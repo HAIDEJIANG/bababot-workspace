@@ -1,0 +1,20 @@
+# OpenClaw Workspace Gitignore
+
+# Ignore large/temp files
+node_modules/
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Ignore browser specific data if any leaks here
+browser/
+
+# Include everything else (skills, memory, soul, etc.)
+!IDENTITY.md
+!USER.md
+!SOUL.md
+!MEMORY.md
+!memory/
+!skills/
+!TOOLS.md
