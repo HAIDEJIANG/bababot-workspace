@@ -12,7 +12,7 @@ from datetime import datetime
 
 # API Configuration
 API_KEY = "li-AqG4H7aQFqrL9OGvesAP1qBWweEyIZ2RxUwQgT73XWlf-XJrXn_19UfArQSZ2OHMjPTJ_A4jIpNYNhhWmtyTbTctTtO82Q"
-KEYWORDS = ["CFM56-7B", "LEAP engine", "GE90 engine"]
+KEYWORDS = ["CFM56-7B", "LEAP engine", "GE90 engine", "Trent 700", "V2500 engine"]
 MODIFIERS = ["sale", "wanted", "available", "sourcing"]
 
 def run_search():
