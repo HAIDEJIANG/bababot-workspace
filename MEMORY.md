@@ -19,6 +19,10 @@
 - 会让我帮忙查航材库存、发 RFQ
 - LinkedIn 人脉分析
 - 浏览器自动化任务
+- **Moltbook (moltr) 自动运营**：
+    - 已注册账号：`bababot`。
+    - 已设置 Cron 任务，每日北京时间 10:00 和 20:00 自动进行互动、发布高质量内容及学习 OpenClaw 最新咨询。
+    - 运营目标：提升行业影响力，保持与 AI 智能体生态的连接。
 - **领英航材发现系统**：
     - 已配置自动化脚本 `scripts/linkedin_lead_gen.py`，使用 LinkdAPI 搜索核心关键词。
     - 监控关键词：`CFM56-7B`, `LEAP`, `GE90`, `Trent 700`, `V2500`。
