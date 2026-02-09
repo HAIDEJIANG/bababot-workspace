@@ -45,8 +45,23 @@
 - LinkdAPI KEY 已配置在 TOOLS.md
 - Chrome 扩展位置: `C:\Users\Haide\AppData\Roaming\npm\node_modules\openclaw\assets\chrome-extension`
 
+## 航空供应商资源名录 (Aviation Vendor Directory)
+| 供应商名称 | 核心联系人 | 业务邮箱 (Email) | 擅长/关联 PN |
+| :--- | :--- | :--- | :--- |
+| STS Component Solutions | Nick Chambers | `sales@sts-cs.com` | J1438P020, 335-010-401-0 |
+| STS Engine Services | Greg Macleod | `greg.macleod@gt-es.co.uk` | J1438P012 |
+| VSE Aviation, Inc. | Megan McClure | `sales-miami@vseaviation.com` | J1438P012, 2081M17P01 |
+| BROOKS & MALDINI CORP | - | `stockmarket@brooks-maldini.net` | J1438P020, 335-010-401-0 |
+| SKY AIR SUPPLY LTD | Brian Jones | `sales@skyairsupply.com` | J1438P012 |
+| TURBO RESOURCES INT'L | Steve Donaldson | `stevedonaldson@TurboResources.com` | 2081M17P01 |
+| EU INSPECTION & SERVICES | - | `maintenance@euinspectionservice.com` | J1438P012 |
+| Jacaero Industries, LLC | Connor Jacobs | `connor@jacaero.com` | SYS10281540 |
+| Aviation Parts | - | `sales@aviationparts.com` | 355A11-0030-04 |
+| AAH Parts | - | `sales@aahparts.com` | 8-930060-06 |
+
 ## 历史记录
 - **2026-02-04**: 分析了 LinkedIn 10个新连接；StockMarket.aero 查询多个 PN；发送 RFQ (3800454-6)；安装 130+ 技能
 - **2026-02-05**: 从 GitHub 同步 workspace；安装 memU 记忆系统；指导安装浏览器扩展
 - **2026-02-06**: 完成了 Excel 表格中全部 **154个 PN** 的库存大搜索，记录了详细的供应商与库存数据。
+- **2026-02-09**: 从 163 企业邮箱提取并汇总了最近 200+ 封邮件中的供应商联系方式及报价回执。
 
