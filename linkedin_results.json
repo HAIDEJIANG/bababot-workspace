@@ -1,0 +1,780 @@
+[
+  {
+    "id": 98382106,
+    "urn": "ACoAAAXdMRoBllzXJqZnmplh7TVjKU_aWScUkYQ",
+    "username": "nick-chambers-10ab4628",
+    "firstName": "Nick",
+    "lastName": "Chambers",
+    "isCreator": false,
+    "isPremium": false,
+    "isInfluencer": false,
+    "followerCount": 582,
+    "connectionsCount": 552,
+    "profilePicture": "",
+    "profilePictures": [],
+    "backgroundImage": [],
+    "summary": "",
+    "headline": "Aviation",
+    "geo": {
+      "country": "United States",
+      "city": "Palm City, Florida",
+      "full": "Palm City, Florida, United States",
+      "countryCode": "us"
+    },
+    "industry": {
+      "name": "Airlines/Aviation",
+      "urn": "urn:li:fsd_industry:94"
+    },
+    "currentPositions": [
+      {
+        "companyName": "DASI",
+        "company": {
+          "id": "9309211",
+          "name": "DASI",
+          "url": "https://www.linkedin.com/company/dasi-llc/",
+          "logoURL": "https://media.licdn.com/dms/image/v2/C510BAQFCSyjLAKEPJg/company-logo_400_400/company-logo_400_400/0/1631338333676?e=1772064000&v=beta&t=5d9ahwo7oQRB6syduTlMcgTHZegTXFHlOaD6CjT9hjg"
+        }
+      }
+    ],
+    "currentEducation": [
+      {
+        "school": {
+          "id": 17751,
+          "urn": "17751",
+          "name": "Arkansas State University",
+          "url": "https://www.linkedin.com/school/arkansas-state-university/",
+          "logoURL": "https://media.licdn.com/dms/image/v2/C4E0BAQH0hUZJbA_67Q/company-logo_400_400/company-logo_400_400/0/1631332231810?e=1772064000&v=beta&t=XVMRiKBx3kcL8eXNk1hTbVlj2d70414w0peSroH88i0"
+        },
+        "company": {
+          "id": "22242",
+          "name": "Arkansas State University",
+          "url": "https://www.linkedin.com/school/arkansas-state-university/",
+          "logoURL": "https://media.licdn.com/dms/image/v2/C4E0BAQH0hUZJbA_67Q/company-logo_400_400/company-logo_400_400/0/1631332231810?e=1772064000&v=beta&t=XVMRiKBx3kcL8eXNk1hTbVlj2d70414w0peSroH88i0"
+        }
+      }
+    ],
+    "languages": [],
+    "educations": [
+      {
+        "start": {
+          "year": 1992,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 1997,
+          "month": 0,
+          "day": 0
+        },
+        "fieldOfStudy": "Exercise Science",
+        "degree": "Bachelor",
+        "grade": "",
+        "schoolName": "",
+        "description": "",
+        "activities": "Lambda Chi Alpha",
+        "url": "https://www.linkedin.com/school/arkansas-state-university/",
+        "schoolId": "22242",
+        "logo": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQH0hUZJbA_67Q/company-logo_200_200/company-logo_200_200/0/1631332231810?e=1772064000&v=beta&t=VaA9d9s30jRvwbu519y1piseGgMBfsN5Di4b0fULciE",
+            "width": 200,
+            "height": 200
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQH0hUZJbA_67Q/company-logo_100_100/company-logo_100_100/0/1631332231810?e=1772064000&v=beta&t=-aYdGJhklN4jdcxjpwhnFa5eUt-4zHgKbNpfCgq-l_Y",
+            "width": 100,
+            "height": 100
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQH0hUZJbA_67Q/company-logo_400_400/company-logo_400_400/0/1631332231810?e=1772064000&v=beta&t=XVMRiKBx3kcL8eXNk1hTbVlj2d70414w0peSroH88i0",
+            "width": 400,
+            "height": 400
+          }
+        ]
+      }
+    ],
+    "position": [
+      {
+        "companyId": 9309211,
+        "companyName": "DASI",
+        "companyUsername": "dasi-llc",
+        "companyURL": "https://www.linkedin.com/company/dasi-llc/",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQFCSyjLAKEPJg/company-logo_400_400/company-logo_400_400/0/1631338333676?e=1772064000&v=beta&t=5d9ahwo7oQRB6syduTlMcgTHZegTXFHlOaD6CjT9hjg",
+        "companyIndustry": "Aviation & Aerospace",
+        "companyStaffCountRange": "201 - 500",
+        "title": "Chief Information Officer",
+        "multiLocaleTitle": {
+          "en_US": "Chief Information Officer"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "DASI"
+        },
+        "location": "Miami, Florida, United States",
+        "locationType": "",
+        "description": "",
+        "employmentType": "Full-time",
+        "start": {
+          "year": 2024,
+          "month": 2,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 9309211,
+        "companyName": "DASI (Diversified Aero Services Inc.)",
+        "companyUsername": "dasi-llc",
+        "companyURL": "https://www.linkedin.com/company/dasi-llc/",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQFCSyjLAKEPJg/company-logo_400_400/company-logo_400_400/0/1631338333676?e=1772064000&v=beta&t=5d9ahwo7oQRB6syduTlMcgTHZegTXFHlOaD6CjT9hjg",
+        "companyIndustry": "Aviation & Aerospace",
+        "companyStaffCountRange": "201 - 500",
+        "title": "Chief Operating Officer",
+        "multiLocaleTitle": {
+          "en_US": "Chief Operating Officer"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "DASI (Diversified Aero Services Inc.)"
+        },
+        "location": "Miami, FL",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 2017,
+          "month": 2,
+          "day": 0
+        },
+        "end": {
+          "year": 2024,
+          "month": 2,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 0,
+        "companyName": "Self-Employed",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "ERP Software Consultant",
+        "multiLocaleTitle": {
+          "en_US": "ERP Software Consultant"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "Self-Employed"
+        },
+        "location": "Palm City, FL",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 2015,
+          "month": 10,
+          "day": 0
+        },
+        "end": {
+          "year": 2017,
+          "month": 2,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 524635,
+        "companyName": "STS Component Solutions",
+        "companyUsername": "sts-component-solutions",
+        "companyURL": "https://www.linkedin.com/company/sts-component-solutions/",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQFeCkrRgxvOSA/company-logo_400_400/company-logo_400_400/0/1630580123497/sts_component_solutions_logo?e=1772064000&v=beta&t=IxdS78TsCdRm7EVVbkYsVdo_eRXfD4U6S_0n5UwrRu4",
+        "companyIndustry": "Airlines/Aviation",
+        "companyStaffCountRange": "51 - 200",
+        "title": "Vice President of Operations",
+        "multiLocaleTitle": {
+          "en_US": "Vice President of Operations"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "STS Component Solutions"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 2008,
+          "month": 8,
+          "day": 0
+        },
+        "end": {
+          "year": 2015,
+          "month": 10,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 0,
+        "companyName": "Tradewinds Aircraft Services",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "Product Line Director / IT Director",
+        "multiLocaleTitle": {
+          "en_US": "Product Line Director / IT Director"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "Tradewinds Aircraft Services"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "Tradewinds bought out by STS Component Solutions August 2008",
+        "employmentType": "",
+        "start": {
+          "year": 2005,
+          "month": 2,
+          "day": 0
+        },
+        "end": {
+          "year": 2008,
+          "month": 8,
+          "day": 0
+        }
+      }
+    ],
+    "fullPositions": [
+      {
+        "companyId": 9309211,
+        "companyName": "DASI",
+        "companyUsername": "dasi-llc",
+        "companyURL": "https://www.linkedin.com/company/dasi-llc/",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQFCSyjLAKEPJg/company-logo_400_400/company-logo_400_400/0/1631338333676?e=1772064000&v=beta&t=5d9ahwo7oQRB6syduTlMcgTHZegTXFHlOaD6CjT9hjg",
+        "companyIndustry": "Aviation & Aerospace",
+        "companyStaffCountRange": "201 - 500",
+        "title": "Chief Information Officer",
+        "multiLocaleTitle": {
+          "en_US": "Chief Information Officer"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "DASI"
+        },
+        "location": "Miami, Florida, United States",
+        "locationType": "",
+        "description": "",
+        "employmentType": "Full-time",
+        "start": {
+          "year": 2024,
+          "month": 2,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 9309211,
+        "companyName": "DASI (Diversified Aero Services Inc.)",
+        "companyUsername": "dasi-llc",
+        "companyURL": "https://www.linkedin.com/company/dasi-llc/",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQFCSyjLAKEPJg/company-logo_400_400/company-logo_400_400/0/1631338333676?e=1772064000&v=beta&t=5d9ahwo7oQRB6syduTlMcgTHZegTXFHlOaD6CjT9hjg",
+        "companyIndustry": "Aviation & Aerospace",
+        "companyStaffCountRange": "201 - 500",
+        "title": "Chief Operating Officer",
+        "multiLocaleTitle": {
+          "en_US": "Chief Operating Officer"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "DASI (Diversified Aero Services Inc.)"
+        },
+        "location": "Miami, FL",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 2017,
+          "month": 2,
+          "day": 0
+        },
+        "end": {
+          "year": 2024,
+          "month": 2,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 0,
+        "companyName": "Self-Employed",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "ERP Software Consultant",
+        "multiLocaleTitle": {
+          "en_US": "ERP Software Consultant"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "Self-Employed"
+        },
+        "location": "Palm City, FL",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 2015,
+          "month": 10,
+          "day": 0
+        },
+        "end": {
+          "year": 2017,
+          "month": 2,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 524635,
+        "companyName": "STS Component Solutions",
+        "companyUsername": "sts-component-solutions",
+        "companyURL": "https://www.linkedin.com/company/sts-component-solutions/",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQFeCkrRgxvOSA/company-logo_400_400/company-logo_400_400/0/1630580123497/sts_component_solutions_logo?e=1772064000&v=beta&t=IxdS78TsCdRm7EVVbkYsVdo_eRXfD4U6S_0n5UwrRu4",
+        "companyIndustry": "Airlines/Aviation",
+        "companyStaffCountRange": "51 - 200",
+        "title": "Vice President of Operations",
+        "multiLocaleTitle": {
+          "en_US": "Vice President of Operations"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "STS Component Solutions"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 2008,
+          "month": 8,
+          "day": 0
+        },
+        "end": {
+          "year": 2015,
+          "month": 10,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 0,
+        "companyName": "Tradewinds Aircraft Services",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "Product Line Director / IT Director",
+        "multiLocaleTitle": {
+          "en_US": "Product Line Director / IT Director"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "Tradewinds Aircraft Services"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "Tradewinds bought out by STS Component Solutions August 2008",
+        "employmentType": "",
+        "start": {
+          "year": 2005,
+          "month": 2,
+          "day": 0
+        },
+        "end": {
+          "year": 2008,
+          "month": 8,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 0,
+        "companyName": "Tradewinds Aircraft Services",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "Customer Support/ Customer Support Manager / IT Manager",
+        "multiLocaleTitle": {
+          "en_US": "Customer Support/ Customer Support Manager / IT Manager"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "Tradewinds Aircraft Services"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 2002,
+          "month": 10,
+          "day": 0
+        },
+        "end": {
+          "year": 2005,
+          "month": 5,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 0,
+        "companyName": "Dynaclo Controls",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "Customer Service Manager",
+        "multiLocaleTitle": {
+          "en_US": "Customer Service Manager"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "Dynaclo Controls"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 2002,
+          "month": 3,
+          "day": 0
+        },
+        "end": {
+          "year": 2002,
+          "month": 10,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 0,
+        "companyName": "Hubair Inc",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "Customer Support / Asst Customer Support Manager",
+        "multiLocaleTitle": {
+          "en_US": "Customer Support / Asst Customer Support Manager"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "Hubair Inc"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 1999,
+          "month": 10,
+          "day": 0
+        },
+        "end": {
+          "year": 2002,
+          "month": 2,
+          "day": 0
+        }
+      }
+    ],
+    "skills": [
+      {
+        "name": "Aircraft",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Aviation",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Commercial Aviation",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Airlines",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Aerospace",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Aircraft Maintenance",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Helicopters",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Program Management",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Airports",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Flight Safety",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Airworthiness",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Charter",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Civil Aviation",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Flights",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Management",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Avionics",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Overhaul",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Operations Management",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Process Improvement",
+        "passedSkillAssessment": false
+      },
+      {
+        "name": "Logistics",
+        "passedSkillAssessment": false
+      }
+    ],
+    "courses": [],
+    "certifications": [],
+    "projects": [],
+    "publications": [],
+    "volunteering": [],
+    "patents": [],
+    "supportedLocales": [
+      {
+        "country": "US",
+        "language": "en"
+      }
+    ],
+    "multiLocaleFirstName": {
+      "en_US": "Nick"
+    },
+    "multiLocaleLastName": {
+      "en_US": "Chambers"
+    },
+    "multiLocaleHeadline": {
+      "en_US": "Aviation"
+    }
+  },
+  {
+    "id": 782454198,
+    "urn": "ACoAAC6jTbYBQJ4TdRQOrVNRB9uzm1eVOS-sxmk",
+    "username": "megan-mcclure-18606119a",
+    "firstName": "Megan",
+    "lastName": "McClure",
+    "isCreator": false,
+    "isPremium": false,
+    "isInfluencer": false,
+    "followerCount": 0,
+    "connectionsCount": 0,
+    "profilePicture": "",
+    "profilePictures": [],
+    "backgroundImage": [],
+    "summary": "",
+    "headline": "Office Coordinator",
+    "geo": {
+      "country": "United States",
+      "city": "Wichita, Kansas Metropolitan Area",
+      "full": "Wichita, Kansas Metropolitan Area",
+      "countryCode": "us"
+    },
+    "industry": {
+      "name": "Airlines/Aviation",
+      "urn": "urn:li:fsd_industry:94"
+    },
+    "currentPositions": [
+      {
+        "companyName": "GlobalParts.aero",
+        "company": {
+          "id": "",
+          "name": "",
+          "url": "",
+          "logoURL": ""
+        }
+      }
+    ],
+    "languages": [],
+    "educations": [],
+    "position": [
+      {
+        "companyId": 0,
+        "companyName": "GlobalParts.aero",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "Office Manager",
+        "multiLocaleTitle": {
+          "en_US": "Office Manager"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "GlobalParts.aero"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 33179785,
+        "companyName": "VSE Aviation",
+        "companyUsername": "vse-aviation-inc",
+        "companyURL": "https://www.linkedin.com/company/vse-aviation-inc/",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQFr97od2rTv-w/company-logo_400_400/company-logo_400_400/0/1630602166877/vse_aviation_inc_logo?e=1772064000&v=beta&t=xMv-ledSh8xHzDT2TT02Svgw-FDrRqqYsF5Yg2YeZYQ",
+        "companyIndustry": "Aviation & Aerospace",
+        "companyStaffCountRange": "501 - 1000",
+        "title": "Office Coordinator",
+        "multiLocaleTitle": {
+          "en_US": "Office Coordinator"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "VSE Aviation"
+        },
+        "location": "Kansas, United States",
+        "locationType": "",
+        "description": "",
+        "employmentType": "Full-time",
+        "start": {
+          "year": 2019,
+          "month": 7,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    ],
+    "fullPositions": [
+      {
+        "companyId": 0,
+        "companyName": "GlobalParts.aero",
+        "companyUsername": "",
+        "companyURL": "",
+        "companyLogo": "",
+        "companyIndustry": "",
+        "companyStaffCountRange": "",
+        "title": "Office Manager",
+        "multiLocaleTitle": {
+          "en_US": "Office Manager"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "GlobalParts.aero"
+        },
+        "location": "",
+        "locationType": "",
+        "description": "",
+        "employmentType": "",
+        "start": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      },
+      {
+        "companyId": 33179785,
+        "companyName": "VSE Aviation",
+        "companyUsername": "vse-aviation-inc",
+        "companyURL": "https://www.linkedin.com/company/vse-aviation-inc/",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQFr97od2rTv-w/company-logo_400_400/company-logo_400_400/0/1630602166877/vse_aviation_inc_logo?e=1772064000&v=beta&t=xMv-ledSh8xHzDT2TT02Svgw-FDrRqqYsF5Yg2YeZYQ",
+        "companyIndustry": "Aviation & Aerospace",
+        "companyStaffCountRange": "501 - 1000",
+        "title": "Office Coordinator",
+        "multiLocaleTitle": {
+          "en_US": "Office Coordinator"
+        },
+        "multiLocaleCompanyName": {
+          "en_US": "VSE Aviation"
+        },
+        "location": "Kansas, United States",
+        "locationType": "",
+        "description": "",
+        "employmentType": "Full-time",
+        "start": {
+          "year": 2019,
+          "month": 7,
+          "day": 0
+        },
+        "end": {
+          "year": 0,
+          "month": 0,
+          "day": 0
+        }
+      }
+    ],
+    "skills": [],
+    "courses": [],
+    "certifications": [],
+    "projects": [],
+    "publications": [],
+    "volunteering": [],
+    "patents": [],
+    "supportedLocales": [
+      {
+        "country": "US",
+        "language": "en"
+      }
+    ],
+    "multiLocaleFirstName": {
+      "en_US": "Megan"
+    },
+    "multiLocaleLastName": {
+      "en_US": "McClure"
+    },
+    "multiLocaleHeadline": {
+      "en_US": "Office Coordinator"
+    }
+  }
+]
