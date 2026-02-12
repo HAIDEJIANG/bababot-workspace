@@ -872,6 +872,26 @@
     "pdf-form-filler": {
       "version": "0.2.0",
       "installedAt": 1770056115954
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1770870808735
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1770870813540
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1770870844979
+    },
+    "clawshell": {
+      "version": "0.1.0",
+      "installedAt": 1770870849382
+    },
+    "gmail": {
+      "version": "1.0.6",
+      "installedAt": 1770870874914
     }
   }
 }

@@ -25,7 +25,7 @@ KEYWORDS = [
 ]
 MODIFIERS = ["sale", "wanted", "available", "sourcing", "RFQ", "stock"]
 BUSINESS_TOKENS = ["PN", "Part Number", "S/N", "Serial Number", "Condition", "Price", "USD", "Contact", "@", "WhatsApp", "Email", "Looking for", "In stock"]
-EXCLUDE_TOKENS = ["news", "announces", "press release", "summit", "conference", "celebrating", "congratulations", "happy to announce"]
+EXCLUDE_TOKENS = ["news", "announces", "press release", "summit", "conference", "celebrating", "congratulations", "happy to announce", "hiring", "recruiting", "job", "career", "vacancy", "position", "join our team", "apply now"]
 
 def is_business_lead(content):
     content_lower = content.lower()
