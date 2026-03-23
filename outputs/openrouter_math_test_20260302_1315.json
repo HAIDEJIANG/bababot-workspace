@@ -1,0 +1,242 @@
+{
+  "test_prompt": "What is 7 multiplied by 8? Please provide only the numerical answer.",
+  "expected_answer": "56",
+  "total_models": 29,
+  "correct_count": 15,
+  "error_count": 11,
+  "success_rate": 51.724137931034484,
+  "results": [
+    {
+      "model": "openai/gpt-4o",
+      "status": "success",
+      "error": null,
+      "latency_ms": 2260.49,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1481.15,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "openai/gpt-5",
+      "status": "success",
+      "error": null,
+      "latency_ms": 5660.06,
+      "answer": "",
+      "correct": false
+    },
+    {
+      "model": "openai/gpt-5-codex",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1797.85,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "openai/gpt-5.2-codex",
+      "status": "success",
+      "error": null,
+      "latency_ms": 2116.84,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "openai-codex/gpt-5.3-codex",
+      "status": "error",
+      "error": "HTTP 400: {\"error\":{\"message\":\"openai-codex/gpt-5.3-codex is not a valid model ID\",\"code\":400},\"user_id\":\"user",
+      "latency_ms": 1093.0819511413574,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "openai-codex/gpt-5.3-codex-spark",
+      "status": "error",
+      "error": "HTTP 400: {\"error\":{\"message\":\"openai-codex/gpt-5.3-codex-spark is not a valid model ID\",\"code\":400},\"user_id\"",
+      "latency_ms": 917.0355796813965,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "openai/o1",
+      "status": "error",
+      "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 50",
+      "latency_ms": 1049.3483543395996,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "openai/o3",
+      "status": "success",
+      "error": null,
+      "latency_ms": 3385.93,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "openai/o3-deep-research",
+      "status": "error",
+      "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 50",
+      "latency_ms": 973.2041358947754,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "anthropic/claude-3.5-haiku",
+      "status": "success",
+      "error": null,
+      "latency_ms": 2061.63,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "anthropic/claude-3.5-sonnet",
+      "status": "error",
+      "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 50",
+      "latency_ms": 1295.0360774993896,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "anthropic/claude-opus-4",
+      "status": "error",
+      "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 50",
+      "latency_ms": 1089.2770290374756,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "anthropic/claude-3.7-sonnet",
+      "status": "success",
+      "error": null,
+      "latency_ms": 2100.33,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "google/gemini-2.0-flash-001",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1354.79,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1289.57,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "status": "success",
+      "error": null,
+      "latency_ms": 2902.49,
+      "answer": "5",
+      "correct": false
+    },
+    {
+      "model": "deepseek/deepseek-chat",
+      "status": "success",
+      "error": null,
+      "latency_ms": 2308.37,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "deepseek/deepseek-reasoner",
+      "status": "error",
+      "error": "HTTP 400: {\"error\":{\"message\":\"deepseek/deepseek-reasoner is not a valid model ID\",\"code\":400},\"user_id\":\"user",
+      "latency_ms": 958.6491584777832,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "moonshot/kimi-k2.5",
+      "status": "error",
+      "error": "HTTP 400: {\"error\":{\"message\":\"moonshot/kimi-k2.5 is not a valid model ID\",\"code\":400},\"user_id\":\"user_3A1FNl7",
+      "latency_ms": 952.2604942321777,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "mistralai/mistral-large",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1458.13,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "mistralai/codestral-2508",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1348.29,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1286.83,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "qwen-portal/qwen3-235b-a22b",
+      "status": "error",
+      "error": "HTTP 400: {\"error\":{\"message\":\"qwen-portal/qwen3-235b-a22b is not a valid model ID\",\"code\":400},\"user_id\":\"use",
+      "latency_ms": 952.2631168365479,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "qwen-portal/qwen3-30b-a3b",
+      "status": "error",
+      "error": "HTTP 400: {\"error\":{\"message\":\"qwen-portal/qwen3-30b-a3b is not a valid model ID\",\"code\":400},\"user_id\":\"user_",
+      "latency_ms": 1014.3017768859863,
+      "answer": null,
+      "correct": false
+    },
+    {
+      "model": "cohere/command-r-plus-08-2024",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1466.44,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "alibaba/tongyi-deepresearch-30b-a3b",
+      "status": "success",
+      "error": null,
+      "latency_ms": 1342.5,
+      "answer": "",
+      "correct": false
+    },
+    {
+      "model": "x-ai/grok-3-mini",
+      "status": "success",
+      "error": null,
+      "latency_ms": 3272.73,
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "model": "x-ai/grok-4-mini",
+      "status": "error",
+      "error": "HTTP 400: {\"error\":{\"message\":\"x-ai/grok-4-mini is not a valid model ID\",\"code\":400},\"user_id\":\"user_3A1FNl7nN",
+      "latency_ms": 922.5714206695557,
+      "answer": null,
+      "correct": false
+    }
+  ]
+}

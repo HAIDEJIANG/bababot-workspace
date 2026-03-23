@@ -1,0 +1,98 @@
+{
+  "rfq_id": "RFQ20260318-01",
+  "total": 10,
+  "success": 0,
+  "failed": 10,
+  "results": [
+    {
+      "index": 1,
+      "pn": "S1820612-02",
+      "qty": "1",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:22:46.872517"
+    },
+    {
+      "index": 2,
+      "pn": "X-A1B",
+      "qty": "1",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:23:22.393667"
+    },
+    {
+      "index": 3,
+      "pn": "9BG407572-70",
+      "qty": "1",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:23:57.911679"
+    },
+    {
+      "index": 4,
+      "pn": "2LA006823-70",
+      "qty": "1",
+      "condition": "SV",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:24:33.423489"
+    },
+    {
+      "index": 5,
+      "pn": "091595-01",
+      "qty": "1",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:25:08.948468"
+    },
+    {
+      "index": 6,
+      "pn": "091595-02",
+      "qty": "1",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:25:44.471293"
+    },
+    {
+      "index": 7,
+      "pn": "00712226-0002",
+      "qty": "5",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:26:19.991324"
+    },
+    {
+      "index": 8,
+      "pn": "00712226-0001",
+      "qty": "1",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:26:55.515233"
+    },
+    {
+      "index": 9,
+      "pn": "30090331-0502",
+      "qty": "1",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:27:31.035710"
+    },
+    {
+      "index": 10,
+      "pn": "30060173-0502",
+      "qty": "1",
+      "condition": "NE",
+      "success": false,
+      "message": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*=\\\"Part Number\\\"], input[placeholder*=\\\"Search\\\"]\").first\n",
+      "timestamp": "2026-03-21T15:28:06.559136"
+    }
+  ]
+}

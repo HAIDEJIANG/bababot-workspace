@@ -1,0 +1,6 @@
+2026/03/10-15:55:07.736 254c Reusing MANIFEST C:\Users\Haide\.openclaw\workspace\scripts\rfq_auto\.rfq_edge_profile\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/03/10-15:55:07.738 254c Recovering log #399
+2026/03/10-15:55:07.739 254c Reusing old log C:\Users\Haide\.openclaw\workspace\scripts\rfq_auto\.rfq_edge_profile\Default\EdgeCoupons/coupons_data.db/000399.log 
+2026/03/10-15:55:07.840 1dfc Level-0 table #404: started
+2026/03/10-15:55:07.849 1dfc Level-0 table #404: 681700 bytes OK
+2026/03/10-15:55:07.853 1dfc Delete type=0 #399

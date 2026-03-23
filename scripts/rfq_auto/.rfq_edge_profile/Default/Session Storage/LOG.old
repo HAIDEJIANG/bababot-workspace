@@ -1,0 +1,6 @@
+2026/03/10-15:53:27.273 77c4 Reusing MANIFEST C:\Users\Haide\.openclaw\workspace\scripts\rfq_auto\.rfq_edge_profile\Default\Session Storage/MANIFEST-000001
+2026/03/10-15:53:27.276 77c4 Recovering log #98
+2026/03/10-15:53:27.281 77c4 Reusing old log C:\Users\Haide\.openclaw\workspace\scripts\rfq_auto\.rfq_edge_profile\Default\Session Storage/000098.log 
+2026/03/10-15:54:27.951 7bb4 Level-0 table #102: started
+2026/03/10-15:54:27.954 7bb4 Level-0 table #102: 31321 bytes OK
+2026/03/10-15:54:27.956 7bb4 Delete type=0 #98

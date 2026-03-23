@@ -1,0 +1,14 @@
+{
+  "part_number": "206-0014-004",
+  "quantity": "1",
+  "success": true,
+  "stage": "submitted",
+  "selected_condition": "NS",
+  "history_verified": false,
+  "supplier_count": 1,
+  "suppliers_submitted": [
+    {"name": "THAMESIDE AERO SPARES LTD", "condition": "NS", "qty": 1, "alternate_pn": "2060-014-004", "description": "PLATE"}
+  ],
+  "note": "Final RFQ in batch! Partial match: 2060-014-004 returned for search 206-0014-004. RFQ successfully submitted to THAMESIDE AERO SPARES LTD.",
+  "timestamp": "2026-03-12 10:35:00"
+}

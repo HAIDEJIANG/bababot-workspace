@@ -1,0 +1,25 @@
+{
+  "part_number": "120-02487-0004",
+  "quantity": "1",
+  "success": true,
+  "stage": "submitted",
+  "selected_condition": "NE",
+  "history_verified": false,
+  "supplier_count": 2,
+  "suppliers_submitted": [
+    {
+      "name": "AERONED BV",
+      "location": "Zuid-Holland, Netherlands",
+      "condition": "NE",
+      "qty": 1
+    },
+    {
+      "name": "VICTOR AEROSYSTEMS",
+      "location": "United States",
+      "condition": "NE",
+      "qty": 1
+    }
+  ],
+  "note": "RFQ successfully submitted to 2 suppliers (max reached for this PN). Both confirmed: 'Your RFQ has been sent successfully'",
+  "timestamp": "2026-03-12 01:06:00"
+}

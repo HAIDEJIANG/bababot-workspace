@@ -1,0 +1,14 @@
+{
+  "part_number": "206-0011-004",
+  "quantity": "1",
+  "success": true,
+  "stage": "submitted",
+  "selected_condition": "SV",
+  "history_verified": false,
+  "supplier_count": 1,
+  "suppliers_submitted": [
+    {"name": "SKYBUS LLC", "condition": "SV", "qty": 1, "alternate_pn": "206001-1004", "description": "DRIVE UNIT"}
+  ],
+  "note": "Partial match: 206001-1004 returned for search 206-0011-004. Only SV condition was valid (AR and OH were invalid). RFQ successfully submitted.",
+  "timestamp": "2026-03-12 10:24:00"
+}

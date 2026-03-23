@@ -1,0 +1,19 @@
+{
+  "part_number": "12051347-0002",
+  "quantity": "1",
+  "success": true,
+  "stage": "submitted",
+  "selected_condition": "NE",
+  "history_verified": false,
+  "supplier_count": 1,
+  "suppliers_submitted": [
+    {
+      "name": "AERONED BV",
+      "location": "Zuid-Holland, Netherlands",
+      "condition": "NE",
+      "qty": 1
+    }
+  ],
+  "note": "RFQ successfully submitted to AERONED BV. Page confirmation: 'Your RFQ has been sent successfully'",
+  "timestamp": "2026-03-12 00:55:00"
+}

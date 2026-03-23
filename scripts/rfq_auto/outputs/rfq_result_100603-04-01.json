@@ -1,0 +1,11 @@
+{
+  "part_number": "100603-04-01",
+  "quantity": "1",
+  "success": true,
+  "stage": "verify_history",
+  "selected_condition": "NE",
+  "history_verified": true,
+  "supplier_count": 9,
+  "note": "Submitted to 9/9 suppliers. 100603-04-01 found in RFQ history",
+  "timestamp": "2026-03-10 15:30:22"
+}

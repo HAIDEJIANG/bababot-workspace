@@ -1,0 +1,120 @@
+{
+  "run_id": "20260320_072017",
+  "start_time": "2026-03-20T07:20:17.105770",
+  "target_parts": [
+    {
+      "pn": "10037-0770",
+      "name": "Fuel Load Preselect Indicator",
+      "expected_suppliers": 80
+    },
+    {
+      "pn": "1152466-250",
+      "name": "APU Start Converter Unit",
+      "expected_suppliers": 95
+    },
+    {
+      "pn": "129666-3",
+      "name": "Precooler Control Valve Sensor",
+      "expected_suppliers": 108
+    }
+  ],
+  "part_results": [
+    {
+      "part_number": "10037-0770",
+      "part_name": "Fuel Load Preselect Indicator",
+      "total_suppliers_found": 43,
+      "valid_suppliers_count": 10,
+      "submitted_count": 0,
+      "success_count": 0,
+      "failed_count": 10,
+      "suppliers": [
+        {
+          "vendor": "row_48",
+          "condition": "NS",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:20:37.803776"
+        },
+        {
+          "vendor": "row_49",
+          "condition": "NS",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:20:56.104616"
+        },
+        {
+          "vendor": "row_56",
+          "condition": "OH",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:21:14.395275"
+        },
+        {
+          "vendor": "row_23",
+          "condition": "SV",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:21:32.702492"
+        },
+        {
+          "vendor": "row_36",
+          "condition": "SV",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:21:50.996034"
+        },
+        {
+          "vendor": "row_42",
+          "condition": "SV",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:22:09.312618"
+        },
+        {
+          "vendor": "row_50",
+          "condition": "SV",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:22:27.608257"
+        },
+        {
+          "vendor": "row_68",
+          "condition": "SV",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:22:45.897409"
+        },
+        {
+          "vendor": "row_75",
+          "condition": "SV",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:23:04.198265"
+        },
+        {
+          "vendor": "row_81",
+          "condition": "SV",
+          "pn": "10037-0770",
+          "status": "failed",
+          "error": "Failed to click Send or open popup",
+          "timestamp": "2026-03-20T07:23:22.486499"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_submitted": 0,
+    "total_success": 0,
+    "total_failed": 10,
+    "total_suppliers_covered": 10
+  }
+}

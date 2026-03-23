@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-03-20T19:25:33.830855",
+  "stats": {
+    "total": 28,
+    "completed": 28,
+    "skipped_no_suppliers": 0,
+    "skipped_invalid_condition": 0,
+    "failed": 0,
+    "submitted": 28
+  },
+  "last_completed_index": 28
+}

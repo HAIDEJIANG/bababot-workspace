@@ -1,0 +1,93 @@
+{
+  "run_id": "20260320_094015",
+  "start_time": "2026-03-20T09:40:15.667863",
+  "target_pns": [
+    {
+      "pn": "10037-0770",
+      "desc": "Fuel Load Preselect Indicator"
+    },
+    {
+      "pn": "1152466-250",
+      "desc": "APU Start Converter Unit"
+    },
+    {
+      "pn": "129666-3",
+      "desc": "Precooler Control Valve Sensor"
+    }
+  ],
+  "results": [
+    {
+      "pn": "10037-0770",
+      "description": "Fuel Load Preselect Indicator",
+      "suppliers_found": 43,
+      "suppliers_valid": 7,
+      "submissions": [
+        {
+          "vendor": "Patria Netherlands Components B.V.",
+          "condition": "NE",
+          "status": "failed",
+          "error": "Submit button not found"
+        },
+        {
+          "vendor": "10037-0770",
+          "condition": "NS",
+          "status": "failed",
+          "error": "Submit button not found"
+        },
+        {
+          "vendor": "AERO INSTRUMENTS & AVIONICS, INC.",
+          "condition": "NS",
+          "status": "failed",
+          "error": "Locator.all: Target page, context or browser has been closed"
+        },
+        {
+          "vendor": "AirStart Inc.",
+          "condition": "AR",
+          "status": "failed",
+          "error": "Locator.all: Target page, context or browser has been closed"
+        },
+        {
+          "vendor": "CAPITAL AEROSPARES",
+          "condition": "AR",
+          "status": "failed",
+          "error": "Locator.all: Target page, context or browser has been closed"
+        },
+        {
+          "vendor": "Elliot Ward Aviation",
+          "condition": "AR",
+          "status": "failed",
+          "error": "Locator.all: Target page, context or browser has been closed"
+        },
+        {
+          "vendor": "HAYWARD & GREEN AVIATION LTD",
+          "condition": "AR",
+          "status": "failed",
+          "error": "Locator.all: Target page, context or browser has been closed"
+        }
+      ]
+    },
+    {
+      "pn": "1152466-250",
+      "description": "APU Start Converter Unit",
+      "suppliers_found": 0,
+      "suppliers_valid": 0,
+      "submissions": [],
+      "error": "Locator.fill: Target page, context or browser has been closed"
+    },
+    {
+      "pn": "129666-3",
+      "description": "Precooler Control Valve Sensor",
+      "suppliers_found": 0,
+      "suppliers_valid": 0,
+      "submissions": [],
+      "error": "Locator.fill: Target page, context or browser has been closed"
+    }
+  ],
+  "end_time": "2026-03-20T09:41:11.021655",
+  "summary": {
+    "total_submissions": 7,
+    "successful": 0,
+    "failed": 7,
+    "unique_vendors_covered": 7
+  }
+}

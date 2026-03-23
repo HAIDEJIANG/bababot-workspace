@@ -1,0 +1,11 @@
+{
+  "part_number": "T330D336K035AS",
+  "quantity": "1",
+  "success": true,
+  "stage": "verify_history",
+  "selected_condition": "NE",
+  "history_verified": true,
+  "supplier_count": 6,
+  "note": "Submitted to 6/6 suppliers. T330D336K035AS found in RFQ history",
+  "timestamp": "2026-03-10 15:19:20"
+}

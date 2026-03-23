@@ -1,0 +1,908 @@
+
+function closePayPalWindow(){
+	
+
+	//var y = window.parent.document.getElementById('#PPDGFrame');
+	//var contentHeight = $('#PPDGFrame').height(); 
+	top.window.jQuery('#PPDGFrame').remove();
+	//parent.jQuery('#PPDGFrame').remove();
+}
+
+function checkPrevAction(){
+	var actionval = $('#itemdetailaction').val();
+	if(actionval.length>0 && actionval != 'none'){
+		showitemdetailpopupSF('',actionval);
+	}
+	var rfqAllAction = $('#showRfqAllPopup').val();
+	if(rfqAllAction.length>0 && rfqAllAction != 'none'){
+		rfqAllCartPopup('/StockMarket/showRfqAll.do');
+	}
+}
+Number.prototype.format = function(n, x) {
+	var re = "\\d(?=(\\d{" + (x || 3) + "})+" + (n > 0 ? "\\." : "$") + ")";
+	return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, "g"), "$&,");
+};
+
+function rfqAllCartPopup(actionurl){
+	ga('send', 'event', 'RFQ_ALL_BUTTON', 'clicked');
+	var vp = $(window).height();
+	var vpw = $(window).width();
+	var scrollh = $(window).scrollTop();
+	var tag = $("<div id=\"rfqAllPopup\"></div>");
+	if(actionurl != null){
+		$.ajax({
+			type:"POST",
+			url:actionurl ,
+			data:$('#welcomeForm').serialize(),
+			success:function(htmldata,textStatus){
+				var title = htmldata.match(/<title>(.*?)<\/title>/)[1];
+				if("Login Page"==title){
+					document.welcomeForm.action="/StockMarket/LoadLogin.do";
+					document.welcomeForm.submit();
+				}else if("RFQ ALL"==title) {
+					tag.html(htmldata).dialog({
+						width: 1100,
+						modal:true,
+						title:'RFQ ALL',
+						closeOnEscape : true,
+						open: function(event,ui){
+							setdialogSS(vp,scrollh,vpw);
+							$( "#needByDate" ).datepicker();
+							$('#conditionCode').checkDrop({ "defaultText": "Please Select a Condition Code"});
+							$.ajax({
+								url: "/StockMarket/displayRfqAllVendors.do" ,
+								cache: false,
+								success: function(html){
+								$("#rfqall-section").html(html);
+								}	});
+							$('#backButton').click(function(){
+								$('#rfqAllPopup').dialog("destroy");
+							});
+							$('#conditionCode').change(function(){
+								var cond_code = this.value;
+								$.ajax({
+									url: "/StockMarket/displayRfqAllVendors.do?cond_code=" + cond_code ,
+									cache: false,
+									success: function(html){
+									$("#rfqall-section").html(html);
+									}
+								});
+							});
+						},
+						close: function(){
+							 $(this).dialog("destroy");
+						}
+					}).dialog('open');
+				}else {
+					document.welcomeForm.action="/StockMarket/Welcome.do";
+					document.welcomeForm.submit();
+				}
+			},
+			error: function(xhr,textStatus,errorThrown){
+				alert('Error Status='+xhr.status);
+			}
+		});
+	}
+}
+
+function showSelfServiceCartPopup(actionurl){
+	ga('send', 'event', 'MoveToTop_Sponsored_Vendor', 'clicked');
+	var vp = $(window).height();
+	var vpw = $(window).width();
+	var scrollh = $(window).scrollTop();
+	var tag = $("<div id=\"selfServiceCart\"></div>");
+	if(actionurl != null){
+		$.ajax({
+			type:"POST",
+			url:actionurl ,
+			data:$('#welcomeForm').serialize(),
+			success:function(htmldata,textStatus){
+				var title = htmldata.match(/<title>(.*?)<\/title>/)[1];
+				if("Login Page"==title){
+					document.welcomeForm.action="/StockMarket/LoadLogin.do";
+					document.welcomeForm.submit();
+				}else if("Self Service"==title) {
+					tag.html(htmldata).dialog({
+						width: 1200,
+						modal:true,
+						title:'MVParts',
+						closeOnEscape : true,
+						open: function(event,ui){
+								//$(this).dialog("widget").focus();
+								setdialogSS(vp,scrollh,vpw);
+								//getNewValues();
+								$(".dragTable tbody").sortable({
+									connectWith: ".ui-sortable",
+									items: "tr.draggable, tr:not(.locked)",
+									cancel: "tr:not(.draggable)",
+									create: function () {$(this).find(".draggable~tr").addClass("locked");},
+									start: function () {$(".draggable").css("cursor", "grabbing");},
+									stop: function (event, ui) {$(".draggable").css("cursor", "");
+										$.ajax({
+											type:'POST',
+											url: "/StockMarket/selfServiceRank.do?callback=T&position="+ ui.item.index() ,
+											dataFilter: function (data) {
+												var outBidAmount = $.parseJSON(data).bidAmount;
+												var rank = $.parseJSON(data).rank;
+												$('#partRanking').html(rank);
+												$('#dollarSymbol').show();
+												$('#totalCost').html(outBidAmount.format(2,3));
+												$('#pr').html(rank);
+												$('#tc').html(outBidAmount.format(2,3));
+												$('#dragText').hide();
+											}
+								     	});
+									}
+								});
+								
+								$('#payNowButton').click(function(){
+									if($('#paypalcb').prop('checked') && $('#disclaimer').prop('checked')){
+										//document.selfServiceForm.action="/StockMarket/selfServicePayProcess.do";
+										//document.selfServiceForm.submit();
+										if("--" === $('#totalCost').html() && "--" === $('#partRanking').html()){
+											alert('Please Drag your company logo to desired vendor ranking location');
+										}else if("0.00" === $('#totalCost').html()) {
+											alert('You have selected a vendor rank that is equal to or below the vendor rank that your company already possesses for this part number. Please use your mouse to drag your company\'s logo to a higher vendor rank.');
+										}else{
+											showSelfServiceConfirmation();
+										}
+									}else {
+										if($('#paypalcb').prop('checked')){
+											alert("Please confirm that you have read and understand the Vendor Ranking Disclaimer");
+										}else{
+											alert("Please agree to the Parcipation Agreement and Privacy Policy and Vendor Ranking Disclaimer before submitting payment");
+										}
+										
+									}
+								});
+								
+								$('#partRanking').html('--');
+								$('#totalCost').html('--');
+								$('#dollarSymbol').hide();
+								
+								$("#showSSDemoConf").click(function(){
+									showSelfServiceDemoConfirmation();
+								});
+						},
+						close: function(){
+							 $(this).dialog("destroy");
+						}
+					}).dialog('open');
+				}else {
+					document.welcomeForm.action="/StockMarket/Welcome.do";
+					document.welcomeForm.submit();
+				}
+			},
+			error: function(xhr,textStatus,errorThrown){
+				alert('Error Status='+xhr.status);
+			}
+		});
+	}
+	
+}
+
+function showRfqAllConfirmation(){
+	ga('send', 'event', 'RFQ_ALL_SEND_BUTTON', 'clicked');
+	var vp = $(window).height();
+	var vpw = $(window).width();
+	var scrollh = $(window).scrollTop();
+	var tag = $("<div id=\"rfqAllConfirmation\"></div>");
+	$.ajax({
+		type:"POST",
+		url: "/StockMarket/sendRfqAll.do",
+		data:$('#rfqAllForm').serialize(),
+		success:function(htmldata,textStatus){
+		$('#rfqAllPopup').dialog("destroy");
+			var title = htmldata.match(/<title>(.*?)<\/title>/)[1];
+			if("Login Page"==title){
+				document.selfServiceForm.action="/StockMarket/LoadLogin.do";
+				document.selfServiceForm.submit();
+			}else if("RFQ ALL Confirmation"==title) {
+				tag.html(htmldata).dialog({
+					width: 450,
+					modal:true,
+					title:'RFQ Sent Confirmation',
+					closeOnEscape : true,
+					open: function(event,ui){
+							$(this).dialog("widget").focus();
+							setdialogSSC(vp,scrollh,vpw);
+							$('#continue').click(function(){
+								$('#rfqAllConfirmation').dialog("destroy");
+								// document.welcomeForm.action="/StockMarket/Welcome.do";
+								// document.welcomeForm.submit();
+							});
+					},
+					close: function(){
+						//$('#itemdetailaction').val('');
+						 $(this).dialog("destroy");
+					}
+				}).dialog('open');
+			}else {
+				document.selfServiceForm.action="/StockMarket/Welcome.do";
+				document.selfServiceForm.submit();
+			}
+		},
+		error: function(xhr,textStatus,errorThrown){
+			alert('Error Status='+xhr.status);
+		}
+	});
+}
+
+
+function showSelfServiceDemoConfirmation(){
+	var vp = $(window).height();
+	var vpw = $(window).width();
+	var scrollh = $(window).scrollTop();
+	var tag = $("<div id=\"ssDemoConfirmation\"></div>"); 
+	$.ajax({
+		type:"POST",
+		url: "/StockMarket/showSSDemoConf.do",
+		success:function(htmldata,textStatus){
+		$('#selfServiceCart').dialog("destroy");
+			var title = htmldata.match(/<title>(.*?)<\/title>/)[1];
+			if("Login Page"==title){
+				document.selfServiceForm.action="/StockMarket/LoadLogin.do";
+				document.selfServiceForm.submit();
+			}else if("Self Service Confirmation"==title) {
+				tag.html(htmldata).dialog({
+					width: 700,
+					modal:true,
+					title:'Most Valuable Part Tool',
+					closeOnEscape : true,
+					open: function(event,ui){
+							$(this).dialog("widget").focus();
+							setdialogSSC(vp,scrollh,vpw);
+							$('#continue').click(function(){
+								$('#ssDemoConfirmation').dialog('destroy');
+							});
+					},
+					close: function(){
+						 $(this).dialog("destroy");
+					}
+				}).dialog('open');
+			}else {
+				document.selfServiceForm.action="/StockMarket/Welcome.do";
+				document.selfServiceForm.submit();
+			}
+		},
+		error: function(xhr,textStatus,errorThrown){
+			alert('Error Status='+xhr.status);
+		}
+	});
+	
+}
+
+function showSelfServiceConfirmation(){
+	ga('send', 'event', 'MVP_PAY_BUTTON', 'clicked');
+	var vp = $(window).height();
+	var vpw = $(window).width();
+	var scrollh = $(window).scrollTop();
+	var tag = $("<div id=\"ssConfirmation\"></div>"); 
+		$.ajax({
+			type:"POST",
+			url: "/StockMarket/selfServicePayProcess.do?totalCost="+$('#totalCost').html()+"&partPosition="+$('#partRanking').html(),
+			data:$('#selfServiceForm').serialize(),
+			success:function(htmldata,textStatus){
+			$('#selfServiceCart').dialog("destroy");
+				var title = htmldata.match(/<title>(.*?)<\/title>/)[1];
+				if("Login Page"==title){
+					document.selfServiceForm.action="/StockMarket/LoadLogin.do";
+					document.selfServiceForm.submit();
+				}else if("Self Service Confirmation"==title) {
+					tag.html(htmldata).dialog({
+						width: 700,
+						modal:true,
+						title:'Most Valuable Part Tool',
+						closeOnEscape : true,
+						open: function(event,ui){
+								$(this).dialog("widget").focus();
+								setdialogSSC(vp,scrollh,vpw);
+								$('#continue').click(function(){
+									//$(this).dialog("destroy");
+									// document.welcomeForm.action="/StockMarket/Welcome.do";
+									// document.welcomeForm.submit();
+									document.getElementsByClassName('actionForm')[0].action = "/StockMarket/loadCmpInventory.do";
+									document.getElementsByClassName('actionForm')[0].submit();
+								});
+						},
+						close: function(){
+							//$('#itemdetailaction').val('');
+							 $(this).dialog("destroy");
+							 //document.welcomeForm.action="/StockMarket/Welcome.do";
+							//document.welcomeForm.submit();
+							 document.getElementsByClassName('actionForm')[0].action = "/StockMarket/loadCmpInventory.do";
+							 document.getElementsByClassName('actionForm')[0].submit();
+						}
+					}).dialog('open');
+				}else {
+					document.selfServiceForm.action="/StockMarket/Welcome.do";
+					document.selfServiceForm.submit();
+				}
+			},
+			error: function(xhr,textStatus,errorThrown){
+				alert('Error Status='+xhr.status);
+			}
+		});
+}
+
+function showitemdetailpopup(idMap,actiontype){
+	//var id = $(object).attr("id");
+	//var href = $(object).attr("href");
+	
+	var vp = $(window).height();
+	var vpw = $(window).width();
+	var scrollh = $(window).scrollTop();
+	var tag = $("<div id=\"detailmp\"></div>");
+	var actionurl;
+	var jid = $('#jid').val();
+		if(idMap != null && idMap.length > 0){
+			actionurl = "/StockMarket/LoadItemDetailAction.do?actiontype="+actiontype+"&idMap="+idMap; 
+		}else {
+			actionurl = "/StockMarket/LoadItemDetailAction.do";
+		}
+	
+	var actdiv=0;
+	if("detail"==actiontype){
+		actdiv=0;
+	}else if("rfq"==actiontype){
+		actdiv=3;
+	}else if("po"==actiontype){
+		actdiv=4;
+	}
+	$.ajax({
+		type:"POST",
+		url:actionurl ,
+		data:$('#welcomeForm').serialize(),
+		success:function(htmldata,textStatus){
+
+			var title = htmldata.match(/<title>(.*?)<\/title>/)[1];
+			if("Login Page"==title){
+				document.welcomeForm.action="/StockMarket/LoadLogin.do";
+				document.welcomeForm.submit();
+			}else if("Part Detail"==title) {
+				tag.html(htmldata).dialog({
+					width: 500,
+					modal:true,
+					title:'Part Detail',
+					closeOnEscape : true,
+				//	position:[vpw/2-250,toph+300],
+					open: function(event,ui){
+							var validated = false;
+							$(this).dialog("widget").focus();
+							/*if('T' == $("#showPPFormDiv").val()){
+								actdiv = 5;
+							}*/
+							$('#needBy').datepicker({
+								dateFormat:'mm/dd/yy',
+								showOn: "button",
+								buttonImage: "images/calendaricon.png",
+								buttonImageOnly: true
+							});
+					
+							$('#deliveryDate').datepicker({
+								dateFormat:'mm/dd/yy',
+								showOn: "button",
+								buttonImage: "images/calendaricon.png",
+								buttonImageOnly: true
+							});
+							
+							$('#ppdeliveryDate').datepicker({
+								dateFormat:'mm/dd/yy',
+								showOn: "button",
+								buttonImage: "images/calendaricon.png",
+								buttonImageOnly: true
+							});
+							
+							setdialogpos(vp,scrollh,vpw);
+							validateinputfields();
+							$('#accordion').accordion({
+								collapsible:true,
+								heightStyle:"content",
+								active:actdiv,
+								create: function(event, ui){
+									   if($('#unitPrice').val() > 0){
+										   $('#rfqh3').css('display','none');
+										   $('#unitPrice').attr('readonly','readonly');
+									//var newindex = $(ui.newHeader).index('h3');
+								//	if(newindex==2){
+									//	event.preventDefault();
+									//}
+									   }
+								}
+							});
+							
+							/*$(document.body).on('change', '#qtyOrdered', function(){
+								alert(this.value);
+								$.ajax({
+						    		type:'POST',
+						    		url: "/StockMarket/pppCalculatePrice.do?qty="+this.value ,
+						    		dataFilter: function (data) {
+						    			var price = $.parseJSON(data).price;
+						    			alert("Price : " +price);
+						    			//$('#ppunitPrice').val(price);
+						    		}
+					    		});
+							});*/
+							
+							$("#ppqtyOrdered").change(function(){
+						    	$.ajax({
+						    		type:'POST',
+						    		url: "/StockMarket/pppCalculatePrice.do?qty="+this.value ,
+						    		dataFilter: function (data) {
+						    			var rqna = $.parseJSON(data).rqna;
+						    			if("F" == rqna){
+						    				var price = $.parseJSON(data).price;
+							    			$('#ppunitPrice').val(price);
+						    			}else {
+						    				alert("Request Quantity Not Available");
+						    			}
+						    			
+						    		}
+						    		});
+						        });
+							
+						
+							
+							$("#submitBtn").click(function(event){
+								event.preventDefault();
+								$("#ppForm").submit(function (event) {
+									
+									var error = "";
+									if(isEmpty($('#pppoNumber').val())) {
+										error = "Please Enter PO Number";
+									}
+									if(isEmpty($('#ppqtyOrdered').val())) {
+										if("" == error){
+											error = "Please Enter Quantity";
+										} else error = error + "\n" + "Please Enter Quantity";
+									} else if(0 == $('#ppqtyOrdered').val()) {
+										if("" == error){
+											error = "Please Enter Quantity greater than Zero";
+										} else error = error + "\n" + "Please Enter Quantity greater than Zero";
+									}
+									if("" == error){
+										validateForm();
+									}
+									else alert(error);
+									return false;
+								}).submit();
+							});
+							
+							function validateForm(){
+								$.ajax({
+									type:'POST',
+									url: "/StockMarket/Paykey.do?qty="+$('#ppqtyOrdered').val() ,
+									data: $("#ppForm").serialize(),
+									dataFilter: function (data) {
+										var paykey = $.parseJSON(data).paykey;
+						    			$('#paykey').val(paykey);
+						    			if(embeddedPPFlow){
+						    				//embeddedPPFlow.startFlow("https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay?paykey="+$('#paykey').val()); // Start Payflow
+						    				embeddedPPFlow.startFlow("https://www.paypal.com/webapps/adaptivepayment/flow/pay?paykey="+$('#paykey').val()); // Start Payflow
+						    			}else{
+											var embeddedPPFlow = new PAYPAL.apps.DGFlow();
+											embeddedPPFlow.startFlow("https://www.paypal.com/webapps/adaptivepayment/flow/pay?paykey="+$('#paykey').val()); // Start Payflow
+						    			}
+					    			}
+						     	});
+							}
+
+						function isEmpty(str) {
+						    return (!str || 0 === str.length);
+						}
+							
+					},
+					close: function(){
+						$('#itemdetailaction').val('');
+						 $(this).dialog("destroy");
+					}
+				}).dialog('open');
+			}else {
+				document.welcomeForm.action="/StockMarket/Welcome.do";
+				document.welcomeForm.submit();
+			}
+		},
+		error: function(xhr,textStatus,errorThrown){
+			alert('Error Status='+xhr.status);
+		}
+	});
+
+
+
+}
+
+function showitemdetailpopupSF(idMap,actiontype){
+	//var id = $(object).attr("id");
+	//var href = $(object).attr("href");
+	
+	var vp = $(window).height();
+	var vpw = $(window).width();
+	var scrollh = $(window).scrollTop();
+	var tag = $("<div id=\"detailmp\"></div>");
+	var actionurl;
+	
+	var jid = $('#jid').val();
+		if(idMap != null && idMap.length > 0){
+			if('T' == $('#showPppConfirm').val()) {
+				actionurl = "/StockMarket/LoadItemDetailAction.do;jsessionid="+jid+"?actiontype="+actiontype+"&idMap="+idMap+"&loadPppConfirmTab=T"; 
+			} else actionurl = "/StockMarket/LoadItemDetailAction.do;jsessionid="+jid+"?actiontype="+actiontype+"&idMap="+idMap; 
+		}else {
+			if('T' == $('#showPppConfirm').val()) actionurl = "/StockMarket/LoadItemDetailAction.do?loadPppConfirmTab=T";
+			else actionurl = "/StockMarket/LoadItemDetailAction.do";
+		}
+	
+	var actdiv=0;
+	if("detail"==actiontype){
+		actdiv=0;
+	}else if("rfq"==actiontype){
+		actdiv=3;
+	}else if("po"==actiontype){
+		actdiv=4;
+	}
+	$.ajax({
+		type:"POST",
+		url:actionurl ,
+		data:$('#welcomeForm').serialize(),
+		success:function(htmldata,textStatus){
+
+			var title = htmldata.match(/<title>(.*?)<\/title>/)[1];
+			if("Login Page"==title){
+				document.welcomeForm.action="/StockMarket/LoadLogin.do";
+				document.welcomeForm.submit();
+			}else if("Part Detail"==title) {
+				tag.html(htmldata).dialog({
+					width: 500,
+					modal:true,
+					title:'Part Detail',
+					closeOnEscape : true,
+				//	position:[vpw/2-250,toph+300],
+					open: function(event,ui){
+							/*if('T' == $("#showPPFormDiv").val()){
+								actdiv = 5;
+							}*/
+							$(this).dialog("widget").focus();
+							$('#needBy').datepicker({
+								dateFormat:'mm/dd/yy',
+								showOn: "button",
+								buttonImage: "images/calendaricon.png",
+								buttonImageOnly: true
+							});
+					
+							$('#deliveryDate').datepicker({
+								dateFormat:'mm/dd/yy',
+								showOn: "button",
+								buttonImage: "images/calendaricon.png",
+								buttonImageOnly: true
+							});
+							setdialogpos(vp,scrollh,vpw);
+							validateinputfields();
+							$('#accordion').accordion({
+								collapsible:true,
+								heightStyle:"content",
+								active:actdiv,
+								create: function(event, ui){
+									   if($('#unitPrice').val() > 0){
+										   $('#rfqh3').css('display','none');
+										   $('#unitPrice').attr('readonly','readonly');
+									//var newindex = $(ui.newHeader).index('h3');
+								//	if(newindex==2){
+									//	event.preventDefault();
+									//}
+									   }
+								}
+							});
+							
+							$("#ppqtyOrdered").change(function(){
+						    	$.ajax({
+						    		type:'POST',
+						    		url: "/StockMarket/pppCalculatePrice.do?qty="+this.value ,
+						    		dataFilter: function (data) {
+						    			var rqna = $.parseJSON(data).rqna;
+						    			if("F" == rqna){
+						    				var price = $.parseJSON(data).price;
+							    			$('#ppunitPrice').val(price);
+						    			}else {
+						    				alert("Request Quantity Not Available");
+						    			}
+						    			
+						    		}
+						    		});
+						        });
+							
+						
+							
+							$("#submitBtn").click(function(event){
+								event.preventDefault();
+								$("#ppForm").submit(function (event) {
+									
+									var error = "";
+									if(isEmpty($('#pppoNumber').val())) {
+										error = "Please Enter PO Number";
+									}
+									if(isEmpty($('#ppqtyOrdered').val())) {
+										if("" == error){
+											error = "Please Enter Quantity";
+										} else error = error + "\n" + "Please Enter Quantity";
+									} else if(0 == $('#ppqtyOrdered').val()) {
+										if("" == error){
+											error = "Please Enter Quantity greater than Zero";
+										} else error = error + "\n" + "Please Enter Quantity greater than Zero";
+									}
+									if("" == error){
+										validateForm();
+									}
+									else alert(error);
+									return false;
+								}).submit();
+							});
+							
+							function validateForm(){
+								$.ajax({
+									type:'POST',
+									url: "/StockMarket/Paykey.do?qty="+$('#ppqtyOrdered').val() ,
+									data: $("#ppForm").serialize(),
+									dataFilter: function (data) {
+										var paykey = $.parseJSON(data).paykey;
+						    			$('#paykey').val(paykey);
+						    			if(embeddedPPFlow){
+						    				embeddedPPFlow.startFlow("https://www.paypal.com/webapps/adaptivepayment/flow/pay?paykey="+$('#paykey').val()); // Start Payflow
+						    				//embeddedPPFlow.startFlow("https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay?paykey="+$('#paykey').val()); // Start Payflow
+						    			}else{
+											var embeddedPPFlow = new PAYPAL.apps.DGFlow();
+											embeddedPPFlow.startFlow("https://www.paypal.com/webapps/adaptivepayment/flow/pay?paykey="+$('#paykey').val()); // Start Payflow
+											//embeddedPPFlow.startFlow("https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay?paykey="+$('#paykey').val()); // Start Payflow
+						    			}
+					    			}
+						     	});
+							}
+
+						function isEmpty(str) {
+						    return (!str || 0 === str.length);
+						}
+					},
+					close: function(){
+						$('#itemdetailaction').val('');
+						 $(this).dialog("destroy");
+					}
+				}).dialog('open');
+			}else {
+				document.welcomeForm.action="/StockMarket/Welcome.do";
+				document.welcomeForm.submit();
+			}
+		},
+		error: function(xhr,textStatus,errorThrown){
+			alert('Error Status='+xhr.status);
+		}
+	});
+
+
+
+}
+
+function setdialogpos(vp,scrollh,vpw){
+
+	//if(vp>toph+dh){
+	//	topval = toph-dh/2;
+	//}else{
+	//	topval = toph-dh;
+	//}
+	$('.ui-dialog').css({
+		'top':(scrollh+Math.round(vp/2)-200),'left':Math.round(vpw/2)-250});
+	
+}
+
+function setdialogSS(vp,scrollh,vpw){
+	$('.ui-dialog').css({
+		'top':(scrollh+Math.round(vp/2)-325),'left':Math.round(vpw/2)-585});
+}
+
+function setdialogSSC(vp,scrollh,vpw){
+	$('.ui-dialog').css({
+		'top':(scrollh+Math.round(vp/2)-325),'left':Math.round(vpw/2)-485});
+}
+
+
+function validateinputfields(){
+	 $("#poForm").validate(
+			{
+				submitHandler: function(form){
+					submitPoAjax();
+				},
+				rules: {
+					unitPrice:{
+					  required: true,
+						number:true
+					},
+					qtyOrdered: {
+						required: true,
+						number:true,
+						min:1
+					},
+					poNumber: {
+						required: true
+					},
+					comments:{
+						maxlength: 125
+					}
+				}
+			});
+	
+	 $("#rfqForm").validate(
+				{
+					submitHandler: function(form){
+						var cap = document.rfqForm.isCapability.value;
+						var capType = document.rfqForm.capabilityType.value;
+						if (cap == 'T')	{
+							var y = confirm("This item represents: " + capType + ".\n Do you wish to submit an RFQ for this service?");
+							if (y == true)	{
+								submitRfqAjax();
+							}
+						}else {
+							submitRfqAjax();
+						}
+					},
+					rules: {
+						quanitity: {
+							required: true,
+							number:true,
+							min:1
+						}
+					}
+				});
+}
+function submitRfqAjax(){
+	$.ajax({
+		type:"POST",
+		url: "/StockMarket/RFQConfirmAction.do" ,
+		cache: false,
+		data:$('#rfqForm').serialize(),
+		success: function(html){
+			var title = html.match(/<title>(.*?)<\/title>/)[1];
+			if("Login Page"==title){
+				document.welcomeForm.action="/StockMarket/LoadLogin.do";
+				document.welcomeForm.submit();
+			}else if("RFQ Sent"==title){
+				$("#rfqdiv").replaceWith(html);
+			}
+			
+		}	});
+}
+function submitPoAjax(){
+	$.ajax({
+		type:"POST",
+		url: "/StockMarket/POConfirmationAction.do" ,
+		cache: false,
+		data:$('#poForm').serialize(),
+		success: function(html){
+			var title = html.match(/<title>(.*?)<\/title>/)[1];
+			if("Login Page"==title){
+				document.welcomeForm.action="/StockMarket/LoadLogin.do";
+				document.welcomeForm.submit();
+			}else if("PO Sent"==title){
+		$("#podiv").replaceWith(html);
+			}
+		}	});
+}
+function loadcalendarscripts(){
+	if (externalJS.length > 0) {
+		var nextscript = externalJS.shift();
+		$.getScript(nextscript, function() {
+			 loadcalendarscripts();
+		});
+	}
+}
+function getUrlParam(paramName){
+	return decodeURIComponent(
+			 (location.search.match(RegExp("[?|&]"+paramName+'=(.+?)(&|$)'))||[,null])[1]
+	//	(RegExp(paramName + '=' + '(.+?)($|$)').exec(location.search)||[,null])[1]	
+	);
+}
+
+function displayVendorDetail(sysstm){
+	if($('#vendor').length > 0){
+		if (typeof window.console != "undefined" && typeof window.console.log != "undefined") {
+			console.log('vendor info already called');
+		}
+	}else {
+	$.ajax({
+			url: "/StockMarket/LoadVendorDetailAction.do?&sysStm="+sysstm ,
+			cache: false,
+			success: function(html){
+			$("#vendor1").replaceWith(html);
+			}	});
+	}
+}
+
+function submitRFQ(){
+	var cap = document.rfqForm.isCapability.value;
+	var capType = document.rfqForm.capabilityType.value;
+	var valid=true;
+	if (cap == 'T')	{
+		var y = confirm("This item represents: " + capType + ".\n Do you wish to submit an RFQ for this service?");
+		if (y == true)	{
+			valid = true;
+		}else {
+			valid = false;
+		}
+	}
+	return valid;
+}
+
+function submitPO(){
+	var po = $('#poNumber').val();
+	var price = $('#unitPrice').val();
+	var qty = $('#qtyOrdered').val();
+	var err='This field is required';
+	var valid=true;
+	if(po==''){
+		valid=false;
+		$('#polbl').html(''+err);
+	}
+	if(price==''){
+		valid=false;
+		$('#prlbl').html(''+err);
+	}
+	if(qty==''){
+		valid=false;
+		$('#qtylbl').html(''+err);
+	}
+	if(qty != '' && qty<1){
+		valid=false;
+		$('#qtylbl').html(''+'Minimum value is 1');
+	}
+	if(valid){
+		document.poForm.submit();
+	}
+}
+
+function showRfq(){
+	
+		   if($('#unitPrice').val() > 0){
+			   return false;
+		   }
+		  
+	
+}
+function logthisclick(cmp,pn){
+	//var pnnew = pn.replace(/\\/g,"\\\\");
+	if(containsAllAscii(pn)) {
+		$.ajax({
+			type:"POST",
+			url: "/StockMarket/rowClickAction.do?cmp="+cmp+"&pn="+pn ,
+			cache: false
+			});
+	}else {
+		console.log('Found Non Ascii'+pn);
+	}
+}
+
+function logexpandall(){
+	var cmpid,tds;
+	var pn = $('#pn').val();
+	if(containsAllAscii(pn)) {
+		var trs = $('tr[id^="grp"]');
+		$(trs).each(function(tdi,tdele){
+			tds = $(this).find("td.grp-highlight");
+			if(tds.length==0){ 
+			cmpid = $(this).find(".cmp").val();
+				$.ajax({
+					type:"POST",
+					url: "/StockMarket/rowClickAction.do?cmp="+cmpid+"&pn="+pn ,
+					cache: false
+					});
+			}
+		});
+	}else {
+		console.log('Found Non Ascii'+pn);
+	}
+		
+	
+}
+function containsAllAscii(str) {
+    return  /^[\040-\176]*$/.test(str) ;
+}
+function replacenonascii(str) {
+    var str1 =  str.replace(/[^\u000A\u0020-\u007E]/g,"") ;
+    return str1;
+}
+

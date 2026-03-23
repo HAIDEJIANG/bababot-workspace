@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "evolver": {
+      "version": "1.32.2",
+      "installedAt": 1773897361931
+    },
+    "feishu-evolver-wrapper": {
+      "version": "1.7.1",
+      "installedAt": 1773897366169
+    }
+  }
+}

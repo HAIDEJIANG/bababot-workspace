@@ -1,0 +1,11 @@
+{
+  "part_number": "MS90451-7152",
+  "quantity": "1",
+  "success": true,
+  "stage": "verify_history",
+  "selected_condition": "NE",
+  "history_verified": true,
+  "supplier_count": 10,
+  "note": "Submitted to 10/10 suppliers. MS90451-7152 found in RFQ history",
+  "timestamp": "2026-03-10 15:34:54"
+}

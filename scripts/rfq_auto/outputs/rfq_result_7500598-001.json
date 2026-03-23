@@ -1,0 +1,70 @@
+{
+  "pn": "7500598-001",
+  "timestamp": "2026-03-20T18:50:00+08:00",
+  "status": "completed",
+  "submissions": [
+    {
+      "vendor": "STS Component Solutions LLC",
+      "condition": "NE",
+      "qty": 1,
+      "status": "success"
+    },
+    {
+      "vendor": "STS Component Solutions LLC",
+      "condition": "NE",
+      "qty": 3,
+      "status": "success"
+    },
+    {
+      "vendor": "INITIAL ELECTRONICS",
+      "condition": "AR",
+      "qty": 1,
+      "status": "success"
+    },
+    {
+      "vendor": "VSE Aviation, Inc.",
+      "condition": "NE",
+      "qty": 1,
+      "status": "success"
+    },
+    {
+      "vendor": "VSE Aviation, Inc.",
+      "condition": "NE",
+      "qty": 1,
+      "status": "success"
+    }
+  ],
+  "skipped": [
+    {
+      "vendor": "AVI Trading, LLC",
+      "condition": "DIST",
+      "reason": "Invalid condition"
+    },
+    {
+      "vendor": "GIOCOM, LLC",
+      "condition": "DIST",
+      "reason": "Invalid condition"
+    },
+    {
+      "vendor": "SAYWELL INTERNATIONAL",
+      "condition": "DIST",
+      "reason": "Invalid condition"
+    },
+    {
+      "vendor": "HARMONY AEROSPACE FRANCE",
+      "condition": "DIST",
+      "reason": "Invalid condition"
+    },
+    {
+      "vendor": "SEATTLE AVIATION SOLUTIONS",
+      "condition": "DIST",
+      "reason": "Invalid condition"
+    }
+  ],
+  "summary": {
+    "total_submissions": 5,
+    "successful": 5,
+    "failed": 0,
+    "skipped": 5
+  }
+}

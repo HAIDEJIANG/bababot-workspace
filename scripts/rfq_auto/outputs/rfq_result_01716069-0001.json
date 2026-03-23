@@ -1,0 +1,11 @@
+{
+  "part_number": "01716069-0001",
+  "quantity": "1",
+  "success": true,
+  "stage": "verify_history",
+  "selected_condition": "NE",
+  "history_verified": true,
+  "supplier_count": 2,
+  "note": "Submitted to 2/2 suppliers. 01716069-0001 found in RFQ history",
+  "timestamp": "2026-03-10 15:01:23"
+}

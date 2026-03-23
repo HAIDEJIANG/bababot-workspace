@@ -1,0 +1,11 @@
+{
+  "part_number": "837-7009-010",
+  "quantity": "1",
+  "success": true,
+  "stage": "verify_history",
+  "selected_condition": "NE",
+  "history_verified": true,
+  "supplier_count": 4,
+  "note": "Submitted to 4/4 suppliers. 837-7009-010 found in RFQ history",
+  "timestamp": "2026-03-10 15:37:02"
+}

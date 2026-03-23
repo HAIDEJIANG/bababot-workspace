@@ -1,0 +1,21 @@
+{
+  "part_number": "201-0005-000",
+  "quantity": "1",
+  "success": true,
+  "stage": "submitted",
+  "selected_condition": "NE",
+  "history_verified": false,
+  "supplier_count": 1,
+  "suppliers_submitted": [
+    {
+      "name": "Hermes Technical Int'l, Inc.",
+      "location": "FL, United States",
+      "condition": "NE",
+      "qty": 1,
+      "alternate_pn": "MS35489-13",
+      "note": "Alternate part: GROMMET,NONMETALLIC"
+    }
+  ],
+  "note": "RFQ successfully submitted to 1 supplier (NE condition). Alternate part number MS35489-13. Confirmed: 'Your RFQ has been sent successfully'",
+  "timestamp": "2026-03-12 01:35:00"
+}

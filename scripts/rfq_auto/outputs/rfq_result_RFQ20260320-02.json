@@ -1,0 +1,44 @@
+{
+  "rfq_id": "RFQ20260320-02",
+  "customer": "四川海特 (SICHUAN HAITE HIGH-TECH)",
+  "contact": "张雨欣 Cynthia Zhang (cynthia@haitegroup.com)",
+  "deadline": "2026-03-27",
+  "total_parts": 42,
+  "execution_account": "sale@aeroedgeglobal.com",
+  "platform": "stockmarket.aero",
+  "started_at": "2026-03-21T09:22:00+08:00",
+  "last_updated": "2026-03-21T09:26:00+08:00",
+  "stats": {
+    "completed": 0,
+    "in_progress": 1,
+    "skipped_no_suppliers": 0,
+    "skipped_invalid_condition": 0,
+    "failed": 0,
+    "total_submissions": 1,
+    "successful_submissions": 1
+  },
+  "parts": [
+    {
+      "index": 1,
+      "part_number": "964-0452-001",
+      "description": "HF 收发机",
+      "condition_required": "AR",
+      "quantity": 1,
+      "oem": "HONEYWELL",
+      "status": "in_progress",
+      "suppliers_found": 15,
+      "submissions": [
+        {
+          "supplier": "AJW Group",
+          "condition": "AR",
+          "quantity": 1,
+          "status": "success",
+          "submitted_at": "2026-03-21T09:26:00+08:00"
+        }
+      ]
+    }
+  ],
+  "valid_conditions": ["NE", "FN", "NS", "OH", "SV", "AR"],
+  "invalid_conditions": ["DIST", "EXCHANGE", "RQST", "Capability"],
+  "notes": "任务执行中 - 每项最多提交前 10 家有效供应商"
+}

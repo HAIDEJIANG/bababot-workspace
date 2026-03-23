@@ -1,0 +1,15 @@
+{
+  "status": "running",
+  "progress": "initializing",
+  "stats": {
+    "total_new": 0,
+    "total_duplicates": 0,
+    "by_category": {}
+  },
+  "start_time": "2026-03-01T20:56:00+08:00",
+  "end_time": "2026-03-01T21:26:00+08:00",
+  "last_updated": "2026-03-01T20:56:00+08:00",
+  "total_indexed": 0,
+  "batches_collected": 0,
+  "output_file": "outputs/aviation_linkedin_master_20250301.csv"
+}

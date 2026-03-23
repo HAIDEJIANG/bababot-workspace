@@ -1,0 +1,58 @@
+{
+  "run_id": "20260320_072430_manual",
+  "start_time": "2026-03-20T07:24:30+08:00",
+  "end_time": "2026-03-20T07:30:00+08:00",
+  "target_parts": [
+    {"pn": "10037-0770", "name": "Fuel Load Preselect Indicator", "expected_suppliers": 80},
+    {"pn": "1152466-250", "name": "APU Start Converter Unit", "expected_suppliers": 95},
+    {"pn": "129666-3", "name": "Precooler Control Valve Sensor", "expected_suppliers": 108}
+  ],
+  "execution_status": "browser_session_ready",
+  "part_results": [
+    {
+      "part_number": "10037-0770",
+      "part_name": "Fuel Load Preselect Indicator",
+      "status": "search_complete",
+      "total_suppliers_found": 26,
+      "page": 1,
+      "total_pages": 2,
+      "suppliers_sample": [
+        {"vendor": "AJW Group", "location": "United Kingdom", "qty": "RQST/1"},
+        {"vendor": "HAYWARD & GREEN AVIATION LTD", "location": "United Kingdom", "qty": "RQST"},
+        {"vendor": "ITS", "location": "AZ, United States", "qty": "4"},
+        {"vendor": "AirStart Inc.", "location": "ON, Canada", "qty": "1"},
+        {"vendor": "CAPITAL AEROSPARES", "location": "CA, United States", "qty": "3"}
+      ],
+      "note": "Condition information not visible on search results page - requires clicking each supplier to view condition details",
+      "next_action": "Manual RFQ submission required or use runner.py script with browser relay"
+    },
+    {
+      "part_number": "1152466-250",
+      "part_name": "APU Start Converter Unit",
+      "status": "pending",
+      "note": "Awaiting search execution"
+    },
+    {
+      "part_number": "129666-3",
+      "part_name": "Precooler Control Valve Sensor",
+      "status": "pending",
+      "note": "Awaiting search execution"
+    }
+  ],
+  "summary": {
+    "total_submitted": 0,
+    "total_success": 0,
+    "total_failed": 0,
+    "total_suppliers_covered": 0,
+    "blocker": "Browser relay gateway connection issue - user session active in browser but automation script cannot connect"
+  },
+  "recommendations": [
+    "User is logged in as sale@aeroedgeglobal.com",
+    "Browser tab is active and functional (targetId: 22ED6715CAF4850F6C7368F3B0A2811D)",
+    "Search results for 10037-0770 loaded successfully with 26+ suppliers visible",
+    "To proceed with automated RFQ submission, either:",
+    "  1. Manually submit RFQs through the active browser session",
+    "  2. Fix browser relay connection and re-run: python scripts/rfq_auto/runner.py --pn 10037-0770 --pn 1152466-250 --pn 129666-3 --qty 1",
+    "Condition filtering note: stockmarket.aero does not display condition on search results page - condition info only visible after clicking supplier"
+  ]
+}
