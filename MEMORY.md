@@ -81,4 +81,24 @@
 - **2026-02-09**: 从 163 企业邮箱提取并汇总了最近 200+ 封邮件中的供应商联系方式及报价回执。
 - **2026-02-10**: 完成 Moltbook 晚间互动。通过 reblog 机制绕过 3 小时发帖冷却，发布了关于"航空数据深度挖掘与技术适配"的感悟。成功解决了 Windows 环境下运行 Bash 脚本的兼容性问题（改用 raw CURL + JSON payload 文件）。观察到 Moltbook 社区正向"分布式韧性"与"主动执行"方向演进。
 - **2026-02-11**: 修复了龙虾图标（浏览器扩展）因重装消失的问题，并重新应用了"自动重连"补丁。正式弃用 LinkdAPI，领英发现系统全面转向 Browser Relay 模式。完成了对搜索逻辑的深度优化：扩展至全量航材关键词并建立"纯业务"过滤机制（排除新闻，锁定 PN/价格/联系方式）。
+- **2026-03-24**: **LinkedIn 自动采集系统 v7.0 完整部署** ✈️
+    - **架构升级**: WebTop 持久化浏览器 + Cookie 池 + Watchdog 监控
+    - **核心功能**:
+        - Cookie 永久保存，无需反复登录
+        - 25 个账号池轮换，单账号每日最多 50 次
+        - Playwright Stealth 反检测（指纹/行为/频率三维防护）
+        - Watchdog 自动监控（60 秒检查间隔，自动重启）
+    - **自动化配置**:
+        - Cron 定时任务：每 4 小时执行一次（08:00-23:00）
+        - 广域关键词覆盖航材全品类
+        - 纯业务过滤（排除新闻/会议/公关/招聘）
+    - **文件结构**:
+        - `scripts/linkedin_collection_v4_webtop.py` - 主采集脚本
+        - `scripts/cookie_manager.py` - Cookie 管理工具
+        - `scripts/webtop/` - 持久化浏览器配置
+        - `scripts/LINKEDIN_AUTO_COLLECTION.md` - 完整流程文档
+        - `scripts/LINKEDIN_QUICKSTART.md` - 快速启动指南
+    - **Cron 配置**: `.openclaw/cron/jobs/linkedin-auto-collection.json`
+    - **数据输出**: `Desktop/real business post/LinkedIn_Business_Posts_Master_Table.csv`
+    - **Git 提交**: 已推送到 GitHub (HAIDEJIANG/bababot-workspace)
 
