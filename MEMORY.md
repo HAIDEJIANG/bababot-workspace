@@ -10,6 +10,18 @@
 - **StockMarket.aero**: 航材库存查询和 RFQ 发送
 - **GitHub**: 私人仓库用于同步 bababot workspace
 
+## ⚠️ 航材条件匹配规则（铁律，绝对不可搞错）
+
+| 需求类型 | 匹配条件 |
+|----------|----------|
+| **全新件** | **FN, NE, NS** |
+| **可用件** | **OH, RP, SV, TESTED, INSPECTED** |
+
+**绝对排除**: AR, DIST, EXCHANGE, RQST, REQUEST, Capability
+**AR ≠ 可用件！** AR 是拆机件（As Removed），未经检修，不等于可用件。
+
+> 老板原话：切记切记切记切记切记！
+
 ## 经验教训 & 优化 (Lessons Learned)
 - **Browser Relay 自动断连**: StockMarket.aero 在发送 RFQ 后会触发页面重载，导致浏览器扩展（龙虾图标）自动断开。
     - **修复 (2026-02-06)**: 已修改 `background.js` 源码，增加了"自动重连"逻辑。如果不是用户手动关闭，插件会在断开 1 秒后尝试自动重新附加。
