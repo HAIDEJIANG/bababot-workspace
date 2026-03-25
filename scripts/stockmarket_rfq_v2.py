@@ -281,8 +281,8 @@ class StockMarketRFQ:
                 seen.add(e["vendor"])
                 unique.append(e)
         
-        # Send RFQ to top 10
-        to_send = unique[:10]
+        # Send RFQ to top 20
+        to_send = unique[:20]
         sent_count = 0
         sent_list = []
         

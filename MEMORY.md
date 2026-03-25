@@ -76,7 +76,13 @@
 
 ## 重要配置
 - LinkdAPI KEY 已配置在 TOOLS.md
-- Chrome 扩展位置: `C:\Users\Haide\AppData\Roaming\npm\node_modules\openclaw\assets\chrome-extension`
+- Chrome 扩展已被 v2026.3.22 移除，浏览器工具现走 CDP 协议
+- **himalaya 邮件 CLI**: v1.2.0 安装在 `~/.local/bin/himalaya.exe`
+  - 配置: `~/.config/himalaya/config.toml`
+  - 密码文件: `~/.config/himalaya/.imap_pw`
+  - 账号 `sale`: sale@aeroedgeglobal.com (163 企业邮箱 IMAP)
+  - 用法: `himalaya envelope list`, `himalaya message read <id>`, `himalaya attachment download <id>`
+  - **使用前需设 PATH**: `$env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"`
 
 ## 航空供应商资源名录 (Aviation Vendor Directory)
 | 供应商名称 | 核心联系人 | 业务邮箱 (Email) | 擅长/关联 PN |
@@ -105,11 +111,19 @@
 - 解析 Excel 附件，提取零件清单（PN、条件、数量）
 
 ### Step 2: StockMarket.aero 自动发 RFQ
-- **脚本**: `scripts/stockmarket_rfq_v2.py`（按需复制修改 PARTS_LIST）
+- **统一脚本 (v3)**: `scripts/stockmarket_rfq.py` + CSV 零件清单
+- **用法**:
+  ```
+  python scripts/stockmarket_rfq.py scripts/rfq_parts_XXX.csv --ref RFQ20260401 --max-vendors 20
+  python scripts/stockmarket_rfq.py parts.csv --start 5 --end 20    # 只跑第 5-20 行
+  python scripts/stockmarket_rfq.py parts.csv --dry-run              # 只搜索不发送
+  ```
+- **CSV 格式**: `序号,件号,条件,数量` (条件: new/sv)
 - **账号**: sale@aeroedgeglobal.com / Aa138222
 - **参考号格式**: RFQ + 日期 + 序号（如 RFQ20260324-02）
 - **效率**: ~936 条/小时（手动 1.5 条/小时，提升 624 倍）
-- **执行日志**: `rfq_auto_results.csv`
+- **每 PN 发送上限**: 20 家供应商（默认值，可通过 --max-vendors 调整）
+- **旧脚本**: v2/batch2 已废弃，统一使用 v3
 
 ### Step 3: 条件匹配规则（铁律）
 | 客户需求 | 优先匹配 | 无匹配时 |
@@ -125,9 +139,19 @@
 - 正常 PN 不含中文、括号、空格
 
 ### Step 5: IMAP 提取供应商报价
-- **脚本**: `scripts/extract_quotes_v3.py`
+- **主力工具链 (2026-03-25 验证通过)**:
+  ```
+  himalaya 列邮件 → himalaya 下载 PDF 附件 → pymupdf 提取文本 → 结构化报价数据 → 写入总表
+  ```
+  - `himalaya envelope list --account sale --page-size 20` — 列出最新邮件
+  - `himalaya envelope list --account sale --query "subject:RFQ"` — 按主题搜索
+  - `himalaya message read --account sale <id>` — 读邮件正文
+  - `himalaya attachment download --account sale <id>` — 下载附件到 Downloads
+  - `python pymupdf` 提取 PDF 文本 → 解析报价字段
+  - 全程 CLI，不需要开浏览器
+- **备选脚本**: `scripts/extract_quotes_v3.py`（Python requests 直连 IMAP）
 - **邮箱**: sale@aeroedgeglobal.com
-- **IMAP 服务器**: imap.qiye.163.com:993
+- **IMAP 服务器**: imaphz.qiye.163.com:993
 - **IMAP 授权码**: A4D8%b3x6FHAH45d（非登录密码，163 企业邮箱专用授权码）
 - **过滤逻辑**: 排除 StockMarket 自动确认回执，仅提取真实供应商报价
 - **提取字段**: 供应商/联系人/邮箱/PN/价格/条件/数量/交期/发货地/S∕N/Trace To/Tag Type

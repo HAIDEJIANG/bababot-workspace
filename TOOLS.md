@@ -43,4 +43,36 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+---
+
+## Himalaya (邮件 CLI)
+
+- **安装路径**: `C:\Users\Haide\.local\bin\himalaya.exe`
+- **配置文件**: `C:\Users\Haide\.config\himalaya\config.toml`
+- **密码文件**: `C:\Users\Haide\.config\himalaya\.imap_pw`
+- **使用前需设 PATH**: `$env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"`
+
+### 已配置账号: sale
+- 邮箱: sale@aeroedgeglobal.com
+- IMAP: imaphz.qiye.163.com:993 (TLS)
+- SMTP: smtp.163.com:465 (TLS)
+- 认证: 163 企业邮箱授权码 (存于密码文件)
+
+### 常用命令
+```powershell
+# 列出最新邮件
+himalaya envelope list --account sale --page-size 20
+
+# 搜索邮件
+himalaya envelope list --account sale --query "subject:RFQ"
+
+# 读邮件
+himalaya message read --account sale <message_id>
+
+# 下载附件
+himalaya attachment download --account sale <message_id>
+```
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
