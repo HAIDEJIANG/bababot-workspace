@@ -17,8 +17,13 @@ LinkedIn 深度采集脚本 v4.0 - WebTop 持久化浏览器版
 import time
 import json
 import sys
+import io
 from datetime import datetime
 from pathlib import Path
+
+# Fix Windows console encoding
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 # 添加 webtop 模块路径
 sys.path.insert(0, str(Path(__file__).parent / 'webtop'))
@@ -219,44 +224,48 @@ def run_collection():
     
     with sync_playwright() as p:
         # 连接到持久化浏览器
-        log("🔌 连接到持久化浏览器...")
-        browser = create_browser_context(p)
+        log("连接浏览器...")
+        try:
+            browser = p.chromium.connect_over_cdp("http://localhost:9222", timeout=15000)
+            log("浏览器连接成功")
+        except Exception as e:
+            log(f"连接失败：{e}")
+            log("尝试启动新浏览器...")
+            browser = create_browser_context(p)
         
         # 获取或创建页面
         context = browser.contexts[0] if hasattr(browser, 'contexts') else browser
         page = context.pages[0] if context.pages else browser.new_page()
         
-        log("✅ 浏览器连接成功")
+        log("浏览器已就绪")
         
         # 访问 LinkedIn
-        log("🔗 访问 LinkedIn...")
+        log("访问 LinkedIn...")
         page.goto("https://www.linkedin.com/feed/", timeout=60000)
         page.wait_for_load_state("networkidle", timeout=60000)
         
         # 检查登录状态
         if "sign-in" in page.url.lower():
-            log("❌ 未登录状态")
-            log("📝 请在浏览器中手动登录 LinkedIn")
-            log("⏳ 等待 60 秒...")
+            log("未登录状态")
+            log("请在浏览器中手动登录 LinkedIn")
+            log("等待 60 秒...")
             time.sleep(60)
             
             # 再次检查
             if "sign-in" in page.url.lower():
-                log("❌ 仍未登录，退出")
+                log("仍未登录，退出")
                 return
             else:
-                log("✅ 登录成功")
+                log("登录成功")
         else:
-            log("✅ 已登录状态")
+            log("已登录状态")
         
         # 开始采集
-        log("🚀 开始采集...")
+        log("开始采集...")
         
         for batch in range(BATCH_COUNT):
             state.current_batch = batch + 1
-            log(f"\n{'='*70}")
-            log(f"批次 {batch+1}/{BATCH_COUNT}")
-            log(f"{'='*70}")
+            log(f"\n批次 {batch+1}/{BATCH_COUNT}")
             
             batch_start = time.time()
             
@@ -264,14 +273,14 @@ def run_collection():
             while (time.time() - batch_start) < (BATCH_DURATION_MINUTES * 60):
                 # 获取快照/提取帖子
                 posts = extract_posts(page)
-                log(f"📊 提取到 {len(posts)} 个帖子")
+                log(f"提取到 {len(posts)} 个帖子")
                 
                 # 处理帖子
                 process_posts(posts)
                 
                 # 检查重复率
                 if state.duplicate_rate() > state.get_adaptive_threshold():
-                    log(f"⚠️ 重复率过高 ({state.duplicate_rate()*100:.1f}%)，刷新内容")
+                    log(f"重复率过高 ({state.duplicate_rate()*100:.1f}%)，刷新内容")
                     browser_click_new_posts(page)
                 else:
                     # 滚动页面
@@ -284,7 +293,7 @@ def run_collection():
             
             # 批次间等待
             if batch < BATCH_COUNT - 1:
-                log(f"⏸️  批次完成，等待 {BATCH_INTERVAL_SECONDS} 秒")
+                log(f"批次完成，等待 {BATCH_INTERVAL_SECONDS} 秒")
                 time.sleep(BATCH_INTERVAL_SECONDS)
         
         # 完成
@@ -292,7 +301,7 @@ def run_collection():
         state.save()
         
         log("\n" + "=" * 70)
-        log("✅ 采集完成！")
+        log("采集完成！")
         log("=" * 70)
         log(f"总运行时长：{state.elapsed_minutes():.1f} 分钟")
         log(f"总浏览帖子：{state.total_posts_seen}")
@@ -302,7 +311,7 @@ def run_collection():
         log(f"\n结果保存至：{results_file}")
         
         # 注意：不要关闭浏览器，保持持久化运行
-        log("\n📝 浏览器保持运行，其他脚本可继续使用")
+        log("\n浏览器保持运行，其他脚本可继续使用")
 
 def main():
     """主函数"""

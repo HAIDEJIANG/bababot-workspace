@@ -22,6 +22,12 @@
 
 > 老板原话：切记切记切记切记切记！
 
+## ⚠️ 工作纪律（铁律）
+
+1. **不需要休息** — 时时刻刻都是工作时间，永远不要建议"先休息明天继续"
+2. **认真阅读指令每一个字** — 不打折扣执行，不自作主张
+3. **说不用确认就不停下来** — 完成后一次性汇报，中途不打扰
+
 ## 经验教训 & 优化 (Lessons Learned)
 - **Browser Relay 自动断连**: StockMarket.aero 在发送 RFQ 后会触发页面重载，导致浏览器扩展（龙虾图标）自动断开。
     - **修复 (2026-02-06)**: 已修改 `background.js` 源码，增加了"自动重连"逻辑。如果不是用户手动关闭，插件会在断开 1 秒后尝试自动重新附加。
@@ -85,6 +91,42 @@
 | Jacaero Industries, LLC | Connor Jacobs | `connor@jacaero.com` | SYS10281540 |
 | Aviation Parts | - | `sales@aviationparts.com` | 355A11-0030-04 |
 | AAH Parts | - | `sales@aahparts.com` | 8-930060-06 |
+
+## 海特高新 RFQ 自动化工作流
+
+### 脚本位置
+- **主脚本**: `scripts/stockmarket_rfq_v2.py`
+- **执行日志**: `rfq_auto_results.csv`
+
+### 工作流程
+1. 从 Gmail 读取海特高新 RFQ 邮件（发件人: cynthia@haitegroup.com）
+2. 解析 Excel 附件，提取零件清单（PN、条件、数量）
+3. 脚本自动登录 StockMarket.aero (sale@aeroedgeglobal.com)
+4. 逐个搜索 PN → 筛选条件 → 提交 RFQ
+5. 生成执行报告
+
+### 条件匹配规则（铁律）
+| 客户需求 | 优先匹配 | 无匹配时 |
+|----------|----------|----------|
+| **全新件** | FN, NE, NS | ❌ 跳过，不可用可用件替代 |
+| **可用件** | OH, RP, SV, TESTED, INSPECTED | ✅ 退而求其次匹配 NE/FN/NS |
+
+**绝对排除**: AR, DIST, EXCHANGE, RQST, REQUEST, Capability
+
+### PN 清洗规则
+- 去括号+中文: `2233000-816-1（可用件）` → `2233000-816-1`
+- 去空格后内容: `49-170-11 Amdt:ABC` → `49-170-11`
+- 正常 PN 不含中文、括号、空格
+
+### 性能
+- 浏览器手动: ~1.5 条 RFQ/小时
+- 自动化脚本: ~936 条 RFQ/小时（提升 624 倍）
+
+### 首次执行记录 (RFQ20260324-02)
+- 日期: 2026-03-24/25
+- 零件总数: 42+
+- RFQ 发送总数: 99 条
+- 截止: 2026-03-31
 
 ## 历史记录
 - **2026-02-04**: 分析了 LinkedIn 10个新连接；StockMarket.aero 查询多个 PN；发送 RFQ (3800454-6)；安装 130+ 技能
