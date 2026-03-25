@@ -92,20 +92,26 @@
 | Aviation Parts | - | `sales@aviationparts.com` | 355A11-0030-04 |
 | AAH Parts | - | `sales@aahparts.com` | 8-930060-06 |
 
-## 海特高新 RFQ 自动化工作流
+## 航材询报价全流程工作流（标准流程）
 
-### 脚本位置
-- **主脚本**: `scripts/stockmarket_rfq_v2.py`
+### 📋 流程总览
+```
+收到客户询价 → 解析零件清单 → StockMarket 发 RFQ → 等待供应商回复 → IMAP 提取报价 → 汇总到报价总表 → 加价后向客户报价
+```
+
+### Step 1: 接收客户询价
+- 来源：Gmail (jianghaide@gmail.com) 或其他渠道
+- 海特高新固定发件人: cynthia@haitegroup.com
+- 解析 Excel 附件，提取零件清单（PN、条件、数量）
+
+### Step 2: StockMarket.aero 自动发 RFQ
+- **脚本**: `scripts/stockmarket_rfq_v2.py`（按需复制修改 PARTS_LIST）
+- **账号**: sale@aeroedgeglobal.com / Aa138222
+- **参考号格式**: RFQ + 日期 + 序号（如 RFQ20260324-02）
+- **效率**: ~936 条/小时（手动 1.5 条/小时，提升 624 倍）
 - **执行日志**: `rfq_auto_results.csv`
 
-### 工作流程
-1. 从 Gmail 读取海特高新 RFQ 邮件（发件人: cynthia@haitegroup.com）
-2. 解析 Excel 附件，提取零件清单（PN、条件、数量）
-3. 脚本自动登录 StockMarket.aero (sale@aeroedgeglobal.com)
-4. 逐个搜索 PN → 筛选条件 → 提交 RFQ
-5. 生成执行报告
-
-### 条件匹配规则（铁律）
+### Step 3: 条件匹配规则（铁律）
 | 客户需求 | 优先匹配 | 无匹配时 |
 |----------|----------|----------|
 | **全新件** | FN, NE, NS | ❌ 跳过，不可用可用件替代 |
@@ -113,19 +119,40 @@
 
 **绝对排除**: AR, DIST, EXCHANGE, RQST, REQUEST, Capability
 
-### PN 清洗规则
+### Step 4: PN 清洗规则
 - 去括号+中文: `2233000-816-1（可用件）` → `2233000-816-1`
 - 去空格后内容: `49-170-11 Amdt:ABC` → `49-170-11`
 - 正常 PN 不含中文、括号、空格
 
-### 性能
-- 浏览器手动: ~1.5 条 RFQ/小时
-- 自动化脚本: ~936 条 RFQ/小时（提升 624 倍）
+### Step 5: IMAP 提取供应商报价
+- **脚本**: `scripts/extract_quotes_v3.py`
+- **邮箱**: sale@aeroedgeglobal.com
+- **IMAP 服务器**: imap.qiye.163.com:993
+- **IMAP 授权码**: A4D8%b3x6FHAH45d（非登录密码，163 企业邮箱专用授权码）
+- **过滤逻辑**: 排除 StockMarket 自动确认回执，仅提取真实供应商报价
+- **提取字段**: 供应商/联系人/邮箱/PN/价格/条件/数量/交期/发货地/S∕N/Trace To/Tag Type
 
-### 首次执行记录 (RFQ20260324-02)
+### Step 6: 汇总到报价总表
+- **总表位置**: `C:\Users\Haide\Desktop\Quotes_Master_Table.csv`
+- **用 WPS 打开**
+- **关键字段（19 栏）**:
+  需求编号 | 序号 | 供应商 | 联系人 | 邮箱 | 件号 | 描述 | 条件 | 数量(需求) | 数量(可供) | 单价USD | 总价USD | 交期 | 发货地 | S/N | Trace To | Tag Type | 报价日期 | 备注
+- **需求编号规则**:
+  - 有 RFQ 编号 → 填 RFQ 编号（如 `RFQ20260324-02`）
+  - 无 RFQ 编号 → 填 `发送方名字+日期`（如 `海特高新_20260401`）
+- **所有需求的报价统一汇入此表**，按需求编号区分
+
+### Step 7: 向客户报价
+- 从总表中按 PN 筛选最优报价
+- 最终报价 = 供应商报价 + 运费 + 税费 + 公司利润
+- 提交给客户
+
+### 首次完整执行记录 (RFQ20260324-02)
 - 日期: 2026-03-24/25
-- 零件总数: 42+
-- RFQ 发送总数: 99 条
+- 客户: 海特高新 (Cynthia Zhang)
+- 零件总数: 53 个 PN
+- RFQ 发送: 114 条 (Batch1: 99 + Batch2: 15)
+- 报价回收: 9 封供应商报价
 - 截止: 2026-03-31
 
 ## 历史记录
