@@ -1,6 +1,6 @@
 # Heartbeat Report
 
-**时间**: 2026-03-25 12:05:01
+**时间**: 2026-03-25 19:26:18
 
 ## 系统状态
 
@@ -9,9 +9,11 @@
 ```
  m Scrapling
  m bababot-workspace
+ D linkedin_feed_append.py
  m memU
  M memory/2026-03-25.md
  M memory/heartbeat_report.md
+ M scripts/check_jianghaide_email.py
  m skills/browser-use-skill
  m skills/claude-meta-skills
  m skills/evolver
@@ -19,13 +21,11 @@
  m skills/swarm-janitor
  m skills/ztaylor-openclaw-skills
  m superpowers
-?? rfq_auto_results_batch2.csv
-?? rfq_quotes_extracted.json
-?? rfq_quotes_report.md
-?? rfq_quotes_summary.csv
-?? scripts/check_sale_email.py
-?? scripts/extract_quotes.py
-?? scripts/stockmarket_rfq_v2_batch2.py
+?? scripts/extract_abraham_emails.py
+?? scripts/extract_abraham_v2.py
+?? scripts/extract_quotes_imap.py
+?? scripts/fix_ids.py
+?? scripts/linkedin_save_posts.py
 
 ```
 

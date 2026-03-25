@@ -1,105 +1,94 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-检查 jianghaide 邮箱中的 DOMAS 邮件
+读取 jianghaide@aeroedgeglobal.com 邮箱收件箱
 """
 
 import imaplib
 import email
 from email.header import decode_header
-import base64
+import sys
+import re
+from datetime import datetime
 
-# 邮箱配置 - jianghaide
-IMAP_HOST = "imaphz.qiye.163.com"
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
+IMAP_SERVER = "imaphz.qiye.163.com"
 IMAP_PORT = 993
-IMAP_USER = "jianghaide@aeroedgeglobal.com"
-# 密码使用 base64 编码避免 shell 解析问题
-IMAP_PASS = base64.b64decode('YXJ2OUt6dE5ZJEpXYUh4Mw==').decode()
+EMAIL_ADDR = "jianghaide@aeroedgeglobal.com"
+EMAIL_PASS = "arv9KztNY$JWaHx3"
 
-TARGET_EMAIL = "domas@blueskytechnics.com"
-
-def decode_mime_words(s):
-    if not s:
+def decode_mime(val):
+    if not val:
         return ""
-    decoded = []
-    for part, encoding in decode_header(s):
+    parts = decode_header(val)
+    result = []
+    for part, charset in parts:
         if isinstance(part, bytes):
             try:
-                decoded.append(part.decode(encoding or 'utf-8', errors='ignore'))
+                result.append(part.decode(charset or 'utf-8', errors='replace'))
             except:
-                decoded.append(part.decode('latin-1', errors='ignore'))
+                result.append(part.decode('utf-8', errors='replace'))
         else:
-            decoded.append(str(part))
-    return ''.join(decoded)
+            result.append(str(part))
+    return " ".join(result)
 
-print(f"连接到 IMAP 服务器 (jianghaide@aeroedgeglobal.com)...")
-mail = imaplib.IMAP4_SSL(IMAP_HOST, IMAP_PORT)
-mail.login(IMAP_USER, IMAP_PASS)
+def main():
+    print("=" * 70)
+    print("jianghaide@aeroedgeglobal.com - Inbox Check")
+    print("Time: %s" % datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    print("=" * 70)
 
-# 列出所有邮箱
-print("\n=== 邮箱文件夹列表 ===")
-status, mailboxes = mail.list()
-for mbox in mailboxes:
-    print(mbox.decode())
-
-# 检查 INBOX
-print("\n=== 检查 INBOX ===")
-mail.select('INBOX')
-status, messages = mail.search(None, 'ALL')
-if status == 'OK':
-    msg_ids = messages[0].split()
-    print(f"INBOX 总邮件数：{len(msg_ids)}")
-
-# 搜索来自 DOMAS 的邮件
-print(f"\n=== 搜索来自 {TARGET_EMAIL} 的邮件 ===")
-for mbox_code in ['INBOX', '&XfJT0ZAB-', '&g0l6P3ux-']:
+    print("\n[1] Connecting...")
     try:
-        mail.select(mbox_code)
-        
-        # 搜索发件人
-        status, messages = mail.search(None, f'(FROM "{TARGET_EMAIL}")')
-        if status == 'OK' and messages[0]:
-            msg_ids = messages[0].split()
-            print(f"\n{mbox_code}: 找到 {len(msg_ids)} 封来自 DOMAS 的邮件")
-            
-            # 显示前 20 封
-            for msg_id in msg_ids[:20]:
-                status, msg_data = mail.fetch(msg_id, '(RFC822)')
-                if status == 'OK':
-                    raw_email = msg_data[0][1]
-                    msg = email.message_from_bytes(raw_email)
-                    subject = decode_mime_words(msg.get('Subject', ''))
-                    from_addr = decode_mime_words(msg.get('From', ''))
-                    date = msg.get('Date', '')
-                    print(f"  From: {from_addr}")
-                    print(f"  Subject: {subject}")
-                    print(f"  Date: {date}")
-                    print()
-        else:
-            print(f"{mbox_code}: 没有找到来自 DOMAS 的邮件")
+        mail = imaplib.IMAP4_SSL(IMAP_SERVER, IMAP_PORT)
+        mail.login(EMAIL_ADDR, EMAIL_PASS)
+        print("  OK - Logged in")
     except Exception as e:
-        print(f"{mbox_code}: 错误 - {str(e)}")
+        print("  FAIL: %s" % str(e))
+        return
 
-# 搜索包含 blueskytechnics 的邮件
-print(f"\n=== 搜索包含 blueskytechnics 的邮件 ===")
-mail.select('INBOX')
-for term in ['blueskytechnics', 'DOMAS', 'domas']:
-    status, messages = mail.search(None, f'(BODY "{term}")')
-    if status == 'OK' and messages[0]:
-        msg_ids = messages[0].split()
-        print(f"包含 '{term}': {len(msg_ids)} 封邮件")
-        
-        # 显示前 5 封
-        for msg_id in msg_ids[:5]:
-            status, msg_data = mail.fetch(msg_id, '(RFC822)')
-            if status == 'OK':
-                raw_email = msg_data[0][1]
-                msg = email.message_from_bytes(raw_email)
-                subject = decode_mime_words(msg.get('Subject', ''))
-                from_addr = decode_mime_words(msg.get('From', ''))
-                print(f"  From: {from_addr} | Subject: {subject}")
-    else:
-        print(f"包含 '{term}': 0 封邮件")
+    mail.select("INBOX")
 
-mail.logout()
-print("\n完成!")
+    # Get recent emails
+    since = "20-Mar-2026"
+    print("\n[2] Searching since %s..." % since)
+    status, msgs = mail.search(None, '(SINCE %s)' % since)
+    if status != "OK":
+        print("  Search failed")
+        mail.logout()
+        return
+
+    msg_ids = msgs[0].split()
+    print("  Found %d emails" % len(msg_ids))
+
+    print("\n[3] Latest emails:")
+    print("-" * 100)
+    print("%-4s %-25s %-50s %s" % ("No", "From", "Subject", "Date"))
+    print("-" * 100)
+
+    for idx, mid in enumerate(msg_ids[-30:], 1):  # Last 30
+        try:
+            st, data = mail.fetch(mid, "(BODY.PEEK[HEADER.FIELDS (FROM SUBJECT DATE)])")
+            if st != "OK":
+                continue
+            msg = email.message_from_bytes(data[0][1])
+            subject = decode_mime(msg.get("Subject", ""))
+            from_addr = decode_mime(msg.get("From", ""))
+            date_str = decode_mime(msg.get("Date", ""))
+
+            # Shorten from
+            from_short = from_addr.split('<')[0].strip()[:25] if '<' in from_addr else from_addr[:25]
+            # Shorten date
+            date_short = date_str[:20] if date_str else ""
+
+            print("%-4d %-25s %-50s %s" % (idx, from_short, subject[:50], date_short))
+        except:
+            continue
+
+    print("-" * 100)
+    mail.logout()
+    print("\nDone.")
+
+if __name__ == "__main__":
+    main()
