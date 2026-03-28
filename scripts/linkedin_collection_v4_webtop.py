@@ -81,6 +81,12 @@ class CollectionState:
             return 0
         return self.duplicate_posts / self.total_posts_seen
     
+    def get_adaptive_threshold(self):
+        """获取自适应重复率阈值"""
+        # 简单实现：返回初始阈值
+        # 后续可根据采集进度动态调整
+        return DUPLICATE_THRESHOLD_INITIAL
+    
     def save(self):
         """保存状态到文件"""
         state = {
@@ -165,28 +171,36 @@ def extract_posts(page):
     posts = []
     
     try:
-        # 使用 JavaScript 提取帖子
+        # 使用 JavaScript 提取帖子 - 通用选择器
         posts_data = page.evaluate('''() => {
-            const posts = [];
-            const postElements = document.querySelectorAll('[class*="feed-shared-update-v2"]');
+            var posts = [];
+            // 尝试获取所有可能的帖子容器
+            var allDivs = document.querySelectorAll('div');
             
-            postElements.forEach(post => {
-                try {
-                    const text = post.innerText.substring(0, 500);
-                    if (text.trim().length > 20) {
-                        posts.push({
-                            text: text,
-                            timestamp: new Date().toISOString(),
-                            url: window.location.href
-                        });
+            for (var i = 0; i < allDivs.length; i++) {
+                var div = allDivs[i];
+                var className = div.className || '';
+                
+                // 查找包含 feed 或 update 或 post 相关类名的 div
+                if (className.indexOf('feed') >= 0 || className.indexOf('update') >= 0 || className.indexOf('post') >= 0) {
+                    var text = div.innerText.substring(0, 500);
+                    if (text.trim().length > 80 && text.indexOf('Sponsored') < 0 && text.indexOf('Promoted') < 0 && text.indexOf('广告') < 0) {
+                        // 检查是否包含典型帖子内容
+                        if (text.indexOf('·') >= 0 || text.indexOf('posted') >= 0 || text.indexOf('分享') >= 0) {
+                            posts.push({
+                                text: text.replace(/\\n+/g, ' ').trim(),
+                                timestamp: new Date().toISOString(),
+                                url: window.location.href
+                            });
+                        }
                     }
-                } catch(e) {}
-            });
+                }
+            }
             
-            return posts;
+            return posts.slice(0, 25);
         }''')
         
-        posts = posts_data[:20]  # 限制每次提取数量
+        posts = posts_data[:20]
     except Exception as e:
         log(f"⚠️ 提取帖子失败：{e}")
     

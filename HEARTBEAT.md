@@ -69,6 +69,18 @@ Calendar for upcoming events (< 24h)
 Weather (if relevant)
 Git status in workspace (using layered reporting)
 
+## Critical Task Monitoring
+
+### LinkedIn 联系人采集完成监控（高优先级）
+- **监控文件**: `C:\Users\Haide\Desktop\LINKEDIN\ANALYSIS_20260326\progress.json`
+- **完成条件**: `processed_contacts >= 3185`
+- **完成后动作**: 
+  1. 立即通知老板
+  2. 提示 Sub-Agent 改进项目已就绪
+  3. 等待老板确认是否执行
+- **检查频率**: 每次心跳检查（30 分钟）
+- **项目配置**: `projects/subagent-improvement/project_config.json`
+
 Run unified system status check (recommended - combines multiple checks):
 ```powershell
 python .\scripts\system_status_check.py

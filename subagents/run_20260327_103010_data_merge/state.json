@@ -1,0 +1,32 @@
+{
+  "run_id": "20260327_103010",
+  "task_name": "data_merge",
+  "start_time": "2026-03-27T10:30:10.376656",
+  "end_time": null,
+  "status": "failed",
+  "progress": 0,
+  "total_items": 0,
+  "errors": [
+    {
+      "attempt": 1,
+      "error": "'generator' object does not support the context manager protocol",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\src\\subagent_base.py\", line 240, in execute_with_retry\n    result = self.execute()\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\agents\\subagent_data_merge.py\", line 50, in execute\n    with resource_manager.acquire_file(str(self.input_files['existing']), self.run_id):\n         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'generator' object does not support the context manager protocol\n",
+      "time": "2026-03-27T10:30:10.432227"
+    },
+    {
+      "attempt": 2,
+      "error": "'generator' object does not support the context manager protocol",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\src\\subagent_base.py\", line 240, in execute_with_retry\n    result = self.execute()\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\agents\\subagent_data_merge.py\", line 50, in execute\n    with resource_manager.acquire_file(str(self.input_files['existing']), self.run_id):\n         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'generator' object does not support the context manager protocol\n",
+      "time": "2026-03-27T10:30:40.438475"
+    },
+    {
+      "attempt": 3,
+      "error": "'generator' object does not support the context manager protocol",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\src\\subagent_base.py\", line 240, in execute_with_retry\n    result = self.execute()\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\agents\\subagent_data_merge.py\", line 50, in execute\n    with resource_manager.acquire_file(str(self.input_files['existing']), self.run_id):\n         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'generator' object does not support the context manager protocol\n",
+      "time": "2026-03-27T10:31:10.449842"
+    }
+  ],
+  "result": null,
+  "attempt": 3,
+  "last_error": "'generator' object does not support the context manager protocol"
+}

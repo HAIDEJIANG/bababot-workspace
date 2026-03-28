@@ -6,3 +6,20 @@
 {"id": "mem-20260324230141", "text": "关键教训：AR(As Removed)是拆机件不等于可用件，StockMarket询价时可用件应匹配SV/OH条件，全新件匹配NE/FN/NS，条件匹配规则必须修正", "created_at": "2026-03-24T23:01:41"}
 {"id": "mem-20260324230200", "text": "StockMarket.aero自动化问题：会话频繁过期导致子代理停滞，搜索框fill操作不稳定需改用type，PN2-42尚未执行待条件修正后继续", "created_at": "2026-03-24T23:02:00"}
 {"id": "mem-20260324230212", "text": "RFQ20260324-02待办：修正条件匹配规则后继续PN2-42，PN1需重新查找SV/OH条件供应商，需解决StockMarket会话过期稳定性问题", "created_at": "2026-03-24T23:02:12"}
+{"id": "mem-20260326083008", "text": "RFQ20260324-02 Batch 2 完成：10 个 PN 发送 15 条 RFQ，总计 114 条 RFQ 全部完成，6 个 PN 成功收到报价，3 个无库存，1 个条件不匹配", "created_at": "2026-03-26T08:30:08"}
+{"id": "mem-20260326083011", "text": "报价邮件处理进展：识别 11 封供应商报价回复，设计 Quotes_Master_Table.csv 总表（18 字段含需求编号/供应商/件号/条件/单价/交期等），himalaya+pymupdf 提取链路验证成功", "created_at": "2026-03-26T08:30:11"}
+{"id": "mem-20260326083018", "text": "LinkedIn 采集两轮完成：扫描 100+ 帖子，提取 18 条高价值业务帖，关键发现包括 ERJ 起落架整套出售、CFM56-5B6 发动机、B747-400F 拆解项目、A330 MLG OH 等", "created_at": "2026-03-26T08:30:18"}
+{"id": "mem-20260326083022", "text": "技术工具链验证：himalaya CLI v1.2.0 安装配置完成，pymupdf PDF 提取测试成功（RIM Alliance/Lift Aerospace 报价），确认无需 deepread 外部依赖", "created_at": "2026-03-26T08:30:22"}
+{"id": "mem-20260326084014", "text": "RFQ20260324-02 Batch 2 完成 - 10 个 PN 发送 15 条 RFQ，总计 114 条 RFQ 全部完成；6 个 PN 成功报价，3 个无库存，1 个条件不匹配", "created_at": "2026-03-26T08:40:14"}
+{"id": "mem-20260326084021", "text": "报价邮件处理系统建立 - 识别 11 封供应商报价回复，设计 Quotes_Master_Table.csv 总表（18 字段），himalaya+pymupdf 提取链路验证成功（无需 deepread 外部依赖）", "created_at": "2026-03-26T08:40:21"}
+{"id": "mem-20260326084021", "text": "LinkedIn 采集两轮完成 - 扫描 100+ 帖子，提取 18 条高价值业务帖；关键发现：ERJ 起落架整套、CFM56-5B6 发动机 (fresh SV)、B747-400F 拆解、A330 MLG OH、Dash 8 Q400 整机", "created_at": "2026-03-26T08:40:21"}
+{"id": "mem-20260326084021", "text": "技术工具链验证 - himalaya CLI v1.2.0 安装配置完成，pymupdf PDF 提取测试成功，openpyxl 就绪，gmail 技能需 maton.ai API key", "created_at": "2026-03-26T08:40:21"}
+{"id": "mem-20260326084021", "text": "163 企业邮箱 IMAP 问题 - 需要授权码而非密码，浏览器 SPA 操作困难；需在 mail.qiye.163.com 设置中开启 IMAP 并生成授权码", "created_at": "2026-03-26T08:40:21"}
+{"id": "mem-20260326230040", "text": "LinkedIn 页面选择器问题修复成功，采用多层备选方案（h1→.text-heading-xlarge→h2），所有字段改为可选，采集恢复正常", "created_at": "2026-03-26T23:00:40"}
+{"id": "mem-20260326230040", "text": "LinkedIn 联系人分析系统完成优先级打分（3,185 位联系人，87% 高优先级），自动采集进行中（11.7% 进度，预计 2 天完成）", "created_at": "2026-03-26T23:00:40"}
+{"id": "mem-20260326230040", "text": "收到海特高新 Cynthia Zhang 询价单 RFQ20260326-01（截止 4 月 2 日），需下载附件解析零件清单并发送 StockMarket RFQ", "created_at": "2026-03-26T23:00:40"}
+{"id": "mem-20260326230040", "text": "Scrapy v2.14.2 安装测试成功，性能约 545 条/分钟，用于 LinkedIn 数据采集", "created_at": "2026-03-26T23:00:40"}
+{"id": "mem-20260327230232", "text": "LinkedIn 联系人优先级打分完成 - 3,185 位联系人全部打分，87% 高优先级（2,770 人），13% 中优先级（415 人）；输出 priority_ranking.csv", "created_at": "2026-03-27T23:02:32"}
+{"id": "mem-20260327230238", "text": "RFQ20260326-01 新询价单 - 海特高新 Cynthia Zhang 发送，截止 4 月 2 日；待下载附件解析零件清单并发送 StockMarket RFQ", "created_at": "2026-03-27T23:02:38"}
+{"id": "mem-20260327230238", "text": "LinkedIn 自动采集进行中 - 进度 11.7%（372/3,185），速度 65-90 人/小时，间隔 20-30 秒，预计 2 天完成；选择器问题已修复（多层备选方案）", "created_at": "2026-03-27T23:02:38"}
+{"id": "mem-20260327230238", "text": "Scrapy 性能验证 - v2.14.2 安装成功，测试性能~545 条/分钟，用于 LinkedIn 数据采集", "created_at": "2026-03-27T23:02:38"}

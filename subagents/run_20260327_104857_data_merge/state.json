@@ -1,0 +1,32 @@
+{
+  "run_id": "20260327_104857",
+  "task_name": "data_merge",
+  "start_time": "2026-03-27T10:48:57.220092",
+  "end_time": null,
+  "status": "failed",
+  "progress": 30,
+  "total_items": 100,
+  "errors": [
+    {
+      "attempt": 1,
+      "error": "'contact_id'",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\src\\subagent_base.py\", line 240, in execute_with_retry\n    result = self.execute()\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\agents\\subagent_data_merge.py\", line 85, in execute\n    merged = pd.merge(\n        existing_data,\n    ...<4 lines>...\n        suffixes=('_existing', '_collected')\n    )\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 385, in merge\n    op = _MergeOperation(\n        left_df,\n    ...<10 lines>...\n        validate=validate,\n    )\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 1018, in __init__\n    ) = self._get_merge_keys()\n        ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 1620, in _get_merge_keys\n    right_keys.append(right._get_label_or_level_values(rk))\n                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\generic.py\", line 1776, in _get_label_or_level_values\n    raise KeyError(key)\nKeyError: 'contact_id'\n",
+      "time": "2026-03-27T10:48:57.278549"
+    },
+    {
+      "attempt": 2,
+      "error": "'contact_id'",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\src\\subagent_base.py\", line 240, in execute_with_retry\n    result = self.execute()\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\agents\\subagent_data_merge.py\", line 85, in execute\n    merged = pd.merge(\n        existing_data,\n    ...<4 lines>...\n        suffixes=('_existing', '_collected')\n    )\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 385, in merge\n    op = _MergeOperation(\n        left_df,\n    ...<10 lines>...\n        validate=validate,\n    )\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 1018, in __init__\n    ) = self._get_merge_keys()\n        ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 1620, in _get_merge_keys\n    right_keys.append(right._get_label_or_level_values(rk))\n                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\generic.py\", line 1776, in _get_label_or_level_values\n    raise KeyError(key)\nKeyError: 'contact_id'\n",
+      "time": "2026-03-27T10:49:27.348954"
+    },
+    {
+      "attempt": 3,
+      "error": "'contact_id'",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\src\\subagent_base.py\", line 240, in execute_with_retry\n    result = self.execute()\n  File \"C:\\Users\\Haide\\.openclaw\\workspace\\projects\\subagent-improvement\\agents\\subagent_data_merge.py\", line 85, in execute\n    merged = pd.merge(\n        existing_data,\n    ...<4 lines>...\n        suffixes=('_existing', '_collected')\n    )\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 385, in merge\n    op = _MergeOperation(\n        left_df,\n    ...<10 lines>...\n        validate=validate,\n    )\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 1018, in __init__\n    ) = self._get_merge_keys()\n        ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\reshape\\merge.py\", line 1620, in _get_merge_keys\n    right_keys.append(right._get_label_or_level_values(rk))\n                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^\n  File \"C:\\Users\\Haide\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas\\core\\generic.py\", line 1776, in _get_label_or_level_values\n    raise KeyError(key)\nKeyError: 'contact_id'\n",
+      "time": "2026-03-27T10:49:57.408615"
+    }
+  ],
+  "result": null,
+  "attempt": 3,
+  "last_error": "'contact_id'"
+}

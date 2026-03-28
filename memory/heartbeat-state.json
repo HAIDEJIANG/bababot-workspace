@@ -1,11 +1,18 @@
 {
   "lastChecks": {
-    "email": 1774497211,
-    "calendar": 1774497211,
-    "weather": 1774497211,
-    "heartbeat": 1774497211
+    "email": 1774583638,
+    "calendar": 1774583638,
+    "weather": 1774583638,
+    "heartbeat": 1774583638,
+    "linkedin_progress": 1774583638
   },
-  "lastHeartbeatReport": "2026-03-26T11:53:31+08:00",
+  "lastHeartbeatReport": "2026-03-27T08:53:58+08:00",
   "gitStatus": "uncommitted_changes",
-  "browserRelayStatus": "warning_utf8_bom"
+  "browserRelayStatus": "warning_utf8_bom",
+  "linkedinProgress": {
+    "total": 3185,
+    "processed": 336,
+    "failed": 32,
+    "percentComplete": 10.5
+  }
 }

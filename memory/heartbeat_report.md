@@ -1,33 +1,58 @@
 # Heartbeat Report
 
-**时间**: 2026-03-25 20:56:06
+**时间**: 2026-03-28 08:58:49
 
 ## 系统状态
 
 ### Git 状态
 ⚠️ 有未提交的更改:
 ```
+ M CONTEXT.md
+ M HEARTBEAT.md
  m Scrapling
  m bababot-workspace
  m memU
+ M memory/heartbeat-state.json
  M memory/heartbeat_report.md
+ M memu_memory/activities.jsonl
+ M memu_memory/state.json
+ M scripts/heartbeat_optimized.py
+ M scripts/linkedin_collection_v4_webtop.py
  m skills/browser-use-skill
  m skills/claude-meta-skills
  m skills/evolver
+ D skills/memory-lancedb-pro-skill
  m skills/skill-x-research
  m skills/swarm-janitor
  m skills/ztaylor-openclaw-skills
  m superpowers
-?? memory/linkedin_collection_20260325_2005.md
+?? memory/2026-03-26.md
+?? projects/
+?? rfq_auto_results_20260326_214652.csv
+?? scripts/CONTACT_ANALYSIS_GUIDE.md
+?? scripts/CONTACT_ANALYSIS_GUIDE_v2.md
+?? scripts/LINKEDIN_DATA_MERGE_PLAN.md
+?? scripts/__pycache__/
+?? scripts/check_accurate_progress.py
+?? scripts/contact_deep_analysis_v1.py
+?? scripts/contact_deep_analysis_v3.py
+?? scripts/convert_linkedin_contacts.py
+?? scripts/linkedin_business_leads_realtime.py
+?? scripts/linkedin_cookie_config.py
+?? scripts/linkedin_leads_monitor.py
+?? scripts/linkedin_login_check.py
+?? scripts/linkedin_priority_ranking.py
+?? scripts/start_linkedin_analysis.ps1
+?? scripts/test_linkedin_selectors.py
+?? subagents/
 
 ```
 
 ### 任务状态
-✅ linkedin_collection_v3_stable.py 存在
-✅ linkedin_lead_gen.py 存在
+✅ LinkedIn 采集：619/3,185 (19.43%) - 剩余 2,566 位
 
 ### Browser Relay
-⚠️ Watchdog 状态读取失败：Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+✅ Browser Relay: 未知 (最后检查：未知)
 
 ### 子代理
 ℹ️ 子代理检查需要 OpenClaw API 访问

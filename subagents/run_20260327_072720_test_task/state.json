@@ -1,0 +1,16 @@
+{
+  "run_id": "20260327_072720",
+  "task_name": "test_task",
+  "start_time": "2026-03-27T07:27:20.574653",
+  "end_time": null,
+  "status": "completed",
+  "progress": 10,
+  "total_items": 10,
+  "errors": [],
+  "result": {
+    "status": "success",
+    "output_file": "C:\\Users\\Haide\\.openclaw\\workspace\\subagents\\run_20260327_072720_test_task\\output\\test_output.txt",
+    "progress": 10
+  },
+  "attempt": 1
+}

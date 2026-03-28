@@ -47,21 +47,31 @@ def check_subagents():
     return "ℹ️ 子代理检查需要 OpenClaw API 访问"
 
 def check_active_tasks():
-    """Check progress of active automation tasks."""
+    """Check progress of active automation tasks from actual CSV files."""
     tasks_status = []
     
-    # Check LinkedIn collection scripts
-    linkedin_scripts = [
-        "linkedin_collection_v3_stable.py",
-        "linkedin_lead_gen.py",
-    ]
-    
-    for script in linkedin_scripts:
-        script_path = WORKSPACE / "scripts" / script
-        if script_path.exists():
-            tasks_status.append(f"✅ {script} 存在")
-        else:
-            tasks_status.append(f"⚠️ {script} 不存在")
+    # Get accurate LinkedIn collection progress from actual CSV files
+    linkedin_csv = Path(r"C:\Users\Haide\Desktop\LINKEDIN\ANALYSIS_20260326\contact_profiles_full.csv")
+    if linkedin_csv.exists():
+        try:
+            import csv
+            unique_urls = set()
+            with open(linkedin_csv, 'r', encoding='utf-8', errors='replace') as f:
+                reader = csv.reader(f)
+                for row in reader:
+                    if row and len(row) > 0 and row[0].startswith('https://www.linkedin.com/in/'):
+                        unique_urls.add(row[0])
+            
+            total = 3185
+            collected = len(unique_urls)
+            progress = collected / total * 100
+            remaining = total - collected
+            
+            tasks_status.append(f"✅ LinkedIn 采集：{collected:,}/{total:,} ({progress:.2f}%) - 剩余 {remaining:,} 位")
+        except Exception as e:
+            tasks_status.append(f"⚠️ LinkedIn 进度检查失败：{e}")
+    else:
+        tasks_status.append("⚠️ LinkedIn 数据文件不存在")
     
     return "\n".join(tasks_status) if tasks_status else "ℹ️ 无配置的任务"
 
@@ -70,11 +80,12 @@ def check_browser_relay():
     watchdog_file = WORKSPACE / "scripts" / "relay-watchdog-state.json"
     if watchdog_file.exists():
         try:
-            with open(watchdog_file, 'r', encoding='utf-8') as f:
+            # Try utf-8-sig to handle UTF-8 BOM
+            with open(watchdog_file, 'r', encoding='utf-8-sig') as f:
                 state = json.load(f)
             last_check = state.get('lastCheck', '未知')
             status = state.get('status', '未知')
-            return f"🦞 Browser Relay: {status} (最后检查：{last_check})"
+            return f"✅ Browser Relay: {status} (最后检查：{last_check})"
         except Exception as e:
             return f"⚠️ Watchdog 状态读取失败：{e}"
     return "ℹ️ Watchdog 状态文件不存在"
