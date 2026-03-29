@@ -1,0 +1,8 @@
+{
+  "heartbeat_paused": true,
+  "pause_start": "2026-03-28T15:42:00+08:00",
+  "pause_end": "2026-03-28T19:42:00+08:00",
+  "pause_duration_hours": 4,
+  "reason": "用户手动暂停",
+  "auto_resume": true
+}

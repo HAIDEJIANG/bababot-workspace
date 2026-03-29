@@ -13,7 +13,8 @@ from pathlib import Path
 
 # ==================== 配置 ====================
 
-INPUT_POSTS_FILE = Path(r"C:\Users\Haide\Desktop\LINKEDIN\ANALYSIS_20260326\contact_posts_90days.csv")
+# 修复 (2026-03-29): 指向实际有数据的主表文件
+INPUT_POSTS_FILE = Path(r"C:\Users\Haide\Desktop\real business post\LinkedIn_Business_Posts_Master_Table.csv")
 OUTPUT_LEADS_FILE = Path(r"C:\Users\Haide\Desktop\LINKEDIN\business_leads_realtime.csv")
 PRIORITY_FILE = Path(r"C:\Users\Haide\Desktop\LINKEDIN\priority_ranking.csv")
 STATE_FILE = Path(r"C:\Users\Haide\Desktop\LINKEDIN\business_leads_state.json")
@@ -214,11 +215,17 @@ def main():
         return
     
     # 读取新发帖
+    # 修复 (2026-03-29): 适配主表字段名 (LinkedIn_Business_Posts_Master_Table.csv)
     new_posts = []
     with open(INPUT_POSTS_FILE, 'r', encoding='utf-8', errors='replace') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            post_id = f"{row.get('contact_id', '')}_{row.get('post_date', '')}_{row.get('crawl_time', '')}"
+            # 字段映射：主表 → 监控脚本期望的字段
+            contact_id = row.get('post_id', '') or row.get('contact_id', '')
+            post_date = row.get('timestamp', '') or row.get('posted_time', '') or row.get('post_date', '')
+            crawl_time = row.get('collected_at', '') or row.get('merge_timestamp', '') or row.get('crawl_time', '')
+            
+            post_id = f"{contact_id}_{post_date}_{crawl_time}"
             if post_id not in processed:
                 new_posts.append(row)
     
@@ -245,30 +252,33 @@ def main():
         except:
             continue
         
-        post_content = post.get('post_content', '')
+        # 修复 (2026-03-29): 适配主表字段名
+        post_content = post.get('content', '') or post.get('content_summary', '') or post.get('post_content', '')
         intent = analyze_intent(post_content)
         
         if intent:
-            contact_id = post.get('contact_id', '')
+            # 字段映射：主表 → 监控脚本期望的字段
+            contact_id = post.get('post_id', '') or post.get('contact_id', '')
             contact_info = priority_map.get(contact_id, {})
             
             lead = {
                 'contact_id': contact_id,
-                'name': contact_info.get('name', post.get('contact_name', '')),
-                'company': contact_info.get('company', ''),
-                'position': contact_info.get('position', ''),
+                'name': contact_info.get('name', post.get('author_name', post.get('author', ''))),
+                'company': contact_info.get('company', post.get('company', '')),
+                'position': contact_info.get('position', post.get('position', post.get('author_title', ''))),
                 'post_date': post_date_str,
                 'post_content': post_content[:500],
-                'post_url': post.get('post_url', ''),
+                'post_url': post.get('source_url', '') or post.get('post_url', ''),
                 'business_intent': intent,
                 'business_summary': extract_business_summary(post_content, intent),
-                'priority_score': contact_info.get('total_score', ''),
+                'priority_score': contact_info.get('total_score', post.get('business_value_score', '')),
                 'priority_level': contact_info.get('priority_level', ''),
-                'recommended_action': get_recommended_action(intent, contact_info.get('total_score', 0)),
+                'recommended_action': get_recommended_action(intent, contact_info.get('total_score', 0) or post.get('business_value_score', 0)),
                 'discovered_at': datetime.now().isoformat()
             }
             new_leads.append(lead)
-            processed.add(f"{contact_id}_{post_date_str}_{post.get('crawl_time', '')}")
+            crawl_time = post.get('collected_at', '') or post.get('merge_timestamp', '') or post.get('crawl_time', '')
+            processed.add(f"{contact_id}_{post_date_str}_{crawl_time}")
     
     print(f"识别到 {len(new_leads)} 条新业务线索")
     

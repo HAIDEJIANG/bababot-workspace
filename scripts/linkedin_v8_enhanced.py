@@ -285,6 +285,23 @@ def save_to_csv(posts, filename=None):
             f.write(f'{post["index"]},"{author}","{company}",,"{pn_str}","{sn_str}","{price_str}","{contacts_str}",{post.get("value_score", 0)},{post.get("is_high_value", False)},"{text_escaped[:500]}",{post["collected_at"]},{post["url"]}\n')
     
     log(f"CSV 已保存：{filepath}", 'SUCCESS')
+    
+    # 修复 (2026-03-29): 同时保存固定文件名的最新版本，供同步脚本使用
+    latest_path = OUTPUT_DIR / "linkedin_enhanced_latest.csv"
+    with open(latest_path, 'w', encoding='utf-8') as f:
+        f.write("序号，发帖人，公司，发布时间，PN 号，S/N,价格，联系方式，价值评分，高价值，帖子内容，采集时间，链接\n")
+        for post in posts:
+            lines = post['text'].split('\n')
+            author = lines[0] if lines else 'Unknown'
+            company = 'Unknown'
+            text_escaped = post['text'].replace('"', '""').replace('\n', ' ')
+            pn_str = ';'.join(post.get('pn_numbers', []))
+            sn_str = ';'.join(post.get('serial_numbers', []))
+            price_str = ';'.join(post.get('prices', []))
+            contacts_str = str(post.get('contacts', {})).replace('"', "''")
+            f.write(f'{post["index"]},"{author}","{company}",,"{pn_str}","{sn_str}","{price_str}","{contacts_str}",{post.get("value_score", 0)},{post.get("is_high_value", False)},"{text_escaped[:500]}",{post["collected_at"]},{post["url"]}\n')
+    log(f"最新副本已保存：{latest_path}", 'SUCCESS')
+    
     return filepath
 
 def save_to_json(posts, filename=None):

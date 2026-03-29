@@ -1,50 +1,45 @@
 # Heartbeat Report
 
-**时间**: 2026-03-28 08:58:49
+**时间**: 2026-03-29 16:53:42
 
 ## 系统状态
 
 ### Git 状态
 ⚠️ 有未提交的更改:
 ```
- M CONTEXT.md
- M HEARTBEAT.md
  m Scrapling
  m bababot-workspace
  m memU
- M memory/heartbeat-state.json
  M memory/heartbeat_report.md
  M memu_memory/activities.jsonl
  M memu_memory/state.json
- M scripts/heartbeat_optimized.py
- M scripts/linkedin_collection_v4_webtop.py
+ M scripts/webtop/webtop-state.json
  m skills/browser-use-skill
  m skills/claude-meta-skills
  m skills/evolver
- D skills/memory-lancedb-pro-skill
  m skills/skill-x-research
  m skills/swarm-janitor
  m skills/ztaylor-openclaw-skills
  m superpowers
-?? memory/2026-03-26.md
-?? projects/
-?? rfq_auto_results_20260326_214652.csv
-?? scripts/CONTACT_ANALYSIS_GUIDE.md
-?? scripts/CONTACT_ANALYSIS_GUIDE_v2.md
-?? scripts/LINKEDIN_DATA_MERGE_PLAN.md
-?? scripts/__pycache__/
-?? scripts/check_accurate_progress.py
-?? scripts/contact_deep_analysis_v1.py
-?? scripts/contact_deep_analysis_v3.py
-?? scripts/convert_linkedin_contacts.py
-?? scripts/linkedin_business_leads_realtime.py
-?? scripts/linkedin_cookie_config.py
-?? scripts/linkedin_leads_monitor.py
-?? scripts/linkedin_login_check.py
-?? scripts/linkedin_priority_ranking.py
-?? scripts/start_linkedin_analysis.ps1
-?? scripts/test_linkedin_selectors.py
-?? subagents/
+?? ClawTeam-OpenClaw/
+?? memory/heartbeat_pause.json
+?? scripts/BROWSER_CONFIG.md
+?? scripts/check_linkedin_status.py
+?? scripts/clean_linkedin_data.py
+?? scripts/contact_deep_analysis_fixed.py
+?? scripts/contact_deep_analysis_stable.py
+?? scripts/linkedin_1hour_edge.py
+?? scripts/linkedin_1hour_fixed.py
+?? scripts/linkedin_1hour_simple.py
+?? scripts/linkedin_1hour_task.py
+?? scripts/linkedin_cdp_running.py
+?? scripts/linkedin_cdp_test.py
+?? scripts/linkedin_chrome_cdp.py
+?? scripts/linkedin_chrome_direct.py
+?? scripts/linkedin_clean_profile.py
+?? scripts/linkedin_webtop_feed.py
+?? skills/clawteam/
+?? wsl_setup.sh
 
 ```
 
