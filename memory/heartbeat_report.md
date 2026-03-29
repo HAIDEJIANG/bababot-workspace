@@ -1,19 +1,16 @@
 # Heartbeat Report
 
-**时间**: 2026-03-29 16:53:42
+**时间**: 2026-03-29 17:53:27
 
 ## 系统状态
 
 ### Git 状态
 ⚠️ 有未提交的更改:
 ```
+ m ClawTeam-OpenClaw
  m Scrapling
  m bababot-workspace
  m memU
- M memory/heartbeat_report.md
- M memu_memory/activities.jsonl
- M memu_memory/state.json
- M scripts/webtop/webtop-state.json
  m skills/browser-use-skill
  m skills/claude-meta-skills
  m skills/evolver
@@ -21,25 +18,6 @@
  m skills/swarm-janitor
  m skills/ztaylor-openclaw-skills
  m superpowers
-?? ClawTeam-OpenClaw/
-?? memory/heartbeat_pause.json
-?? scripts/BROWSER_CONFIG.md
-?? scripts/check_linkedin_status.py
-?? scripts/clean_linkedin_data.py
-?? scripts/contact_deep_analysis_fixed.py
-?? scripts/contact_deep_analysis_stable.py
-?? scripts/linkedin_1hour_edge.py
-?? scripts/linkedin_1hour_fixed.py
-?? scripts/linkedin_1hour_simple.py
-?? scripts/linkedin_1hour_task.py
-?? scripts/linkedin_cdp_running.py
-?? scripts/linkedin_cdp_test.py
-?? scripts/linkedin_chrome_cdp.py
-?? scripts/linkedin_chrome_direct.py
-?? scripts/linkedin_clean_profile.py
-?? scripts/linkedin_webtop_feed.py
-?? skills/clawteam/
-?? wsl_setup.sh
 
 ```
 
