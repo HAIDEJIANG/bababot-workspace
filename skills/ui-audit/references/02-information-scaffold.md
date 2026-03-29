@@ -1,30 +1,22 @@
 # Information Scaffold: Psychology, Economics, Accessibility, Defaults
-
 Your scaffold = pre-made decisions for recurring situations. Build once, reuse forever.
 
 ---
 
 ## Design Psychology Reference
-
 Psychological principles categorized by the problem they solve:
 
 ### Filtering (Helping users focus)
-
-| Principle | Definition | Application |
-|-----------|------------|-------------|
-| **Hick's Law** | More options = harder decisions | Reduce choices, progressive disclosure |
-| **Law of Proximity** | Close objects perceived as related | Group related items spatially |
-| **Law of Similarity** | Visually similar elements perceived as related | Consistent styling for related items |
-| **Nudging** | Subtle cues influence behavior | Defaults, visual emphasis, copy |
-| **Priming** | Cues influence decision-making | Strategic first impressions, context setting |
-| **Progressive Disclosure** | Reveal information gradually | Hide complexity until needed |
-| **Tesler's Law** | Complexity must exist somewhere | Absorb complexity in design, not user's head |
-| **Von Restorff Effect** | Distinctive items remembered | Make key actions visually distinct |
+**Hick's Law**, Definition=More options = harder decisions, Application=Reduce choices, progressive disclosure
+**Law of Proximity**, Definition=Close objects perceived as related, Application=Group related items spatially
+**Law of Similarity**, Definition=Visually similar elements perceived as related, Application=Consistent styling for related items
+**Nudging**, Definition=Subtle cues influence behavior, Application=Defaults, visual emphasis, copy
+**Priming**, Definition=Cues influence decision-making, Application=Strategic first impressions, context setting
+**Progressive Disclosure**, Definition=Reveal information gradually, Application=Hide complexity until needed
+**Tesler's Law**, Definition=Complexity must exist somewhere, Application=Absorb complexity in design, not user's head
+**Von Restorff Effect**, Definition=Distinctive items remembered, Application=Make key actions visually distinct
 
 ### Sense-making (Helping users understand)
-
-| Principle | Definition | Application |
-|-----------|------------|-------------|
 | **Chunking** | Group info into digestible units | Cards, sections, tabs |
 | **Cognitive Load Theory** | Working memory is limited | Minimize extraneous info |
 | **Jakob's Law** | Users expect your site to work like others | Follow conventions |
@@ -35,9 +27,6 @@ Psychological principles categorized by the problem they solve:
 | **Social Proof** | People conform to observed behavior | Testimonials, user counts |
 
 ### Efficiency (Helping users act faster)
-
-| Principle | Definition | Application |
-|-----------|------------|-------------|
 | **Fitt's Law** | Larger, closer targets faster to hit | Size CTAs appropriately, reduce distance |
 | **Goal Gradient Effect** | Motivation increases near goal completion | Progress indicators, milestone celebrations |
 | **Hyperbolic Discounting** | Immediate rewards valued higher | Quick wins, instant feedback |
@@ -50,9 +39,6 @@ Psychological principles categorized by the problem they solve:
 | **Weber's Law** | Large changes more noticeable | Meaningful differences in UI states |
 
 ### Recall (Helping users remember)
-
-| Principle | Definition | Application |
-|-----------|------------|-------------|
 | **Fresh Start Effect** | Motivation at new beginnings | Leverage time-based resets |
 | **Miller's Law** | 7±2 items in short-term memory | Chunk information |
 | **Peak-End Rule** | Experiences judged by peak and end | Design strong endings |
@@ -60,29 +46,21 @@ Psychological principles categorized by the problem they solve:
 | **Serial Position Effect** | First/last items most memorable | Place key items at start/end |
 | **Zeigarnik Effect** | Incomplete tasks remembered more | Use incomplete states strategically |
 
----
-
 ## Economics Fundamentals
-
 Design decisions have business implications. Know these concepts:
 
-| Concept | Definition | Design Implication |
-|---------|------------|-------------------|
-| **Economies of Scale** | More production = lower unit cost | Reusable components pay dividends at scale |
-| **Opportunity Cost** | What you give up by choosing | Every design choice excludes alternatives |
-| **Time Value of Money** | Money now > money later | Ship valuable features sooner |
-| **Supply & Demand** | Scarcity drives price | Exclusive features, limited access can increase perceived value |
-| **Zero Marginal Cost** | Digital copies cost nothing extra | Design for scale, not scarcity |
-| **Network Effects** | Value increases with users | Prioritize collaboration, sharing features |
-| **Diseconomies of Scale** | Too big = inefficient | Complexity costs increase; keep systems manageable |
-| **Economies of Scope** | Cheaper to do multiple things together | Shared components across products |
-| **Veblen Goods** | Higher price = higher demand (luxury) | Premium positioning affects design choices |
-| **Invisible Hand** | Markets self-regulate | User choice will surface winners |
-
----
+**Economies of Scale**, Definition=More production = lower unit cost, Design Implication=Reusable components pay dividends at scale
+**Opportunity Cost**, Definition=What you give up by choosing, Design Implication=Every design choice excludes alternatives
+**Time Value of Money**, Definition=Money now > money later, Design Implication=Ship valuable features sooner
+**Supply & Demand**, Definition=Scarcity drives price, Design Implication=Exclusive features, limited access can increase perceived value
+**Zero Marginal Cost**, Definition=Digital copies cost nothing extra, Design Implication=Design for scale, not scarcity
+**Network Effects**, Definition=Value increases with users, Design Implication=Prioritize collaboration, sharing features
+**Diseconomies of Scale**, Definition=Too big = inefficient, Design Implication=Complexity costs increase; keep systems manageable
+**Economies of Scope**, Definition=Cheaper to do multiple things together, Design Implication=Shared components across products
+**Veblen Goods**, Definition=Higher price = higher demand (luxury), Design Implication=Premium positioning affects design choices
+**Invisible Hand**, Definition=Markets self-regulate, Design Implication=User choice will surface winners
 
 ## Accessibility Reference (POUR)
-
 WCAG's four principles. Accessibility is not optional.
 
 ### Perceivable
@@ -109,40 +87,24 @@ WCAG's four principles. Accessibility is not optional.
 
 **Minimum baseline:** 4.5:1 contrast ratio for text, focus indicators, alt text, semantic HTML.
 
----
-
 ## Default Typefaces
-
 Choose one neutral sans-serif to start. Add personality later.
 
 **Recommended starting typefaces:**
-- Inter
-- Nunito Sans
-- Mona Sans
+- Inter, Nunito Sans, Mona Sans
 - SF Pro (Apple ecosystem)
 - Segoe UI (Microsoft ecosystem)
 
 ### Default Type Scale
-
 Start with 16px base (browser default). Use this scale:
 
-| Size | Use |
-|------|-----|
-| 12px | Captions, labels, metadata |
-| 14px | Secondary text, descriptions |
-| 16px | Body text (base) |
-| 18px | Large body, intro text |
-| 20px | Small headings |
-| 24px | Section headings |
-| 30px | Page headings |
-| 36px | Feature headings |
-| 48px | Hero headings |
-| 60px+ | Display text |
-
----
+- 12px: Captions, labels, metadata
+- 14px: Secondary text, descriptions
+- 16px: Body text (base)
+- 18px: Large body, intro text
+- 20px: Small headings, 24px: Section headings, 30px: Page headings, 36px: Feature headings, 48px: Hero headings, 60px+: Display text
 
 ## Default Design Rules
-
 Establish these defaults to avoid re-deciding:
 
 ### Spacing
@@ -158,10 +120,7 @@ Establish these defaults to avoid re-deciding:
 
 ### Icons
 Pick one library and stick to it:
-- Feather Icons (minimal)
-- Heroicons (Tailwind)
-- Phosphor Icons (flexible)
-- Material Icons (comprehensive)
+- Feather Icons (minimal), Heroicons (Tailwind), Phosphor Icons (flexible), Material Icons (comprehensive)
 
 ### Radius
 - Consistent border-radius across components
@@ -172,10 +131,7 @@ Pick one library and stick to it:
 - Consistent shadow direction
 - Use for layering, not decoration
 
----
-
 ## Atomic Design Principles
-
 Design systems built on composition:
 
 1. **Atoms** — Basic elements (buttons, inputs, labels)
@@ -186,10 +142,7 @@ Design systems built on composition:
 
 Build from small to large. Composition enables reuse.
 
----
-
 ## Nielsen's 10 Usability Heuristics
-
 Quick reference for heuristic evaluation:
 
 1. **Visibility of system status** — Keep users informed

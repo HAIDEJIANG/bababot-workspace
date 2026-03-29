@@ -1,7 +1,6 @@
 Below are general guidelines for sending emails with React Email.
 
 ### Send with Resend (Recommended)
-
 When you have access to the Resend MCP tool:
 
 ```typescript
@@ -10,7 +9,7 @@ import { WelcomeEmail } from './emails/welcome';
 
 // Render to HTML
 const html = await render(
-  <WelcomeEmail name="John" verificationUrl="https://example.com/verify" />
+ <WelcomeEmail name="John" verificationUrl="https://example.com/verify" />
 );
 
 // Create plain text version
@@ -27,31 +26,27 @@ If no MCP tool is available, you can use the Resend SDK for Node.js to send the 
 
 ```tsx
 import { Resend } from 'resend';
-import { WelcomeEmail } from './emails/welcome';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const { data, error } = await resend.emails.send({
-  from: 'Acme <onboarding@resend.dev>',
-  to: ['user@example.com'],
-  subject: 'Welcome to Acme',
-  react: <WelcomeEmail name="John" verificationUrl="https://example.com/verify" />
+ from: 'Acme <onboarding@resend.dev>',
+ to: ['user@example.com'],
+ subject: 'Welcome to Acme',
+ react: <WelcomeEmail name="John" verificationUrl="https://example.com/verify" />
 });
 
 if (error) {
-  console.error('Failed to send:', error);
+ console.error('Failed to send:', error);
 }
-```
 
 The Node SDK automatically handles the plain-text rendering and HTML rendering for you.
 
 ### Send as a Template to Resend
-
 If preferred, you can upload the email as a template to Resend, which can be used to send emails with the Resend SDK for Node.js:
 
 ```bash
 npx react-email@latest resend setup
-```
 
 This will require the user to provide a Resend API key in the terminal.
 
@@ -59,55 +54,32 @@ Once configured, the user can select a template to send using the UI in the "Res
 
 If using a template when sending with the Resend SDK for Node.js, the user can pass the template ID to the `send` method:
 
-```tsx
 await resend.emails.send({
-  from: 'Acme <onboarding@resend.dev>',
-  to: ['user@example.com'],
-  subject: 'Welcome to Acme',
-  template: {
-    id: '1245-1256-1234-1234',
-  }
-});
-```
+ template: {
+ id: '1245-1256-1234-1234',
 
 ### Send with Other Providers
-
 **Nodemailer:**
 
-```tsx
-import { render } from '@react-email/components';
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.example.com',
-  port: 587,
-  auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
-});
+ host: 'smtp.example.com',
+ port: 587,
+ auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
 
 const html = await render(<WelcomeEmail name="John" verificationUrl="https://example.com/verify" />);
 
 await transporter.sendMail({
-  from: 'noreply@example.com',
-  to: 'user@example.com',
-  subject: 'Welcome',
-  html
-});
-```
+ from: 'noreply@example.com',
+ to: 'user@example.com',
+ subject: 'Welcome',
+ html
 
 **SendGrid:**
 
-```tsx
-import { render } from '@react-email/components';
 import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const html = await render(<WelcomeEmail name="John" verificationUrl="https://example.com/verify" />);
-
 await sgMail.send({
-  to: 'user@example.com',
-  from: 'noreply@example.com',
-  subject: 'Welcome',
-  html
-});
-```

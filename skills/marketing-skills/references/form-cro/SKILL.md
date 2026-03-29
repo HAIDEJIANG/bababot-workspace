@@ -1,37 +1,27 @@
 ---
 name: form-cro
 description: When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, survey forms, or checkout forms. Also use when the user mentions "form optimization," "lead form conversions," "form friction," "form fields," "form completion rate," or "contact form." For signup/registration forms, see signup-flow-cro. For popups containing forms, see popup-cro.
----
 
 # Form CRO
-
 You are an expert in form optimization. Your goal is to maximize form completion rates while capturing the data that matters.
 
 ## Initial Assessment
-
 Before providing recommendations, identify:
 
 1. **Form Type**
-   - Lead capture (gated content, newsletter)
-   - Contact form
-   - Demo/sales request
-   - Application form
-   - Survey/feedback
-   - Checkout form
-   - Quote request
+ - Lead capture (gated content, newsletter)
+ - Contact form, Demo/sales request, Application form, Survey/feedback, Checkout form, Quote request
 
 2. **Current State**
-   - How many fields?
-   - What's the current completion rate?
-   - Mobile vs. desktop split?
-   - Where do users abandon?
+ - How many fields?
+ - What's the current completion rate?
+ - Mobile vs. desktop split?
+ - Where do users abandon?
 
 3. **Business Context**
-   - What happens with form submissions?
-   - Which fields are actually used in follow-up?
-   - Are there compliance/legal requirements?
-
----
+ - What happens with form submissions?
+ - Which fields are actually used in follow-up?
+ - Are there compliance/legal requirements?
 
 ## Core Principles
 
@@ -56,8 +46,6 @@ For each field, ask:
 - Clear, conversational labels
 - Logical grouping and order
 - Smart defaults where possible
-
----
 
 ## Field-by-Field Optimization
 
@@ -89,9 +77,7 @@ For each field, ask:
 - Consider making optional
 
 ### Message/Comments (Free Text)
-- Make optional
-- Reasonable character guidance
-- Expand on focus
+- Make optional, Reasonable character guidance, Expand on focus
 
 ### Dropdown Selects
 - "Select one..." placeholder
@@ -103,8 +89,6 @@ For each field, ask:
 - Clear, parallel labels
 - Reasonable number of options
 - Consider "Select all that apply" instruction
-
----
 
 ## Form Layout Optimization
 
@@ -123,12 +107,9 @@ For each field, ask:
 ```
 Email
 [name@company.com]
-```
 
 **Bad:**
-```
-[Enter your email address]  ← Disappears on focus
-```
+[Enter your email address] ← Disappears on focus
 
 ### Visual Design
 - Sufficient spacing between fields
@@ -140,8 +121,6 @@ Email
 - Single column: Higher completion, mobile-friendly
 - Multi-column: Only for short related fields (First/Last name)
 - When in doubt, single column
-
----
 
 ## Multi-Step Forms
 
@@ -165,8 +144,6 @@ Email
 3. Qualifying questions
 4. Contact preferences
 
----
-
 ## Error Handling
 
 ### Inline Validation
@@ -189,8 +166,6 @@ Email
 - Preserve all entered data
 - Don't clear form on error
 
----
-
 ## Submit Button Optimization
 
 ### Button Copy
@@ -199,10 +174,7 @@ Strong: "[Action] + [What they get]"
 
 Examples:
 - "Get My Free Quote"
-- "Download the Guide"
-- "Request Demo"
-- "Send Message"
-- "Start Free Trial"
+- "Download the Guide", "Request Demo", "Send Message", "Start Free Trial"
 
 ### Button Placement
 - Immediately after last field
@@ -215,8 +187,6 @@ Examples:
 - Success confirmation (clear next steps)
 - Error handling (clear message, focus on issue)
 
----
-
 ## Trust and Friction Reduction
 
 ### Near the Form
@@ -226,17 +196,12 @@ Examples:
 - Expected response time
 
 ### Reducing Perceived Effort
-- "Takes 30 seconds"
-- Field count indicator
-- Remove visual clutter
-- Generous white space
+- "Takes 30 seconds", Field count indicator, Remove visual clutter, Generous white space
 
 ### Addressing Objections
 - "No spam, unsubscribe anytime"
 - "We won't share your number"
 - "No credit card required"
-
----
 
 ## Form Types: Specific Guidance
 
@@ -270,18 +235,11 @@ Examples:
 - Skip logic for relevance
 - Consider incentive for completion
 
----
-
 ## Mobile Optimization
-
 - Larger touch targets (44px minimum height)
 - Appropriate keyboard types (email, tel, number)
-- Autofill support
-- Single column only
-- Sticky submit button
+- Autofill support, Single column only, Sticky submit button
 - Minimal typing (dropdowns, buttons)
-
----
 
 ## Measurement
 
@@ -294,14 +252,7 @@ Examples:
 - **Mobile vs. desktop**: Completion by device
 
 ### What to Track
-- Form views
-- First field focus
-- Each field completion
-- Errors by field
-- Submit attempts
-- Successful submissions
-
----
+- Form views, First field focus, Each field completion, Errors by field, Submit attempts, Successful submissions
 
 ## Output Format
 
@@ -323,12 +274,9 @@ For each issue:
 ### Test Hypotheses
 Ideas to A/B test with expected outcomes
 
----
-
 ## Experiment Ideas
 
 ### Form Structure Experiments
-
 **Layout & Flow**
 - Single-step form vs. multi-step with progress bar
 - 1-column vs. 2-column field layout
@@ -350,10 +298,7 @@ Ideas to A/B test with expected outcomes
 - Conditional fields based on earlier answers
 - Auto-suggest for company names
 
----
-
 ### Copy & Design Experiments
-
 **Labels & Microcopy**
 - Test field label clarity and length
 - Placeholder text optimization
@@ -371,10 +316,7 @@ Ideas to A/B test with expected outcomes
 - Add testimonial near form
 - Display expected response time
 
----
-
 ### Form Type-Specific Experiments
-
 **Demo Request Forms**
 - Test with/without phone number requirement
 - Add "preferred contact method" choice
@@ -393,20 +335,14 @@ Ideas to A/B test with expected outcomes
 - Show alternative contact methods (chat, phone)
 - Expected response time messaging
 
----
-
 ### Mobile & UX Experiments
-
 - Larger touch targets for mobile
 - Test appropriate keyboard types by field
 - Sticky submit button on mobile
 - Auto-focus first field on page load
 - Test form container styling (card vs. minimal)
 
----
-
 ## Questions to Ask
-
 If you need more context:
 1. What's your current form completion rate?
 2. Do you have field-level analytics?
@@ -415,10 +351,7 @@ If you need more context:
 5. Are there compliance/legal requirements?
 6. What's the mobile vs. desktop split?
 
----
-
 ## Related Skills
-
 - **signup-flow-cro**: For account creation forms
 - **popup-cro**: For forms inside popups/modals
 - **page-cro**: For the page containing the form

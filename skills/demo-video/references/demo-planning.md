@@ -1,5 +1,4 @@
 # Demo Planning Guide
-
 How to plan and structure effective product demos.
 
 ## Demo Structure
@@ -24,20 +23,17 @@ Sprinkle micro-interactions that show quality:
 - Keyboard shortcuts
 
 ## Timing Guidelines
-
-| Action | Duration |
-|--------|----------|
-| Page load | 2-3 seconds |
-| Read content | 1.5-2 seconds |
-| Button click | 0.5 seconds |
-| Dropdown open | 1-1.5 seconds |
-| Form filling | 0.5s per field |
-| Show result | 2-3 seconds |
-| Transition | 0.5 seconds |
+- Page load: 2-3 seconds
+- Read content: 1.5-2 seconds
+- Button click: 0.5 seconds
+- Dropdown open: 1-1.5 seconds
+- Form filling: 0.5s per field
+- Show result: 2-3 seconds
+- Transition: 0.5 seconds
 
 **Total demo length:**
 - Quick teaser: 15-30 seconds
-- Feature highlight: 45-60 seconds  
+- Feature highlight: 45-60 seconds
 - Full walkthrough: 2-3 minutes max
 
 ## Interaction Patterns
@@ -54,25 +50,18 @@ await page.waitForTimeout(1500);
 ```
 
 ### Natural Text Input
-```javascript
 // Type slowly for readability
 await input.type('search query', { delay: 100 });
-```
 
 ### Scroll to Reveal
-```javascript
 // Smooth scroll
 await page.evaluate(() => {
-  window.scrollBy({ top: 300, behavior: 'smooth' });
+ window.scrollBy({ top: 300, behavior: 'smooth' });
 });
-await page.waitForTimeout(1000);
-```
 
 ### Drag and Drop
-```javascript
 // Simulate drag
 await page.locator('.draggable').dragTo(page.locator('.dropzone'));
-```
 
 ## What Makes Demos Compelling
 
@@ -91,7 +80,6 @@ await page.locator('.draggable').dragTo(page.locator('.dropzone'));
 - Leave dropdowns/modals open when moving to next section
 
 ## Demo Checklist
-
 Before recording:
 - [ ] App in demo-ready state (good data, clean UI)
 - [ ] Browser window sized appropriately (1280x720 or 1920x1080)

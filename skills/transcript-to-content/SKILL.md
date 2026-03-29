@@ -1,14 +1,11 @@
 ---
 name: transcript-to-content
 description: This skill transforms training and onboarding meeting transcripts into structured learning materials, documentation, and actionable review content. Use this skill when processing meeting transcripts from onboarding sessions, training meetings, or knowledge transfer conversations to extract key information and generate study guides, quick reference sheets, checklists, FAQ documents, action item lists, and training effectiveness assessments.
----
 
 # Transcript to Content
-
 Transform raw meeting transcripts and training session recordings into structured learning materials, documentation, and actionable insights.
 
 ## When to Use This Skill
-
 Use this skill when:
 - User provides meeting transcripts, training session recordings, or onboarding notes
 - User requests structured learning materials from verbal/conversational data
@@ -19,31 +16,25 @@ Use this skill when:
 ## Core Workflow
 
 ### Step 1: Understand the Request
-
 Identify what type of content the user needs:
 
-| Output Type | When to Use |
-|------------|-------------|
-| **Master Knowledge Source** | Comprehensive structured learning module with metadata, terminology, SOPs, nuances, and assessments |
-| **Presentation/Slide Deck** | Visual training presentation for delivery or reference |
-| **SOP Document** | Step-by-step procedural documentation |
-| **Quick Reference Sheet** | Concise one-page summary of key points and procedures |
-| **Study Guide** | Organized review material for learners |
-| **Checklist** | Actionable task list extracted from procedures |
-| **FAQ Document** | Common questions and answers from training content |
-| **Action Items List** | Tasks, owners, and deadlines from meeting discussions |
+- **Master Knowledge Source**: Comprehensive structured learning module with metadata, terminology, SOPs, nuances, and assessments
+- **Presentation/Slide Deck**: Visual training presentation for delivery or reference
+- **SOP Document**: Step-by-step procedural documentation
+- **Quick Reference Sheet**: Concise one-page summary of key points and procedures
+- **Study Guide**: Organized review material for learners
+- **Checklist**: Actionable task list extracted from procedures
+- **FAQ Document**: Common questions and answers from training content
+- **Action Items List**: Tasks, owners, and deadlines from meeting discussions
 
 ### Step 2: Locate and Analyze Source Material
-
 **If transcripts are in project directory:**
 ```bash
 ls -lah /home/ubuntu/projects/[project-name]/
 ```
 
 **Search for relevant content by keyword:**
-```bash
 grep -ri "keyword" /home/ubuntu/projects/[project-name]/*.md
-```
 
 **Read and identify:**
 - Main topics and concepts
@@ -55,7 +46,6 @@ grep -ri "keyword" /home/ubuntu/projects/[project-name]/*.md
 - Questions and answers
 
 ### Step 3: Extract Structured Content
-
 Apply **Chain of Thought processing:**
 
 1. **Read entire transcript(s)** for macro-context and overall themes
@@ -84,7 +74,6 @@ Extract these sections:
 - **Action Items:** Extract tasks with owners and deadlines
 
 ### Step 4: Apply Branding (if applicable)
-
 **If user provides brand assets:**
 - Ask for logo file, brand colors, and font preferences
 - Store logo in working directory
@@ -99,22 +88,17 @@ Extract these sections:
 ### Step 5: Create Deliverables
 
 #### For Presentations
-
 Read `/home/ubuntu/skills/transcript-to-content/references/presentation-guidelines.md` for detailed guidelines.
 
 **Workflow:**
 1. Initialize presentation using `slide_initialize` tool
 2. Create outline (max 12 slides by default unless user specifies)
 3. Copy logo to project directory if provided:
-   ```bash
-   cp [logo-path] [project-dir]/logo.png
-   ```
+ cp [logo-path] [project-dir]/logo.png
 4. Edit slides one by one using `slide_edit` tool
 5. Present using `slide_present` tool
 6. Export to PDF if requested:
-   ```bash
-   manus-export-slides manus-slides://[version-id] pdf
-   ```
+ manus-export-slides manus-slides://[version-id] pdf
 
 **Standard presentation structure:**
 1. Title slide
@@ -133,7 +117,6 @@ Read `/home/ubuntu/skills/transcript-to-content/references/presentation-guidelin
 - No excessive shadows, rounded corners, or animations
 
 #### For SOP Documents
-
 Create Markdown documents with:
 - Clear hierarchical structure (H1, H2, H3)
 - Numbered procedures with imperative language
@@ -143,6 +126,7 @@ Create Markdown documents with:
 
 **Example structure:**
 ```markdown
+
 # [Procedure Name]
 
 ## Overview
@@ -158,11 +142,9 @@ Create Markdown documents with:
 
 ## Troubleshooting
 - **Issue:** [Problem]
-  **Solution:** [Resolution]
-```
+ **Solution:** [Resolution]
 
 #### For Quick Reference Sheets
-
 Create concise one-page documents with:
 - Key terminology in definition list format
 - Essential steps in numbered lists
@@ -170,16 +152,12 @@ Create concise one-page documents with:
 - Common scenarios with solutions
 
 #### For Study Guides
-
 Organize by topic with:
 - Learning objectives
 - Key concepts with explanations
-- Examples and scenarios
-- Practice questions
-- Additional resources
+- Examples and scenarios, Practice questions, Additional resources
 
 #### For Checklists
-
 Extract action items with:
 - Checkbox format (`- [ ]`)
 - Clear, actionable language
@@ -187,14 +165,12 @@ Extract action items with:
 - Optional: Priority indicators or time estimates
 
 #### For FAQ Documents
-
 Structure as:
 - Question in bold
 - Answer in clear, concise language
 - Optional: Related questions or resources
 
 #### For Master Knowledge Source
-
 Follow the schema in `references/master-knowledge-source-format.md` exactly:
 - Output ONLY the structured content (no preamble or postscript)
 - Use strict Markdown formatting
@@ -202,7 +178,6 @@ Follow the schema in `references/master-knowledge-source-format.md` exactly:
 - Flag unknowns with `[MISSING INFO]`
 
 ## Quality Standards
-
 **Content Accuracy:**
 - Base all content strictly on source material
 - Never fabricate steps, data, or information
@@ -246,8 +221,6 @@ User provides onboarding transcript → Extract sequential tasks → Create chec
 ### Pattern 6: Meeting Action Items
 User provides meeting notes → Extract decisions and tasks → Create action items list with owners
 
-## Troubleshooting
-
 **Issue:** Slide appears empty in PDF
 **Solution:** Check padding values. Reduce padding, adjust spacing, ensure content fits within 720px height.
 
@@ -267,6 +240,5 @@ User provides meeting notes → Extract decisions and tasks → Create action it
 **Solution:** Convert to imperative voice. Use action verbs. Add "CRITICAL" prefix to important steps.
 
 ## Resources
-
 - **Master Knowledge Source Format:** `references/master-knowledge-source-format.md` - Complete schema for structured learning modules
 - **Presentation Guidelines:** `references/presentation-guidelines.md` - Detailed presentation design and creation guidelines

@@ -1,14 +1,11 @@
 ---
 name: copywriting
 description: When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," or "CTA copy." For email copy, see email-sequence. For popup copy, see popup-cro.
----
 
 # Copywriting
-
 You are an expert conversion copywriter. Your goal is to write marketing copy that is clear, compelling, and drives action.
 
 ## Before Writing
-
 Gather this context (ask if not provided):
 
 ### 1. Page Purpose
@@ -33,8 +30,6 @@ Gather this context (ask if not provided):
 - Where is traffic coming from? (ads, organic, email)
 - What do visitors already know before arriving?
 - What messaging are they seeing before this page?
-
----
 
 ## Copywriting Principles
 
@@ -62,14 +57,10 @@ Gather this context (ask if not provided):
 - Each section should advance one argument
 - Build a logical flow down the page
 
----
-
 ## Writing Style Rules
-
 Follow these core principles. For detailed editing checks and word-by-word polish, use the **copy-editing** skill after your initial draft.
 
 ### Core Style Principles
-
 1. **Simple over complex** — Use everyday words. "Use" instead of "utilize," "help" instead of "facilitate."
 
 2. **Specific over vague** — Avoid words like "streamline," "optimize," "innovative" that sound good but mean nothing.
@@ -83,7 +74,6 @@ Follow these core principles. For detailed editing checks and word-by-word polis
 6. **Honest over sensational** — Never fabricate statistics, claims, or testimonials.
 
 ### Quick Quality Check
-
 Before finalizing, scan for:
 - Jargon that could confuse outsiders
 - Sentences trying to do too much (max 3 conjunctions)
@@ -93,42 +83,35 @@ Before finalizing, scan for:
 
 For a thorough line-by-line review, run the copy through the **copy-editing** skill's Seven Sweeps framework.
 
----
-
 ## Best Practices
 
 ### Be Direct
 Get to the point. Don't bury the value in qualifications.
 
-❌ Slack lets you share files instantly, from documents to images, directly in your conversations
+ Slack lets you share files instantly, from documents to images, directly in your conversations
 
-✅ Need to share a screenshot? Send as many documents, images, and audio files as your heart desires.
+ Need to share a screenshot? Send as many documents, images, and audio files as your heart desires.
 
 ### Use Rhetorical Questions
 Questions engage readers and make them think about their own situation.
 
-✅ Hate returning stuff to Amazon?
+ Hate returning stuff to Amazon?
 
-✅ Need to share a screenshot?
+ Need to share a screenshot?
 
-✅ Tired of chasing approvals?
+ Tired of chasing approvals?
 
 ### Use Analogies and Metaphors
 When appropriate, analogies make abstract concepts concrete and memorable.
 
-❌ Slack lets you share files instantly, from documents to images, directly in your conversations
-
-✅ Imagine Slack's file-sharing as a digital whiteboard where everyone can post files, images, and updates in real time.
+ Imagine Slack's file-sharing as a digital whiteboard where everyone can post files, images, and updates in real time.
 
 ### Pepper in Humor (When Appropriate)
 Puns, wit, and humor make copy memorable—but only if it fits the brand and doesn't undermine clarity.
 
----
-
 ## Page Structure Framework
 
 ### Above the Fold (First Screen)
-
 **Headline**
 - Your single most important message
 - Should communicate core value proposition
@@ -188,7 +171,6 @@ Puns, wit, and humor make copy memorable—but only if it fits the brand and doe
 - Should reinforce the message, not distract
 
 ### Social Proof Section
-
 Options (use 1-2):
 - Customer logos (recognizable > many)
 - Key metric ("10,000+ teams")
@@ -196,7 +178,6 @@ Options (use 1-2):
 - Star rating with review count
 
 ### Problem/Pain Section
-
 - Articulate the problem better than they can
 - Show you understand their situation
 - Create recognition ("that's exactly my problem")
@@ -207,7 +188,6 @@ Structure:
 - Hint at the cost of not solving it
 
 ### Solution/Benefits Section
-
 - Bridge from problem to your solution
 - Focus on 3-5 key benefits (not 10)
 - Each benefit: headline + short explanation + proof point if available
@@ -218,7 +198,6 @@ Format options:
 - Feature → Benefit → Proof structure
 
 ### How It Works Section
-
 - Reduce perceived complexity
 - 3-4 step process
 - Each step: simple action + outcome
@@ -229,16 +208,14 @@ Example:
 3. "Get automated reports every Monday"
 
 ### Social Proof (Detailed)
-
-- Full testimonials with:
-  - Specific results
-  - Customer name, role, company
-  - Photo if possible
+ - Full testimonials with:
+ - Specific results
+ - Customer name, role, company
+- Photo if possible
 - Case study snippets
 - Logos section (if not above)
 
 ### Objection Handling
-
 Common objections to address:
 - "Is this right for my situation?"
 - "What if it doesn't work?"
@@ -246,26 +223,19 @@ Common objections to address:
 - "How is this different from X?"
 
 Formats:
-- FAQ section
-- Comparison table
-- Guarantee/promise section
+- FAQ section, Comparison table, Guarantee/promise section
 - "Built for [specific audience]" section
 
 ### Final CTA Section
-
 - Recap the value proposition
 - Repeat the primary CTA
 - Add urgency if genuine (deadline, limited availability)
 - Risk reversal (guarantee, free trial, no credit card)
 
----
-
 ## Landing Page Section Variety
-
 A great landing page isn't just a list of features. Use a variety of section types to create an engaging, persuasive narrative. Mix and match from these:
 
 ### Section Types to Include
-
 **How It Works (Numbered Steps)**
 Walk users through the process in 3-4 clear steps. Reduces perceived complexity and shows the path to value.
 
@@ -306,7 +276,6 @@ Even on non-pricing pages, a pricing teaser can move decision-makers forward.
 Money-back guarantee, free trial terms, or "cancel anytime" messaging reduces friction.
 
 ### Recommended Section Mix
-
 For a landing page, aim for variety. Don't just stack features:
 
 **Typical Feature-Heavy Page (Weak):**
@@ -330,25 +299,16 @@ For a landing page, aim for variety. Don't just stack features:
 10. FAQ
 11. Final CTA with guarantee
 
----
-
 ## CTA Copy Guidelines
-
 **Weak CTAs (avoid):**
-- Submit
-- Sign Up
-- Learn More
-- Click Here
-- Get Started
+- Submit, Sign Up, Learn More, Click Here, Get Started
 
 **Strong CTAs (use):**
 - Start Free Trial
 - Get [Specific Thing]
 - See [Product] in Action
 - Create Your First [Thing]
-- Book My Demo
-- Download the Guide
-- Try It Free
+- Book My Demo, Download the Guide, Try It Free
 
 **CTA formula:**
 [Action Verb] + [What They Get] + [Qualifier if needed]
@@ -358,20 +318,12 @@ Examples:
 - "Get the Complete Checklist"
 - "See Pricing for My Team"
 
----
-
 ## Output Format
-
 When writing copy, provide:
 
 ### Page Copy
 Organized by section with clear labels:
-- Headline
-- Subheadline
-- CTA
-- Section headers
-- Body copy
-- Secondary CTAs
+- Headline, Subheadline, CTA, Section headers, Body copy, Secondary CTAs
 
 ### Annotations
 For key elements, explain:
@@ -382,14 +334,10 @@ For key elements, explain:
 ### Alternatives
 For headlines and CTAs, provide 2-3 options:
 - Option A: [copy] — [rationale]
-- Option B: [copy] — [rationale]
-- Option C: [copy] — [rationale]
 
 ### Meta Content (if relevant)
 - Page title (for SEO)
 - Meta description
-
----
 
 ## Page-Specific Guidance
 
@@ -423,31 +371,21 @@ For headlines and CTAs, provide 2-3 options:
 - Build trust through transparency
 - Still include a CTA (it's still a marketing page)
 
----
-
 ## Voice and Tone Considerations
-
 Before writing, establish:
 
 **Formality level:**
-- Casual/conversational
-- Professional but friendly
-- Formal/enterprise
+- Casual/conversational, Professional but friendly, Formal/enterprise
 
 **Brand personality:**
-- Playful or serious?
-- Bold or understated?
-- Technical or accessible?
+- Playful or serious?, Bold or understated?, Technical or accessible?
 
 Maintain consistency throughout, but adjust intensity:
 - Headlines can be bolder
 - Body copy should be clearer
 - CTAs should be action-oriented
 
----
-
 ## Related Skills
-
 - **copy-editing**: For polishing and improving existing copy (use after writing your first draft)
 - **page-cro**: If the page structure/strategy needs work, not just copy
 - **email-sequence**: For email copywriting

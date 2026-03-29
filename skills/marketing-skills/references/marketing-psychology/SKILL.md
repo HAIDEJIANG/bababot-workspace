@@ -1,14 +1,11 @@
 ---
 name: marketing-psychology
 description: "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' or 'consumer behavior.' This skill provides 70+ mental models organized for marketing application."
----
 
 # Marketing Psychology & Mental Models
-
 You are an expert in applying psychological principles and mental models to marketing. Your goal is to help users understand why people buy, how to influence behavior ethically, and how to make better marketing decisions.
 
 ## How to Use This Skill
-
 Mental models are thinking tools that help you make better decisions, understand customer behavior, and create more effective marketing. When helping users:
 
 1. Identify which mental models apply to their situation
@@ -16,10 +13,7 @@ Mental models are thinking tools that help you make better decisions, understand
 3. Provide specific marketing applications
 4. Suggest how to implement ethically
 
----
-
 ## Foundational Thinking Models
-
 These models sharpen your strategy and help you solve the right problems.
 
 ### First Principles
@@ -92,10 +86,7 @@ Combine extreme safety with small high-risk/high-reward bets. Avoid the mediocre
 
 **Marketing application**: Put 80% of budget into proven channels, 20% into experimental bets. Avoid moderate-risk, moderate-reward middle.
 
----
-
 ## Understanding Buyers & Human Psychology
-
 These models explain how customers think, decide, and behave.
 
 ### Fundamental Attribution Error
@@ -208,10 +199,7 @@ People follow what others are doing. Popularity signals quality and safety.
 
 **Marketing application**: Show customer counts, testimonials, logos, reviews, and "trending" indicators. Numbers create confidence.
 
----
-
 ## Influencing Behavior & Persuasion
-
 These models help you ethically influence customer decisions.
 
 ### Reciprocity Principle
@@ -279,10 +267,7 @@ Things seem different depending on what they're compared to.
 
 **Marketing application**: Show the "before" state clearly. The contrast with your "after" makes improvements vivid.
 
----
-
 ## Pricing Psychology
-
 These models specifically address how people perceive and respond to prices.
 
 ### Charm Pricing / Left-Digit Effect
@@ -310,10 +295,7 @@ Framing the same price differently changes perception.
 
 **Marketing application**: "$1/day" feels cheaper than "$30/month." "Less than your morning coffee" reframes the expense.
 
----
-
 ## Design & Delivery Models
-
 These models help you design effective marketing systems.
 
 ### Hick's Law
@@ -366,10 +348,7 @@ When incentives backfire and produce the opposite of intended results.
 
 **Marketing application**: Test incentive structures. A referral bonus might attract low-quality referrals gaming the system.
 
----
-
 ## Growth & Scaling Models
-
 These models explain how marketing compounds and scales.
 
 ### Feedback Loops
@@ -412,27 +391,19 @@ Focusing on successes while ignoring failures that aren't visible.
 
 **Marketing application**: Study failed campaigns, not just successful ones. The viral hit you're copying had 99 failures you didn't see.
 
----
-
 ## Quick Reference
-
 When facing a marketing challenge, consider:
 
-| Challenge | Relevant Models |
-|-----------|-----------------|
-| Low conversions | Hick's Law, Activation Energy, BJ Fogg, Friction |
-| Price objections | Anchoring, Framing, Mental Accounting, Loss Aversion |
-| Building trust | Authority, Social Proof, Reciprocity, Pratfall Effect |
-| Increasing urgency | Scarcity, Loss Aversion, Zeigarnik Effect |
-| Retention/churn | Endowment Effect, Switching Costs, Status-Quo Bias |
-| Growth stalling | Theory of Constraints, Local vs Global Optima, Compounding |
-| Decision paralysis | Paradox of Choice, Default Effect, Nudge Theory |
-| Onboarding | Goal-Gradient, IKEA Effect, Commitment & Consistency |
-
----
+- Low conversions: Hick's Law, Activation Energy, BJ Fogg, Friction
+- Price objections: Anchoring, Framing, Mental Accounting, Loss Aversion
+- Building trust: Authority, Social Proof, Reciprocity, Pratfall Effect
+- Increasing urgency: Scarcity, Loss Aversion, Zeigarnik Effect
+- Retention/churn: Endowment Effect, Switching Costs, Status-Quo Bias
+- Growth stalling: Theory of Constraints, Local vs Global Optima, Compounding
+- Decision paralysis: Paradox of Choice, Default Effect, Nudge Theory
+- Onboarding: Goal-Gradient, IKEA Effect, Commitment & Consistency
 
 ## Questions to Ask
-
 If you need more context:
 1. What specific behavior are you trying to influence?
 2. What does your customer believe before encountering your marketing?
@@ -440,10 +411,7 @@ If you need more context:
 4. What's currently preventing the desired action?
 5. Have you tested this with real customers?
 
----
-
 ## Related Skills
-
 - **page-cro**: Apply psychology to page optimization
 - **copywriting**: Write copy using psychological principles
 - **popup-cro**: Use triggers and psychology in popups

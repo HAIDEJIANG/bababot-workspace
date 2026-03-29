@@ -1,11 +1,9 @@
 ---
 name: emporia-energy
 description: Direct Emporia Vue energy queries via Emporia cloud (PyEmVue) or local ESPHome API, including guidance on choosing/configuring cloud vs local modes and running list/summary/circuit commands.
-metadata: {"moltbot":{"emoji":"⚡","os":["darwin","linux","win32"],"requires":{"bins":["python3"],"env":["EMPORIA_MODE"]}}}
----
+metadata: {"moltbot":{"emoji":"","os":["darwin","linux","win32"],"requires":{"bins":["python3"],"env":["EMPORIA_MODE"]}}}
 
 # Emporia Energy Skill
-
 Use the scripts in `{baseDir}/scripts` to query Emporia Vue data directly.
 
 Modes are selected with `EMPORIA_MODE`:
@@ -13,7 +11,6 @@ Modes are selected with `EMPORIA_MODE`:
 - `esphome`: Local ESPHome API (for flashed devices)
 
 ## Choose a mode (cloud vs local)
-
 - Use **cloud** if your Emporia device is still on stock firmware or you want the simplest setup. Requires Emporia account credentials and internet access.
 - Use **esphome** only if the device is flashed with ESPHome and on your LAN. Requires the device IP/hostname and native API access on port 6053.
 
@@ -34,7 +31,6 @@ Optional:
 - `ESPHOME_API_KEY` (Noise PSK, base64) or `ESPHOME_PASSWORD` (legacy)
 
 ## Configuration steps
-
 Cloud:
 1. Set `EMPORIA_MODE=cloud`.
 2. Set `EMPORIA_EMAIL` and `EMPORIA_PASSWORD`.
@@ -49,58 +45,34 @@ ESPHome:
 5. Run `list` first to confirm channels, then `summary` or `circuit <name>`.
 
 ## Commands
-
 The scripts accept:
-- `summary` (default)
-- `list`
-- `circuit <name>`
+- `summary` (default), `list`, `circuit <name>`
 
 ## Usage
-
-Cloud:
 ```
 export EMPORIA_MODE=cloud
 export EMPORIA_EMAIL="you@example.com"
 export EMPORIA_PASSWORD="..."
 python {baseDir}/scripts/emporia_cloud.py summary
-```
 
-ESPHome:
-```
 export EMPORIA_MODE=esphome
 export ESPHOME_HOST="192.168.1.50"
 export ESPHOME_API_KEY="base64-noise-psk"
 python {baseDir}/scripts/emporia_esphome.py summary
-```
 
 ## Dependencies (pip by default)
-
-Cloud:
-```
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r {baseDir}/requirements-cloud.txt
-```
 
-ESPHome:
-```
-python3 -m venv .venv
-source .venv/bin/activate
 pip install -r {baseDir}/requirements-esphome.txt
-```
 
 Optional: you can use `uv` instead of `pip` if preferred.
 
 ## Output
-
 Scripts emit JSON with:
-- timestamp
-- unit
-- total (best-effort)
-- top circuits
-- channels used
+- timestamp, unit, total (best-effort), top circuits, channels used
 
 ## Safety
-
 - Never print secrets (passwords, tokens, keys).
 - Do not make hardware or panel wiring recommendations.

@@ -4,28 +4,20 @@ description: Thinking partner that transforms ideas into platform-optimized cont
 version: 1.0.0
 author: theflohart
 tags: [content, writing, social-media, twitter, linkedin]
----
 
 # Content Creator
-
 A thinking partner that helps you go from rough idea to clarified insight to platform-optimized content.
 
 **Philosophy:** Great content comes from clear thinking. We explore first, draft second.
 
 ## Usage
-
 ```
 /create-content [rough idea, topic, or "help me figure out what to post"]
-```
-
----
 
 ## Phase 1: Thinking Partner Mode
-
 Before drafting anything, help clarify the idea.
 
 ### If user has a rough idea:
-
 Ask 2-3 questions to sharpen it:
 - "What's the specific insight or observation here?"
 - "What made you think of this? What triggered it?"
@@ -34,23 +26,18 @@ Ask 2-3 questions to sharpen it:
 - "Do you have a specific example or number to anchor this?"
 
 ### If user says "help me figure out what to post":
-
 1. Search for recent notes, journal entries, sessions
 2. Look for: observations, breakthroughs, experiments, patterns noticed
 3. Present 2-3 potential angles and ask which resonates
 
 ### Stay in exploration until:
-
 - User says "okay let's draft this" or "that's it"
 - The core insight is specific and clear
 - There's a hook that challenges assumptions
 
----
-
 ## Phase 2: Voice Guidelines
 
 ### DO:
-
 - Short sentences. Like texting.
 - Observations over wisdom. Show, don't preach.
 - Specific numbers. "$120K ARR" not "good revenue"
@@ -60,7 +47,6 @@ Ask 2-3 questions to sharpen it:
 - Self-aware humor
 
 ### DON'T:
-
 - Corporate speak ("leverage" "synergy" "optimize")
 - Long explanations
 - Abstract wisdom without specifics
@@ -70,26 +56,17 @@ Ask 2-3 questions to sharpen it:
 - Any sentence over 20 words
 
 ### Red Flags (rewrite if present):
-
-- Em-dashes (—)
-- "This is why..."
-- "The key is..."
-- "In today's world..."
-- Wisdom without specifics
+- Em-dashes (—), "This is why...", "The key is...", "In today's world...", Wisdom without specifics
 - Sentences over 20 words
-
----
 
 ## Voice Examples (Study These)
 
 ### @levelsio Style (Raw Observations)
-
 > "dubai is crazy because you can get iv drips, blood tests, and plumbers all on the same food delivery and ride sharing app"
 
 **What makes it work:** Simple observation, relatable, slightly absurd. No call to action, just sharing reality.
 
 ### @marclou Style (Authentic + Celebrates Others)
-
 > "SOLD
 > 1. David vibe-coded the project in 1 week
 > 2. Launch went viral on LinkedIn
@@ -99,17 +76,13 @@ Ask 2-3 questions to sharpen it:
 **What makes it work:** Celebrates others' wins. Specific numbers. Simple format.
 
 ### @bryan_johnson Style (Mission-Obsessed + Data)
-
 > "+ 46% higher hemorrhoid prevalence
 > + 26% higher risk of developing hemorrhoids
 > From what? Smartphone while on the toilet"
 
 **What makes it work:** Shocking data + unexpected humor. Bold.
 
----
-
 ## Voice Calibration Test
-
 Before finalizing any draft, check:
 
 **TOO AI:**
@@ -120,12 +93,9 @@ Before finalizing any draft, check:
 
 **The difference:** No em-dashes. Specific detail (20 mins vs 4 hours). Self-aware ("sounds dumb"). Shows the lifestyle, doesn't explain it.
 
----
-
 ## Phase 3: Platform-Specific Drafting
 
 ### For X (Twitter)
-
 **Viral Mechanics:**
 - Hook in first line (pattern interrupt, surprising stat, provocative question)
 - 280 characters ideal for single posts
@@ -145,8 +115,6 @@ Before finalizing any draft, check:
 - Final tweet: Synthesis + engagement question
 
 ### For LinkedIn
-
-**Viral Mechanics:**
 - First line is everything (shows in feed preview)
 - Line breaks create white space (easier to read)
 - 1,200-1,500 characters sweet spot
@@ -154,7 +122,6 @@ Before finalizing any draft, check:
 - End with question to drive comments
 
 **Format:**
-```
 [Hook line - surprising or contrarian]
 
 [2-3 short paragraphs with the story/insight]
@@ -164,35 +131,24 @@ Before finalizing any draft, check:
 [Universal takeaway in 1 sentence]
 
 [Question for engagement]
-```
-
----
 
 ## Phase 4: Draft & Refine
-
 1. **Draft 2-3 versions** for the chosen platform
 2. **Run voice check** on each:
-   - Is it casual enough to be a text message?
-   - Specific OR observation (not vague wisdom)?
-   - No em-dashes?
+ - Is it casual enough to be a text message?
+ - Specific OR observation (not vague wisdom)?
+ - No em-dashes?
 3. **Present options** with notes on what makes each one work
 4. **Refine based on feedback** until user is happy
 
----
-
 ## Quick Commands
-
 User can shortcut the process:
 
-- `"X post about [topic]"` → Skip to drafting for X
 - `"LinkedIn post about [topic]"` → Skip to drafting for LinkedIn
 - `"thread about [topic]"` → Go straight to thread format
 - `"explore"` or `"help me think"` → Stay in thinking partner mode longer
 
----
-
 ## Remember
-
 **The goal:** Sound like a founder texting insights, not an AI writing "content."
 
 Great content = clear thinking + specific examples + authentic voice.

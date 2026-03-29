@@ -1,9 +1,7 @@
 # claw-shell
-
 ALWAYS USES TMUX SESSION `claw`.
 
 ## PURPOSE
-
 - RUN SHELL COMMANDS INSIDE TMUX SESSION `claw`
 - NEVER TOUCH ANY OTHER SESSION
 - READ OUTPUT BACK TO THE AGENT
@@ -11,7 +9,6 @@ ALWAYS USES TMUX SESSION `claw`.
 ## INTERFACE
 
 ### Tool: `claw_shell_run`
-
 **Inputs:**
 
 - `command` (string, required): shell command to run inside session `claw`.
@@ -24,22 +21,17 @@ ALWAYS USES TMUX SESSION `claw`.
 4. Return the captured output to the agent.
 
 ## SAFETY
-
-- DO NOT RUN:
-  - `sudo`
-  - `rm` (without explicit user approval)
-  - `reboot`, `shutdown`, or destructive system-level commands
+ - DO NOT RUN:
+ - `sudo`
+ - `rm` (without explicit user approval)
+ - `reboot`, `shutdown`, or destructive system-level commands
 - IF THE COMMAND CONTAINS ANY OF THE ABOVE:
-  - ASK USER FOR CONFIRMATION BEFORE EXECUTING.
+ - ASK USER FOR CONFIRMATION BEFORE EXECUTING.
 
 ## EXAMPLES
+- SAFE:, `ls -la`, `bird read https://x.com/...`, `git status`
 
-- SAFE:
-  - `ls -la`
-  - `bird read https://x.com/...`
-  - `git status`
-
-- DANGEROUS (ASK FIRST):
-  - `rm -rf ...`
-  - `docker system prune -a`
-  - `chmod -R ...`
+ - DANGEROUS (ASK FIRST):
+ - `rm -rf ...`
+ - `docker system prune -a`
+ - `chmod -R ...`

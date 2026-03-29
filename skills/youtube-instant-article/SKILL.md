@@ -3,14 +3,11 @@ name: youtube-instant-article
 description: Transform YouTube videos into Telegraph Instant View articles with visual slides and timestamped summaries. Use this skill whenever a user shares a YouTube URL (youtube.com or youtu.be) and asks to summarize, explain, or process the video. This is the DEFAULT skill for all YouTube video requests - do NOT use the generic summarize tool for YouTube.
 argument-hint: <youtube-url>
 allowed-tools: Bash(summarize:*), Bash(curl:*), Bash(jq:*)
----
 
 # YouTube Instant Article
-
 Transform YouTube videos into Telegraph Instant View articles with visual slides and timestamped summaries.
 
 ## When to Use
-
 **ALWAYS use this skill when:**
 - User shares a YouTube URL (any youtube.com or youtu.be link)
 - "Summarize this video"
@@ -23,71 +20,54 @@ Transform YouTube videos into Telegraph Instant View articles with visual slides
 - Explicit "just give me the transcript" requests
 
 ## Quick Start
-
 ```bash
 source /Users/viticci/clawd/.env && {baseDir}/scripts/generate.sh "$ARGUMENTS"
 ```
 
 ## Options
-
-| Flag | Default | Description |
-|------|---------|-------------|
-| `--slides-max N` | 6 | Maximum slides to extract |
-| `--debug` | off | Keep temp files for debugging |
+`--slides-max N`, Default=6, Description=Maximum slides to extract
+`--debug`, Default=off, Description=Keep temp files for debugging
 
 ## Environment Variables
-
 Required environment variables are loaded from `/Users/viticci/clawd/.env`:
 - `TELEGRAPH_TOKEN` - Telegraph API access token
 - `OPENAI_API_KEY` - For GPT-5.2 summarization
 
 ## Output
-
 Telegraph Instant View article with:
-- 📺 Video link at top
-- 🖼️ Slides interleaved with timestamped sections
+- Video link at top
+- ️ Slides interleaved with timestamped sections
 - ⏱️ Key moments with timestamps
-- 💬 Notable quotes as blockquotes
-- ✨ Proper title from YouTube
+- Notable quotes as blockquotes
+- Proper title from YouTube
 
 ## Architecture
-
-```
 YouTube URL
-    │
-    ├─► summarize --extract (get video title)
-    │
-    ├─► summarize --slides (extract key frames)
-    │
-    ├─► summarize --timestamps (GPT-5.2 summary)
-    │
-    ├─► catbox.moe (upload images)
-    │
-    └─► Telegraph API (create article)
-```
+ │
+ ├─► summarize --extract (get video title)
+ ├─► summarize --slides (extract key frames)
+ ├─► summarize --timestamps (GPT-5.2 summary)
+ ├─► catbox.moe (upload images)
+ └─► Telegraph API (create article)
 
 ## Key Features
 
 ### Image Hosting: catbox.moe
 - No API key required
-- No expiration
-- Reliable CDN
-- Direct URL embedding
+- No expiration, Reliable CDN, Direct URL embedding
 
 ### LLM: OpenAI GPT-5.2
-- Fast (~4-5 seconds)
-- High quality summaries
-- Automatic timestamp extraction
+- Fast (~4-5 seconds), High quality summaries, Automatic timestamp extraction
 
 ### Layout: Interleaved Images
 - Images distributed across timestamp sections
 - Not grouped at top
 - Each major section gets a relevant slide
 
-## ⚠️ Important Notes
+## ️ Important Notes
 
 ### Instant View Timing
-Telegram needs **1-2 minutes** to generate Instant View for new pages. If the ⚡ button doesn't appear immediately, wait and try again.
+Telegram needs **1-2 minutes** to generate Instant View for new pages. If the button doesn't appear immediately, wait and try again.
 
 ### Script Requirements
 - Uses **zsh** (not bash) for associative array support
@@ -101,19 +81,15 @@ Telegram needs **1-2 minutes** to generate Instant View for new pages. If the �
 - Extracts video title automatically
 
 ## Dependencies
-
 - `summarize` v0.10.0+ (`brew install steipete/tap/summarize`)
 - `jq` (`brew install jq`)
 - `curl` (pre-installed on macOS)
 - OpenAI API key with GPT-5.2 access
 
 ## Processing Time
-
-| Video Length | Approx. Time |
-|--------------|--------------|
-| < 15 min | 20-30s |
-| 15-30 min | 30-45s |
-| 30+ min | 45-60s+ |
+- < 15 min: 20-30s
+- 15-30 min: 30-45s
+- 30+ min: 45-60s+
 
 ## Troubleshooting
 

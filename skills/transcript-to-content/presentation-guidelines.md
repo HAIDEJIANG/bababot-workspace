@@ -1,13 +1,11 @@
 # Professional Presentation Guidelines
 
 ## Overview
-
 Create professional, clean presentations that communicate training content clearly and effectively. These guidelines support creating presentations for any organization with customizable branding.
 
 ## Presentation Structure
 
 ### Standard Slide Deck Structure (12 slides max by default)
-
 1. **Title Slide** - Topic introduction with metadata
 2. **Definition/Overview** - What is the concept?
 3. **Step-by-Step Content** - Core instructional slides (typically 4-6 steps)
@@ -19,12 +17,8 @@ Create professional, clean presentations that communicate training content clear
 ## Design Standards
 
 ### Visual Style
-
 **Clean, Professional Design:**
-- Clear grid systems
-- Strong typography hierarchy
-- Minimal decoration
-- Ample white space
+- Clear grid systems, Strong typography hierarchy, Minimal decoration, Ample white space
 - Geometric accents (lines, simple shapes) used sparingly
 
 **Prohibited Elements:**
@@ -35,7 +29,6 @@ Create professional, clean presentations that communicate training content clear
 - Cluttered or busy layouts
 
 ### Branding Integration
-
 **Logo Placement:**
 - Content slides: Top-right corner (120-140px width)
 - Title/Closing slides: Top-left or top-right (180-200px width)
@@ -52,7 +45,6 @@ Create professional, clean presentations that communicate training content clear
 - Ensure readability with sufficient contrast
 
 ### Color Application
-
 **Recommended Neutral Palette:**
 - Background: `#F2F2F2` or `#FFFFFF` (light grey or white)
 - Text: `#1A1A1A` or `#2C2C2C` (near black)
@@ -66,7 +58,6 @@ Create professional, clean presentations that communicate training content clear
 - Reserve brand color for emphasis and key information
 
 ### Typography Hierarchy
-
 **Recommended Sizes:**
 - Title slide main heading: 72-96px, weight 900
 - Slide headers: 42-48px, weight 700-900
@@ -85,7 +76,6 @@ Create professional, clean presentations that communicate training content clear
 - Clean, uncluttered design
 
 ### Content Slide Layouts
-
 **Three-Column Grid:**
 - Column 1: Large step number or icon
 - Column 2: Main content (instructions, metrics)
@@ -101,7 +91,6 @@ Create professional, clean presentations that communicate training content clear
 - Visual dividers between sections
 
 ### Data Visualization
-
 **Chart Guidelines:**
 - Use Chart.js or similar libraries for standard charts
 - Apply brand color for primary data
@@ -112,27 +101,24 @@ Create professional, clean presentations that communicate training content clear
 **Example HTML structure:**
 ```html
 <div style="height: 200px; max-width: 600px;">
-    <canvas id="myChart"></canvas>
+ <canvas id="myChart"></canvas>
 </div>
 ```
 
 ## Content Guidelines
 
 ### Writing Style
-
 - **Imperative voice:** "Navigate to...", "Click...", "Set..."
 - **Concise bullets:** Maximum 3-4 main points per slide
 - **Clear hierarchy:** Use bold for emphasis, not decoration
 - **Action-oriented:** Focus on what to do, not just what to know
 
 ### Information Density
-
 - **Title slide:** Minimal text, strong visual presence
 - **Content slides:** Balanced text and white space (aim for 40% white space)
-- **Summary slides:** Checklist format with check marks (✓) or bullets
+- **Summary slides:** Checklist format with check marks () or bullets
 
 ### Critical Elements to Include
-
 1. **Step Numbers:** Large, prominent, consistent styling
 2. **Action Items:** Clear, numbered lists with arrows (→) or bullets
 3. **Warnings/Alerts:** Highlighted boxes with distinct styling
@@ -142,42 +128,36 @@ Create professional, clean presentations that communicate training content clear
 ## Technical Requirements (for HTML Slides)
 
 ### HTML Structure
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Slide Title]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* Styles here */
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>[Slide Title]</title>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+ <style>
+ /* Styles here */
+ </style>
 </head>
 <body>
-    <div class="slide-container">
-        <!-- Content here -->
-    </div>
+ <div class="slide-container">
+ <!-- Content here -->
 </body>
 </html>
-```
 
 ### Critical CSS Rules
-
 **Slide Container:**
 ```css
 .slide-container {
-    width: 1280px;
-    min-height: 720px;
-    background-color: #F2F2F2;
-    position: relative;
-    overflow: hidden;
-    padding: 80px 100px 60px;
-    display: flex;
-    flex-direction: column;
+ width: 1280px;
+ min-height: 720px;
+ background-color: #F2F2F2;
+ position: relative;
+ overflow: hidden;
+ padding: 80px 100px 60px;
+ display: flex;
+ flex-direction: column;
 }
-```
 
 **Key Constraints:**
 - Use `min-height` not `height` to prevent overflow
@@ -187,7 +167,6 @@ Create professional, clean presentations that communicate training content clear
 - Avoid `position: absolute` for main content containers
 
 ## Workflow
-
 1. **Gather brand assets** - Logo, colors, fonts (if provided by user)
 2. **Initialize presentation** using `slide_initialize` tool
 3. **Create outline** with all slide IDs and summaries
@@ -197,7 +176,6 @@ Create professional, clean presentations that communicate training content clear
 7. **Export to PDF** using `manus-export-slides` utility if requested
 
 ## Quality Checklist
-
 Before presenting, verify:
 - [ ] Logo appears on all slides (if provided)
 - [ ] Brand colors used consistently

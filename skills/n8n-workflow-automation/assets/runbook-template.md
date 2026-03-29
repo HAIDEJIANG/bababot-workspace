@@ -18,9 +18,7 @@
 - Safe re-run behavior:
 
 ## Error handling
-- Retry policy:
-- Failure notifications:
-- Review queue link/location:
+- Retry policy:, Failure notifications:, Review queue link/location:
 
 ## Logging & audit
 - Run ID:
@@ -29,4 +27,4 @@
 
 ## Operational checks
 - Expected counts/thresholds:
-- “Stop the line” conditions:
+- "Stop the line" conditions:

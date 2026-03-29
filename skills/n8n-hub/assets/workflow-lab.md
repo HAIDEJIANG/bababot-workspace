@@ -24,16 +24,13 @@
 - Safe re-run behavior:
 
 ## Error handling
-- Retry policy:
-- Failure notifications:
-- Review queue link/location:
+- Retry policy:, Failure notifications:, Review queue link/location:
 
 ## Operational checks
 - Expected counts/thresholds:
-- “Stop the line” conditions:
+- "Stop the line" conditions:
 
 ## Logging & audit
 - Run ID:
 - Logged fields per run:
 - Log storage location:
-

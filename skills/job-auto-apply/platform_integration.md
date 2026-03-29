@@ -1,5 +1,4 @@
 # Job Platform Integration Reference
-
 This document provides technical details for integrating with various job platforms.
 
 ## Platform APIs
@@ -26,17 +25,14 @@ This document provides technical details for integrating with various job platfo
 
 ### ZipRecruiter API
 - **Documentation**: Contact ZipRecruiter for partner API access
-- **Authentication**: API Key
 - **Features**: Job posting, applicant tracking integration
 
 ### Wellfound (AngelList)
 - **Documentation**: https://docs.wellfound.com/
-- **Authentication**: OAuth 2.0
 - **Focus**: Startup and tech jobs
 - **Easy Apply**: Built-in quick apply feature
 
 ## Web Scraping Approach
-
 When APIs are not available or limited, use web scraping with these tools:
 
 ### Selenium Setup
@@ -53,69 +49,54 @@ driver = webdriver.Chrome(options=options)
 ```
 
 ### Playwright (Recommended)
-```python
 from playwright.sync_api import sync_playwright
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
-    page = browser.new_page()
-    page.goto('https://linkedin.com/jobs')
-```
+ browser = p.chromium.launch(headless=True)
+ page = browser.new_page()
+ page.goto('https://linkedin.com/jobs')
 
 ## Application Form Automation
 
 ### Common Form Fields
 1. **Personal Information**
-   - Full name
-   - Email address
-   - Phone number
-   - Location/Address
-   
+ - Full name, Email address, Phone number, Location/Address
+
 2. **Professional Information**
-   - Resume/CV upload
-   - Cover letter (text or upload)
-   - LinkedIn profile URL
-   - Portfolio/Website URL
-   - GitHub/GitLab profile
-   
+ - Resume/CV upload
+ - Cover letter (text or upload)
+ - LinkedIn profile URL, Portfolio/Website URL, GitHub/GitLab profile
+
 3. **Work Authorization**
-   - Authorized to work in [country]?
-   - Require visa sponsorship?
-   - Willing to relocate?
-   
+ - Authorized to work in [country]?
+ - Require visa sponsorship?
+ - Willing to relocate?
+
 4. **Experience & Education**
-   - Years of experience
-   - Highest education level
-   - Degree field
-   - University name
-   
+ - Years of experience, Highest education level, Degree field, University name
+
 5. **Screening Questions**
-   - Custom questions (vary by employer)
-   - Multiple choice or text answers
-   - Skills assessments
+ - Custom questions (vary by employer)
+ - Multiple choice or text answers
+ - Skills assessments
 
 ### Form Field Selectors
 
 #### LinkedIn Easy Apply
-```python
 LINKEDIN_SELECTORS = {
-    "easy_apply_button": "button[aria-label*='Easy Apply']",
-    "phone": "input[name='phoneNumber']",
-    "resume_upload": "input[type='file'][name*='resume']",
-    "submit": "button[aria-label='Submit application']",
+ "easy_apply_button": "button[aria-label*='Easy Apply']",
+ "phone": "input[name='phoneNumber']",
+ "resume_upload": "input[type='file'][name*='resume']",
+ "submit": "button[aria-label='Submit application']",
 }
-```
 
 #### Indeed
-```python
 INDEED_SELECTORS = {
-    "apply_button": "button[id*='apply']",
-    "name": "input[name='applicant.name']",
-    "email": "input[name='applicant.emailAddress']",
-    "phone": "input[name='applicant.phoneNumber']",
-    "resume": "input[type='file'][name='resume']",
-}
-```
+ "apply_button": "button[id*='apply']",
+ "name": "input[name='applicant.name']",
+ "email": "input[name='applicant.emailAddress']",
+ "phone": "input[name='applicant.phoneNumber']",
+ "resume": "input[type='file'][name='resume']",
 
 ## Best Practices
 
@@ -125,17 +106,15 @@ INDEED_SELECTORS = {
 - Use exponential backoff for retries
 
 ### Error Handling
-```python
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 @retry(
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=4, max=10)
+ stop=stop_after_attempt(3),
+ wait=wait_exponential(multiplier=1, min=4, max=10)
 )
 def submit_application(job_url):
-    # Application logic
-    pass
-```
+ # Application logic
+ pass
 
 ### Session Management
 - Maintain authenticated sessions
@@ -167,60 +146,47 @@ def submit_application(job_url):
 
 ### Resume Tailoring
 Use AI to customize resumes per job:
-```python
 def tailor_resume(resume_text, job_description):
-    """Customize resume to highlight relevant skills"""
-    # Use LLM to analyze job requirements
-    # Reorder/emphasize matching experience
-    # Return tailored resume
-    pass
-```
+ """Customize resume to highlight relevant skills"""
+ # Use LLM to analyze job requirements
+ # Reorder/emphasize matching experience
+ # Return tailored resume
 
 ### Cover Letter Generation
 Generate personalized cover letters:
-```python
 def generate_cover_letter(job, profile, company_research):
-    """Create personalized cover letter"""
-    # Research company culture
-    # Match skills to requirements
-    # Generate authentic, personalized letter
-    pass
-```
+ """Create personalized cover letter"""
+ # Research company culture
+ # Match skills to requirements
+ # Generate authentic, personalized letter
 
 ## Tracking & Analytics
 
 ### Application Tracker
-```python
 APPLICATION_SCHEMA = {
-    "job_id": str,
-    "company": str,
-    "position": str,
-    "applied_date": str,
-    "platform": str,
-    "status": str,  # applied, rejected, interview, offer
-    "match_score": float,
-    "follow_up_date": str,
-    "notes": str
-}
-```
+ "job_id": str,
+ "company": str,
+ "position": str,
+ "applied_date": str,
+ "platform": str,
+ "status": str, # applied, rejected, interview, offer
+ "match_score": float,
+ "follow_up_date": str,
+ "notes": str
 
 ### Success Metrics
-- Application-to-response rate
-- Interview conversion rate
-- Best performing platforms
+- Application-to-response rate, Interview conversion rate, Best performing platforms
 - Most successful job titles/companies
 - Time to hire statistics
 
 ## Security
 
 ### Credential Storage
-```python
 from cryptography.fernet import Fernet
 import keyring
 
 # Store credentials securely
 keyring.set_password("job_automation", "linkedin", encrypted_password)
-```
 
 ### Data Encryption
 - Encrypt stored resumes and personal data
@@ -238,9 +204,7 @@ keyring.set_password("job_automation", "linkedin", encrypted_password)
 
 ### Debug Mode
 Enable verbose logging to troubleshoot issues:
-```python
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
-```

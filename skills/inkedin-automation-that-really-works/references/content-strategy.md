@@ -1,7 +1,6 @@
 # LinkedIn Content Strategy
 
 ## Hook Mastery
-
 First line is everything — LinkedIn truncates after ~140 chars.
 
 **Strong hooks:**
@@ -17,7 +16,6 @@ First line is everything — LinkedIn truncates after ~140 chars.
 - "Check out this article..."
 
 ## Post Structure
-
 ```
 Hook line (grab attention)
 
@@ -30,7 +28,6 @@ Short paragraph (context)
 One-liner insight
 
 Call to action or question
-```
 
 **Character counts:**
 - Ideal post: 1,200–1,500 characters
@@ -38,18 +35,14 @@ Call to action or question
 - Max total: 3,000 characters
 
 ## Best Posting Times (CET/CEST)
-
-| Region | Best Times | Best Days |
-|--------|-----------|-----------|
-| DACH | 07:00–09:00 | Di–Do |
-| US East | 13:00–15:00 | Di–Do |
-| US West | 16:00–18:00 | Di–Do |
-| Global | 08:00–09:00 CET | Di–Mi |
+DACH, Best Times=07:00–09:00, Best Days=Di–Do
+US East, Best Times=13:00–15:00, Best Days=Di–Do
+US West, Best Times=16:00–18:00, Best Days=Di–Do
+Global, Best Times=08:00–09:00 CET, Best Days=Di–Mi
 
 Rule: Post when your audience starts their workday.
 
 ## Content Pillars
-
 Pick 3–4 and rotate:
 
 1. **Educational** — Tips, how-tos, frameworks
@@ -58,38 +51,30 @@ Pick 3–4 and rotate:
 4. **Engagement Posts** — Questions, polls, debates
 
 Example rotation:
-- Monday: Educational
-- Wednesday: Personal Story
-- Friday: Engagement/Question
+- Monday: Educational, Wednesday: Personal Story, Friday: Engagement/Question
 
 ## The 4-1-1 Rule
-
 For every 6 posts:
 - 4 educational/value posts
 - 1 soft promotion (case study, achievement)
 - 1 hard promotion (product, service, hiring)
 
 ## Hashtag Strategy
-
 - Use 3–5 hashtags at END of post
-- Mix reach levels:
-  - 1 broad (#leadership, #ai — 10M+ followers)
-  - 2 medium (#digitaltransformation, #aistrategy — 1M)
-  - 1–2 niche (#creditrisk, #fintechleadership — 50K)
+ - Mix reach levels:
+ - 1 broad (#leadership, #ai — 10M+ followers)
+ - 2 medium (#digitaltransformation, #aistrategy — 1M)
+ - 1–2 niche (#creditrisk, #fintechleadership — 50K)
 
 ## Post Formats That Perform
-
-| Format | Engagement | Best For |
-|--------|-----------|----------|
-| Carousel/PDF | Very high | Frameworks, step-by-step |
-| Poll | High | Quick engagement boost |
-| Text-only | High | Stories, opinions |
-| Image + text | Medium-high | Visual concepts |
-| Link posts | Low | Driving traffic (algorithm deprioritizes) |
-| Video | Variable | Personal brand, tutorials |
+Carousel/PDF, Engagement=Very high, Best For=Frameworks, step-by-step
+Poll, Engagement=High, Best For=Quick engagement boost
+Text-only, Engagement=High, Best For=Stories, opinions
+Image + text, Engagement=Medium-high, Best For=Visual concepts
+Link posts, Engagement=Low, Best For=Driving traffic (algorithm deprioritizes)
+Video, Engagement=Variable, Best For=Personal brand, tutorials
 
 ## Engagement Multipliers
-
 - **Reply to every comment** within 1 hour = 2x reach
 - **Tag 1–2 people** only if genuinely relevant
 - **First comment strategy**: Add context/link in your own first comment

@@ -1,10 +1,8 @@
 ---
 name: wed
 description: "What Would Elon Do? - Transform any idea into a ruthless execution plan. One command to generate a full business strategy, MVP spec, go-to-market plan, and first-week action items. Think bigger. Move faster. /wed 'your idea'"
----
 
 # What Would Elon Do? (WED)
-
 > "When something is important enough, you do it even if the odds are not in your favor." - Elon Musk
 
 Transform any idea into an actionable empire-building plan. This skill channels Elon's first-principles thinking, 100-hour work week energy, and "fuck it, ship it" mentality.
@@ -12,10 +10,8 @@ Transform any idea into an actionable empire-building plan. This skill channels 
 Stop overthinking. Start executing.
 
 ## Usage
-
 ```
 /wed "your startup idea or problem"
-```
 
 ## What You Get
 
@@ -35,17 +31,13 @@ An internal announcement written exactly like Elon would write it. Direct. Aggre
 Day-by-day breakdown. Hour counts. Specific deliverables. No fluff, just execution.
 
 ## Examples
-
-```
 /wed "I want to build a better calendar app"
 /wed "How do I compete with Uber in my city"
 /wed "I have $500 and want to start a SaaS"
 /wed "I want to automate my entire job"
 /wed "Build me a $10k/month business"
-```
 
 ## Why This Works
-
 Most people fail because they:
 - Overthink instead of ship
 - Build features nobody wants
@@ -59,7 +51,6 @@ This skill forces you into Elon mode:
 - Ignore the haters, trust the process
 
 ## The Philosophy
-
 **"If you need inspiring words, don't do it."** - Elon Musk
 
 This isn't about motivation. It's about execution. You give WED an idea, it gives you a war plan. What you do with it is up to you.
@@ -68,21 +59,12 @@ The best founders ship fast and fix later. They don't wait for permission. They 
 
 That's what this skill gives you.
 
----
-
 ## Technical Details
-
 For the full execution workflow and advanced configuration, see `rules/logic.md`.
-
----
 
 **Created by:** [@theonejvo](https://x.com/theonejvo)
 
 ### Changelog
-
 **v1.0.0** - Initial release
-- First-principles analysis engine
-- Moonshot reframing
-- Weekend MVP generator
-- Musk memo writer
+- First-principles analysis engine, Moonshot reframing, Weekend MVP generator, Musk memo writer
 - Week 1 war planning

@@ -1,21 +1,17 @@
 ---
 name: stremio-cast
 description: Busca conteúdo no Stremio Web e transmite para dispositivos Chromecast usando CATT e Playwright. Use para reproduzir filmes e séries diretamente do Stremio em TVs.
----
 
 # Stremio Cast
-
 Esta skill permite que o Manus automatize a interface web do Stremio para encontrar links de streaming locais e transmiti-los para um dispositivo Chromecast.
 
 ## Pré-requisitos
-
 Para que esta skill funcione corretamente, o ambiente deve ter:
 1. **Stremio Service** rodando localmente na porta `11470`.
 2. **Playwright** instalado para automação do navegador.
 3. **CATT (Cast All The Things)** instalado via pip para o casting.
 
 ## Fluxo de Trabalho
-
 A skill executa os seguintes passos:
 1. Abre a interface web do Stremio (`app.strem.io`).
 2. Realiza a busca pelo título solicitado.
@@ -24,7 +20,6 @@ A skill executa os seguintes passos:
 5. Envia essa URL para o dispositivo Chromecast especificado usando a ferramenta `catt`.
 
 ## Uso
-
 A skill deve ser invocada quando o usuário pedir para "tocar [filme/série] no Chromecast" ou "assistir [título] na TV".
 
 ### Parâmetros

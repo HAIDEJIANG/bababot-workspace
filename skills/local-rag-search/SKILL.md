@@ -1,10 +1,8 @@
 ---
 name: local-rag-search
 description: Efficiently perform web searches using the mcp-local-rag server with semantic similarity ranking. Use this skill when you need to search the web for current information, research topics across multiple sources, or gather context from the internet without using external APIs. This skill teaches effective use of RAG-based web search with DuckDuckGo, Google, and multi-engine deep research capabilities.
----
 
 # Local RAG Search Skill
-
 This skill enables you to effectively use the mcp-local-rag MCP server for intelligent web searches with semantic ranking. The server performs RAG-like similarity scoring to prioritize the most relevant results without requiring any external APIs.
 
 ## Available Tools
@@ -26,7 +24,6 @@ Use this for privacy-focused, general web searches.
 ### 2. `rag_search_google` - Google Search
 Use this for comprehensive, technical, or detailed searches.
 
-**When to use:**
 - Technical or scientific queries
 - Need comprehensive coverage
 - Searching for specific documentation
@@ -34,7 +31,6 @@ Use this for comprehensive, technical, or detailed searches.
 ### 3. `deep_research` - Multi-Engine Deep Research
 Use this for comprehensive research across multiple search engines.
 
-**When to use:**
 - Researching complex topics requiring broad coverage
 - Need diverse perspectives from multiple sources
 - Gathering comprehensive information on a subject
@@ -59,57 +55,44 @@ Shortcut for deep research using only DuckDuckGo.
 
 ### Query Formulation
 1. **Use natural language**: Write queries as questions or descriptive phrases
-   - Good: "latest developments in quantum computing"
-   - Good: "how to implement binary search in Python"
-   - Avoid: Single keywords like "quantum" or "Python"
+ - Good: "latest developments in quantum computing"
+ - Good: "how to implement binary search in Python"
+ - Avoid: Single keywords like "quantum" or "Python"
 
 2. **Be specific**: Include context and details
-   - Good: "React hooks best practices for 2024"
-   - Better: "React useEffect cleanup function best practices"
+ - Good: "React hooks best practices for 2024"
+ - Better: "React useEffect cleanup function best practices"
 
 ### Tool Selection Strategy
-
 1. **Single Topic, Quick Answer** → Use `rag_search_ddgs` or `rag_search_google`
-   ```
-   rag_search_ddgs(
-       query="What is the capital of France?",
-       top_k=3
-   )
-   ```
+ ```
+ rag_search_ddgs(
+ query="What is the capital of France?",
+ top_k=3
+ )
 
 2. **Technical/Scientific Query** → Use `rag_search_google`
-   ```
-   rag_search_google(
-       query="Docker multi-stage build optimization techniques",
-       num_results=15,
-       top_k=7
-   )
-   ```
+ rag_search_google(
+ query="Docker multi-stage build optimization techniques",
+ num_results=15,
+ top_k=7
 
 3. **Comprehensive Research** → Use `deep_research` with multiple search terms
-   ```
-   deep_research(
-       search_terms=[
-           "machine learning fundamentals",
-           "neural networks architecture",
-           "deep learning best practices 2024"
-       ],
-       backends=["google", "duckduckgo"],
-       top_k_per_term=5
-   )
-   ```
+ deep_research(
+ search_terms=[
+ "machine learning fundamentals",
+ "neural networks architecture",
+ "deep learning best practices 2024"
+ ],
+ backends=["google", "duckduckgo"],
+ top_k_per_term=5
 
 4. **Factual/Encyclopedia Content** → Use `deep_research` with Wikipedia
-   ```
-   deep_research(
-       search_terms=["World War II timeline", "WWII key battles"],
-       backends=["wikipedia"],
-       num_results_per_term=5
-   )
-   ```
+ search_terms=["World War II timeline", "WWII key battles"],
+ backends=["wikipedia"],
+ num_results_per_term=5
 
 ### Parameter Tuning
-
 **For quick answers:**
 - `num_results=5-10`, `top_k=3-5`
 
@@ -124,40 +107,33 @@ Shortcut for deep research using only DuckDuckGo.
 ## Workflow Examples
 
 ### Example 1: Current Events
-```
 Task: "What happened at the UN climate summit last week?"
 
 1. Use rag_search_google for recent news coverage
 2. Set top_k=7 for comprehensive view
 3. Present findings with source URLs
-```
 
 ### Example 2: Technical Deep Dive
-```
 Task: "How do I optimize PostgreSQL queries?"
 
 1. Use deep_research with multiple specific terms:
-   - "PostgreSQL query optimization techniques"
-   - "PostgreSQL index best practices"
-   - "PostgreSQL EXPLAIN ANALYZE tutorial"
+ - "PostgreSQL query optimization techniques"
+ - "PostgreSQL index best practices"
+ - "PostgreSQL EXPLAIN ANALYZE tutorial"
 2. Use backends=["google", "stackoverflow"] if available
 3. Synthesize findings into actionable guide
-```
 
 ### Example 3: Multi-Perspective Research
-```
 Task: "Research the impact of remote work on productivity"
 
 1. Use deep_research with diverse search terms:
-   - "remote work productivity statistics 2024"
-   - "hybrid work model effectiveness studies"
-   - "work from home challenges research"
+ - "remote work productivity statistics 2024"
+ - "hybrid work model effectiveness studies"
+ - "work from home challenges research"
 2. Use backends=["google", "duckduckgo"] for broad coverage
 3. Synthesize different perspectives and studies
-```
 
 ## Guidelines
-
 1. **Always cite sources**: When `include_urls=True`, reference the source URLs in your response
 2. **Verify recency**: Check if the content appears current and relevant
 3. **Cross-reference**: For important facts, use multiple search terms or engines
@@ -167,7 +143,6 @@ Task: "Research the impact of remote work on productivity"
 7. **Explain your choice**: Briefly mention which tool you're using and why
 
 ## Error Handling
-
 If a search returns insufficient results:
 1. Try rephrasing the query with different keywords
 2. Switch to a different backend
@@ -175,13 +150,11 @@ If a search returns insufficient results:
 4. Use `deep_research` with multiple related search terms
 
 ## Privacy Considerations
-
 - DuckDuckGo: Privacy-focused, doesn't track users
 - Google: Most comprehensive but tracks searches
 - Recommend DuckDuckGo as default unless user specifically needs Google's coverage
 
 ## Performance Notes
-
 - First search may be slower (model loading)
 - Subsequent searches are faster (cached models)
 - More backends = more comprehensive but slower

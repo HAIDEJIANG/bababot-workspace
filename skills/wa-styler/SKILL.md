@@ -1,14 +1,11 @@
 ---
 name: whatsapp-styler
 description: Skill to ensure all messages sent to WhatsApp follow the platform's specific formatting syntax. It prevents markdown bloat and ensures a clean, mobile-first reading experience.
----
 
 # WhatsApp Styler
-
 This skill defines the strict formatting rules for WhatsApp to ensure the user sees clean, styled text without raw markdown symbols.
 
 ## Core Syntax Rules
-
 1. *Bold*: Use single asterisks around text: `*texto*`. NEVER use double asterisks `**`.
 2. _Italic_: Use single underscores around text: `_texto_`.
 3. ~Strikethrough~: Use tildes around text: `~texto~`.
@@ -18,7 +15,6 @@ This skill defines the strict formatting rules for WhatsApp to ensure the user s
 7. *Quotes*: Use the angle bracket: `> texto`.
 
 ## Prohibited Patterns (Do NOT use)
-
 - No headers (`#`, `##`, `###`). Use *BOLD CAPS* instead.
 - No markdown tables. Use bullet lists for structured data.
 - No horizontal rules (`---`). Use a line of underscores if needed `__________`.

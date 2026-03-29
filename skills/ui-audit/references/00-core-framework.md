@@ -10,9 +10,7 @@ Rules that automate recurring decisions. Pre-made defaults so you don't re-decid
 - Economics fundamentals (market forces)
 - Accessibility reference (WCAG/POUR)
 - Default typefaces and type scale
-- Icon library choice
-- Design system reference
-- Default design rules
+- Icon library choice, Design system reference, Default design rules
 
 ### 2. Decisioning
 Process for making new decisions when scaffolds don't apply.
@@ -37,7 +35,6 @@ Checklists for executing decisions consistently.
 ## The Decisioning Workflow (Detail)
 
 ### Step 1: What Does Institutional Knowledge Say?
-
 Institutional knowledge = existing patterns, brand guidelines, tech stack, team capabilities, business constraints.
 
 **Questions:**
@@ -49,10 +46,8 @@ Institutional knowledge = existing patterns, brand guidelines, tech stack, team 
 **Rule:** Always check internal resources before external inspiration.
 
 ### Step 2: What Are Users Familiar With?
-
 User familiarity = conventions from similar products, learned behaviors, competitor patterns.
 
-**Questions:**
 - What do competitors do for this pattern?
 - What's the platform convention (iOS/Android/Web)?
 - What prior experience do users bring?
@@ -61,10 +56,8 @@ User familiarity = conventions from similar products, learned behaviors, competi
 **Rule:** Familiarity reduces cognitive load. Novelty requires justification.
 
 ### Step 3: What Does Research Say?
-
 Research = user testing, analytics, academic studies, heuristic evaluation.
 
-**Questions:**
 - Do we have usability data on this pattern?
 - What does instrumentation tell us?
 - Are there published studies on this interaction?
@@ -73,7 +66,6 @@ Research = user testing, analytics, academic studies, heuristic evaluation.
 **Rule:** Research trumps opinion, but absence of research ≠ decision paralysis.
 
 ### Arriving at a Decision
-
 After weighing all three sources:
 1. If clear winner exists → choose it
 2. If conflict exists → prioritize by macro bet alignment
@@ -81,44 +73,34 @@ After weighing all three sources:
 
 **Document your reasoning.** Future you (and teammates) will thank you.
 
----
-
 ## Staging Your Bets
 
 ### Why Bets Matter
-
 Every design decision is a bet. You're wagering time and resources on an outcome. The question is whether you're betting intentionally or accidentally.
 
 ### Macro vs. Micro Bets
-
 **Macro bets** = Company-level strategic bets on how to win the market
 **Micro bets** = Individual design decisions within an interface
 
 **Critical Rule:** Micro bets are only valid when intentionally supporting macro bets.
 
 ### The 4 Categories of Macro Bets
-
-| Category | We win by... | Design implications |
-|----------|--------------|---------------------|
-| **Velocity** | Getting features to market faster | Reduce time-to-delivery, reuse components, find metaphors in other markets |
-| **Efficiency** | Managing waste better | Design systems, reuse patterns, reduce WIP |
-| **Accuracy** | Being right more frequently | Stronger research, measure with instrumentation, discovery sprints |
-| **Innovation** | Discovering untapped market potential | Uncover "fog of war" with better discovery, find parallels in other markets |
+**Velocity**, We win by...=Getting features to market faster, Design implications=Reduce time-to-delivery, reuse components, find metaphors in other markets
+**Efficiency**, We win by...=Managing waste better, Design implications=Design systems, reuse patterns, reduce WIP
+**Accuracy**, We win by...=Being right more frequently, Design implications=Stronger research, measure with instrumentation, discovery sprints
+**Innovation**, We win by...=Discovering untapped market potential, Design implications=Uncover "fog of war" with better discovery, find parallels in other markets
 
 ### How to Stage Your Bets
-
 1. **Analyze your industry** — Level of competition, market maturity, disruption threats
 2. **Analyze competitors** — Leading vs. lagging, their bets, their gaps
 3. **Define customer goals** — Jobs-to-be-done statements
 4. **Name your bets** — Explicit statements of what you're betting on and why
 
 ### Jobs-to-be-Done (JTBD) Format
-
 ```
 When [situation],
 I want to [motivation],
 So I can [desired outcome].
-```
 
 **Good JTBD:** "When I get emails, I want to organize them so I don't lose important information."
 
@@ -126,10 +108,7 @@ So I can [desired outcome].
 
 The difference: Good JTBD focuses on outcome, bad focuses on feature.
 
----
-
 ## Informing Simplicity
-
 Before diving into design:
 
 1. **Define 2-3 primary JTBD** — What are users trying to accomplish?

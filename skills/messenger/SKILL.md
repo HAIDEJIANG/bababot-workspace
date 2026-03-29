@@ -1,7 +1,6 @@
 ---
 name: messenger
 description: Guidance for Facebook Messenger Platform integrations: app setup, webhooks, messaging, and operational safety.
----
 
 # Messenger Integration Guide
 

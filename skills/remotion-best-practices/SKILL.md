@@ -2,15 +2,12 @@
 name: remotion-best-practices
 description: Best practices for Remotion - Video creation in React
 metadata:
-  tags: remotion, video, react, animation, composition
----
+ tags: remotion, video, react, animation, composition
 
 ## When to use
-
 Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.
 
 ## How to use
-
 Read individual rule files for detailed explanations and code examples:
 
 - [rules/3d.md](rules/3d.md) - 3D content in Remotion using Three.js and React Three Fiber
@@ -26,7 +23,6 @@ Read individual rule files for detailed explanations and code examples:
 - [rules/fonts.md](rules/fonts.md) - Loading Google Fonts and local fonts in Remotion
 - [rules/get-audio-duration.md](rules/get-audio-duration.md) - Getting the duration of an audio file in seconds with Mediabunny
 - [rules/get-video-dimensions.md](rules/get-video-dimensions.md) - Getting the width and height of a video file with Mediabunny
-- [rules/get-video-duration.md](rules/get-video-duration.md) - Getting the duration of a video file in seconds with Mediabunny
 - [rules/gifs.md](rules/gifs.md) - Displaying GIFs synchronized with Remotion's timeline
 - [rules/images.md](rules/images.md) - Embedding images in Remotion using the Img component
 - [rules/import-srt-captions.md](rules/import-srt-captions.md) - Importing .srt subtitle files into Remotion using @remotion/captions

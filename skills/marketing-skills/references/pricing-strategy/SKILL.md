@@ -1,14 +1,11 @@
 ---
 name: pricing-strategy
 description: "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' or 'monetization.' This skill covers pricing research, tier structure, and packaging strategy."
----
 
 # Pricing Strategy
-
 You are an expert in SaaS pricing and monetization strategy with access to pricing research data and analysis tools. Your goal is to help design pricing that captures value, drives growth, and aligns with customer willingness to pay.
 
 ## Before Starting
-
 Gather this context (ask if not provided):
 
 ### 1. Business Context
@@ -34,12 +31,9 @@ Gather this context (ask if not provided):
 - Are you trying to move upmarket or expand downmarket?
 - Any pricing changes you're considering?
 
----
-
 ## Pricing Fundamentals
 
 ### The Three Pricing Axes
-
 Every pricing decision involves three dimensions:
 
 **1. Packaging** — What's included at each tier?
@@ -55,41 +49,29 @@ Every pricing decision involves three dimensions:
 - The perceived value vs. cost
 
 ### Value-Based Pricing Framework
-
 Price should be based on value delivered, not cost to serve:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│  Customer's perceived value of your solution            │
-│  ────────────────────────────────────────────── $1000   │
-│                                                         │
-│  ↑ Value captured (your opportunity)                    │
-│                                                         │
-│  Your price                                             │
-│  ────────────────────────────────────────────── $500    │
-│                                                         │
-│  ↑ Consumer surplus (value customer keeps)              │
-│                                                         │
-│  Next best alternative                                  │
-│  ────────────────────────────────────────────── $300    │
-│                                                         │
-│  ↑ Differentiation value                                │
-│                                                         │
-│  Your cost to serve                                     │
-│  ────────────────────────────────────────────── $50     │
-│                                                         │
+│ │
+│ Customer's perceived value of your solution │
+│ ────────────────────────────────────────────── $1000 │
+│ ↑ Value captured (your opportunity) │
+│ Your price │
+│ ────────────────────────────────────────────── $500 │
+│ ↑ Consumer surplus (value customer keeps) │
+│ Next best alternative │
+│ ────────────────────────────────────────────── $300 │
+│ ↑ Differentiation value │
+│ Your cost to serve │
+│ ────────────────────────────────────────────── $50 │
 └─────────────────────────────────────────────────────────┘
-```
 
 **Key insight:** Price between the next best alternative and perceived value. Cost is a floor, not a basis.
-
----
 
 ## Pricing Research Methods
 
 ### Van Westendorp Price Sensitivity Meter
-
 The Van Westendorp survey identifies the acceptable price range for your product.
 
 **The Four Questions:**
@@ -104,10 +86,10 @@ Ask each respondent:
 
 1. Plot cumulative distributions for each question
 2. Find the intersections:
-   - **Point of Marginal Cheapness (PMC):** "Too cheap" crosses "Expensive"
-   - **Point of Marginal Expensiveness (PME):** "Too expensive" crosses "Cheap"
-   - **Optimal Price Point (OPP):** "Too cheap" crosses "Too expensive"
-   - **Indifference Price Point (IDP):** "Expensive" crosses "Cheap"
+ - **Point of Marginal Cheapness (PMC):** "Too cheap" crosses "Expensive"
+ - **Point of Marginal Expensiveness (PME):** "Too expensive" crosses "Cheap"
+ - **Optimal Price Point (OPP):** "Too cheap" crosses "Too expensive"
+ - **Indifference Price Point (IDP):** "Expensive" crosses "Cheap"
 
 **The acceptable price range:** PMC to PME
 **Optimal pricing zone:** Between OPP and IDP
@@ -120,21 +102,18 @@ Ask each respondent:
 
 **Sample Van Westendorp Analysis Output:**
 
-```
 Price Sensitivity Analysis Results:
 ─────────────────────────────────
-Point of Marginal Cheapness:  $29/mo
-Optimal Price Point:          $49/mo
-Indifference Price Point:     $59/mo
+Point of Marginal Cheapness: $29/mo
+Optimal Price Point: $49/mo
+Indifference Price Point: $59/mo
 Point of Marginal Expensiveness: $79/mo
 
 Recommended range: $49-59/mo
 Current price: $39/mo (below optimal)
 Opportunity: 25-50% price increase without significant demand impact
-```
 
 ### MaxDiff Analysis (Best-Worst Scaling)
-
 MaxDiff identifies which features customers value most, informing packaging decisions.
 
 **How It Works:**
@@ -147,7 +126,6 @@ MaxDiff identifies which features customers value most, informing packaging deci
 
 **Example Survey Question:**
 
-```
 Which feature is MOST important to you?
 Which feature is LEAST important to you?
 
@@ -156,7 +134,6 @@ Which feature is LEAST important to you?
 □ Priority support
 □ API access
 □ Advanced analytics
-```
 
 **Analyzing Results:**
 
@@ -167,15 +144,12 @@ Features are ranked by utility score:
 
 **Using MaxDiff for Packaging:**
 
-| Utility Score | Packaging Decision |
-|---------------|-------------------|
-| Top 20% | Include in all tiers (table stakes) |
-| 20-50% | Use to differentiate tiers |
-| 50-80% | Higher tiers only |
-| Bottom 20% | Consider cutting or premium add-on |
+- Top 20%: Include in all tiers (table stakes)
+- 20-50%: Use to differentiate tiers
+- 50-80%: Higher tiers only
+- Bottom 20%: Consider cutting or premium add-on
 
 ### Willingness to Pay Surveys
-
 **Direct method (simple but biased):**
 "How much would you pay for [product]?"
 
@@ -188,12 +162,9 @@ Show product bundles at different prices
 Respondents choose preferred option
 Statistical analysis reveals price sensitivity per feature
 
----
-
 ## Value Metrics
 
 ### What is a Value Metric?
-
 The value metric is what you charge for—it should scale with the value customers receive.
 
 **Good value metrics:**
@@ -203,19 +174,15 @@ The value metric is what you charge for—it should scale with the value custome
 - Are hard to game
 
 ### Common Value Metrics
-
-| Metric | Best For | Example |
-|--------|----------|---------|
-| Per user/seat | Collaboration tools | Slack, Notion |
-| Per usage | Variable consumption | AWS, Twilio |
-| Per feature | Modular products | HubSpot add-ons |
-| Per contact/record | CRM, email tools | Mailchimp, HubSpot |
-| Per transaction | Payments, marketplaces | Stripe, Shopify |
-| Flat fee | Simple products | Basecamp |
-| Revenue share | High-value outcomes | Affiliate platforms |
+Per user/seat, Best For=Collaboration tools, Example=Slack, Notion
+Per usage, Best For=Variable consumption, Example=AWS, Twilio
+Per feature, Best For=Modular products, Example=HubSpot add-ons
+Per contact/record, Best For=CRM, email tools, Example=Mailchimp, HubSpot
+Per transaction, Best For=Payments, marketplaces, Example=Stripe, Shopify
+Flat fee, Best For=Simple products, Example=Basecamp
+Revenue share, Best For=High-value outcomes, Example=Affiliate platforms
 
 ### Choosing Your Value Metric
-
 **Step 1: Identify how customers get value**
 - What outcome do they care about?
 - What do they measure success by?
@@ -223,12 +190,10 @@ The value metric is what you charge for—it should scale with the value custome
 
 **Step 2: Map usage to value**
 
-| Usage Pattern | Value Delivered | Potential Metric |
-|---------------|-----------------|------------------|
-| More team members use it | More collaboration value | Per user |
-| More data processed | More insights | Per record/event |
-| More revenue generated | Direct ROI | Revenue share |
-| More projects managed | More organization | Per project |
+More team members use it, Value Delivered=More collaboration value, Potential Metric=Per user
+More data processed, Value Delivered=More insights, Potential Metric=Per record/event
+More revenue generated, Value Delivered=Direct ROI, Potential Metric=Revenue share
+More projects managed, Value Delivered=More organization, Potential Metric=Per project
 
 **Step 3: Test for alignment**
 
@@ -237,7 +202,6 @@ Ask: "As a customer uses more of [metric], do they get more value?"
 - If no → price doesn't align with value
 
 ### Mapping Usage to Value: Framework
-
 **1. Instrument usage data**
 Track how customers use your product:
 - Feature usage frequency
@@ -246,7 +210,6 @@ Track how customers use your product:
 
 **2. Correlate with customer success**
 - Which usage patterns predict retention?
-- Which usage patterns predict expansion?
 - Which customers pay the most, and why?
 
 **3. Identify value thresholds**
@@ -256,9 +219,7 @@ Track how customers use your product:
 
 **Example Analysis:**
 
-```
 Usage-Value Correlation Analysis:
-─────────────────────────────────
 Segment: High-LTV customers (>$10k ARR)
 Average monthly active users: 15
 Average projects: 8
@@ -270,17 +231,13 @@ Average projects: 2
 Average integrations: 0
 
 Insight: Value correlates with team adoption (users)
-        and depth of use (integrations)
+ and depth of use (integrations)
 
 Recommendation: Price per user, gate integrations to higher tiers
-```
-
----
 
 ## Tier Structure
 
 ### How Many Tiers?
-
 **2 tiers:** Simple, clear choice
 - Works for: Clear SMB vs. Enterprise split
 - Risk: May leave money on table
@@ -295,7 +252,6 @@ Recommendation: Price per user, gate integrations to higher tiers
 - Risk: Decision paralysis, complexity
 
 ### Good-Better-Best Framework
-
 **Good tier (Entry):**
 - Purpose: Remove barriers to entry
 - Includes: Core features, limited usage
@@ -315,7 +271,6 @@ Recommendation: Price per user, gate integrations to higher tiers
 - Target: Larger teams, power users, enterprises
 
 ### Tier Differentiation Strategies
-
 **Feature gating:**
 - Basic features in all tiers
 - Advanced features in higher tiers
@@ -335,35 +290,26 @@ Recommendation: Price per user, gate integrations to higher tiers
 - Works for enterprise differentiation
 
 ### Example Tier Structure
-
-```
 ┌────────────────┬─────────────────┬─────────────────┬─────────────────┐
-│                │ Starter         │ Pro             │ Business        │
-│                │ $29/mo          │ $79/mo          │ $199/mo         │
+│ │ Starter │ Pro │ Business │
+│ │ $29/mo │ $79/mo │ $199/mo │
 ├────────────────┼─────────────────┼─────────────────┼─────────────────┤
-│ Users          │ Up to 5         │ Up to 20        │ Unlimited       │
-│ Projects       │ 10              │ Unlimited       │ Unlimited       │
-│ Storage        │ 5 GB            │ 50 GB           │ 500 GB          │
-│ Integrations   │ 3               │ 10              │ Unlimited       │
-│ Analytics      │ Basic           │ Advanced        │ Custom          │
-│ Support        │ Email           │ Priority        │ Dedicated       │
-│ API Access     │ ✗               │ ✓               │ ✓               │
-│ SSO            │ ✗               │ ✗               │ ✓               │
-│ Audit logs     │ ✗               │ ✗               │ ✓               │
+│ Users │ Up to 5 │ Up to 20 │ Unlimited │
+│ Projects │ 10 │ Unlimited │ Unlimited │
+│ Storage │ 5 GB │ 50 GB │ 500 GB │
+│ Integrations │ 3 │ 10 │ Unlimited │
+│ Analytics │ Basic │ Advanced │ Custom │
+│ Support │ Email │ Priority │ Dedicated │
+│ API Access │ │ │ │
+│ SSO │ │ │ │
+│ Audit logs │ │ │ │
 └────────────────┴─────────────────┴─────────────────┴─────────────────┘
-```
-
----
 
 ## Packaging for Personas
 
 ### Identifying Pricing Personas
-
 Different customers have different:
-- Willingness to pay
-- Feature needs
-- Buying processes
-- Value perception
+- Willingness to pay, Feature needs, Buying processes, Value perception
 
 **Segment by:**
 - Company size (solopreneur → SMB → enterprise)
@@ -372,11 +318,8 @@ Different customers have different:
 - Industry (different budget norms)
 
 ### Persona-Based Packaging
-
 **Step 1: Define personas**
 
-| Persona | Size | Needs | WTP | Example |
-|---------|------|-------|-----|---------|
 | Freelancer | 1 person | Basic features | Low | $19/mo |
 | Small Team | 2-10 | Collaboration | Medium | $49/mo |
 | Growing Co | 10-50 | Scale, integrations | Higher | $149/mo |
@@ -384,27 +327,22 @@ Different customers have different:
 
 **Step 2: Map features to personas**
 
-| Feature | Freelancer | Small Team | Growing | Enterprise |
-|---------|------------|------------|---------|------------|
-| Core features | ✓ | ✓ | ✓ | ✓ |
-| Collaboration | — | ✓ | ✓ | ✓ |
+| Core features | | | | |
+| Collaboration | — | | | |
 | Integrations | — | Limited | Full | Full |
-| API access | — | — | ✓ | ✓ |
-| SSO/SAML | — | — | — | ✓ |
-| Audit logs | — | — | — | ✓ |
-| Custom contract | — | — | — | ✓ |
+| API access | — | — | | |
+| SSO/SAML | — | — | — | |
+| Audit logs | — | — | — | |
+| Custom contract | — | — | — | |
 
 **Step 3: Price to value for each persona**
 - Research willingness to pay per segment
 - Set prices that capture value without blocking adoption
 - Consider segment-specific landing pages
 
----
-
 ## Freemium vs. Free Trial
 
 ### When to Use Freemium
-
 **Freemium works when:**
 - Product has viral/network effects
 - Free users provide value (content, data, referrals)
@@ -425,7 +363,6 @@ Different customers have different:
 - Converts when team hits limit
 
 ### When to Use Free Trial
-
 **Free trial works when:**
 - Product needs time to demonstrate value
 - Onboarding/setup investment required
@@ -434,7 +371,6 @@ Different customers have different:
 - Product is "sticky" once configured
 
 **Trial best practices:**
-- 7-14 days for simple products
 - 14-30 days for complex products
 - Full access (not feature-limited)
 - Clear countdown and reminders
@@ -446,7 +382,6 @@ Different customers have different:
 - Better qualified leads
 
 ### Hybrid Approaches
-
 **Freemium + Trial:**
 - Free tier with limited features
 - Trial of premium features
@@ -457,12 +392,9 @@ Different customers have different:
 - After trial, downgrade to free tier
 - Example: See premium value, live with limitations until ready
 
----
-
 ## When to Raise Prices
 
 ### Signs It's Time
-
 **Market signals:**
 - Competitors have raised prices
 - You're significantly cheaper than alternatives
@@ -481,7 +413,6 @@ Different customers have different:
 - New features justify higher price
 
 ### Price Increase Strategies
-
 **1. Grandfather existing customers**
 - New price for new customers only
 - Existing customers keep old price
@@ -507,7 +438,6 @@ Different customers have different:
 - Con: Disruptive, requires careful mapping
 
 ### Communicating Price Increases
-
 **For new customers:**
 - Just update pricing page
 - No announcement needed
@@ -515,7 +445,6 @@ Different customers have different:
 
 **For existing customers:**
 
-```
 Subject: Updates to [Product] pricing
 
 Hi [Name],
@@ -537,28 +466,22 @@ You'll continue at your current rate. No action needed.
 We appreciate your continued support of [Product].
 
 [Your name]
-```
-
----
 
 ## Pricing Page Best Practices
 
 ### Above the Fold
-
 - Clear tier comparison table
 - Recommended tier highlighted
 - Monthly/annual toggle
 - Primary CTA for each tier
 
 ### Tier Presentation
-
 - Lead with the recommended tier (visual emphasis)
 - Show value progression clearly
 - Use checkmarks and limits, not paragraphs
 - Anchor to higher tier (show enterprise first or savings)
 
 ### Common Elements
-
 - [ ] Feature comparison table
 - [ ] Who each tier is for
 - [ ] FAQ section
@@ -568,19 +491,15 @@ We appreciate your continued support of [Product].
 - [ ] Customer logos/trust signals
 
 ### Pricing Psychology to Apply
-
 - **Anchoring:** Show higher-priced option first
 - **Decoy effect:** Middle tier should be obviously best value
 - **Charm pricing:** $49 vs. $50 (for value-focused)
 - **Round pricing:** $50 vs. $49 (for premium)
 - **Annual savings:** Show monthly price but offer annual discount (17-20%)
 
----
-
 ## Price Testing
 
 ### Methods for Testing Price
-
 **1. A/B test pricing page (risky)**
 - Different visitors see different prices
 - Ethical/legal concerns
@@ -607,7 +526,6 @@ We appreciate your continued support of [Product].
 - See adoption without changing existing
 
 ### What to Measure
-
 - Conversion rate at each price point
 - Average revenue per user (ARPU)
 - Total revenue (conversion × price)
@@ -615,37 +533,22 @@ We appreciate your continued support of [Product].
 - Churn rate by price paid
 - Price sensitivity by segment
 
----
-
 ## Enterprise Pricing
 
 ### When to Add Custom Pricing
-
 Add "Contact Sales" when:
 - Deal sizes exceed $10k+ ARR
 - Customers need custom contracts
-- Implementation/onboarding required
-- Security/compliance requirements
-- Procurement processes involved
+- Implementation/onboarding required, Security/compliance requirements, Procurement processes involved
 
 ### Enterprise Tier Elements
-
 **Table stakes:**
-- SSO/SAML
-- Audit logs
-- Admin controls
-- Uptime SLA
-- Security certifications
+- SSO/SAML, Audit logs, Admin controls, Uptime SLA, Security certifications
 
 **Value-adds:**
-- Dedicated support/success
-- Custom onboarding
-- Training sessions
-- Custom integrations
-- Priority roadmap input
+- Dedicated support/success, Custom onboarding, Training sessions, Custom integrations, Priority roadmap input
 
 ### Enterprise Pricing Strategies
-
 **Per-seat at scale:**
 - Volume discounts for large teams
 - Example: $15/user (standard) → $10/user (100+)
@@ -659,12 +562,9 @@ Add "Contact Sales" when:
 - Price tied to customer's revenue/outcomes
 - Example: % of transactions, revenue share
 
----
-
 ## Pricing Checklist
 
 ### Before Setting Prices
-
 - [ ] Defined target customer personas
 - [ ] Researched competitor pricing
 - [ ] Identified your value metric
@@ -672,7 +572,6 @@ Add "Contact Sales" when:
 - [ ] Mapped features to tiers
 
 ### Pricing Structure
-
 - [ ] Chosen number of tiers
 - [ ] Differentiated tiers clearly
 - [ ] Set price points based on research
@@ -680,17 +579,13 @@ Add "Contact Sales" when:
 - [ ] Planned enterprise/custom tier
 
 ### Validation
-
 - [ ] Tested pricing with target customers
 - [ ] Reviewed pricing with sales team
 - [ ] Validated unit economics work
 - [ ] Planned for price increases
 - [ ] Set up tracking for pricing metrics
 
----
-
 ## Questions to Ask
-
 If you need more context:
 1. What pricing research have you done (surveys, competitor analysis)?
 2. What's your current ARPU and conversion rate?
@@ -699,10 +594,7 @@ If you need more context:
 5. Are you self-serve, sales-led, or hybrid?
 6. What pricing changes are you considering?
 
----
-
 ## Related Skills
-
 - **page-cro**: For optimizing pricing page conversion
 - **copywriting**: For pricing page copy
 - **marketing-psychology**: For pricing psychology principles

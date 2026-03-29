@@ -1,17 +1,16 @@
 # Giphy GIF Skill Changelog
 
 ## 2026-02-02 - Consolidated to Single-File Skill
-
 **Why:**
 - Eliminated external script dependency entirely
 - Follows OpenClaw best practice: simple skills = SKILL.md only
 - Easier to maintain, copy, and share
 
 **Changes:**
-- ✅ Removed `scripts/` directory entirely
-- ✅ Embedded all logic directly into SKILL.md as inline commands
-- ✅ Added helper function example for easy reuse
-- ✅ Improved documentation with practical examples
+- Removed `scripts/` directory entirely
+- Embedded all logic directly into SKILL.md as inline commands
+- Added helper function example for easy reuse
+- Improved documentation with practical examples
 
 **Migration Path:**
 1. Python → Shell Script (earlier today)

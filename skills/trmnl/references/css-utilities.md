@@ -9,9 +9,7 @@ Uses dither patterns on 1-bit displays:
 - `bg--white` - Pure white
 
 ### Text Colors (17 Shades)
-- `text--black`
-- `text--gray-10` through `text--gray-75`
-- `text--white`
+- `text--black`, `text--gray-10` through `text--gray-75`, `text--white`
 
 **Note:** Dark mode inverts entire screen except images.
 
@@ -38,7 +36,6 @@ Example: `<span class="title">Heading</span>`
 Example: `<span class="value value--large">$1,234.56</span>`
 
 ### Value Formatting (data-value-format)
-
 Auto-format numbers with locale support:
 ```html
 <span class="value" data-value-format="true">2345678</span>
@@ -52,18 +49,13 @@ Auto-format numbers with locale support:
 **Currencies:** `$` `€` `£` `¥` `₴` `₹` `₪` `₩` `₫` `₱` `₽` `₿`
 
 ### Fit Value (Auto-resize)
-
 Automatically resize text to fit container:
-```html
 <span class="value value--xxxlarge" data-fit-value="true">12345</span>
-```
 
 For text content, specify max height:
-```html
 <span class="value" data-fit-value="true" data-fit-value-max-height="340">
-  Long text here
+ Long text here
 </span>
-```
 
 Adjusts font size, weight, and line height to fit.
 
@@ -81,10 +73,7 @@ Supports `data-clamp="N"` for line limiting.
 - `.description` - Standardized descriptive text
 
 ### Text Alignment
-- `text--left` (default)
-- `text--center`
-- `text--right`
-- `text--justify`
+- `text--left` (default), `text--center`, `text--right`, `text--justify`
 
 ## Sizing Utilities
 
@@ -103,7 +92,6 @@ Custom 0-800px (no responsive support):
 
 ### Min/Max Dimensions
 - `w--min-{size}`, `w--max-{size}`
-- `h--min-{size}`, `h--max-{size}`
 - Arbitrary: `w--min-[100px]`, `w--max-[400px]`
 
 ### Dynamic Sizing
@@ -139,23 +127,16 @@ Example: `<div class="p--4 md:p--8 lg:p--12">`
 Works with `grid` and `flex` containers.
 
 ## Border Utilities
-
 Uses grayscale dithering (1=black, 7=white, 2-6=dithered grays):
 - `border--h-1` through `border--h-7` - Horizontal
-- `border--v-1` through `border--v-7` - Vertical
 
 **Note:** v2 borders NOT backward compatible with v1.
 
 ## Rounded Corners
 
 ### Base Sizes
-- `rounded--none` (0px)
-- `rounded--xsmall` (5px)
-- `rounded--small` (7px)
 - `rounded` or `rounded--base` (10px)
 - `rounded--medium` (15px)
-- `rounded--large` (20px)
-- `rounded--xlarge` (25px)
 - `rounded--xxlarge` (30px)
 - `rounded--full` (9999px - pill shape)
 
@@ -163,26 +144,17 @@ Uses grayscale dithering (1=black, 7=white, 2-6=dithered grays):
 - `rounded--[15px]` - Custom 0-50px (no responsive support)
 
 ### Corner-Specific
-- `rounded-tl--{size}` (top-left)
-- `rounded-tr--{size}` (top-right)
 - `rounded-br--{size}` (bottom-right)
-- `rounded-bl--{size}` (bottom-left)
 
 ### Side-Specific
-- `rounded-t--{size}` (top corners)
-- `rounded-r--{size}` (right corners)
 - `rounded-b--{size}` (bottom corners)
-- `rounded-l--{size}` (left corners)
 
 ## Visibility Utilities
 
 ### Display Classes
 - `hidden` - display: none
 - `visible` - display: block
-- `block`, `inline`, `inline-block`
-- `flex`, `inline-flex`
-- `grid`
-- `table`, `table-row`
+- `block`, `inline`, `inline-block`, `flex`, `inline-flex`, `grid`, `table`, `table-row`
 
 **Responsive:** All support `sm:`, `md:`, `lg:` breakpoints.
 **Bit-depth:** Support `1bit:`, `2bit:`, `4bit:` variants.
@@ -190,7 +162,6 @@ Uses grayscale dithering (1=black, 7=white, 2-6=dithered grays):
 Example: `<div class="hidden md:block 1bit:hidden 4bit:flex">`
 
 ## Aspect Ratio (Beta)
-
 - `aspect--auto` - No constraints
 - `aspect--1/1` - Square
 - `aspect--4/3`, `aspect--3/2`, `aspect--16/9`, `aspect--21/9`
@@ -212,33 +183,25 @@ Widths: `image-stroke` (default 1.5px), `image-stroke--small` (1px), `image-stro
 Colors: White (default), `image-stroke--black`
 
 ## Text Stroke
-
 **Limitation:** Works ONLY on pure black or white text.
 
 ### Width Modifiers
 - `text-stroke` - Default 3.5px white
-- `text-stroke--small` (2px)
-- `text-stroke--base` (3.5px)
-- `text-stroke--medium` (4.5px)
-- `text-stroke--large` (6px)
-- `text-stroke--xlarge` (7.5px)
+- `text-stroke--small` (2px), `text-stroke--medium` (4.5px), `text-stroke--xlarge` (7.5px)
 
 ### Colors
 16 shades: black, gray-10 through gray-75, white.
 
 ## Outline Utility
-
 - `outline` - Pixel-perfect rounded border
-  - 1-bit: Dithered 9-slice PNG
-  - 2-bit/4-bit: 1px solid border with 10px radius
+ - 1-bit: Dithered 9-slice PNG
+ - 2-bit/4-bit: 1px solid border with 10px radius
 
 - `screen--backdrop` - Alternative for patterned backgrounds
 
 ## Scale Utilities (Beta)
-
 Applied to `screen` element via `--ui-scale` CSS variable:
 
-- `screen--scale-xsmall` (0.75) - Maximum density
 - `screen--scale-small` (0.875) - Increased density
 - `screen--scale-regular` (1.0) - Default
 - `screen--scale-large` (1.125) - Enhanced readability

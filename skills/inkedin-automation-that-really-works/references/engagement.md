@@ -1,7 +1,6 @@
 # LinkedIn Engagement Guide
 
 ## Algorithm Signals (ranked by weight)
-
 1. **Comments** — weighted ~10x more than likes
 2. **Dwell time** — how long people read your post
 3. **Saves** — signals high value content
@@ -12,10 +11,8 @@
 ## Comment Strategy
 
 ### Quality Comment Formula
-
 ```
 [Acknowledgment] + [Your perspective/experience] + [Question or extension]
-```
 
 **Examples:**
 
@@ -32,14 +29,11 @@
 
 ### What NOT to comment
 - "Great post!" (bot behavior)
-- Generic emoji-only reactions
-- Copy-paste templates
-- Self-promotional plugs
+- Generic emoji-only reactions, Copy-paste templates, Self-promotional plugs
 
 ## Connection Growth
 
 ### Warm Outreach Template
-```
 Hey [Name],
 
 Loved your post about [topic] — especially [specific point].
@@ -49,7 +43,6 @@ I'm [brief intro] and we share interest in [overlap].
 Would love to connect and follow your content.
 
 [Your name]
-```
 
 ### Connection Limits
 - 100 requests/week (safe)
@@ -58,30 +51,23 @@ Would love to connect and follow your content.
 - Space: 20–30/day max
 
 ## Rate Limits (Stay Under)
-
-| Action | Daily Max | Weekly Max |
-|--------|----------|-----------|
-| Posts | 2–3 | 10–15 |
-| Comments | 20–30 | — |
-| Likes | 100 | — |
-| Connection requests | 30 | 100 |
-| Profile views | Natural pace | — |
-| InMails | 25 | — |
+Posts, Daily Max=2–3, Weekly Max=10–15
+Comments, Daily Max=20–30, Weekly Max=—
+Likes, Daily Max=100, Weekly Max=—
+Connection requests, Daily Max=30, Weekly Max=100
+Profile views, Daily Max=Natural pace, Weekly Max=—
+InMails, Daily Max=25, Weekly Max=—
 
 ## Weekly Engagement Routine
-
-| Day | Activity | Time |
-|-----|----------|------|
-| Daily | 15–20 comments on feed | 30 min |
-| Daily | Reply to all comments on own posts | 15 min |
-| Mon/Wed/Fri | Post content | 15 min |
-| Tue/Thu | Send connection requests | 15 min |
-| Sunday | Review analytics, plan week | 30 min |
+Daily, Activity=15–20 comments on feed, Time=30 min
+Daily, Activity=Reply to all comments on own posts, Time=15 min
+Mon/Wed/Fri, Activity=Post content, Time=15 min
+Tue/Thu, Activity=Send connection requests, Time=15 min
+Sunday, Activity=Review analytics, plan week, Time=30 min
 
 Total: ~1 hour/day for serious growth.
 
 ## Metrics to Track
-
 **Weekly:**
 - Impressions (reach)
 - Engagement rate (engagement / impressions)

@@ -1,5 +1,4 @@
 # Changelog
-
 All notable changes to the Zoho Email Integration skill will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -7,21 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.3] - 2026-01-31
 
-### ✅ UX / Quality of Life
+### UX / Quality of Life
 - **ClawdHub-friendly naming**: aligned docs + skill metadata to `clawdhub install zoho-email`
 - **`--help` without configuration**: help no longer requires credentials/tokens
 - **`doctor` command**: first-run diagnostics (env vars, token file, REST reachability, IMAP/SMTP reachability)
 - **Standardised token location**: default is now `~/.clawdbot/zoho-mail-tokens.json`
-- **Convenience cleanup commands**:
-  - `empty-spam` (dry-run by default, `--execute` to run)
-  - `empty-trash` (dry-run by default, `--execute` to run)
+ - **Convenience cleanup commands**:
+ - `empty-trash` (dry-run by default, `--execute` to run)
 - **Docs cleanup**: removed broken README links, added practical quick start + common task commands
 - **Clawdbot wrapper example**: added `examples/clawdbot-commands/emails.sh`
 
 ## [2.0.2] - 2026-01-29
 
-### 📝 Documentation - Updated SKILL.md Introduction
-
+### Documentation - Updated SKILL.md Introduction
 **Updated skill description to accurately reflect v2.0 capabilities:**
 
 #### Changed
@@ -35,8 +32,7 @@ This ensures users immediately see the modern features (OAuth2, REST API, HTML, 
 
 ## [2.0.1] - 2026-01-29
 
-### 🐛 Fixed - REST API Batch Operations
-
+### Fixed - REST API Batch Operations
 **Critical bug fixes for REST API mode + updated documentation:**
 
 #### Fixed
@@ -46,7 +42,6 @@ This ensures users immediately see the modern features (OAuth2, REST API, HTML, 
 - **Move operation** - Fixed endpoint to use `/updatemessage` with proper mode and folder lookup
 - **Batch operations** - All operations now batch multiple messages in single API calls (90% reduction in API usage)
 
-#### Changed
 - REST API methods now use folder name-to-ID lookup for consistency with IMAP mode
 - Batch operations consolidated into single API requests instead of individual calls
 - Improved error messages for folder not found cases
@@ -66,8 +61,7 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 
 ## [2.0.0] - 2026-01-29
 
-### 🚀 Added - REST API Backend Implementation
-
+### Added - REST API Backend Implementation
 **Major performance upgrade: 5-10x faster operations with REST API support!**
 
 ### Added - REST API Features
@@ -84,7 +78,6 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 - `list_messages()` - List emails with server-side filtering
 - `get_message()` - Get specific message by ID
 - `send_message()` - Send emails via REST API
-- `mark_as_read()` - Mark messages as read
 - `mark_as_unread()` - Mark messages as unread
 - `delete_messages()` - Delete messages (move to trash)
 - `move_messages()` - Move messages between folders
@@ -102,10 +95,8 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 - `get_unread_count()` - Uses REST API when available
 - `search_emails()` - Uses REST API list_messages with query conversion
 - `send_email()` - Uses REST API send_message when available
-- `mark_as_read()` - Uses REST API batch operations
 - `mark_as_unread()` - Uses REST API batch operations
 - `delete_emails()` - Uses REST API delete operations
-- `move_emails()` - Uses REST API move operations
 
 ### Added - Dependencies
 - `requests>=2.31.0` - Required for REST API mode
@@ -136,8 +127,7 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 
 ## [1.2.0] - 2026-01-29
 
-### 🔐 Added - OAuth2 Authentication Support
-
+### Added - OAuth2 Authentication Support
 **Secure OAuth2 authentication with automatic token management!**
 
 ### Added - OAuth2 Features
@@ -146,7 +136,6 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 - **Secure token storage** - Tokens stored in `~/.clawdbot/zoho-mail-tokens.json` with 600 permissions
 - **Token management CLI** - Commands to check status, refresh, and revoke tokens
 - **IMAP XOAUTH2 support** - OAuth2 authentication for IMAP connections
-- **SMTP XOAUTH2 support** - OAuth2 authentication for SMTP connections
 - **Backward compatibility** - App passwords still work, auto-detection of auth method
 - **No external dependencies** - Uses Python standard library only
 
@@ -161,11 +150,7 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 
 ### Added - OAuth2 Setup Tool
 - `scripts/oauth-setup.py` - Interactive OAuth2 setup wizard
-  - Browser-based authorization flow
-  - Automatic callback handling
-  - Secure token storage
-  - Token refresh support
-  - Status checking
+ - Browser-based authorization flow, Automatic callback handling, Secure token storage, Token refresh support, Status checking
 
 ### Added - Python API Methods
 - `ZohoEmail(auth_method='oauth2')` - OAuth2 authentication mode
@@ -173,7 +158,6 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 - `revoke_token()` - Revoke and delete OAuth2 tokens
 - `get_token_status()` - Check token validity and expiration
 
-### Added - Documentation
 - `OAUTH2_SETUP.md` - Complete OAuth2 setup guide with troubleshooting
 - `OAUTH2_FEATURE.md` - Comprehensive feature documentation
 - `OAUTH2_COMPLETE.md` - Implementation summary
@@ -195,11 +179,11 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 - Error messages now mention both auth methods
 
 ### Backward Compatibility
-- ✅ App passwords still fully supported
-- ✅ All existing commands work unchanged
-- ✅ No breaking changes to CLI or Python API
-- ✅ Auto-detection fallsback to app password if no OAuth2 tokens
-- ✅ Existing scripts require no modifications
+- App passwords still fully supported
+- All existing commands work unchanged
+- No breaking changes to CLI or Python API
+- Auto-detection fallsback to app password if no OAuth2 tokens
+- Existing scripts require no modifications
 
 ### Migration Path
 1. Run `python3 scripts/oauth-setup.py` to configure OAuth2
@@ -244,10 +228,10 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 - Environment variable configuration
 - CLI interface with comprehensive help
 - Python API for programmatic use
-- Example scripts:
-  - `morning-briefing.sh` - Daily email report
-  - `vip-monitor.sh` - Monitor important senders
-  - `auto-reply.py` - Automated email responses
+ - Example scripts:
+ - `morning-briefing.sh` - Daily email report
+ - `vip-monitor.sh` - Monitor important senders
+ - `auto-reply.py` - Automated email responses
 - Verbose debug mode (`--verbose` flag)
 - Configurable timeouts (`ZOHO_TIMEOUT` env var)
 - Date-limited search for performance (`ZOHO_SEARCH_DAYS` env var)
@@ -256,7 +240,6 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 - HTML email support with `send-html` command
 - Email attachment support (list, download, send)
 
-### Performance
 - **10x faster searches** - Date filtering limits search to recent emails (default: 30 days)
 - **2x faster unread checks** - Readonly IMAP mode
 - **Connection timeouts** - Prevents hanging on slow connections (default: 30s)
@@ -288,19 +271,15 @@ See [FIXES_COMPLETE.md](FIXES_COMPLETE.md) for detailed technical documentation.
 ## [Unreleased]
 
 ### Planned Features (v2.1.0+)
-- ✅ Attachment upload via REST API
-- ✅ Webhook support for real-time notifications
-- ✅ Advanced search syntax (by attachment, size, date)
-- ✅ Label and tag management
-- ✅ Bulk batch API for multiple operations
-- ✅ Email templates and scheduled sends
-- ✅ Zoho Calendar integration
-- ✅ Zoho CRM integration
+- Attachment upload via REST API
+- Webhook support for real-time notifications
+- Advanced search syntax (by attachment, size, date)
+- Label and tag management
+- Bulk batch API for multiple operations
+- Email templates and scheduled sends
+- Zoho Calendar integration
 
 ---
 
 **Legend:**
-- 🚀 Major feature
-- ✅ Completed
-- 🔧 In progress
-- 📋 Planned
+- Major feature, Completed, In progress, Planned

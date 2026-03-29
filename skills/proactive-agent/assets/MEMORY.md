@@ -1,5 +1,4 @@
 # MEMORY.md - Long-Term Memory
-
 > Your curated memories. Distill from daily notes. Remove when outdated.
 
 ---
@@ -15,14 +14,10 @@
 ### Important Dates
 [Birthdays, anniversaries, deadlines they care about]
 
----
-
 ## Lessons Learned
 
 ### [Date] - [Topic]
 [What happened and what you learned]
-
----
 
 ## Ongoing Context
 
@@ -35,13 +30,9 @@
 ### Things to Remember
 [Anything else important for continuity]
 
----
-
 ## Relationships & People
 
 ### [Person Name]
 [Who they are, relationship to human, relevant context]
-
----
 
 *Review and update periodically. Daily notes are raw; this is curated.*

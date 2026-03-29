@@ -1,10 +1,8 @@
 # OpenClaw agent workspace (cheat sheet)
-
-This reference is for building **OpenClaw-specific agents** (not generic LLM “agents”).
+This reference is for building **OpenClaw-specific agents** (not generic LLM "agents").
 
 ## Workspace layout (canonical)
-
-Workspace = agent’s “home” directory.
+Workspace = agent's "home" directory.
 
 Common files at workspace root:
 
@@ -20,7 +18,6 @@ Common files at workspace root:
 - `skills/` — optional workspace-specific skills
 
 ## What NOT to store in the workspace
-
 Do not commit secrets or credentials. Keep these out of the workspace repo:
 
 - `~/.openclaw/openclaw.json` (config)
@@ -28,7 +25,6 @@ Do not commit secrets or credentials. Keep these out of the workspace repo:
 - `~/.openclaw/agents/<agentId>/sessions/` (session transcripts)
 
 ## Heartbeats
-
 Default heartbeat prompt:
 
 `Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.`
@@ -40,15 +36,13 @@ Best practices:
 - Heartbeats burn tokens; enable only once you trust the agent.
 
 ## Safety defaults (recommended)
-
 - Never run destructive/state-changing actions without explicit permission.
 - Never send outbound messages/emails/posts unless explicitly asked.
 - Prefer `trash` over `rm`.
 - Stop on CLI usage errors; run `--help` and correct.
-- In group chats: don’t be the user’s voice; respond only when mentioned or clearly useful.
+- In group chats: don't be the user's voice; respond only when mentioned or clearly useful.
 
 ## Sub-agents (important)
-
 Sub-agents do not receive full bootstrap files. In particular, sub-agents only get `AGENTS.md` + `TOOLS.md` by default (not `SOUL.md`, `USER.md`, etc.).
 
 Implication: if you delegate, ensure `AGENTS.md` contains the cross-cutting safety and operating rules you need sub-agents to follow.

@@ -1,38 +1,24 @@
 ---
 name: email-sequence
 description: When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation," or "lifecycle emails." For in-app onboarding, see onboarding-cro.
----
 
 # Email Sequence Design
-
 You are an expert in email marketing and automation. Your goal is to create email sequences that nurture relationships, drive action, and move people toward conversion.
 
 ## Initial Assessment
-
 Before creating a sequence, understand:
 
 1. **Sequence Type**
-   - Welcome/onboarding sequence
-   - Lead nurture sequence
-   - Re-engagement sequence
-   - Post-purchase sequence
-   - Event-based sequence
-   - Educational sequence
-   - Sales sequence
+ - Welcome/onboarding sequence, Lead nurture sequence, Re-engagement sequence, Post-purchase sequence, Event-based sequence, Educational sequence, Sales sequence
 
 2. **Audience Context**
-   - Who are they?
-   - What triggered them into this sequence?
-   - What do they already know/believe?
-   - What's their current relationship with you?
+ - Who are they?
+ - What triggered them into this sequence?
+ - What do they already know/believe?
+ - What's their current relationship with you?
 
 3. **Goals**
-   - Primary conversion goal
-   - Relationship-building goals
-   - Segmentation goals
-   - What defines success?
-
----
+ - Primary conversion goal, Relationship-building goals, Segmentation goals, What defines success?
 
 ## Core Principles
 
@@ -56,8 +42,6 @@ Before creating a sequence, understand:
 - Links should do something useful
 - Make next steps obvious
 
----
-
 ## Email Sequence Strategy
 
 ### Sequence Length
@@ -67,9 +51,7 @@ Before creating a sequence, understand:
 - Re-engagement: 3-5 emails
 
 Depends on:
-- Sales cycle length
-- Product complexity
-- Relationship stage
+- Sales cycle length, Product complexity, Relationship stage
 
 ### Timing/Delays
 - Welcome email: Immediately
@@ -83,10 +65,7 @@ Consider:
 - Time zones: Send at local time
 
 ### Subject Line Strategy
-- Clear > Clever
-- Specific > Vague
-- Benefit or curiosity-driven
-- 40-60 characters ideal
+- Clear > Clever, Specific > Vague, Benefit or curiosity-driven, 40-60 characters ideal
 - Test emoji (they're polarizing)
 
 **Patterns that work:**
@@ -102,12 +81,9 @@ Consider:
 - Don't repeat subject line
 - Complete the thought or add intrigue
 
----
-
 ## Sequence Templates
 
 ### Welcome Sequence (Post-Signup)
-
 **Email 1: Welcome (Immediate)**
 - Subject: Welcome to [Product] — here's your first step
 - Deliver what was promised (lead magnet, access, etc.)
@@ -146,15 +122,10 @@ Consider:
 
 **Email 7: Conversion (Day 12-14)**
 - Subject: Ready to [upgrade/buy/commit]?
-- Summarize value
-- Clear offer
-- Urgency if appropriate
+- Summarize value, Clear offer, Urgency if appropriate
 - Risk reversal (guarantee, trial)
 
----
-
 ### Lead Nurture Sequence (Pre-Sale)
-
 **Email 1: Deliver + Introduce (Immediate)**
 - Deliver the lead magnet
 - Brief intro to who you are
@@ -186,20 +157,12 @@ Consider:
 - Build preference
 
 **Email 7: Objection Handler (Day 15-18)**
-- Common concern addressed
-- FAQ or myth-busting
-- Reduce friction
+- Common concern addressed, FAQ or myth-busting, Reduce friction
 
 **Email 8: Direct Offer (Day 19-21)**
-- Clear pitch
-- Strong value proposition
-- Specific CTA
-- Urgency if available
-
----
+- Clear pitch, Strong value proposition, Specific CTA, Urgency if available
 
 ### Re-Engagement Sequence
-
 **Email 1: Check-In (Day 30-60 of inactivity)**
 - Subject: Is everything okay, [Name]?
 - Genuine concern
@@ -214,9 +177,7 @@ Consider:
 
 **Email 3: Incentive (Day 5-7 after)**
 - Subject: We miss you — here's something special
-- Offer if appropriate
-- Limited time
-- Clear CTA
+- Offer if appropriate, Limited time, Clear CTA
 
 **Email 4: Last Chance (Day 10-14 after)**
 - Subject: Should we stop emailing you?
@@ -224,10 +185,7 @@ Consider:
 - One-click to stay or go
 - Clean the list if no response
 
----
-
 ### Onboarding Sequence (Product Users)
-
 Coordinate with in-app onboarding. Email supports, doesn't duplicate.
 
 **Email 1: Welcome + First Step (Immediate)**
@@ -246,29 +204,20 @@ Coordinate with in-app onboarding. Email supports, doesn't duplicate.
 - In-app link
 
 **Email 4: Success Story (Day 4-5)**
-- Customer who succeeded
-- Relatable journey
-- Motivational
+- Customer who succeeded, Relatable journey, Motivational
 
 **Email 5: Check-In (Day 7)**
-- How's it going?
-- Ask for feedback
-- Offer help
+- How's it going?, Ask for feedback, Offer help
 
 **Email 6: Advanced Tip (Day 10-12)**
-- Power feature
-- For engaged users
-- Level-up content
+- Power feature, For engaged users, Level-up content
 
 **Email 7: Upgrade/Expand (Day 14+)**
 - For trial users: conversion push
 - For free users: upgrade prompt
 - For paid: expansion opportunity
 
----
-
 ## Email Types Reference
-
 A comprehensive guide to lifecycle and campaign emails. Use this as an audit checklist and implementation reference.
 
 ### Onboarding Emails
@@ -288,8 +237,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 
 **Key metrics**: Activation rate, feature adoption
 
----
-
 #### New Customers Series
 **Trigger**: User converts to paid
 **Goal**: Reinforce purchase decision, drive adoption, reduce early churn
@@ -302,8 +249,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Email 5: Check-in + introduce support resources (day 14)
 
 **Key point**: Different from new user series—they've committed. Focus on reinforcement and expansion, not conversion.
-
----
 
 #### Key Onboarding Step Reminder
 **Trigger**: User hasn't completed critical setup step after X time
@@ -321,8 +266,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Make it easy (direct link to complete)
 - Offer help if stuck
 
----
-
 #### New User Invite
 **Trigger**: Existing user invites teammate
 **Goal**: Activate the invited user
@@ -332,13 +275,10 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Email 2: Reminder if not accepted (day 2)
 - Email 3: Final reminder (day 5)
 
-**Copy approach**:
 - Personalize with inviter's name
 - Explain what they're joining
 - Single CTA to accept invite
 - Social proof optional
-
----
 
 ### Retention Emails
 
@@ -359,8 +299,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Urgency: Trial ending, limited offer
 - Final: Last chance + easy path
 
----
-
 #### Upgrade to Higher Plan
 **Trigger**: User approaching plan limits or using features available on higher tier
 **Goal**: Upsell to next tier
@@ -372,13 +310,10 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Tried to use higher-tier feature
 - Power user behavior patterns
 
-**Copy approach**:
 - Acknowledge their growth (positive framing)
 - Show what next tier unlocks
 - Quantify value vs. cost
 - Easy upgrade path
-
----
 
 #### Ask for Review
 **Trigger**: Customer milestone (30/60/90 days, key achievement, support resolution)
@@ -391,34 +326,26 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - After renewal
 - NOT after billing issues or bugs
 
-**Copy approach**:
 - Thank them for being a customer
 - Mention specific value/milestone if possible
 - Explain why reviews matter (help others decide)
 - Direct link to review platform
 - Keep it short—this is an ask
 
----
-
 #### Offer Support Proactively
 **Trigger**: Signs of struggle (drop in usage, failed actions, error encounters)
 **Goal**: Save at-risk user, improve experience
-**Format**: Single email
 
-**Trigger examples**:
 - Usage dropped significantly week-over-week
 - Multiple failed attempts at action
 - Viewed help docs repeatedly
 - Stuck at same onboarding step
 
-**Copy approach**:
 - Genuine concern tone
 - Specific: "I noticed you..." (if data allows)
 - Offer direct help (not just link to docs)
 - Personal from support or CSM
 - No sales pitch—pure help
-
----
 
 #### Product Usage Report
 **Trigger**: Time-based (weekly, monthly, quarterly)
@@ -439,12 +366,9 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 
 **Key point**: Make them feel good and remind them of value delivered.
 
----
-
 #### NPS Survey
 **Trigger**: Time-based (quarterly) or event-based (post-milestone)
 **Goal**: Measure satisfaction, identify promoters and detractors
-**Format**: Single email
 
 **Best practices**:
 - Keep it simple: Just the NPS question initially
@@ -457,8 +381,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Passives (7-8): Ask what would make it a 10
 - Detractors (0-6): Personal outreach to understand issues
 
----
-
 #### Referral Program
 **Trigger**: Customer milestone, promoter NPS score, or campaign
 **Goal**: Generate referrals
@@ -467,16 +389,12 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 **Good timing**:
 - After positive NPS response
 - After customer achieves result
-- After renewal
 - Seasonal campaigns
 
-**Copy approach**:
 - Remind them of their success
 - Explain the referral offer clearly
 - Make sharing easy (unique link)
 - Show what's in it for them AND referee
-
----
 
 ### Billing Emails
 
@@ -491,34 +409,27 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Lock in current price messaging
 - Easy one-click switch
 
-**Best timing**:
 - Around monthly renewal date
 - End of year / new year
 - After 3-6 months of loyalty
 - Price increase announcement (lock in old rate)
-
----
 
 #### Failed Payment Recovery
 **Trigger**: Payment fails
 **Goal**: Recover revenue, retain customer
 **Typical sequence**: 3-4 emails over 7-14 days
 
-**Sequence structure**:
 - Email 1 (Day 0): Friendly notice, update payment link
 - Email 2 (Day 3): Reminder, service may be interrupted
 - Email 3 (Day 7): Urgent, account will be suspended
 - Email 4 (Day 10-14): Final notice, what they'll lose
 
-**Copy approach**:
 - Assume it's an accident (card expired, etc.)
 - Clear, direct, no guilt
 - Single CTA to update payment
 - Explain what happens if not resolved
 
 **Key metrics**: Recovery rate, time to recovery
-
----
 
 #### Cancellation Survey
 **Trigger**: User cancels subscription
@@ -538,14 +449,10 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 
 **Winback opportunity**: Based on reason, offer targeted save (discount, pause, downgrade, training).
 
----
-
 #### Upcoming Renewal Reminder
 **Trigger**: X days before renewal (14 or 30 days typical)
 **Goal**: No surprise charges, opportunity to expand
-**Format**: Single email
 
-**What to include**:
 - Renewal date and amount
 - What's included in renewal
 - How to update payment/plan
@@ -554,14 +461,11 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 
 **Required for**: Annual subscriptions, high-value contracts
 
----
-
 ### Usage Emails
 
 #### Daily/Weekly/Monthly Summary
 **Trigger**: Time-based
 **Goal**: Drive engagement, demonstrate value
-**Format**: Single email, recurring
 
 **Content by frequency**:
 - **Daily**: Notifications, quick stats (for high-engagement products)
@@ -577,27 +481,18 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 
 **Personalization**: Must be relevant to their actual usage. Empty reports are worse than no report.
 
----
-
 #### Key Event or Milestone Notifications
 **Trigger**: Specific achievement or event
 **Goal**: Celebrate, drive continued engagement
 **Format**: Single email per event
 
 **Milestone examples**:
-- First [action] completed
-- 10th/100th [thing] created
-- Goal achieved
-- Team collaboration milestone
-- Usage streak
+- First [action] completed, 10th/100th [thing] created, Goal achieved, Team collaboration milestone, Usage streak
 
-**Copy approach**:
 - Celebration tone
 - Specific achievement
 - Context (compared to others, compared to before)
 - What's next / next milestone
-
----
 
 ### Win-Back Emails
 
@@ -606,7 +501,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 **Goal**: Convert or re-engage
 **Typical sequence**: 3-4 emails over 30 days
 
-**Sequence structure**:
 - Email 1 (Day 1 post-expiry): Trial ended, here's what you're missing
 - Email 2 (Day 7): What held you back? (gather feedback)
 - Email 3 (Day 14): Incentive offer (discount, extended trial)
@@ -617,19 +511,15 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Low engagement: Offer fresh start, more onboarding help
 - No engagement: Ask what happened, offer demo/call
 
----
-
 #### Cancelled Customers
 **Trigger**: Time after cancellation (30, 60, 90 days)
 **Goal**: Win back churned customers
 **Typical sequence**: 2-3 emails spread over 90 days
 
-**Sequence structure**:
 - Email 1 (Day 30): What's new since you left
 - Email 2 (Day 60): We've addressed [common reason]
 - Email 3 (Day 90): Special offer to return
 
-**Copy approach**:
 - No guilt, no desperation
 - Genuine updates and improvements
 - Personalize based on cancellation reason if known
@@ -637,30 +527,21 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 
 **Key point**: They're more likely to return if their reason was addressed.
 
----
-
 ### Campaign Emails
 
 #### Monthly Roundup / Newsletter
 **Trigger**: Time-based (monthly)
 **Goal**: Engagement, brand presence, content distribution
-**Format**: Single email, recurring
 
 **Content mix**:
 - Product updates and tips
-- Customer stories
-- Educational content
-- Company news
-- Industry insights
+- Customer stories, Educational content, Company news, Industry insights
 
-**Best practices**:
 - Consistent send day/time
 - Scannable format
 - Mix of content types
 - One primary CTA focus
 - Unsubscribe is okay—keeps list healthy
-
----
 
 #### Seasonal Promotions
 **Trigger**: Calendar events (Black Friday, New Year, etc.)
@@ -674,19 +555,15 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Industry-specific seasons
 - Back to school / work
 
-**Sequence structure**:
 - Announcement: Offer reveal
 - Reminder: Midway through promotion
 - Last chance: Final hours
-
----
 
 #### Product Updates
 **Trigger**: New feature release
 **Goal**: Adoption, engagement, demonstrate momentum
 **Format**: Single email per major release
 
-**What to include**:
 - What's new (clear and simple)
 - Why it matters (benefit, not just feature)
 - How to use it (direct link)
@@ -696,8 +573,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Users who would benefit most
 - Users who requested feature
 - Power users first (for beta feel)
-
----
 
 #### Industry News Roundup
 **Trigger**: Time-based (weekly or monthly)
@@ -712,8 +587,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 
 **Best for**: B2B products where customers care about industry trends.
 
----
-
 #### Pricing Update
 **Trigger**: Price change announcement
 **Goal**: Transparent communication, minimize churn
@@ -724,7 +597,6 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 - Reminder 14 days before
 - Final notice 7 days before
 
-**Copy approach**:
 - Clear, direct, transparent
 - Explain the why (value delivered, costs increased)
 - Grandfather if possible (lock in old rate)
@@ -732,14 +604,10 @@ A comprehensive guide to lifecycle and campaign emails. Use this as an audit che
 
 **Important**: Honesty and advance notice build trust even when price increases.
 
----
-
 ## Email Audit Checklist
-
 Use this to audit your current email program:
 
 ### Onboarding
-- [ ] New users series
 - [ ] New customers series
 - [ ] Key onboarding step reminders
 - [ ] New user invite sequence
@@ -773,8 +641,6 @@ Use this to audit your current email program:
 - [ ] Seasonal promotion calendar
 - [ ] Product update announcements
 - [ ] Pricing update communications
-
----
 
 ## Email Copy Guidelines
 
@@ -812,8 +678,6 @@ Use this to audit your current email program:
 - One clear primary CTA per email
 - Button text: Action + outcome
 
----
-
 ## Personalization
 
 ### Merge Fields
@@ -822,35 +686,25 @@ Use this to audit your current email program:
 - Relevant data (usage, plan, etc.)
 
 ### Dynamic Content
-- Based on segment
-- Based on behavior
-- Based on stage
+- Based on segment, Based on behavior, Based on stage
 
 ### Triggered Emails
 - Action-based sends
 - More relevant than time-based
 - Examples: Feature used, milestone hit, inactivity
 
----
-
 ## Segmentation Strategies
 
 ### By Behavior
-- Openers vs. non-openers
-- Clickers vs. non-clickers
-- Active vs. inactive
+- Openers vs. non-openers, Clickers vs. non-clickers, Active vs. inactive
 
 ### By Stage
-- Trial vs. paid
-- New vs. long-term
-- Engaged vs. at-risk
+- Trial vs. paid, New vs. long-term, Engaged vs. at-risk
 
 ### By Profile
 - Industry/role (B2B)
 - Use case / goal
 - Company size
-
----
 
 ## Testing and Optimization
 
@@ -864,9 +718,7 @@ Use this to audit your current email program:
 
 ### How to Test
 - A/B test one variable at a time
-- Sufficient sample size
-- Statistical significance
-- Document learnings
+- Sufficient sample size, Statistical significance, Document learnings
 
 ### Metrics to Track
 - Open rate (benchmark: 20-40%)
@@ -874,8 +726,6 @@ Use this to audit your current email program:
 - Unsubscribe rate (keep under 0.5%)
 - Conversion rate (specific to sequence goal)
 - Revenue per email (if applicable)
-
----
 
 ## Output Format
 
@@ -887,10 +737,8 @@ Goal: [Primary conversion goal]
 Length: [Number of emails]
 Timing: [Delay between emails]
 Exit Conditions: [When they leave the sequence]
-```
 
 ### For Each Email
-```
 Email [#]: [Name/Purpose]
 Send: [Timing]
 Subject: [Subject line]
@@ -898,15 +746,11 @@ Preview: [Preview text]
 Body: [Full copy]
 CTA: [Button text] → [Link destination]
 Segment/Conditions: [If applicable]
-```
 
 ### Metrics Plan
 What to measure and benchmarks
 
----
-
 ## Questions to Ask
-
 If you need more context:
 1. What triggers entry to this sequence?
 2. What's the primary goal/conversion action?
@@ -915,10 +759,7 @@ If you need more context:
 5. What other emails are they receiving?
 6. What's your current email performance?
 
----
-
 ## Related Skills
-
 - **onboarding-cro**: For in-app onboarding (email supports this)
 - **copywriting**: For landing pages emails link to
 - **ab-test-setup**: For testing email elements

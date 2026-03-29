@@ -2,11 +2,9 @@
 name: linkedin
 description: LinkedIn automation via browser relay or cookies for messaging, profile viewing, and network actions.
 homepage: https://linkedin.com
-metadata: {"clawdbot":{"emoji":"💼"}}
----
+metadata: {"clawdbot":{"emoji":""}}
 
 # LinkedIn
-
 Use browser automation to interact with LinkedIn - check messages, view profiles, search, and send connection requests.
 
 ## Connection Methods
@@ -17,7 +15,7 @@ Use browser automation to interact with LinkedIn - check messages, view profiles
 3. Use `browser` tool with `profile="chrome"`
 
 ### Option 2: Isolated Browser
-1. Use `browser` tool with `profile="clawd"` 
+1. Use `browser` tool with `profile="clawd"`
 2. Navigate to linkedin.com
 3. Log in manually (one-time setup)
 4. Session persists for future use
@@ -27,25 +25,16 @@ Use browser automation to interact with LinkedIn - check messages, view profiles
 ### Check Connection Status
 ```
 browser action=snapshot profile=chrome targetUrl="https://www.linkedin.com/feed/"
-```
 
 ### View Notifications/Messages
-```
 browser action=navigate profile=chrome targetUrl="https://www.linkedin.com/messaging/"
 browser action=snapshot profile=chrome
-```
 
 ### Search People
-```
 browser action=navigate profile=chrome targetUrl="https://www.linkedin.com/search/results/people/?keywords=QUERY"
-browser action=snapshot profile=chrome
-```
 
 ### View Profile
-```
 browser action=navigate profile=chrome targetUrl="https://www.linkedin.com/in/USERNAME/"
-browser action=snapshot profile=chrome
-```
 
 ### Send Message (confirm with user first!)
 1. Navigate to messaging or profile

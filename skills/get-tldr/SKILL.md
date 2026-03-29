@@ -1,10 +1,8 @@
 ---
 name: get-tldr
 description: Provide the summary returned by the get-tldr.com summarize API without further summarization; the skill should format the API output for readability but must not change its content.
----
 
 # get-tldr
-
 Quick, deterministic skill to summarize the content of a link using the get-tldr.com API.
 
 Usage pattern (for the agent):
@@ -21,10 +19,9 @@ Notes for maintainers:
 
 ```
 {
-  "api_token": "<your_key_here>",
-  "logfile": "/path/to/logfile.log"
+ "api_token": "<your_key_here>",
+ "logfile": "/path/to/logfile.log"
 }
-```
 
 - The script will use the "api_token" field from the config. If the config file is missing the script falls back to the GET_TLDR_API_KEY environment variable or a .env file in the skill folder.
 - IMPORTANT: Do not summarize the API response again; the skill should only format the response for readability and must not alter the content.

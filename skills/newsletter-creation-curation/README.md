@@ -3,7 +3,6 @@
 A comprehensive skill for creating, structuring, and curating email newsletters for B2B SaaS companies.
 
 ## Overview
-
 This skill teaches Claude systematic approaches to email newsletter creation, content curation, and subscriber engagement. It provides frameworks for structuring different newsletter formats, curating industry content, writing engaging copy, and planning editorial calendars.
 
 ## Core Capabilities
@@ -37,7 +36,6 @@ This skill teaches Claude systematic approaches to email newsletter creation, co
 - Frequency and timing optimization
 
 ## Limitations
-
 This skill provides newsletter frameworks and writing guidance. It does **NOT**:
 - Connect to email service providers (Substack, Mailchimp, etc.)
 - Provide subscriber analytics or open rate data
@@ -82,14 +80,10 @@ This skill provides newsletter frameworks and writing guidance. It does **NOT**:
 24. Tech stack recommendations newsletter
 
 ## Installation
-
 Upload this skill folder to Claude via:
-- Claude.ai web interface
-- Claude desktop app
-- Claude API
+- Claude.ai web interface, Claude desktop app, Claude API
 
 ## Usage
-
 Simply mention newsletter-related tasks:
 - "Help me structure my weekly newsletter"
 - "Curate industry news for this week's edition"
@@ -100,7 +94,6 @@ Simply mention newsletter-related tasks:
 Claude will automatically use this skill to provide structured newsletter guidance.
 
 ## Industry Coverage
-
 Optimized for 4 high-growth B2B verticals:
 - **Sales Technology**: CRM, Sales Engagement, Revenue Intelligence
 - **HR Technology**: HRIS, ATS, Performance Management, Payroll
@@ -119,7 +112,6 @@ Structure a long-form newsletter analyzing sales forecasting best practices with
 Plan a 4-part newsletter series on fintech compliance covering basics through competitive advantage.
 
 ## Author
-
 Created by Shashwat Ghosh
 - Fractional CMO, Helix GTM Consulting
 - 24+ years B2B SaaS marketing experience
@@ -127,7 +119,4 @@ Created by Shashwat Ghosh
 - #10 Product Marketing Creator India (LinkedIn)
 
 ## Links
-
-- ClawdHub: https://clawdhub.com/shashwatgtm/newsletter-creation-curation
-- LinkedIn: https://linkedin.com/in/shashwatghosh-ai-b2b-gtm-fractionalcmo
-- GitHub: https://github.com/shashwatgtm
+- ClawdHub: https://clawdhub.com/shashwatgtm/newsletter-creation-curation, LinkedIn: https://linkedin.com/in/shashwatghosh-ai-b2b-gtm-fractionalcmo, GitHub: https://github.com/shashwatgtm

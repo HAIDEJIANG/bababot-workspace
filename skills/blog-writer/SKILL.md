@@ -1,16 +1,13 @@
 ---
 name: blog-writer
 description: This skill should be used when writing blog posts, articles, or long-form content in the writer's distinctive writing style. It produces authentic, opinionated content that matches the writer's voice—direct, conversational, and grounded in personal experience. The skill handles the complete workflow from research review through Notion publication. Use this skill for drafting blog posts, thought leadership pieces, or any writing meant to reflect the writer's perspective on AI, productivity, sales, marketing, or technology topics.
----
 
 # Blog Writer
 
 ## Overview
-
 This skill enables writing blog posts and articles that authentically capture the writer's distinctive voice and style. It draws on examples of the writer's published work to produce content that is direct, opinionated, conversational, and grounded in practical experience. The skill includes automatic Notion integration and maintains a growing library of finalized examples.
 
 ## When to Use This Skill
-
 Trigger this skill when:
 - The user requests blog post or article writing in "my style" or "like my other posts"
 - Drafting thought leadership content on AI, productivity, marketing, or technology
@@ -18,7 +15,6 @@ Trigger this skill when:
 - The user provides research materials, links, or notes to incorporate into writing
 
 ## Core Responsibilities
-
 1. **Follow the writer's Writing Style**: Match voice, word choice, structure, and length of example posts in `references/blog-examples/`
 2. **Incorporate Research**: Review and integrate any information, research material, or links provided by the user
 3. **Follow User Instructions**: Adhere closely to the user's specific requests for topic, angle, and emphasis
@@ -27,7 +23,6 @@ Trigger this skill when:
 ## Workflow
 
 ### Phase 1: Gather Information
-
 Request from the user:
 - Topic or subject matter
 - Any specific angle or thesis to explore
@@ -37,7 +32,6 @@ Request from the user:
 Review all provided materials thoroughly before beginning to write.
 
 ### Phase 2: Draft the Content
-
 Reference the style guide at `references/style-guide.md` and examples in `references/blog-examples/` for calibration.
 
 When writing:
@@ -50,11 +44,9 @@ When writing:
 7. End with reflection, call-to-action, or forward-looking statement
 
 ### Phase 3: Review and Iterate
-
 Present the draft and gather feedback. Iterate until the user confirms satisfaction.
 
 ### Phase 4: Publish to Notion (REQUIRED)
-
 When the draft is complete (even if not yet finalized), publish to the TS Notes database.
 
 **Notion Publication Details:**
@@ -67,36 +59,30 @@ When the draft is complete (even if not yet finalized), publish to the TS Notes 
 **Example Notion API call properties:**
 ```json
 {
-  "Note": "Blog Post Title Here",
-  "Type": "Writing",
-  "Project(s)": "[\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]"
+ "Note": "Blog Post Title Here",
+ "Type": "Writing",
+ "Project(s)": "[\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]"
 }
 ```
 
 **CRITICAL**: The outcome is considered a **failure** if the content is not added to Notion. Always publish to Notion as part of the workflow, even for drafts.
 
 ### Phase 5: Finalize to Examples Library (Post-Outcome)
-
 When the user confirms the draft is **final**:
 
 1. Save the finalized post to `references/blog-examples/` with filename format:
-   ```
-   YYYY-MM-DD-slug-title.md
-   ```
-   Example: `2025-11-25-why-ai-art-is-useless.md`
+ YYYY-MM-DD-slug-title.md
+ Example: `2025-11-25-why-ai-art-is-useless.md`
 
 2. Check the examples library count:
-   - If exceeding 20 examples, ask user permission to remove the 5 oldest
-   - Sort by filename date prefix to identify oldest files
+ - If exceeding 20 examples, ask user permission to remove the 5 oldest
+ - Sort by filename date prefix to identify oldest files
 
 The post-outcome is considered **successful** when the final draft is saved to the skill folder.
 
 ## Success Criteria
-
-| Outcome | Success | Failure |
-|---------|---------|---------|
-| Primary | User receives requested content AND it is added to TS Notes with Type=Writing and Project=My Writing | Content delivered but NOT added to Notion |
-| Post-outcome | Final draft saved to `references/blog-examples/` | Final draft not saved when user confirms it's final |
+Primary, Success=User receives requested content AND it is added to TS Notes with Type=Writing and Project=My Writing, Failure=Content delivered but NOT added to Notion
+Post-outcome, Success=Final draft saved to `references/blog-examples/`, Failure=Final draft not saved when user confirms it's final
 
 ## the writer's Writing Style Profile
 
@@ -141,10 +127,8 @@ Quick reference for the writer's writing patterns, vocabulary preferences, and s
 Contains example blog posts demonstrating the writer's writing style. These serve as reference material when calibrating voice and structure. New finalized posts expand this library over time.
 
 ## Notion API Reference
-
 To create a page in TS Notes:
 
-```
 Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21
 
 Properties:
@@ -153,6 +137,5 @@ Properties:
 - "Project(s)": ["https://www.notion.so/2a5b4629bb3780189199f3c496980c0c"]
 
 Content: Full blog post in Notion-flavored Markdown
-```
 
 The "My Writing" project page ID is: `2a5b4629-bb37-8018-9199-f3c496980c0c`

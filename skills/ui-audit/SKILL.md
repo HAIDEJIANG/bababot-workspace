@@ -5,14 +5,11 @@ author: Tommy Geoco
 homepage: https://audit.uxtools.co
 logo: logo-light.png
 logoDark: logo-dark.png
----
 
 # UI Audit Skill
-
 Evaluate interfaces against proven UX principles. Based on [Making UX Decisions](https://uxdecisions.com) by Tommy Geoco.
 
 ## When to Use This Skill
-
 - Making UI/UX design decisions under time pressure
 - Evaluating design trade-offs with business context
 - Choosing appropriate UI patterns for specific problems
@@ -20,13 +17,11 @@ Evaluate interfaces against proven UX principles. Based on [Making UX Decisions]
 - Structuring design thinking for new interfaces
 
 ## Core Philosophy
-
 **Speed ≠ Recklessness.** Designing quickly is not automatically reckless. Recklessly designing quickly is reckless. The difference is intentionality.
 
 ## The 3 Pillars of Warp-Speed Decisioning
-
 1. **Scaffolding** — Rules you use to automate recurring decisions
-2. **Decisioning** — Process you use for making new decisions  
+2. **Decisioning** — Process you use for making new decisions
 3. **Crafting** — Checklists you use for executing decisions
 
 ## Quick Reference Structure
@@ -74,39 +69,33 @@ Evaluate interfaces against proven UX principles. Based on [Making UX Decisions]
 3. Evaluate benefits, use cases, psychological principles, and implementation guidelines
 
 ## Decision Workflow Summary
-
 When facing a UI decision:
 
 ```
 1. WEIGH INFORMATION
-   ├─ What does institutional knowledge say? (existing patterns, brand, tech constraints)
-   ├─ What are users familiar with? (conventions, competitor patterns)
-   └─ What does research say? (user testing, analytics, studies)
+ ├─ What does institutional knowledge say? (existing patterns, brand, tech constraints)
+ ├─ What are users familiar with? (conventions, competitor patterns)
+ └─ What does research say? (user testing, analytics, studies)
 
 2. NARROW OPTIONS
-   ├─ Eliminate what conflicts with constraints
-   ├─ Prioritize what aligns with macro bets
-   └─ Choose based on JTBD support
+ ├─ Eliminate what conflicts with constraints
+ ├─ Prioritize what aligns with macro bets
+ └─ Choose based on JTBD support
 
 3. EXECUTE
-   └─ Apply relevant checklist + patterns
-```
+ └─ Apply relevant checklist + patterns
 
 ## Macro Bet Categories
-
 Companies win through one or more of:
 
-| Bet | Description | Design Implication |
-|-----|-------------|-------------------|
-| **Velocity** | Features to market faster | Reuse patterns, find metaphors in other markets |
-| **Efficiency** | Manage waste better | Design systems, reduce WIP |
-| **Accuracy** | Be right more often | Stronger research, instrumentation |
-| **Innovation** | Discover untapped potential | Novel patterns, cross-domain inspiration |
+**Velocity**, Description=Features to market faster, Design Implication=Reuse patterns, find metaphors in other markets
+**Efficiency**, Description=Manage waste better, Design Implication=Design systems, reduce WIP
+**Accuracy**, Description=Be right more often, Design Implication=Stronger research, instrumentation
+**Innovation**, Description=Discover untapped potential, Design Implication=Novel patterns, cross-domain inspiration
 
 Always align micro design bets with company macro bets.
 
 ## Key Principle: Good Design Decisions Are Relative
-
 A design decision is "good" when it:
 - Supports the product's jobs-to-be-done
 - Aligns with company macro bets
@@ -115,10 +104,7 @@ A design decision is "good" when it:
 
 There is no universally correct UI solution—only contextually appropriate ones.
 
----
-
 ## Generating Audit Reports
-
 When asked to audit a design, generate a comprehensive report. Always include these sections:
 
 ### Required Sections (always include)
@@ -134,42 +120,37 @@ When asked to audit a design, generate a comprehensive report. Always include th
 8. **Forms** — For data entry: labels, validation, error messages, field types
 
 ### Audit Output Format
-
 ```json
 {
-  "title": "Design Name — Screen/Flow",
-  "project": "Project Name",
-  "date": "YYYY-MM-DD",
-  "figma_url": "optional",
-  "screenshot_url": "optional - URL to screenshot",
-  
-  "macro_bets": [
-    { "category": "velocity|efficiency|accuracy|innovation", "description": "...", "alignment": "strong|moderate|weak" }
-  ],
-  
-  "jtbd": [
-    { "user": "User Type", "situation": "context without 'When'", "motivation": "goal without 'I want to'", "outcome": "benefit without 'so I can'" }
-  ],
-  
-  "visual_hierarchy": {
-    "title": "Visual Hierarchy",
-    "checks": [
-      { "label": "Check name", "status": "pass|warn|fail|na", "notes": "Details" }
-    ]
-  },
-  "visual_style": { ... },
-  "accessibility": { ... },
-  
-  "priority_fixes": [
-    { "rank": 1, "title": "Fix title", "description": "What and why", "framework_reference": "XX-filename.md → Section Name" }
-  ],
-  
-  "notes": "Optional overall observations"
+ "title": "Design Name — Screen/Flow",
+ "project": "Project Name",
+ "date": "YYYY-MM-DD",
+ "figma_url": "optional",
+ "screenshot_url": "optional - URL to screenshot",
+
+ "macro_bets": [
+ { "category": "velocity|efficiency|accuracy|innovation", "description": "...", "alignment": "strong|moderate|weak" }
+ ],
+
+ "jtbd": [
+ { "user": "User Type", "situation": "context without 'When'", "motivation": "goal without 'I want to'", "outcome": "benefit without 'so I can'" }
+
+ "visual_hierarchy": {
+ "title": "Visual Hierarchy",
+ "checks": [
+ { "label": "Check name", "status": "pass|warn|fail|na", "notes": "Details" }
+ ]
+ },
+ "visual_style": { ... },
+ "accessibility": { ... },
+
+ "priority_fixes": [
+ { "rank": 1, "title": "Fix title", "description": "What and why", "framework_reference": "XX-filename.md → Section Name" }
+
+ "notes": "Optional overall observations"
 }
-```
 
 ### Checks Per Section (aim for 6-10 each)
-
 **Visual Hierarchy**: heading distinction, primary action clarity, grouping/proximity, reading flow, type scale, color hierarchy, whitespace usage, visual weight balance
 
 **Visual Style**: spacing consistency, color palette adherence, elevation/shadows, typography system, border/radius consistency, icon style, motion principles

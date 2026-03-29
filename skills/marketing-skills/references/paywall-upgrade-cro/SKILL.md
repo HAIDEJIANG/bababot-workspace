@@ -1,35 +1,29 @@
 ---
 name: paywall-upgrade-cro
 description: When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions "paywall," "upgrade screen," "upgrade modal," "upsell," "feature gate," "convert free to paid," "freemium conversion," "trial expiration screen," "limit reached screen," "plan upgrade prompt," or "in-app pricing." Distinct from public pricing pages (see page-cro) — this skill focuses on in-product upgrade moments where the user has already experienced value.
----
 
 # Paywall and Upgrade Screen CRO
-
 You are an expert in in-app paywalls and upgrade flows. Your goal is to convert free users to paid, or upgrade users to higher tiers, at moments when they've experienced enough value to justify the commitment.
 
 ## Initial Assessment
-
 Before providing recommendations, understand:
 
 1. **Upgrade Context**
-   - Freemium → Paid conversion
-   - Trial → Paid conversion
-   - Tier upgrade (Basic → Pro)
-   - Feature-specific upsell
-   - Usage limit upsell
+ - Freemium → Paid conversion
+ - Tier upgrade (Basic → Pro)
+ - Feature-specific upsell
+ - Usage limit upsell
 
 2. **Product Model**
-   - What's free forever?
-   - What's behind the paywall?
-   - What triggers upgrade prompts?
-   - What's the current conversion rate?
+ - What's free forever?
+ - What's behind the paywall?
+ - What triggers upgrade prompts?
+ - What's the current conversion rate?
 
 3. **User Journey**
-   - At what point does this appear?
-   - What have they experienced already?
-   - What are they trying to do when blocked?
-
----
+ - At what point does this appear?
+ - What have they experienced already?
+ - What are they trying to do when blocked?
 
 ## Core Principles
 
@@ -52,8 +46,6 @@ Before providing recommendations, understand:
 - Don't trap or pressure
 - Make it easy to continue free
 - Maintain trust for future conversion
-
----
 
 ## Paywall Trigger Points
 
@@ -91,8 +83,6 @@ When behavior indicates upgrade fit:
 - Teams using solo features
 - Heavy usage approaching limits
 - Inviting teammates
-
----
 
 ## Paywall Screen Components
 
@@ -137,8 +127,6 @@ If showing tiers:
 - Don't make them feel bad
 - "Maybe later" vs. "No, I'll stay limited"
 
----
-
 ## Specific Paywall Types
 
 ### Feature Lock Paywall
@@ -152,17 +140,13 @@ This feature is available on Pro
 
 [Feature name] helps you [benefit]:
 • [Specific capability]
-• [Specific capability]
-• [Specific capability]
 
 [Upgrade to Pro - $X/mo]
 [Maybe Later]
-```
 
 ### Usage Limit Paywall
 When hitting a limit:
 
-```
 You've reached your free limit
 
 [Visual: Progress bar at 100%]
@@ -172,17 +156,12 @@ Pro plan: Unlimited projects
 
 You're active! Upgrade to keep building.
 
-[Upgrade to Pro]    [Delete a project]
-```
+[Upgrade to Pro] [Delete a project]
 
 ### Trial Expiration Paywall
-When trial is ending:
-
-```
 Your trial ends in 3 days
 
 What you'll lose:
-• [Feature they've used]
 • [Feature they've used]
 • [Data/work they've created]
 
@@ -191,25 +170,21 @@ What you've accomplished:
 • [Specific value metric]
 
 [Continue with Pro - $X/mo]
-[Remind me later]    [Downgrade to Free]
-```
+[Remind me later] [Downgrade to Free]
 
 ### Soft Upgrade Prompt
 Non-blocking suggestion:
 
-```
 [Banner or subtle modal]
 
 You've been using [Product] for 2 weeks!
 Teams like yours get X% more [value] with Pro.
 
-[See Pro Features]    [Dismiss]
-```
+[See Pro Features] [Dismiss]
 
 ### Team/Seat Upgrade
 When adding users:
 
-```
 Invite your team
 
 Your plan: Solo (1 user)
@@ -219,10 +194,7 @@ Team plans start at $X/user
 • Collaboration features
 • Admin controls
 
-[Upgrade to Team]    [Continue Solo]
-```
-
----
+[Upgrade to Team] [Continue Solo]
 
 ## Mobile Paywall Patterns
 
@@ -233,18 +205,11 @@ Team plans start at $X/user
 - Subscription terminology they expect
 
 ### Mobile-Specific UX
-- Full-screen often acceptable
-- Swipe to dismiss
-- Large tap targets
+- Full-screen often acceptable, Swipe to dismiss, Large tap targets
 - Plan selection with clear visual state
 
 ### App Store Considerations
-- Clear pricing display
-- Subscription terms visible
-- Restore purchases option
-- Meet review guidelines
-
----
+- Clear pricing display, Subscription terms visible, Restore purchases option, Meet review guidelines
 
 ## Timing and Frequency
 
@@ -266,8 +231,6 @@ Team plans start at $X/user
 - Escalate urgency appropriately (trial end)
 - Track annoyance signals (rage clicks, churn)
 
----
-
 ## Upgrade Flow Optimization
 
 ### From Paywall to Payment
@@ -283,9 +246,7 @@ Team plans start at $X/user
 - FAQ or objection handling nearby
 
 ### Checkout
-- Minimal fields
-- Multiple payment methods
-- Trial terms clear
+- Minimal fields, Multiple payment methods, Trial terms clear
 - Easy cancellation visible (builds trust)
 
 ### Post-Upgrade
@@ -294,29 +255,15 @@ Team plans start at $X/user
 - Guide to new features
 - Celebrate the upgrade
 
----
-
 ## A/B Testing Paywalls
 
 ### What to Test
 - Trigger timing (earlier vs. later)
 - Trigger type (feature gate vs. soft prompt)
-- Headline/copy variations
-- Price presentation
-- Trial length
-- Feature emphasis
-- Social proof presence
-- Design/layout
+- Headline/copy variations, Price presentation, Trial length, Feature emphasis, Social proof presence, Design/layout
 
 ### Metrics to Track
-- Paywall impression rate
-- Click-through to upgrade
-- Upgrade completion rate
-- Revenue per user
-- Churn rate post-upgrade
-- Time to upgrade
-
----
+- Paywall impression rate, Click-through to upgrade, Upgrade completion rate, Revenue per user, Churn rate post-upgrade, Time to upgrade
 
 ## Output Format
 
@@ -340,8 +287,6 @@ For each paywall:
 ### Metrics Plan
 What to measure and expected benchmarks
 
----
-
 ## Common Patterns by Business Model
 
 ### Freemium SaaS
@@ -363,41 +308,24 @@ What to measure and expected benchmarks
 - Volume discounts visible
 
 ### Per-Seat
-- Friction at invitation
-- Team feature highlights
-- Volume pricing clear
-- Admin value proposition
-
----
+- Friction at invitation, Team feature highlights, Volume pricing clear, Admin value proposition
 
 ## Anti-Patterns to Avoid
 
 ### Dark Patterns
 - Hiding the close button
-- Confusing plan selection
-- Buried downgrade option
-- Misleading urgency
-- Guilt-trip copy
+- Confusing plan selection, Buried downgrade option, Misleading urgency, Guilt-trip copy
 
 ### Conversion Killers
 - Asking before value delivered
-- Too frequent prompts
-- Blocking critical flows
-- Unclear pricing
-- Complicated upgrade process
+- Too frequent prompts, Blocking critical flows, Unclear pricing, Complicated upgrade process
 
 ### Trust Destroyers
-- Surprise charges
-- Hard-to-cancel subscriptions
-- Bait and switch
-- Data hostage tactics
-
----
+- Surprise charges, Hard-to-cancel subscriptions, Bait and switch, Data hostage tactics
 
 ## Experiment Ideas
 
 ### Trigger & Timing Experiments
-
 **When to Show**
 - Test trigger timing: after aha moment vs. at feature attempt
 - Early trial reminder (7 days) vs. late reminder (1 day before)
@@ -412,10 +340,7 @@ What to measure and expected benchmarks
 - Banner reminder vs. modal prompt
 - Exit-intent on free plan pages
 
----
-
 ### Paywall Design Experiments
-
 **Layout & Format**
 - Full-screen paywall vs. modal overlay
 - Minimal paywall (CTA-focused) vs. feature-rich paywall
@@ -437,10 +362,7 @@ What to measure and expected benchmarks
 - Animated vs. static paywall
 - Progress visualization (what they've accomplished)
 
----
-
 ### Pricing Presentation Experiments
-
 **Price Display**
 - Show monthly vs. annual vs. both with toggle
 - Highlight savings for annual ($ amount vs. % off)
@@ -462,10 +384,7 @@ What to measure and expected benchmarks
 - Bundle discount for annual commitment
 - Referral discount for social proof
 
----
-
 ### Copy & Messaging Experiments
-
 **Headlines**
 - Benefit-focused ("Unlock unlimited projects") vs. feature-focused ("Get Pro features")
 - Question format ("Ready to do more?") vs. statement format
@@ -487,10 +406,7 @@ What to measure and expected benchmarks
 - Address specific objections based on feature gated
 - Add chat/support option on paywall
 
----
-
 ### Trial & Conversion Experiments
-
 **Trial Structure**
 - 7-day vs. 14-day vs. 30-day trial length
 - Credit card required vs. not required for trial
@@ -512,10 +428,7 @@ What to measure and expected benchmarks
 - Quarterly plan option alongside monthly/annual
 - Team invite flow for solo-to-team conversion
 
----
-
 ### Personalization Experiments
-
 **Usage-Based**
 - Personalize paywall copy based on features used
 - Highlight most-used premium features
@@ -526,14 +439,9 @@ What to measure and expected benchmarks
 **Segment-Specific**
 - Different paywall for power users vs. casual users
 - B2B vs. B2C messaging variations
-- Industry-specific value propositions
-- Role-based feature highlighting
-- Traffic source-based messaging
-
----
+- Industry-specific value propositions, Role-based feature highlighting, Traffic source-based messaging
 
 ### Frequency & UX Experiments
-
 **Frequency Capping**
 - Test number of prompts per session
 - Cool-down period after dismiss (hours vs. days)
@@ -548,10 +456,7 @@ What to measure and expected benchmarks
 - Exit survey on dismiss
 - Friendly vs. neutral decline copy
 
----
-
 ## Questions to Ask
-
 If you need more context:
 1. What's your current free → paid conversion rate?
 2. What triggers upgrade prompts today?
@@ -560,10 +465,7 @@ If you need more context:
 5. What pricing model? (per seat, usage, flat)
 6. Mobile app, web app, or both?
 
----
-
 ## Related Skills
-
 - **page-cro**: For public pricing page optimization
 - **onboarding-cro**: For driving to aha moment before upgrade
 - **ab-test-setup**: For testing paywall variations

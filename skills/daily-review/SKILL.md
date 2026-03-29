@@ -4,28 +4,23 @@ version: 1.0.0
 description: Comprehensive daily performance review with communication tracking, meeting analysis, output metrics, and focus time monitoring. Your AI performance coach.
 author: henrino3
 tags: [productivity, performance, tracking, review, coach]
----
 
 # Daily Review Skill
-
 Generate comprehensive daily performance reviews with AI coaching insights.
 
 ## Features
-
-| Feature | Source | Status |
-|---------|--------|--------|
-| Emails sent | Gmail API | ✅ |
-| Slack messages | Slack API | ✅ |
-| X.com mentions | Bird CLI | ✅ |
-| Meetings attended | Fireflies (speaker verified) | ✅ |
-| Git commits | git log | ✅ |
-| Docs modified | Google Drive API | ✅ |
-| Screen Time | macOS knowledgeC.db | ✅ |
-| ActivityWatch | AW API | ✅ |
+Emails sent, Source=Gmail API, Status=
+Slack messages, Source=Slack API, Status=
+X.com mentions, Source=Bird CLI, Status=
+Meetings attended, Source=Fireflies (speaker verified), Status=
+Git commits, Source=git log, Status=
+Docs modified, Source=Google Drive API, Status=
+Screen Time, Source=macOS knowledgeC.db, Status=
+ActivityWatch, Source=AW API, Status=
 
 ## Usage
-
 ```bash
+
 # Run daily review for today
 ~/clawd/skills/daily-review/scripts/daily-review.sh
 
@@ -34,38 +29,35 @@ Generate comprehensive daily performance reviews with AI coaching insights.
 ```
 
 ## Sample Output
-
-```
-🏆 Daily Performance Review - 2026-01-15
+Daily Performance Review - 2026-01-15
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📬 COMMUNICATION
-  • Emails sent: 6
-  • Slack messages: 203
-  • X.com mentions: 5
+ COMMUNICATION
+ • Emails sent: 6
+ • Slack messages: 203
+ • X.com mentions: 5
 
-📅 MEETINGS (Fireflies - speaker verified)
-  • CEO Chat (70 min)
-  • Meeting with Perfectos (27 min)
-  • US Squad Standup (27 min)
-  Total: 3 meetings (~2.0 hrs)
+ MEETINGS (Fireflies - speaker verified)
+ • CEO Chat (70 min)
+ • Meeting with Perfectos (27 min)
+ • US Squad Standup (27 min)
+ Total: 3 meetings (~2.0 hrs)
 
-💻 OUTPUT
-  • Git commits: 6
-  • Docs modified: 20
-  • Messages to Ada: 73
+ OUTPUT
+ • Git commits: 6
+ • Docs modified: 20
+ • Messages to Ada: 73
 
 ⏱️ FOCUS TIME
-  Screen Time: 9.7 hrs
-  • Atlas: 203min
-  • Slack: 163min
-  • Telegram: 45min
-  
-  ActivityWatch: 8.5 hrs
-  • Telegram: 120min
-  • Ghostty: 90min
-  • Chrome: 45min
-```
+ Screen Time: 9.7 hrs
+ • Atlas: 203min
+ • Slack: 163min
+ • Telegram: 45min
+
+ ActivityWatch: 8.5 hrs
+ • Telegram: 120min
+ • Ghostty: 90min
+ • Chrome: 45min
 
 ## Requirements
 
@@ -84,24 +76,18 @@ Generate comprehensive daily performance reviews with AI coaching insights.
 - `get_screentime.py` script for knowledgeC.db queries
 
 ## Installation
-
 1. Copy skill to your clawd workspace:
-```bash
 cp -r daily-review ~/clawd/skills/
-```
 
 2. Install dependencies:
-```bash
+
 # Bird CLI (on Mac)
 cd ~/Code && git clone https://github.com/steipete/bird.git
 cd bird && npm install && npm run build:dist
 
-# ActivityWatch
 # Download from https://activitywatch.net/
-```
-
 3. Configure secrets:
-```bash
+
 # Bird (X.com)
 cat > ~/clawd/secrets/bird.env << 'EOF'
 AUTH_TOKEN=your_auth_token
@@ -113,43 +99,34 @@ echo "your_api_key" > ~/clawd/secrets/fireflies.key
 
 # Slack
 echo '{"user_token": "xoxp-xxx"}' > ~/clawd/secrets/slack-super-ada.json
-```
 
 4. Add cron job for daily 09:00 review:
-```bash
 clawdbot cron add --name "daily-review" --schedule "0 9 * * *"
-```
 
 ## Screen Time Query
-
 The skill queries macOS Screen Time directly from `knowledgeC.db`:
 
 ```python
-SELECT 
-  ZVALUESTRING as app,
-  SUM(ZENDDATE - ZSTARTDATE) as seconds
-FROM ZOBJECT 
-WHERE ZSTREAMNAME = '/app/usage' 
+SELECT
+ ZVALUESTRING as app,
+ SUM(ZENDDATE - ZSTARTDATE) as seconds
+FROM ZOBJECT
+WHERE ZSTREAMNAME = '/app/usage'
 AND date(ZSTARTDATE + 978307200, 'unixepoch') = '2026-01-15'
 GROUP BY ZVALUESTRING
 ORDER BY seconds DESC
-```
 
 ## Fireflies Speaker Verification
-
 Meetings are verified by checking if user actually spoke (not just invited):
 
 ```graphql
 {
-  transcripts(limit: 30) {
-    title dateString duration
-    sentences { speaker_name }
-  }
-}
-```
+ transcripts(limit: 30) {
+ title dateString duration
+ sentences { speaker_name }
+ }
 
 Only meetings where `speaker_name` contains user's name are counted.
 
 ## License
-
 MIT

@@ -1,7 +1,6 @@
 ---
 name: substack-formatter
 description: Transform plain text into Substack article format with proper HTML formatting for copy-paste into Substack editor.
----
 
 # Substack Article Formatter
 
@@ -9,13 +8,13 @@ description: Transform plain text into Substack article format with proper HTML 
 Transform plain text into professional Substack format. Handles the technical formatting to ensure bold/italic/headers work correctly when pasted into Substack editor.
 
 ## What This Skill Does
-- ✅ **Formats text for Substack** with proper structure and spacing
-- ✅ **Converts to HTML format** that Substack editor recognizes
-- ✅ **Preserves your content** - only changes visual presentation
-- ✅ **Ensures copy-paste works** with bold, italic, headers, bullets preserved
+- **Formats text for Substack** with proper structure and spacing
+- **Converts to HTML format** that Substack editor recognizes
+- **Preserves your content** - only changes visual presentation
+- **Ensures copy-paste works** with bold, italic, headers, bullets preserved
 
 ## Technical Solution
-**Problem:** Substack editor treats raw markdown as plain text  
+**Problem:** Substack editor treats raw markdown as plain text
 **Solution:** Convert to HTML and copy as `text/html` format
 
 ## Usage
@@ -24,13 +23,9 @@ Transform plain text into professional Substack format. Handles the technical fo
 ```
 Format this for Substack:
 [Your plain text content here]
-```
 
 ### With Minimal Formatting
-```
 Format for Substack (minimal):
-[Your plain text content here]
-```
 
 ## Formatting Options
 
@@ -39,10 +34,8 @@ Format for Substack (minimal):
 - Clean HTML output
 - Preserved content with better readability
 
-### **Minimal Format**  
-- Pure spacing improvements
-- No emphasis changes
-- Exact content preservation
+### **Minimal Format**
+- Pure spacing improvements, No emphasis changes, Exact content preservation
 
 ## Formatting Features
 
@@ -53,24 +46,21 @@ Format for Substack (minimal):
 
 ### **HTML Output**
 - **Bold text:** `<strong>` tags
-- **Emphasis:** `<em>` tags  
+- **Emphasis:** `<em>` tags
 - **Headers:** `<h2>`, `<h3>` for sections
 - **Lists:** `<ul><li>` for bullets, `<ol><li>` for numbered
 - **Paragraphs:** Proper `<p>` tag structure
 
 ## Copy-Paste Process
-
 1. **Run formatter** → Get HTML output
-2. **Use included copy script** → Copies as `text/html` format  
+2. **Use included copy script** → Copies as `text/html` format
 3. **Paste into Substack** → Formatting preserved perfectly
 4. **No manual formatting needed** → Bold/italic/headers work automatically
 
 ## Examples
 
 ### Input (Plain Text):
-```
 I used to think being productive meant doing more things. Last week I tried something different. I did fewer things but focused completely on each one. The result was surprising. I got more done in less time and felt less stressed. Sometimes the answer isn't addition, it's subtraction.
-```
 
 ### Output (Formatted for Substack):
 ```html
@@ -88,12 +78,10 @@ But focused completely on each one.</p>
 <p><strong>Sometimes the answer isn't addition, it's subtraction.</strong></p>
 
 <p>What's one thing you could subtract from your routine?</p>
-```
 
 ## Tools Included
-
 - **`formatter.py`** - Main formatting script
-- **`copy_to_substack.py`** - Converts to HTML and copies correctly  
+- **`copy_to_substack.py`** - Converts to HTML and copies correctly
 - **`test_formatter.py`** - Test with examples
 - **Examples and templates** for each structure type
 

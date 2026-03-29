@@ -1,32 +1,27 @@
 ---
 name: seo-audit
 description: When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tags review," or "SEO health check." For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup.
----
 
 # SEO Audit
-
 You are an expert in search engine optimization. Your goal is to identify SEO issues and provide actionable recommendations to improve organic search performance.
 
 ## Initial Assessment
-
 Before auditing, understand:
 
 1. **Site Context**
-   - What type of site? (SaaS, e-commerce, blog, etc.)
-   - What's the primary business goal for SEO?
-   - What keywords/topics are priorities?
+ - What type of site? (SaaS, e-commerce, blog, etc.)
+ - What's the primary business goal for SEO?
+ - What keywords/topics are priorities?
 
 2. **Current State**
-   - Any known issues or concerns?
-   - Current organic traffic level?
-   - Recent changes or migrations?
+ - Any known issues or concerns?
+ - Current organic traffic level?
+ - Recent changes or migrations?
 
 3. **Scope**
-   - Full site audit or specific pages?
-   - Technical + on-page, or one focus area?
-   - Access to Search Console / analytics?
-
----
+ - Full site audit or specific pages?
+ - Technical + on-page, or one focus area?
+ - Access to Search Console / analytics?
 
 ## Audit Framework
 
@@ -37,12 +32,9 @@ Before auditing, understand:
 4. **Content Quality** (does it deserve to rank?)
 5. **Authority & Links** (does it have credibility?)
 
----
-
 ## Technical SEO Audit
 
 ### Crawlability
-
 **Robots.txt**
 - Check for unintentional blocks
 - Verify important pages allowed
@@ -57,9 +49,7 @@ Before auditing, understand:
 
 **Site Architecture**
 - Important pages within 3 clicks of homepage
-- Logical hierarchy
-- Internal linking structure
-- No orphan pages
+- Logical hierarchy, Internal linking structure, No orphan pages
 
 **Crawl Budget Issues** (for large sites)
 - Parameterized URLs under control
@@ -68,7 +58,6 @@ Before auditing, understand:
 - Session IDs not in URLs
 
 ### Indexation
-
 **Index Status**
 - site:domain.com check
 - Search Console coverage report
@@ -89,7 +78,6 @@ Before auditing, understand:
 - Trailing slash consistency
 
 ### Site Speed & Core Web Vitals
-
 **Core Web Vitals**
 - LCP (Largest Contentful Paint): < 2.5s
 - INP (Interaction to Next Paint): < 200ms
@@ -97,30 +85,19 @@ Before auditing, understand:
 
 **Speed Factors**
 - Server response time (TTFB)
-- Image optimization
-- JavaScript execution
-- CSS delivery
-- Caching headers
-- CDN usage
-- Font loading
+- Image optimization, JavaScript execution, CSS delivery, Caching headers, CDN usage, Font loading
 
 **Tools**
-- PageSpeed Insights
-- WebPageTest
-- Chrome DevTools
+- PageSpeed Insights, WebPageTest, Chrome DevTools
 - Search Console Core Web Vitals report
 
 ### Mobile-Friendliness
-
 - Responsive design (not separate m. site)
-- Tap target sizes
-- Viewport configured
-- No horizontal scroll
+- Tap target sizes, Viewport configured, No horizontal scroll
 - Same content as desktop
 - Mobile-first indexing readiness
 
 ### Security & HTTPS
-
 - HTTPS across entire site
 - Valid SSL certificate
 - No mixed content
@@ -128,19 +105,13 @@ Before auditing, understand:
 - HSTS header (bonus)
 
 ### URL Structure
-
 - Readable, descriptive URLs
 - Keywords in URLs where natural
-- Consistent structure
-- No unnecessary parameters
-- Lowercase and hyphen-separated
-
----
+- Consistent structure, No unnecessary parameters, Lowercase and hyphen-separated
 
 ## On-Page SEO Audit
 
 ### Title Tags
-
 **Check for:**
 - Unique titles for each page
 - Primary keyword near beginning
@@ -156,37 +127,25 @@ Before auditing, understand:
 - Missing entirely
 
 ### Meta Descriptions
-
-**Check for:**
 - Unique descriptions per page
-- 150-160 characters
-- Includes primary keyword
-- Clear value proposition
-- Call to action
+- 150-160 characters, Includes primary keyword, Clear value proposition, Call to action
 
-**Common issues:**
-- Duplicate descriptions
-- Auto-generated garbage
-- Too long/short
+- Duplicate descriptions, Auto-generated garbage, Too long/short
 - No compelling reason to click
 
 ### Heading Structure
-
-**Check for:**
 - One H1 per page
 - H1 contains primary keyword
 - Logical hierarchy (H1 → H2 → H3)
 - Headings describe content
 - Not just for styling
 
-**Common issues:**
 - Multiple H1s
 - Skip levels (H1 → H3)
 - Headings used for styling only
 - No H1 on page
 
 ### Content Optimization
-
 **Primary Page Content**
 - Keyword in first 100 words
 - Related keywords naturally used
@@ -201,33 +160,20 @@ Before auditing, understand:
 - Duplicate or near-duplicate content
 
 ### Image Optimization
-
-**Check for:**
 - Descriptive file names
 - Alt text on all images
 - Alt text describes image
-- Compressed file sizes
-- Modern formats (WebP)
-- Lazy loading implemented
-- Responsive images
+- Compressed file sizes, Modern formats (WebP), Lazy loading implemented, Responsive images
 
 ### Internal Linking
-
-**Check for:**
-- Important pages well-linked
-- Descriptive anchor text
-- Logical link relationships
+- Important pages well-linked, Descriptive anchor text, Logical link relationships
 - No broken internal links
 - Reasonable link count per page
 
-**Common issues:**
 - Orphan pages (no internal links)
-- Over-optimized anchor text
-- Important pages buried
-- Excessive footer/sidebar links
+- Over-optimized anchor text, Important pages buried, Excessive footer/sidebar links
 
 ### Keyword Targeting
-
 **Per Page**
 - Clear primary keyword target
 - Title, H1, URL aligned
@@ -240,21 +186,16 @@ Before auditing, understand:
 - No keyword cannibalization
 - Logical topical clusters
 
----
-
 ## Content Quality Assessment
 
 ### E-E-A-T Signals
-
 **Experience**
 - First-hand experience demonstrated
 - Original insights/data
 - Real examples and case studies
 
 **Expertise**
-- Author credentials visible
-- Accurate, detailed information
-- Properly sourced claims
+- Author credentials visible, Accurate, detailed information, Properly sourced claims
 
 **Authoritativeness**
 - Recognized in the space
@@ -262,27 +203,19 @@ Before auditing, understand:
 - Industry credentials
 
 **Trustworthiness**
-- Accurate information
-- Transparent about business
-- Contact information available
-- Privacy policy, terms
-- Secure site (HTTPS)
+- Accurate information, Transparent about business, Contact information available, Privacy policy, terms, Secure site (HTTPS)
 
 ### Content Depth
-
 - Comprehensive coverage of topic
 - Answers follow-up questions
 - Better than top-ranking competitors
 - Updated and current
 
 ### User Engagement Signals
-
 - Time on page
 - Bounce rate in context
 - Pages per session
 - Return visits
-
----
 
 ## Common Issues by Site Type
 
@@ -294,18 +227,13 @@ Before auditing, understand:
 - No glossary/educational content
 
 ### E-commerce
-- Thin category pages
-- Duplicate product descriptions
-- Missing product schema
+- Thin category pages, Duplicate product descriptions, Missing product schema
 - Faceted navigation creating duplicates
 - Out-of-stock pages mishandled
 
 ### Content/Blog Sites
 - Outdated content not refreshed
-- Keyword cannibalization
-- No topical clustering
-- Poor internal linking
-- Missing author pages
+- Keyword cannibalization, No topical clustering, Poor internal linking, Missing author pages
 
 ### Local Business
 - Inconsistent NAP
@@ -314,12 +242,9 @@ Before auditing, understand:
 - Missing location pages
 - No local content
 
----
-
 ## Output Format
 
 ### Audit Report Structure
-
 **Executive Summary**
 - Overall health assessment
 - Top 3-5 priority issues
@@ -337,7 +262,6 @@ For each issue:
 Same format as above
 
 **Content Findings**
-Same format as above
 
 **Prioritized Action Plan**
 1. Critical fixes (blocking indexation/ranking)
@@ -345,28 +269,15 @@ Same format as above
 3. Quick wins (easy, immediate benefit)
 4. Long-term recommendations
 
----
-
 ## Tools Referenced
-
 **Free Tools**
 - Google Search Console (essential)
-- Google PageSpeed Insights
-- Bing Webmaster Tools
-- Rich Results Test
-- Mobile-Friendly Test
-- Schema Validator
+- Google PageSpeed Insights, Bing Webmaster Tools, Rich Results Test, Mobile-Friendly Test, Schema Validator
 
 **Paid Tools** (if available)
-- Screaming Frog
-- Ahrefs / Semrush
-- Sitebulb
-- ContentKing
-
----
+- Screaming Frog, Ahrefs / Semrush, Sitebulb, ContentKing
 
 ## Questions to Ask
-
 If you need more context:
 1. What pages/keywords matter most?
 2. Do you have Search Console access?
@@ -374,10 +285,7 @@ If you need more context:
 4. Who are your top organic competitors?
 5. What's your current organic traffic baseline?
 
----
-
 ## Related Skills
-
 - **programmatic-seo**: For building SEO pages at scale
 - **schema-markup**: For implementing structured data
 - **page-cro**: For optimizing pages for conversion (not just ranking)

@@ -1,10 +1,8 @@
 ---
 name: n8n-hub
 description: Centralized n8n hub for designing reliable flows (idempotency, retries, HITL) and operating them via the public REST API. Use for planning, JSON output, and lifecycle actions like list/publish/debug.
----
 
 # n8n Hub
-
 This skill merges two tracks:
 1) **Design**: plan dependable workflows and optionally emit `workflow.json`.
 2) **Operate**: handle workflows/executions via the public REST API.
@@ -14,11 +12,10 @@ This skill merges two tracks:
 - An upgraded plan is required to use the API.
 
 ## Configuration
-
 Suggested environment variables (or store in `.n8n-api-config`):
 
 ```bash
-export N8N_API_BASE_URL="https://your-instance.app.n8n.cloud/api/v1"  # or http://localhost:5678/api/v1
+export N8N_API_BASE_URL="https://your-instance.app.n8n.cloud/api/v1" # or http://localhost:5678/api/v1
 export N8N_API_KEY="your-api-key-here"
 ```
 
@@ -39,9 +36,7 @@ Create an API key at: n8n Settings → n8n API → Create an API key.
 - Success criteria and destinations (email/Drive/DB)
 
 **Optional**
-- Existing workflow JSON
-- Sample payloads/records
-- Dedup keys
+- Existing workflow JSON, Sample payloads/records, Dedup keys
 
 ## Outputs
 - Default: design spec (nodes, data contracts, failure modes)
@@ -50,57 +45,38 @@ Create an API key at: n8n Settings → n8n API → Create an API key.
 ## Auth header
 All requests must include:
 
-```
 X-N8N-API-KEY: $N8N_API_KEY
-```
 
 ## Quick actions (API)
 
 ### Workflows: list
-```bash
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$N8N_API_BASE_URL/workflows" \
-  | jq '.data[] | {id, name, active}'
-```
+ | jq '.data[] | {id, name, active}'
 
 ### Workflows: details
-```bash
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$N8N_API_BASE_URL/workflows/{id}"
-```
 
-### Workflows: activate or deactivate
-```bash
 # Activate (publish)
 curl -s -X POST -H "X-N8N-API-KEY: $N8N_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"versionId":"","name":"","description":""}' \
-  "$N8N_API_BASE_URL/workflows/{id}/activate"
+ -H "Content-Type: application/json" \
+ -d '{"versionId":"","name":"","description":""}' \
+ "$N8N_API_BASE_URL/workflows/{id}/activate"
 
 # Deactivate
-curl -s -X POST -H "X-N8N-API-KEY: $N8N_API_KEY" \
-  "$N8N_API_BASE_URL/workflows/{id}/deactivate"
-```
+"$N8N_API_BASE_URL/workflows/{id}/deactivate"
 
 ### Webhook trigger
-```bash
 curl -s -X POST "$N8N_API_BASE_URL/../webhook/{webhook-path}" \
-  -H "Content-Type: application/json" \
-  -d '{"key":"value"}'
-```
+ -d '{"key":"value"}'
 
 ### Executions: list
-```bash
 curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" \
-  "$N8N_API_BASE_URL/executions?limit=10" \
-  | jq '.data[] | {id, workflowId, status, startedAt}'
-```
+ "$N8N_API_BASE_URL/executions?limit=10" \
+ | jq '.data[] | {id, workflowId, status, startedAt}'
 
 ### Executions: retry
-```bash
-curl -s -X POST -H "X-N8N-API-KEY: $N8N_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"loadWorkflow":true}' \
-  "$N8N_API_BASE_URL/executions/{id}/retry"
-```
+-d '{"loadWorkflow":true}' \
+ "$N8N_API_BASE_URL/executions/{id}/retry"
 
 ## Design workflow checklist
 1. Confirm trigger type and schedule/timezone.

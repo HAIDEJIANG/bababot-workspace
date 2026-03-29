@@ -1,9 +1,7 @@
 # Optimizing SwiftUI Performance with Instruments (Summary)
-
 Context: WWDC session introducing the next-generation SwiftUI Instrument in Instruments 26 and how to diagnose SwiftUI-specific bottlenecks.
 
 ## Key takeaways
-
 - Profile SwiftUI issues with the SwiftUI template (SwiftUI instrument + Time Profiler + Hangs/Hitches).
 - Long view body updates are a common bottleneck; use "Long View Body Updates" to identify slow bodies.
 - Set inspection range on a long update and correlate with Time Profiler to find expensive frames.
@@ -15,7 +13,6 @@ Context: WWDC session introducing the next-generation SwiftUI Instrument in Inst
 - Profile early and often during feature development to catch regressions.
 
 ## Suggested workflow (condensed)
-
 1. Record a trace in Release mode using the SwiftUI template.
 2. Inspect "Long View Body Updates" and "Other Long Updates."
 3. Zoom into a long update, then inspect Time Profiler for hot frames.
@@ -24,6 +21,5 @@ Context: WWDC session introducing the next-generation SwiftUI Instrument in Inst
 6. Re-record and compare the update counts and hitch frequency.
 
 ## Example patterns from the session
-
 - Caching formatted distance strings in a location manager instead of computing in `body`.
 - Replacing a dependency on a global favorites array with per-item view models to reduce update fan-out.

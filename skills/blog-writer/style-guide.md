@@ -22,7 +22,6 @@ Start with a strong thesis or personal statement. Examples from Tom's posts:
 - "The real kicker is..."
 - "To be a bit more precise..."
 - "Now let's talk about..."
-- "The key difference here is..."
 
 ### Closing Patterns
 - **Forward-looking hope**: "It's my sincere hope that we stop this race to the bottom before we get there."
@@ -32,14 +31,9 @@ Start with a strong thesis or personal statement. Examples from Tom's posts:
 - **Big picture synthesis**: "Short-form content has irreversibly changed the landscape of marketing and storytelling."
 
 ### Vocabulary Preferences
-
 **Use these naturally:**
 - "leverage" (for using tools)
-- "game-changer"
-- "impactful"
-- "workflows"
-- "professionals"
-- "countless times daily"
+- "game-changer", "impactful", "workflows", "professionals", "countless times daily"
 - contractions (I've, doesn't, won't, that's, I'd)
 
 **Phrases that sound like Tom:**
@@ -72,35 +66,29 @@ Start with a strong thesis or personal statement. Examples from Tom's posts:
 - Headers should be descriptive, not clickbait
 
 ### Structural Template
-
 ```markdown
-# [Bold, Direct Title]
 
+# [Bold, Direct Title]
 [Opening paragraph with strong thesis - 2-3 sentences establishing position]
 
 ### [First Subheading - Context or Problem]
-
 [2-3 short paragraphs developing the point]
 [Personal anecdote or example if relevant]
 
 ### [Second Subheading - Analysis or Explanation]
-
 [Continue developing argument]
 [Include practical implications]
 [Real-world examples]
 
 ### [Third Subheading - Deeper Exploration]
-
 [Further exploration or counterarguments addressed]
 [Specific details or data points]
 
 ### [Fourth Subheading - Solutions or Implications]
-
 [What to do about it]
 [Practical recommendations]
 
 ### [Conclusion Subheading like "What Should We Do?" or "Conclusion"]
-
 [Reflection, call-to-action, or forward-looking statement]
 [Often includes personal hope or belief]
 ```
@@ -125,7 +113,6 @@ Start with a strong thesis or personal statement. Examples from Tom's posts:
 7. **Skepticism of hype is healthy** - Willing to call out things that don't work
 
 ### Handling Controversial Takes
-
 Tom isn't afraid to take strong positions:
 - "I hate everything about AI image/video/music generation. It is useless."
 - "AI art isn't producing the worst work or the best work. It's producing the *median*."
@@ -139,11 +126,9 @@ When writing controversial takes:
 5. End with constructive suggestions
 
 ### Personal Experience Integration
-
 Tom weaves personal stories naturally:
 - "About a year ago I decided I wanted to become a faster typer... I started at around 80 WPM... A year in and I've hit 150."
 - "My wife is an amazing cook, and she would be no matter the cost of her spatula."
-- "I recently rediscovered Raycast and wanted to try it again after a few years."
 
 When including personal experience:
 1. Keep it relevant to the main point
@@ -152,7 +137,6 @@ When including personal experience:
 4. Don't overdo it—one or two per post is enough
 
 ### Formatting Notes
-
 - Use `*italics*` for emphasis on key terms
 - Use `**bold**` sparingly, mainly for key takeaways
 - Lists only when actually listing items (not for general prose)

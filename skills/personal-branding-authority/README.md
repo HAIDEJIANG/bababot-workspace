@@ -3,7 +3,6 @@
 A comprehensive skill for developing personal brands and building professional authority for B2B SaaS professionals.
 
 ## Overview
-
 This skill teaches Claude systematic approaches to personal brand development, thought leadership positioning, and authority building. It provides frameworks for positioning strategies, LinkedIn optimization, content strategies, and professional presence across platforms.
 
 ## Core Capabilities
@@ -24,9 +23,7 @@ This skill teaches Claude systematic approaches to personal brand development, t
 
 ### Thought Leadership Development
 - Expertise area identification and focus
-- Signature framework creation
-- Point-of-view development
-- Content pillar definition
+- Signature framework creation, Point-of-view development, Content pillar definition
 - Speaking topic and angle development
 
 ### Authority-Building Content Strategy
@@ -37,7 +34,6 @@ This skill teaches Claude systematic approaches to personal brand development, t
 - Engagement and network building tactics
 
 ## Limitations
-
 This skill provides personal branding strategy and frameworks. It does **NOT**:
 - Create visual brand assets (logos, colors, photography)
 - Directly optimize LinkedIn profile (requires manual editing)
@@ -82,14 +78,10 @@ This skill provides personal branding strategy and frameworks. It does **NOT**:
 24. Tech stack consultant authority
 
 ## Installation
-
 Upload this skill folder to Claude via:
-- Claude.ai web interface
-- Claude desktop app
-- Claude API
+- Claude.ai web interface, Claude desktop app, Claude API
 
 ## Usage
-
 Simply mention personal branding tasks:
 - "Help me define my personal brand positioning"
 - "Write my LinkedIn headline and about section"
@@ -100,7 +92,6 @@ Simply mention personal branding tasks:
 Claude will automatically use this skill to provide structured personal branding guidance.
 
 ## Industry Coverage
-
 Optimized for 4 high-growth B2B verticals:
 - **Sales Technology**: CRM, Sales Engagement, Revenue Intelligence
 - **HR Technology**: HRIS, ATS, Performance Management, Payroll
@@ -108,7 +99,6 @@ Optimized for 4 high-growth B2B verticals:
 - **Operations Technology**: Workflow Automation, Analytics, Process Mining
 
 ## Personal Brand Archetypes
-
 - **The Educator**: Teaches frameworks and methodologies
 - **The Provocateur**: Challenges conventional wisdom
 - **The Builder**: Shares building and growth journey
@@ -127,7 +117,6 @@ Develop positioning as "The Compliance Operator" for fintech compliance expert w
 Create tiered bios (50/100/150 words) for HR technology conference speaker.
 
 ## Author
-
 Created by Shashwat Ghosh
 - Fractional CMO, Helix GTM Consulting
 - 24+ years B2B SaaS marketing experience
@@ -135,7 +124,4 @@ Created by Shashwat Ghosh
 - #10 Product Marketing Creator India (LinkedIn)
 
 ## Links
-
-- ClawdHub: https://clawdhub.com/shashwatgtm/personal-branding-authority
-- LinkedIn: https://linkedin.com/in/shashwatghosh-ai-b2b-gtm-fractionalcmo
-- GitHub: https://github.com/shashwatgtm
+- ClawdHub: https://clawdhub.com/shashwatgtm/personal-branding-authority, LinkedIn: https://linkedin.com/in/shashwatghosh-ai-b2b-gtm-fractionalcmo, GitHub: https://github.com/shashwatgtm

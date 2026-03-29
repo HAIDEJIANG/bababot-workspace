@@ -1,15 +1,13 @@
 ---
 name: nodetool
 description: Visual AI workflow builder - ComfyUI meets n8n for LLM agents, RAG pipelines, and multimodal data flows. Local-first, open source (AGPL-3.0).
----
 
 # NodeTool
-
 Visual AI workflow builder combining ComfyUI's node-based flexibility with n8n's automation power. Build LLM agents, RAG pipelines, and multimodal data flows on your local machine.
 
 ## Quick Start
-
 ```bash
+
 # See system info
 nodetool info
 
@@ -29,30 +27,23 @@ nodetool serve
 ## Installation
 
 ### Linux / macOS
-
 Quick one-line installation:
 
-```bash
 curl -fsSL https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.sh | bash
-```
 
 With custom directory:
 
-```bash
 curl -fsSL https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.sh | bash --prefix ~/.nodetool
-```
 
 **Non-interactive mode (automatic, no prompts):**
 
 Both scripts support silent installation:
 
-```bash
 # Linux/macOS - use -y
 curl -fsSL https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.sh | bash -y
 
 # Windows - use -Yes
 irm https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.ps1 | iex; .\install.ps1 -Yes
-```
 
 **What happens with non-interactive mode:**
 - All confirmation prompts are skipped automatically
@@ -60,53 +51,32 @@ irm https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/insta
 - Perfect for CI/CD pipelines or automated setups
 
 ### Windows
-
-Quick one-line installation:
-
 ```powershell
 irm https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.ps1 | iex
-```
 
-With custom directory:
-
-```powershell
 .\install.ps1 -Prefix "C:\nodetool"
-```
 
 Non-interactive mode:
 
-```powershell
 .\install.ps1 -Yes
-```
 
 ## Core Commands
 
 ### Workflows
-
 Manage and execute NodeTool workflows:
-
-```bash
-# List all workflows (user + example)
-nodetool workflows list
 
 # Get details for a specific workflow
 nodetool workflows get <workflow_id>
-
-# Run workflow by ID
-nodetool run <workflow_id>
 
 # Run workflow from file
 nodetool run workflow.json
 
 # Run with JSONL output (for automation)
 nodetool run <workflow_id> --jsonl
-```
 
 ### Run Options
-
 Execute workflows in different modes:
 
-```bash
 # Interactive mode (default) - pretty output
 nodetool run workflow_abc123
 
@@ -121,25 +91,19 @@ nodetool run workflow_abc123 --user-id "custom_user_id"
 
 # With auth token
 nodetool run workflow_abc123 --auth-token "my_auth_token"
-```
 
 ### Assets
-
 Manage workflow assets (nodes, models, files):
 
-```bash
 # List all assets
 nodetool assets list
 
 # Get asset details
 nodetool assets get <asset_id>
-```
 
 ### Packages
-
 Manage NodeTool packages (export workflows, generate docs):
 
-```bash
 # List packages
 nodetool package list
 
@@ -157,13 +121,10 @@ nodetool package scan
 
 # Initialize new package project
 nodetool package init
-```
 
 ### Jobs
-
 Manage background job executions:
 
-```bash
 # List jobs for a user
 nodetool jobs list
 
@@ -175,13 +136,10 @@ nodetool jobs logs <job_id>
 
 # Start background job for workflow
 nodetool jobs start <workflow_id>
-```
 
 ### Deployment
-
 Deploy NodeTool to cloud platforms (RunPod, GCP, Docker):
 
-```bash
 # Initialize deployment.yaml
 nodetool deploy init
 
@@ -214,13 +172,10 @@ nodetool deploy workflows
 
 # See what changes will be made
 nodetool deploy plan
-```
 
 ### Model Management
-
 Discover and manage AI models (HuggingFace, Ollama):
 
-```bash
 # List cached HuggingFace models by type
 nodetool model list-hf <hf_type>
 
@@ -235,13 +190,10 @@ nodetool model hf-cache
 
 # Scan cache for info
 nodetool admin scan-cache
-```
 
 ### Admin
-
 Maintain model caches and clean up:
 
-```bash
 # Calculate total cache size
 nodetool admin cache-size
 
@@ -253,15 +205,9 @@ nodetool admin download-hf <model_name>
 
 # Download Ollama models
 nodetool admin download-ollama <model_name>
-```
 
 ### Chat & Server
-
 Interactive chat and web interface:
-
-```bash
-# Start CLI chat
-nodetool chat
 
 # Start chat server (WebSocket + SSE)
 nodetool chat-server
@@ -277,13 +223,10 @@ nodetool serve --reload
 
 # Production mode
 nodetool serve --production
-```
 
 ### Proxy
-
 Start reverse proxy with HTTPS:
 
-```bash
 # Start proxy server
 nodetool proxy
 
@@ -295,11 +238,7 @@ nodetool proxy-validate-config
 
 # Run proxy daemon with ACME HTTP + HTTPS
 nodetool proxy-daemon
-```
 
-### Other Commands
-
-```bash
 # View settings and secrets
 nodetool settings show
 
@@ -320,116 +259,30 @@ nodetool migrations
 
 # Synchronize database with remote
 nodetool sync
-```
 
 ## Use Cases
 
 ### Workflow Execution
-
 Run a NodeTool workflow and get structured output:
 
-```bash
 # Run workflow interactively
 nodetool run my_workflow_id
 
 # Run and stream JSONL output
 nodetool run my_workflow_id --jsonl | jq -r '.[] | "\(.status) | \(.output)"'
-```
 
 ### Package Creation
-
 Generate documentation for a custom package:
 
-```bash
-# Scan for nodes and create package
-nodetool package scan
-
 # Generate complete documentation
-nodetool package docs
-```
-
-### Deployment
-
 Deploy a NodeTool instance to the cloud:
 
-```bash
-# Initialize deployment config
-nodetool deploy init
-
-# Add RunPod deployment
-nodetool deploy add
-
 # Deploy and start
-nodetool deploy apply
-```
-
-### Model Management
-
 Check and manage cached AI models:
 
-```bash
-# List all available models
-nodetool model list-hf-all
-
 # Inspect cache
-nodetool model hf-cache
-```
-
-## Installation
-
-### Linux / macOS
-
-Quick one-line installation:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.sh | bash
-```
-
-With custom directory:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.sh | bash --prefix ~/.nodetool
-```
-
-**Non-interactive mode (automatic, no prompts):**
-
-Both scripts support silent installation:
-
-```bash
-# Linux/macOS - use -y
-curl -fsSL https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.sh | bash -y
-
-# Windows - use -Yes
-irm https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.ps1 | iex; .\install.ps1 -Yes
-```
-
-**What happens with non-interactive mode:**
-- All confirmation prompts are skipped automatically
-- Installation proceeds without requiring user input
-- Perfect for CI/CD pipelines or automated setups
-
-### Windows
-
-Quick one-line installation:
-
-```powershell
-irm https://raw.githubusercontent.com/nodetool-ai/nodetool/refs/heads/main/install.ps1 | iex
-```
-
-With custom directory:
-
-```powershell
-.\install.ps1 -Prefix "C:\nodetool"
-```
-
-Non-interactive mode:
-
-```powershell
-.\install.ps1 -Yes
-```
 
 ## What Gets Installed
-
 The installer sets up:
 - **micromamba** — Python package manager (conda replacement)
 - **NodeTool environment** — Conda env at `~/.nodetool/env`
@@ -437,10 +290,8 @@ The installer sets up:
 - **Wrapper scripts** — `nodetool` CLI available from any terminal
 
 ### Environment Setup
-
 After installation, these variables are automatically configured:
 
-```bash
 # Conda environment
 export MAMBA_ROOT_PREFIX="$HOME/.nodetool/micromamba"
 export PATH="$HOME/.nodetool/env/bin:$HOME/.nodetool/env/Library/bin:$PATH"
@@ -448,20 +299,12 @@ export PATH="$HOME/.nodetool/env/bin:$HOME/.nodetool/env/Library/bin:$PATH"
 # Model cache directories
 export HF_HOME="$HOME/.nodetool/cache/huggingface"
 export OLLAMA_MODELS="$HOME/.nodetool/cache/ollama"
-```
 
 ## System Info
-
 Check NodeTool environment and installed packages:
 
-```bash
-nodetool info
-```
-
 Output shows:
-- Version
-- Python version
-- Platform/Architecture
+- Version, Python version, Platform/Architecture
 - Installed AI packages (OpenAI, Anthropic, Google, HF, Ollama, fal-client)
 - Environment variables
 - API key status

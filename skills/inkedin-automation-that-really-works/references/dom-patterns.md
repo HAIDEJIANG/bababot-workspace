@@ -1,5 +1,4 @@
 # LinkedIn DOM Patterns Reference
-
 Known DOM patterns as of 2024/2025. LinkedIn frequently changes these — update when selectors break.
 
 ## Feed Items
@@ -23,7 +22,6 @@ Known DOM patterns as of 2024/2025. LinkedIn frequently changes these — update
 
 ## Comment Box
 - `[data-placeholder*="Kommentar"]` — German placeholder
-- `[data-placeholder*="comment"]` — English placeholder
 - `.comments-comment-texteditor [role="textbox"]` — role-based
 - `.comments-comment-box [role="textbox"]` — box variant
 - `.comments-comment-texteditor .ql-editor` — Quill editor
@@ -31,8 +29,6 @@ Known DOM patterns as of 2024/2025. LinkedIn frequently changes these — update
 
 ## Submit Button (Comment)
 - `button.comments-comment-box__submit-button` — class-based
-- `button[aria-label*="Posten"]` — German aria
-- `button[aria-label*="Post"]` — English aria
 - `button[aria-label*="Absenden"]` — German "send"
 - `button[class*="submit"]` — generic fallback
 - Text content: "posten", "post", "absenden"
@@ -45,12 +41,10 @@ Known DOM patterns as of 2024/2025. LinkedIn frequently changes these — update
 ## Post Submit (Modal)
 - `button.share-actions__primary-action` — primary action
 - `.share-actions button[aria-label*="Posten"]` — German
-- `.share-actions button[aria-label*="Post"]` — English
 
 ## Comment Menu (3-dot)
 - `button[aria-label*="Weitere Aktionen"]` — German "More actions"
 - `button[aria-label*="More actions"]` — English
-- `button[aria-label*="Optionen"]` — German "Options"
 - Small buttons with SVG icons (< 50px width) near comment text
 
 ## Menu Items
@@ -61,7 +55,6 @@ Known DOM patterns as of 2024/2025. LinkedIn frequently changes these — update
 ## Repost Button
 - `button[aria-label*="Repost"]` — English
 - `button[aria-label*="Erneut"]` — German "again"
-- `button[aria-label*="teilen"]` — German "share"
 
 ## Mention/Autocomplete Dropdown
 - `[role="option"]` — dropdown items

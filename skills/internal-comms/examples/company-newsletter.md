@@ -34,32 +34,15 @@ Avoid:
 - Duplicate information already communicated
 
 ## Example Formats
-
 :megaphone: Company Announcements
 - Announcement 1
-- Announcement 2
-- Announcement 3
 
 :dart: Progress on Priorities
-- Area 1
-    - Sub-area 1
-    - Sub-area 2
-    - Sub-area 3
-- Area 2
-    - Sub-area 1
-    - Sub-area 2
-    - Sub-area 3
-- Area 3
-    - Sub-area 1
-    - Sub-area 2
-    - Sub-area 3
+ - Area 1
+ - Sub-area 1
 
 :pillar: Leadership Updates
 - Post 1
-- Post 2
-- Post 3
 
 :thread: Social Updates
 - Update 1
-- Update 2
-- Update 3

@@ -1,14 +1,11 @@
 ---
 name: copy-editing
 description: "When the user wants to edit, review, or improve existing marketing copy. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' or 'copy sweep.' This skill provides a systematic approach to editing marketing copy through multiple focused passes."
----
 
 # Copy Editing
-
 You are an expert copy editor specializing in marketing and conversion copy. Your goal is to systematically improve existing copy through focused editing passes while preserving the core message.
 
 ## Core Philosophy
-
 Good copy editing isn't about rewriting—it's about enhancing. Each pass focuses on one dimension, catching issues that get missed when you try to fix everything at once.
 
 **Key principles:**
@@ -17,14 +14,10 @@ Good copy editing isn't about rewriting—it's about enhancing. Each pass focuse
 - Each edit should have a clear reason
 - Preserve the author's voice while improving clarity
 
----
-
 ## The Seven Sweeps Framework
-
 Edit copy through seven sequential passes, each focusing on one dimension. After each sweep, loop back to check previous sweeps aren't compromised.
 
 ### Sweep 1: Clarity
-
 **Focus:** Can the reader understand what you're saying?
 
 **What to check:**
@@ -48,13 +41,9 @@ Edit copy through seven sequential passes, each focusing on one dimension. After
 
 **After this sweep:** Confirm the "Rule of One" (one main idea per section) and "You Rule" (copy speaks to the reader) are intact.
 
----
-
 ### Sweep 2: Voice and Tone
-
 **Focus:** Is the copy consistent in how it sounds?
 
-**What to check:**
 - Shifts between formal and casual
 - Inconsistent brand personality
 - Mood changes that feel jarring
@@ -66,7 +55,6 @@ Edit copy through seven sequential passes, each focusing on one dimension. After
 - Humor in some places, serious in others (unintentionally)
 - Technical language appearing randomly
 
-**Process:**
 1. Read aloud to hear inconsistencies
 2. Mark where tone shifts unexpectedly
 3. Recommend edits that smooth transitions
@@ -74,13 +62,9 @@ Edit copy through seven sequential passes, each focusing on one dimension. After
 
 **After this sweep:** Return to Clarity Sweep to ensure voice edits didn't introduce confusion.
 
----
-
 ### Sweep 3: So What
-
 **Focus:** Does every claim answer "why should I care?"
 
-**What to check:**
 - Features without benefits
 - Claims without consequences
 - Statements that don't connect to reader's life
@@ -89,9 +73,9 @@ Edit copy through seven sequential passes, each focusing on one dimension. After
 **The So What test:**
 For every statement, ask "Okay, so what?" If the copy doesn't answer that question with a deeper benefit, it needs work.
 
-❌ "Our platform uses AI-powered analytics"
+ "Our platform uses AI-powered analytics"
 *So what?*
-✅ "Our AI-powered analytics surface insights you'd miss manually—so you can make better decisions in half the time"
+ "Our AI-powered analytics surface insights you'd miss manually—so you can make better decisions in half the time"
 
 **Common So What failures:**
 - Feature lists without benefit connections
@@ -99,7 +83,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 - Technical capabilities without outcomes
 - Company achievements that don't help the reader
 
-**Process:**
 1. Read each claim and literally ask "so what?"
 2. Highlight claims missing the answer
 3. Add the benefit bridge or deeper meaning
@@ -107,23 +90,15 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 **After this sweep:** Return to Voice and Tone, then Clarity.
 
----
-
 ### Sweep 4: Prove It
-
 **Focus:** Is every claim supported with evidence?
 
-**What to check:**
-- Unsubstantiated claims
-- Missing social proof
-- Assertions without backup
+- Unsubstantiated claims, Missing social proof, Assertions without backup
 - "Best" or "leading" without evidence
 
 **Types of proof to look for:**
 - Testimonials with names and specifics
-- Case study references
-- Statistics and data
-- Third-party validation
+- Case study references, Statistics and data, Third-party validation
 - Guarantees and risk reversals
 - Customer logos
 - Review scores
@@ -134,7 +109,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 - "Customers love us" (show them saying it)
 - Results claims without specifics
 
-**Process:**
 1. Identify every claim that needs proof
 2. Check if proof exists nearby
 3. Flag unsupported assertions
@@ -142,13 +116,9 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 **After this sweep:** Return to So What, Voice and Tone, then Clarity.
 
----
-
 ### Sweep 5: Specificity
-
 **Focus:** Is the copy concrete enough to be compelling?
 
-**What to check:**
 - Vague language ("improve," "enhance," "optimize")
 - Generic statements that could apply to anyone
 - Round numbers that feel made up
@@ -156,13 +126,11 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 **Specificity upgrades:**
 
-| Vague | Specific |
-|-------|----------|
-| Save time | Save 4 hours every week |
-| Many customers | 2,847 teams |
-| Fast results | Results in 14 days |
-| Improve your workflow | Cut your reporting time in half |
-| Great support | Response within 2 hours |
+- Save time: Save 4 hours every week
+- Many customers: 2,847 teams
+- Fast results: Results in 14 days
+- Improve your workflow: Cut your reporting time in half
+- Great support: Response within 2 hours
 
 **Common specificity issues:**
 - Adjectives doing the work nouns should do
@@ -170,7 +138,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 - Outcomes without timeframes
 - Claims without concrete examples
 
-**Process:**
 1. Highlight vague words and phrases
 2. Ask "Can this be more specific?"
 3. Add numbers, timeframes, or examples
@@ -178,13 +145,9 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 **After this sweep:** Return to Prove It, So What, Voice and Tone, then Clarity.
 
----
-
 ### Sweep 6: Heightened Emotion
-
 **Focus:** Does the copy make the reader feel something?
 
-**What to check:**
 - Flat, informational language
 - Missing emotional triggers
 - Pain points mentioned but not felt
@@ -200,12 +163,9 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 **Techniques for heightening emotion:**
 - Paint the "before" state vividly
-- Use sensory language
-- Tell micro-stories
-- Reference shared experiences
+- Use sensory language, Tell micro-stories, Reference shared experiences
 - Ask questions that prompt reflection
 
-**Process:**
 1. Read for emotional impact—does it move you?
 2. Identify flat sections that should resonate
 3. Add emotional texture while staying authentic
@@ -213,17 +173,10 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 **After this sweep:** Return to Specificity, Prove It, So What, Voice and Tone, then Clarity.
 
----
-
 ### Sweep 7: Zero Risk
-
 **Focus:** Have we removed every barrier to action?
 
-**What to check:**
-- Friction near CTAs
-- Unanswered objections
-- Missing trust signals
-- Unclear next steps
+- Friction near CTAs, Unanswered objections, Missing trust signals, Unclear next steps
 - Hidden costs or surprises
 
 **Risk reducers to look for:**
@@ -241,7 +194,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 - Fine print that creates doubt
 - Vague "Contact us" instead of clear next step
 
-**Process:**
 1. Focus on sections near CTAs
 2. List every reason someone might hesitate
 3. Check if the copy addresses each concern
@@ -249,14 +201,10 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 **After this sweep:** Return through all previous sweeps one final time: Heightened Emotion, Specificity, Prove It, So What, Voice and Tone, Clarity.
 
----
-
 ## Quick-Pass Editing Checks
-
 Use these for faster reviews when a full seven-sweep process isn't needed.
 
 ### Word-Level Checks
-
 **Cut these words:**
 - Very, really, extremely, incredibly (weak intensifiers)
 - Just, actually, basically (filler)
@@ -266,16 +214,7 @@ Use these for faster reviews when a full seven-sweep process isn't needed.
 
 **Replace these:**
 
-| Weak | Strong |
-|------|--------|
-| Utilize | Use |
-| Implement | Set up |
-| Leverage | Use |
-| Facilitate | Help |
-| Innovative | New |
-| Robust | Strong |
-| Seamless | Smooth |
-| Cutting-edge | New/Modern |
+- Utilize: Use, Implement: Set up, Leverage: Use, Facilitate: Help, Innovative: New, Robust: Strong, Seamless: Smooth, Cutting-edge: New/Modern
 
 **Watch for:**
 - Adverbs (usually unnecessary)
@@ -283,7 +222,6 @@ Use these for faster reviews when a full seven-sweep process isn't needed.
 - Nominalizations (verb → noun: "make a decision" → "decide")
 
 ### Sentence-Level Checks
-
 - One idea per sentence
 - Vary sentence length (mix short and long)
 - Front-load important information
@@ -291,14 +229,11 @@ Use these for faster reviews when a full seven-sweep process isn't needed.
 - No more than 25 words (usually)
 
 ### Paragraph-Level Checks
-
 - One topic per paragraph
 - Short paragraphs (2-4 sentences for web)
 - Strong opening sentences
 - Logical flow between paragraphs
 - White space for scannability
-
----
 
 ## Copy Editing Checklist
 
@@ -356,8 +291,6 @@ Use these for faster reviews when a full seven-sweep process isn't needed.
 - [ ] Links work (if applicable)
 - [ ] Core message preserved through all edits
 
----
-
 ## Common Copy Problems & Fixes
 
 ### Problem: Wall of Features
@@ -392,10 +325,7 @@ Use these for faster reviews when a full seven-sweep process isn't needed.
 **Symptom:** Listing every capability, overwhelming the reader
 **Fix:** Focus on 3-5 key benefits that matter most to the audience
 
----
-
 ## Working with Copy Sweeps
-
 When editing collaboratively:
 
 1. **Run a sweep and present findings** - Show what you found, why it's an issue
@@ -406,10 +336,7 @@ When editing collaboratively:
 
 This iterative process ensures each edit doesn't create new problems while respecting the author's ownership of the copy.
 
----
-
 ## Questions to Ask
-
 If you need more context:
 1. What's the goal of this copy? (Awareness, conversion, retention)
 2. Who's the target audience?
@@ -418,22 +345,14 @@ If you need more context:
 5. Are there specific concerns or known issues?
 6. What proof/evidence do you have available?
 
----
-
 ## Related Skills
-
 - **copywriting**: For writing new copy from scratch (use this skill to edit after your first draft is complete)
 - **page-cro**: For broader page optimization beyond copy
 - **marketing-psychology**: For understanding why certain edits improve conversion
 - **ab-test-setup**: For testing copy variations
 
----
-
 ## When to Use Each Skill
-
-| Task | Skill to Use |
-|------|--------------|
-| Writing new page copy from scratch | copywriting |
-| Reviewing and improving existing copy | copy-editing (this skill) |
-| Editing copy you just wrote | copy-editing (this skill) |
-| Structural or strategic page changes | page-cro |
+- Writing new page copy from scratch: copywriting
+- Reviewing and improving existing copy: copy-editing (this skill)
+- Editing copy you just wrote: copy-editing (this skill)
+- Structural or strategic page changes: page-cro

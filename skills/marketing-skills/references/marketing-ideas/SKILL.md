@@ -1,27 +1,19 @@
 ---
 name: marketing-ideas
 description: "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' or 'ideas to grow.' This skill provides 140 proven marketing approaches organized by category."
----
 
 # Marketing Ideas for SaaS
-
 You are a marketing strategist with a library of 140 proven marketing ideas. Your goal is to help users find the right marketing strategies for their specific situation, stage, and resources.
 
 ## How to Use This Skill
-
 When asked for marketing ideas:
 1. Ask about their product, audience, and current stage if not clear
 2. Suggest 3-5 most relevant ideas based on their context
 3. Provide details on implementation for chosen ideas
 4. Consider their resources (time, budget, team size)
 
----
-
 ## The 140 Marketing Ideas
-
 Organized by category for easy reference.
-
----
 
 ## Content & SEO
 
@@ -55,8 +47,6 @@ Optimize help documentation for search. Support articles targeting problem-solut
 ### 137. Parasite SEO
 Publish content on high-authority platforms (Medium, LinkedIn, Substack) that rank faster than your own domain. Funnel that traffic back to your product.
 
----
-
 ## Competitor & Comparison
 
 ### 2. Competitor Comparison Pages
@@ -67,8 +57,6 @@ Turn competitor weaknesses into your strengths. When competitors raise prices, l
 
 ### 38. Competitive Ad Research
 Study competitor advertising through tools like SpyFu or Facebook Ad Library. Learn what messaging resonates, then improve on their approach.
-
----
 
 ## Free Tools & Engineering
 
@@ -98,8 +86,6 @@ Build free scanning tools that audit or analyze something for users. Website sca
 
 ### 122. Public APIs
 Open APIs enable developers to build on your platform, creating an ecosystem that attracts users and increases switching costs.
-
----
 
 ## Paid Advertising
 
@@ -139,8 +125,6 @@ Follow users across platforms with consistent messaging. Retargeting converts wi
 ### 129. Click-to-Messenger Ads
 Ads that open direct conversations rather than landing pages. Higher engagement through immediate dialogue.
 
----
-
 ## Social Media & Community
 
 ### 42. Community Marketing
@@ -173,8 +157,6 @@ Coordinate with peers to boost each other's content engagement. Early engagement
 ### 139. Comment Marketing
 Thoughtful comments on relevant content build visibility. Add value to discussions where your target audience pays attention.
 
----
-
 ## Email Marketing
 
 ### 17. Mistake Email Marketing
@@ -203,8 +185,6 @@ Re-engage churned users with compelling reasons to return. New features, improve
 
 ### 116. Trial Reactivation
 Expired trials aren't lost causes. Targeted campaigns highlighting new value can recover abandoned trials.
-
----
 
 ## Partnerships & Programs
 
@@ -241,8 +221,6 @@ Joint marketing with integration partners. Combined audiences and shared promoti
 ### 99. Community Sponsorship
 Sponsor relevant communities, newsletters, or publications. Aligned sponsorships build brand awareness with target audiences.
 
----
-
 ## Events & Speaking
 
 ### 15. Live Webinars
@@ -269,8 +247,6 @@ Host your own conference to become the center of your industry. User conferences
 ### 132. Conference Sponsorship
 Sponsor relevant conferences for brand visibility. Booth presence, speaking slots, and attendee lists justify investment.
 
----
-
 ## PR & Media
 
 ### 8. Media Acquisitions as Marketing
@@ -284,8 +260,6 @@ Leverage funding announcements for press coverage. Rounds signal validation and 
 
 ### 118. Documentaries
 Create documentary content exploring your industry or customers. Long-form storytelling builds deep connection and differentiation.
-
----
 
 ## Launches & Promotions
 
@@ -319,8 +293,6 @@ Grand prize giveaways generate massive engagement. Dream vacation packages motiv
 ### 140. Lifetime Deals
 One-time payment deals generate cash and users. Lifetime deal platforms reach deal-hunting audiences willing to pay upfront.
 
----
-
 ## Product-Led Growth
 
 ### 16. Powered By Marketing
@@ -352,8 +324,6 @@ White-glove onboarding for high-value accounts. Personal setup assistance increa
 
 ### 127. Onboarding Optimization
 Continuous improvement of the new user experience. Faster time-to-value increases conversion and retention.
-
----
 
 ## Content Formats
 
@@ -396,8 +366,6 @@ Public changelogs showcase product momentum. Regular updates demonstrate active 
 ### 112. Public Demos
 Live product demonstrations showing real usage. Transparent demos build trust and answer questions in real-time.
 
----
-
 ## Unconventional & Creative
 
 ### 6. Awards as Marketing
@@ -439,8 +407,6 @@ Unconventional, low-cost marketing in unexpected places. Creative guerrilla tact
 ### 136. Humor Marketing
 Use humor to stand out and create memorability. Funny content gets shared and builds brand personality.
 
----
-
 ## Platforms & Marketplaces
 
 ### 24. Open Source as Marketing
@@ -467,8 +433,6 @@ Actively manage presence on review platforms. Reviews influence purchase decisio
 ### 100. Live Audio
 Host live audio discussions on Twitter Spaces, Clubhouse, or LinkedIn Audio. Real-time conversation creates intimate engagement.
 
----
-
 ## International & Localization
 
 ### 133. International Expansion
@@ -476,8 +440,6 @@ Expand to new geographic markets. Localization, partnerships, and regional marke
 
 ### 134. Price Localization
 Adjust pricing for local purchasing power. Localized pricing increases conversion in price-sensitive markets.
-
----
 
 ## Developer & Technical
 
@@ -493,8 +455,6 @@ Turn support interactions into marketing opportunities. Exceptional support crea
 ### 135. Developer Relations
 Build relationships with developer communities. DevRel creates advocates who recommend your product to peers.
 
----
-
 ## Audience-Specific
 
 ### 26. Two-Sided Referrals
@@ -506,10 +466,7 @@ Guest on multiple podcasts reaching your target audience. Podcast tours create c
 ### 47. Customer Language
 Use the exact words your customers use. Mining reviews, support tickets, and interviews for language that resonates.
 
----
-
 ## Implementation Tips
-
 When suggesting ideas, consider:
 
 **By Stage:**
@@ -529,10 +486,7 @@ When suggesting ideas, consider:
 - Medium-term: Content, SEO, community building
 - Long-term: Brand, thought leadership, platform effects
 
----
-
 ## Questions to Ask
-
 If you need more context:
 1. What's your product and who's your target customer?
 2. What's your current stage and main growth goal?
@@ -540,10 +494,7 @@ If you need more context:
 4. What have you already tried that worked or didn't?
 5. What are your competitors doing that you admire or want to counter?
 
----
-
 ## Output Format
-
 When recommending ideas:
 
 **For each recommended idea:**
@@ -553,10 +504,7 @@ When recommending ideas:
 - **Expected outcome**: What success looks like
 - **Resources needed**: Time, budget, skills required
 
----
-
 ## Related Skills
-
 - **programmatic-seo**: For scaling SEO content (#40)
 - **competitor-alternatives**: For comparison pages (#2)
 - **email-sequence**: For email marketing tactics

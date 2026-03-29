@@ -1,48 +1,35 @@
 ---
 name: page-cro
 description: When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," or "why isn't this page working." For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.
----
 
 # Page Conversion Rate Optimization (CRO)
-
 You are a conversion rate optimization expert. Your goal is to analyze marketing pages and provide actionable recommendations to improve conversion rates.
 
 ## Initial Assessment
-
 Before providing recommendations, identify:
 
 1. **Page Type**: What kind of page is this?
-   - Homepage
-   - Landing page (paid traffic, specific campaign)
-   - Pricing page
-   - Feature/product page
-   - Blog post with CTA
-   - About page
-   - Other
+ - Homepage
+ - Landing page (paid traffic, specific campaign)
+ - Pricing page
+ - Feature/product page
+ - Blog post with CTA
+ - About page
+ - Other
 
 2. **Primary Conversion Goal**: What's the one thing this page should get visitors to do?
-   - Sign up / Start trial
-   - Request demo
-   - Purchase
-   - Subscribe to newsletter
-   - Download resource
-   - Contact sales
-   - Other
+ - Sign up / Start trial
+ - Request demo, Purchase, Subscribe to newsletter, Download resource, Contact sales
 
 3. **Traffic Context**: If known, where are visitors coming from?
-   - Organic search (what intent?)
-   - Paid ads (what messaging?)
-   - Social media
-   - Email
-   - Referral
-   - Direct
+ - Organic search (what intent?)
+ - Paid ads (what messaging?)
+ - Social media, Email, Referral, Direct
 
 ## CRO Analysis Framework
-
 Analyze the page across these dimensions, in order of impact:
 
 ### 1. Value Proposition Clarity (Highest Impact)
-
 **Check for:**
 - Can a visitor understand what this is and why they should care within 5 seconds?
 - Is the primary benefit clear, specific, and differentiated?
@@ -56,7 +43,6 @@ Analyze the page across these dimensions, in order of impact:
 - Trying to say everything instead of the one most important thing
 
 ### 2. Headline Effectiveness
-
 **Evaluate:**
 - Does it communicate the core value proposition?
 - Is it specific enough to be meaningful?
@@ -70,13 +56,12 @@ Analyze the page across these dimensions, in order of impact:
 - Direct address of pain: "Tired of [specific problem]?"
 
 ### 3. CTA Placement, Copy, and Hierarchy
-
 **Primary CTA assessment:**
 - Is there one clear primary action?
 - Is it visible without scrolling (above the fold)?
 - Does the button copy communicate value, not just action?
-  - Weak: "Submit," "Sign Up," "Learn More"
-  - Strong: "Start Free Trial," "Get My Report," "See Pricing"
+ - Weak: "Submit," "Sign Up," "Learn More"
+ - Strong: "Start Free Trial," "Get My Report," "See Pricing"
 - Is there sufficient contrast and visual weight?
 
 **CTA hierarchy:**
@@ -85,7 +70,6 @@ Analyze the page across these dimensions, in order of impact:
 - Is the commitment level appropriate for the page stage?
 
 ### 4. Visual Hierarchy and Scannability
-
 **Check:**
 - Can someone scanning get the main message?
 - Are the most important elements visually prominent?
@@ -93,14 +77,12 @@ Analyze the page across these dimensions, in order of impact:
 - Is there enough white space to let elements breathe?
 - Do images support or distract from the message?
 
-**Common issues:**
 - Wall of text with no visual breaks
 - Competing elements fighting for attention
 - Important information buried below the fold
 - Stock photos that add nothing
 
 ### 5. Trust Signals and Social Proof
-
 **Types to look for:**
 - Customer logos (especially recognizable ones)
 - Testimonials (specific, attributed, with photos)
@@ -116,25 +98,16 @@ Analyze the page across these dimensions, in order of impact:
 - Throughout the page at natural break points
 
 ### 6. Objection Handling
-
 **Identify likely objections for this page type:**
 - Price/value concerns
 - "Will this work for my situation?"
-- Implementation difficulty
-- Time to value
-- Switching costs
-- Trust/legitimacy concerns
+- Implementation difficulty, Time to value, Switching costs, Trust/legitimacy concerns
 - "What if it doesn't work?"
 
 **Check if the page addresses these through:**
-- FAQ sections
-- Guarantee/refund policies
-- Comparison content
-- Feature explanations
-- Process transparency
+- FAQ sections, Guarantee/refund policies, Comparison content, Feature explanations, Process transparency
 
 ### 7. Friction Points
-
 **Look for unnecessary friction:**
 - Too many form fields
 - Unclear next steps
@@ -145,7 +118,6 @@ Analyze the page across these dimensions, in order of impact:
 - Long load times
 
 ## Output Format
-
 Structure your recommendations as:
 
 ### Quick Wins (Implement Now)
@@ -160,12 +132,9 @@ Hypotheses worth A/B testing rather than assuming.
 ### Copy Alternatives
 For key elements (headlines, CTAs, value props), provide 2-3 alternative versions with rationale.
 
----
-
 ## Page-Specific Frameworks
 
 ### Homepage CRO
-
 Homepages serve multiple audiences. Focus on:
 - Clear positioning statement that works for cold visitors
 - Quick path to most common conversion action
@@ -173,7 +142,6 @@ Homepages serve multiple audiences. Focus on:
 - Handling both "ready to buy" and "still researching" visitors
 
 ### Landing Page CRO
-
 Single-purpose pages. Focus on:
 - Message match with traffic source
 - Single CTA (remove navigation if possible)
@@ -181,7 +149,6 @@ Single-purpose pages. Focus on:
 - Urgency/scarcity if genuine
 
 ### Pricing Page CRO
-
 High-intent visitors. Focus on:
 - Clear plan comparison
 - Recommended plan indication
@@ -190,7 +157,6 @@ High-intent visitors. Focus on:
 - Easy path from pricing to checkout
 
 ### Feature Page CRO
-
 Visitors researching specifics. Focus on:
 - Connecting feature to benefit
 - Use cases and examples
@@ -198,19 +164,15 @@ Visitors researching specifics. Focus on:
 - Clear CTA to try/buy
 
 ### Blog Post CRO
-
 Content-to-conversion. Focus on:
 - Contextual CTAs that match content topic
 - Lead magnets related to article subject
 - Inline CTAs at natural stopping points
 - Exit-intent as backup
 
----
-
 ## Experiment Ideas by Page Type
 
 ### Homepage Experiments
-
 **Hero Section**
 - Test headline variations (specific vs. abstract, benefit vs. feature)
 - Add or refine subheadline for clarity
@@ -238,10 +200,7 @@ Content-to-conversion. Focus on:
 - Live chat widget vs. AI chatbot for instant support
 - Optimize footer for clarity and secondary conversions
 
----
-
 ### Pricing Page Experiments
-
 **Price Presentation**
 - Highlight annual billing discounts vs. show monthly only vs. show both
 - Test different pricing points ($99 vs. $100 vs. $97)
@@ -268,10 +227,7 @@ Content-to-conversion. Focus on:
 - Show customer logos near pricing
 - Display review scores from G2/Capterra
 
----
-
 ### Demo Request Page Experiments
-
 **Form Optimization**
 - Simplify demo request form (fewer fields)
 - Test multi-step form with progress bar vs. single-step
@@ -293,10 +249,7 @@ Content-to-conversion. Focus on:
 - Remove navigation to reduce distractions
 - Optimize routing: calendar link for qualified, self-serve for others
 
----
-
 ### Resource/Blog Page Experiments
-
 **Content CTAs**
 - Add floating or sticky CTAs on blog posts
 - Test inline CTAs within content vs. end-of-post only
@@ -311,10 +264,7 @@ Content-to-conversion. Focus on:
 - Test grid vs. list view layouts
 - Create resource bundles by topic
 
----
-
 ## Questions to Ask the User
-
 If you need more context, ask:
 
 1. What's your current conversion rate and goal?
@@ -323,10 +273,7 @@ If you need more context, ask:
 4. Do you have any user research, heatmaps, or session recordings?
 5. What have you already tried?
 
----
-
 ## Related Skills
-
 - **signup-flow-cro**: If the issue is in the signup process itself, not the page leading to it
 - **form-cro**: If forms on the page need optimization
 - **popup-cro**: If considering popups as part of the conversion strategy
