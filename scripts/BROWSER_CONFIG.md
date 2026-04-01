@@ -6,55 +6,84 @@
 
 ## Edge 配置
 
-### 用户数据目录
-```
-C:\Users\Haide\AppData\Local\Microsoft\Edge\User Data\OpenClawProfile
-```
-
 ### CDP 调试端口
 ```
---remote-debugging-port=9224
+--remote-debugging-port=9222
 ```
 
-### 启动参数
-```python
-args=[
-    "--remote-debugging-port=9224",
-    "--disable-blink-features=AutomationControlled",
-]
+### 启动命令（一次性设置）
+```powershell
+# 关闭所有 Edge 实例
+Stop-Process -Name msedge -Force -ErrorAction SilentlyContinue
+
+# 启动 Edge 带远程调试端口
+Start-Process "msedge" -ArgumentList "--remote-debugging-port=9222","--user-data-dir=C:\Users\Haide\AppData\Local\Microsoft\Edge\User Data\OpenClawProfile"
+```
+
+### 或使用快捷方式
+目标路径添加参数：
+```
+"msedge.exe" --remote-debugging-port=9222 --user-data-dir="C:\Users\Haide\AppData\Local\Microsoft\Edge\User Data\OpenClawProfile"
 ```
 
 ## 使用方式
 
-### 方案 A: OpenClaw Browser 工具（推荐）
+### 方案 A: CDP 协议直连（推荐 - v9 脚本）
 ```python
-browser.action = "navigate"
-browser.url = "https://www.linkedin.com/feed/"
-```
-- ✅ 自动使用 Edge
-- ✅ Cookie 自动保存
-- ✅ 无需手动配置
+from cdp_client import CDPClient
 
-### 方案 B: Playwright 直接连接
+client = CDPClient(port=9222)
+tabs = client.get_browser_tabs()
+linkedin_tab = client.find_linkedin_feed()
+client.connect(linkedin_tab['webSocketDebuggerUrl'])
+posts = client.extract_posts()
+```
+- ✅ 无需 Playwright
+- ✅ 使用标准库 + websocket-client
+- ✅ Cookie 自动复用（浏览器已登录状态）
+- ✅ 轻量级，依赖少
+
+### 方案 B: Selenium（备选）
 ```python
-context = p.chromium.launch_persistent_context(
-    user_data_dir=r"C:\Users\Haide\AppData\Local\Microsoft\Edge\User Data\OpenClawProfile",
-    headless=False,
-    args=["--remote-debugging-port=9224"],
-)
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
+driver = webdriver.Edge(options=options)
 ```
 
 ## 首次使用
-1. 运行脚本会自动打开 Edge
-2. 访问 LinkedIn 并登录
+1. 启动 Edge 带远程调试端口（见上方命令）
+2. 访问 https://www.linkedin.com/feed 并登录
 3. Cookie 永久保存到用户数据目录
 4. 下次无需重新登录
 
+## 运行采集脚本
+```powershell
+# 基础用法
+python scripts/linkedin_v9_cdp.py --duration 30
+
+# 指定端口
+python scripts/linkedin_v9_cdp.py --duration 60 --port 9222
+
+# 查看帮助
+python scripts/linkedin_v9_cdp.py --help
+```
+
 ## 注意事项
-- Edge 和 Chrome 的 Cookie 不互通
-- 首次需要重新登录 LinkedIn
+- 确保 Edge 已启动并开启远程调试端口
+- 首次需要手动登录 LinkedIn
 - 登录后 Cookie 永久保存
+- 采集时保持 Edge 运行状态
+- 不要关闭调试端口所在的浏览器实例
+
+## 依赖安装
+```powershell
+# CDP 客户端依赖（已安装）
+pip install websocket-client requests
+```
 
 ---
-**更新时间**: 2026-03-29
-**更新原因**: Chrome 已卸载，改用 Edge
+**更新时间**: 2026-03-30
+**更新原因**: Playwright 已卸载，改用纯 CDP 协议方案

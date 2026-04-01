@@ -1,78 +1,84 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-LinkedIn 登录检查脚本
+LinkedIn 登录检查脚本 - CDP 协议版
+
+用法：
+  python scripts/linkedin_login_check.py
 """
 
-import time
 import sys
 import io
+import time
 from pathlib import Path
 
 # Fix Windows console encoding
 if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-sys.path.insert(0, str(Path(__file__).parent / 'webtop'))
-
-from playwright.sync_api import sync_playwright
+from cdp_client import CDPClient
 
 def check_login():
-    with sync_playwright() as p:
-        print("连接浏览器...")
-        try:
-            browser = p.chromium.connect_over_cdp("http://localhost:9222", timeout=15000)
-            print("连接成功")
-        except Exception as e:
-            print(f"连接失败：{e}")
-            print("请确保 webtop_local.py 正在运行")
-            return
+    print("=" * 60)
+    print("LinkedIn 登录状态检查")
+    print("=" * 60)
+    
+    client = CDPClient(port=9222)
+    
+    # 查找 LinkedIn Feed 页面
+    linkedin_tab = client.find_linkedin_feed()
+    
+    if not linkedin_tab:
+        print("\n❌ 未找到已登录的 LinkedIn Feed 页面")
+        print("\n请执行以下步骤：")
+        print("1. 启动 Edge 带远程调试端口：")
+        print("   python scripts/start_edge_for_linkedin.py")
+        print("2. 在 Edge 中访问：https://www.linkedin.com/feed")
+        print("3. 登录 LinkedIn 账号")
+        print("4. 重新运行此检查脚本")
+        return False
+    
+    print(f"\n✅ 找到 LinkedIn 页面")
+    print(f"   标题：{linkedin_tab.get('title', 'N/A')}")
+    print(f"   URL: {linkedin_tab.get('url', 'N/A')[:100]}")
+    
+    # 连接并检查登录状态
+    ws_url = linkedin_tab.get('webSocketDebuggerUrl')
+    if not client.connect(ws_url):
+        print("❌ 无法连接到页面")
+        return False
+    
+    # 检查是否包含登录相关关键词
+    content = client.get_page_content()
+    
+    if "Sign in" in content or "登录" in content or "sign-in" in linkedin_tab.get('url', '').lower():
+        print("\n⚠️ 检测到未登录状态")
+        print("请在浏览器中手动登录 LinkedIn")
+        print("\n等待 60 秒...")
+        for i in range(60, 0, -10):
+            print(f"  剩余 {i} 秒...")
+            time.sleep(10)
         
-        context = browser.contexts[0] if hasattr(browser, 'contexts') and browser.contexts else browser
-        page = context.pages[0] if context.pages else browser.new_page()
-        
-        print(f"当前 URL: {page.url}")
-        
-        # 导航到 LinkedIn feed
-        print("导航到 LinkedIn Feed...")
-        page.goto("https://www.linkedin.com/feed/", timeout=60000)
-        time.sleep(5)
-        
-        print(f"当前 URL: {page.url}")
-        
-        # 检查是否登录
-        if "sign-in" in page.url.lower() or "login" in page.url.lower():
-            print("未登录状态")
-            print("请在浏览器中手动登录 LinkedIn")
-            print("等待 120 秒...")
-            for i in range(120, 0, -10):
-                print(f"  剩余 {i} 秒...")
-                time.sleep(10)
-            
-            # 再次检查
-            if "sign-in" in page.url.lower() or "login" in page.url.lower():
-                print("仍然未登录，退出")
-            else:
-                print("登录成功")
-                print(f"当前 URL: {page.url}")
-        else:
-            print("已登录状态")
-            
-            # 尝试查找帖子
-            print("\n查找帖子元素...")
-            selectors = [
-                'div[role="article"]',
-                '[data-id*="urn:li:activity"]',
-                '[class*="update"]',
-                'article',
-            ]
-            
-            for selector in selectors:
-                try:
-                    elements = page.query_selector_all(selector)
-                    print(f"{selector}: {len(elements)} 个元素")
-                except Exception as e:
-                    print(f"{selector}: 错误 - {e}")
+        # 重新检查
+        linkedin_tab = client.find_linkedin_feed()
+        if not linkedin_tab or "sign-in" in linkedin_tab.get('url', '').lower():
+            print("\n❌ 仍未登录，退出")
+            client.disconnect()
+            return False
+    
+    print("\n✅ 登录状态正常")
+    print("\n可以运行采集脚本：")
+    print("  python scripts/linkedin_v9_cdp.py --duration 30")
+    
+    client.disconnect()
+    return True
 
-if __name__ == '__main__':
-    check_login()
+if __name__ == "__main__":
+    try:
+        success = check_login()
+        sys.exit(0 if success else 1)
+    except Exception as e:
+        print(f"\n[ERROR] 检查失败：{e}")
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)

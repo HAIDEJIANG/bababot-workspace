@@ -6,7 +6,7 @@ This file defines periodic tasks that should run during heartbeat checks.
 ## 心跳配置说明 (根据 OpenClaw 最佳实践)
 
 **活动时间窗口**: 08:00-23:00（夜间自动跳过，节省 token）
-**心跳间隔**: 30 分钟
+**心跳间隔**: 60 分钟（每小时）
 **告警**: 已启用（异常情况主动推送）
 **记忆保护**: 压缩前自动落盘（防止关键信息丢失）
 
@@ -20,7 +20,7 @@ This file defines periodic tasks that should run during heartbeat checks.
 - ✅ 记录心跳状态但不执行任务
 
 ### 日间巡检规则 (08:00-23:00)
-- ✅ 每 30 分钟执行一次
+- ✅ 每 60 分钟执行一次
 - ✅ 正常时静默 (HEARTBEAT_OK)
 - ✅ 异常时主动告警
 
@@ -68,18 +68,6 @@ Email inbox (if configured)
 Calendar for upcoming events (< 24h)
 Weather (if relevant)
 Git status in workspace (using layered reporting)
-
-## Critical Task Monitoring
-
-### LinkedIn 联系人采集完成监控（高优先级）
-- **监控文件**: `C:\Users\Haide\Desktop\LINKEDIN\ANALYSIS_20260326\progress.json`
-- **完成条件**: `processed_contacts >= 3185`
-- **完成后动作**: 
-  1. 立即通知老板
-  2. 提示 Sub-Agent 改进项目已就绪
-  3. 等待老板确认是否执行
-- **检查频率**: 每次心跳检查（30 分钟）
-- **项目配置**: `projects/subagent-improvement/project_config.json`
 
 Run unified system status check (recommended - combines multiple checks):
 ```powershell

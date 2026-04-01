@@ -10,6 +10,49 @@
 - **StockMarket.aero**: 航材库存查询和 RFQ 发送
 - **GitHub**: 私人仓库用于同步 bababot workspace
 
+## ⚙️ OpenClaw 技能配置（精简后）
+
+**保留 20 个核心技能（2026-03-31 精简）：**
+
+### 航空业务
+| 技能 | 用途 |
+|------|------|
+| linkedin | 业务开发、人脉管理 |
+| gmail | Gmail 邮件 |
+| imap-smtp-email | 通用邮件（配合 himalaya） |
+| browser-use | 浏览器自动化 |
+| ddg-search | DuckDuckGo 搜索 |
+| serper | Google 搜索 |
+
+### 办公自动化
+| 技能 | 用途 |
+|------|------|
+| n8n | 工作流自动化 |
+| paperless-ngx | 文档管理 |
+| excel | 表格处理 |
+| docx | 文档处理 |
+| pdf-form-filler | PDF 表单填写 |
+
+### 系统核心
+| 技能 | 用途 |
+|------|------|
+| basal-ganglia-memory | 记忆系统 |
+| homeassistant | 智能家居 |
+
+### 其他保留
+| 技能 | 用途 |
+|------|------|
+| moltr | Moltbook 运营 |
+| frontend-design | 前端设计 |
+| remotion-video-toolkit | 视频生成 |
+| agentmail | 邮件代理 |
+
+**已删除类别：**
+- Playwright 系列（已迁移到 CDP）
+- LinkdAPI 系列（已弃用）
+- 地区专用技能（南非超市、韩国地铁等）
+- 重叠技能（n8n 5→1，浏览器 12→1，LinkedIn 6→1）
+
 ## ⚠️ 航材条件匹配规则（铁律，绝对不可搞错）
 
 | 需求类型 | 匹配条件 |
@@ -28,6 +71,14 @@
 2. **认真阅读指令每一个字** — 不打折扣执行，不自作主张
 3. **说不用确认就不停下来** — 完成后一次性汇报，中途不打扰
 
+## ⚠️ LinkedIn 采集铁律
+
+- **只用 Feed 滚动，不用搜索模式** — 老板多次强调
+- Feed 内容重复时结束采集，不切换关键词搜索
+- 这条规则已在对话中重复强调多次
+
+---
+
 ## 经验教训 & 优化 (Lessons Learned)
 - **Browser Relay 自动断连**: StockMarket.aero 在发送 RFQ 后会触发页面重载，导致浏览器扩展（龙虾图标）自动断开。
     - **修复 (2026-02-06)**: 已修改 `background.js` 源码，增加了"自动重连"逻辑。如果不是用户手动关闭，插件会在断开 1 秒后尝试自动重新附加。
@@ -43,6 +94,18 @@
         4. 绝不依赖记忆，必须使用 cron 自动化提醒
     - **触发原因**: 2026-02-15 00:59 用户要求 10 分钟后汇报（01:09 截止），助手未创建提醒导致错过汇报时间
     - **适用范围**: 所有带时间约束的任务（临时汇报、定期检查、截止期限等）
+
+## 工作原则
+
+### 🎯 主动优化原则（2026-03-31 用户认可）
+用户说的是目标，我理解的是完整交付。能顺手做的优化就做，不用事事问：
+- 数据合并 → 自动去重、清理无效记录
+- 搜索文件 → 智能识别格式、提取关键字段
+- 结果呈现 → 统计质量指标、高价值线索摘要
+
+**用户反馈**："在我并没有要求你对采集信息作优化处理，你主动作出去重合并，删除无效信息等操作，你可以主动想到我并没有意识到的问题，这是非常优秀的操作"
+
+---
 
 ## 工作习惯
 - 会让我帮忙查航材库存、发 RFQ
@@ -206,4 +269,29 @@
     - **Cron 配置**: `.openclaw/cron/jobs/linkedin-auto-collection.json`
     - **数据输出**: `Desktop/real business post/LinkedIn_Business_Posts_Master_Table.csv`
     - **Git 提交**: 已推送到 GitHub (HAIDEJIANG/bababot-workspace)
+- **2026-03-30**: **Playwright 迁移到 CDP 协议** 🔄
+    - **原因**: Playwright 依赖重，与业务关联度低
+    - **操作**: 
+        - 卸载 Playwright CLI 及 Python 包
+        - 清理 ms-playwright 缓存目录
+        - 归档 12 个旧 Playwright 脚本到 `scripts/deprecated_playwright/`
+    - **新方案**: 
+        - 创建 `cdp_client.py` - 纯 CDP 协议客户端（websocket + requests）
+        - 创建 `linkedin_v9_cdp.py` - 新版采集脚本（零 Playwright 依赖）
+        - 更新 `BROWSER_CONFIG.md` - Edge 远程调试配置
+    - **优势**: 更轻量、依赖少、Cookie 自动复用、易维护
+    - **Cron 任务**: 已更新为 v9 脚本，每 4 小时执行，✅ 已启用
+    - **依赖**: websocket-client 1.9.0, requests 2.32.5（均已安装）
+- **2026-03-29**: **ClawTeam 多智能体框架安装完成** 🤖
+    - **安装时长**: 2.5 小时 (Windows+WSL2 双环境)
+    - **核心优势**: 多 agent 并行/Inbox 通信/任务依赖自动解锁/git worktree 隔离/无超时限制/实时 tmux 看板
+    - **适用场景**: 复杂任务分解、多角色协作研究、长时间运行任务、需工作区隔离
+    - **原生 sub-agents 适用**: 简单并行任务、Windows 原生环境、快速原型测试
+    - **文件位置**: `C:\Users\Haide\.openclaw\workspace\ClawTeam-OpenClaw\`
+    - **技能**: `~/.openclaw/workspace/skills/clawteam/SKILL.md`
+    - **配置**: `~/.clawteam/config.json`
+- **2026-03-29**: **LinkedIn 联系人分析优化版停止** ⏸️
+    - **停止原因**: 仅采集静态信息（姓名/公司/职位），无动态帖子数据，价值低
+    - **最终进度**: 383/3,185 (12.03%)，成功采集帖子 8 个 (2.1%)
+    - **新策略**: 用现有导出文件筛选 200-300 位高优先级联系人，针对性手动查看 + 直接业务联系
 

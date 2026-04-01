@@ -27,3 +27,16 @@
 {"id": "mem-20260328230047", "text": "LinkedIn 自动采集进行中 - 进度 11.7%（372/3,185），选择器问题已修复，预计 2 天完成", "created_at": "2026-03-28T23:00:47"}
 {"id": "mem-20260328230049", "text": "RFQ20260326-01 新询价单 - 海特高新 Cynthia Zhang 发送，截止 4 月 2 日，待下载附件解析并发送 StockMarket RFQ", "created_at": "2026-03-28T23:00:49"}
 {"id": "mem-20260328230057", "text": "Scrapy 性能验证 - v2.14.2 安装成功，测试性能~545 条/分钟，用于 LinkedIn 数据采集", "created_at": "2026-03-28T23:00:57"}
+{"id": "mem-20260329230201", "text": "ClawTeam 多智能体框架安装完成 - Windows+WSL2 双环境配置，2.5 小时完成全部安装，tmux 后端支持已验证，功能包括团队创建/任务管理/Inbox 通信/git worktree 隔离", "created_at": "2026-03-29T23:02:01"}
+{"id": "mem-20260329230208", "text": "ClawTeam vs 原生 sub-agents 对比 - ClawTeam 优势：多 agent 并行/Inbox 通信/任务依赖自动解锁/git worktree 隔离/无超时限制/实时看板；劣势：Windows 需 WSL2 配置复杂；适用场景：复杂任务分解、多角色协作、长时间运行任务", "created_at": "2026-03-29T23:02:08"}
+{"id": "mem-20260329230208", "text": "RFQ Inquiry Trial 持续执行中 - 1152466-250(95 供应商) 和 129666-3(108 供应商) 已成功提交，10037-0770(80 供应商) 按前 10 家有效供应商持续执行，总计 283+ 供应商", "created_at": "2026-03-29T23:02:08"}
+{"id": "mem-20260329230208", "text": "LinkedIn 联系人分析优化版已停止 - 进度 383/3185(12%) 后终止，原因：仅采集静态信息无动态帖子数据价值低，与导出文件重复，预计 28 小时产出不划算；转向方案：用现有导出文件筛选 200-300 位高价值联系人精准联系", "created_at": "2026-03-29T23:02:08"}
+{"id": "mem-20260330230048", "text": "Browser Relay 根本问题修复成功：发现 openclaw.json 中 plugins.allow 配置缺少 browser 权限，添加后浏览器控制完全恢复。教训：错误信息模糊时需打开配置文件逐项检查并查阅官方文档。", "created_at": "2026-03-30T23:00:48"}
+{"id": "mem-20260330230100", "text": "LinkedIn Feed 采集完成：35 分钟采集 17 条航材相关帖子，Master Table 总计 134 条。高优先级业务线索包括：Scott Hunstad 多个航材现货、Brian Nolan 紧急采购 A320neo、Kostantin 采购 CFM56-5B 发动机、IBA Group 3 架 A321-211P2F 货机出售。", "created_at": "2026-03-30T23:01:00"}
+{"id": "mem-20260330230109", "text": "RFQ20260330-01 海特询价任务完成：30 个 PN 处理完成，26 个发送成功，4 个无库存，总计约 156 条 RFQ 发送。脚本全流程自动化验证成功，等待供应商回复截止 April 6, 2026。", "created_at": "2026-03-30T23:01:09"}
+{"id": "mem-20260330230117", "text": "CDP 协议深度研究结论：CDP 无法穿透 LinkedIn Shadow DOM 导致帖子提取失败。确认可行方案优先级：现有数据分析 > Playwright > Browser Relay 扩展 > CDP 协议。", "created_at": "2026-03-30T23:01:17"}
+{"id": "mem-20260331230038", "text": "V2500 LinkedIn Connect 任务完成：累计发送 114 位联系人，覆盖 Top 8 V2500 运营商（940 架飞机），包括 American Airlines 71 位、JetBlue 9 位、United Airlines 13 位等，核心高价值联系人包括机队交易总监、发动机采购经理、发动机维修总监等决策人", "created_at": "2026-03-31T23:00:38"}
+{"id": "mem-20260331230045", "text": "OpenClaw 技能精简完成：从约 200 个技能精简到 20 个核心技能，删除约 180 个重叠/冗余技能，保留航空业务 (linkedin/gmail/browser-use 等)、办公自动化 (n8n/excel/docx 等)、系统核心 (basal-ganglia-memory/homeassistant) 等核心功能", "created_at": "2026-03-31T23:00:45"}
+{"id": "mem-20260331230045", "text": "心跳间隔调整完成：从 30 分钟改为 60 分钟，配置文件 openclaw.json 中 agents.defaults.heartbeat.every 已更新为 1h，Gateway 已重启使配置生效，活动时间窗口保持 08:00-23:00", "created_at": "2026-03-31T23:00:45"}
+{"id": "mem-20260331230045", "text": "Browser Relay 根本问题修复成功：发现 openclaw.json 中 plugins.allow 配置缺少 browser 权限，添加后浏览器控制完全恢复，教训是错误信息模糊时需打开配置文件逐项检查并查阅官方文档", "created_at": "2026-03-31T23:00:45"}
+{"id": "mem-20260331230045", "text": "LinkedIn 联系人筛选规则教训：Bill Elder 事件（B777/B787 Fleet Training Manager 与 V2500 无关），建立职位相关性筛选铁律：必须检查当前职位是否涉及目标发动机/机型、工作经验是否与目标业务领域相关、不能只看 Fleet 字样就发送", "created_at": "2026-03-31T23:00:45"}

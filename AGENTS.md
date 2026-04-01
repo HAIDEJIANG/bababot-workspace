@@ -45,6 +45,26 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
+### 📁 Memory 文件操作规则（铁律）
+
+**所有 memory/YYYY-MM-DD.md 操作必须遵循：**
+
+- ✅ **先 read 现有内容** — 获取原有内容
+- ✅ **合并原有 + 新增内容** — 拼接完整内容
+- ✅ **write 完整内容（原有 + 新增）** — 写入合并后的完整内容
+- ❌ **绝不可直接 write 覆盖已有文件** — 这会丢失历史记录
+
+**流程示例：**
+```
+1. read memory/2026-03-31.md → 获取原有内容
+2. 拼接：原有内容 + "\n---\n" + 新增内容
+3. write 完整内容到 memory/2026-03-31.md
+```
+
+**根本原因：** `write` 工具是覆盖式写入，必须先获取原内容再合并写入。
+
+**教训来源：** 2026-03-31 多次误用 write 导致 memory 文件被覆盖，用户明确要求吸取教训。
+
 ## Safety
 
 - Don't exfiltrate private data. Ever.
