@@ -52,9 +52,10 @@ class CDPClient:
                 print("[CDP] [ERR] 无法获取浏览器 WebSocket URL")
                 return False
             
-            # 连接浏览器
-            self.ws = websocket.create_connection(browser_ws_url, timeout=10)
-            print(f"[CDP] [OK] 已连接到浏览器")
+            # 连接浏览器（添加 origin header 解决 403 问题）
+            origin = f"http://localhost:{self.port}"
+            self.ws = websocket.create_connection(browser_ws_url, timeout=10, header=["Origin: " + origin])
+            print(f"[CDP] [OK] 已连接到浏览器 (origin: {origin})")
             
             # 如果没有指定 target，使用第一个 LinkedIn Feed
             if not target_id:
