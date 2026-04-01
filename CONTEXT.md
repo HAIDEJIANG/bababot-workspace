@@ -1,5 +1,15 @@
 # CONTEXT.md - 当前工作上下文
 
+## 2026-04-01 关键摘要
+
+1. **V2500 LinkedIn Connect 任务里程碑** - 累计发送约 370 位联系人，覆盖 47 个 V2500 运营商；最高价值联系人：Kwang Eun (Charlie) Kim (Korean Air Managing VP - Engine Maintenance Center)、Abraham Thomas (Air India Head-Powerplant)、Yosuke Kinoshita (ANA Engine Technics VP)、Xin Li (CAAC SAACC Director of Powerplant Division)
+
+2. **RFQ20260401-01 海特高新询价完成** - 33 个 PN（全新件 26+ 可用件 7），发送 83 条 RFQ，22 个 PN 成功/7 个无库存/4 个条件不匹配；Gmail 预览页面直接提取表格方法验证成功（无需下载 Excel 文件）
+
+3. **新技能安装 6 个** - self-improving-agent(336k, 提升 RFQ 准确性), ontology(144k, LinkedIn 联系人管理), self-improving-proactive-agent(134k), agent-browser-clawdbot(60k, Browser Relay 补充), api-gateway(59.6k), excel(38.8k)
+
+4. **memU 每日提取运行** - OPENAI_API_KEY 未配置，embedding 步骤跳过，记忆文本已创建
+
 ## 2026-03-31 关键摘要
 
 1. **V2500 LinkedIn Connect 任务完成** - 累计发送 114 位联系人，覆盖 Top 8 V2500 运营商（940 架飞机），包括 American Airlines 71 位、JetBlue 9 位、United Airlines 13 位、China Southern 3 位、China Eastern 2 位、Turkish Airlines 5 位、Wizz Air 7 位、IndiGo 4 位；核心高价值联系人包括机队交易总监、发动机采购经理、发动机维修总监、MRO 公司 CEO 等决策人
@@ -71,5 +81,5 @@
 - **报价总表** Quotes_Master_Table.csv 待建立（桌面）
 
 ---
-最后更新：2026-03-31 23:00
-当前行数：76 行
+最后更新：2026-04-01 23:00
+当前行数：74 行

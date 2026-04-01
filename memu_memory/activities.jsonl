@@ -40,3 +40,6 @@
 {"id": "mem-20260331230045", "text": "心跳间隔调整完成：从 30 分钟改为 60 分钟，配置文件 openclaw.json 中 agents.defaults.heartbeat.every 已更新为 1h，Gateway 已重启使配置生效，活动时间窗口保持 08:00-23:00", "created_at": "2026-03-31T23:00:45"}
 {"id": "mem-20260331230045", "text": "Browser Relay 根本问题修复成功：发现 openclaw.json 中 plugins.allow 配置缺少 browser 权限，添加后浏览器控制完全恢复，教训是错误信息模糊时需打开配置文件逐项检查并查阅官方文档", "created_at": "2026-03-31T23:00:45"}
 {"id": "mem-20260331230045", "text": "LinkedIn 联系人筛选规则教训：Bill Elder 事件（B777/B787 Fleet Training Manager 与 V2500 无关），建立职位相关性筛选铁律：必须检查当前职位是否涉及目标发动机/机型、工作经验是否与目标业务领域相关、不能只看 Fleet 字样就发送", "created_at": "2026-03-31T23:00:45"}
+{"id": "mem-20260401230041", "text": "新技能安装 6 个 - self-improving-agent(336k), ontology(144k), self-improving-proactive-agent(134k), agent-browser-clawdbot(60k), api-gateway(59.6k), excel(38.8k)", "created_at": "2026-04-01T23:00:41"}
+{"id": "mem-20260401230041", "text": "V2500 LinkedIn Connect 任务完成 - 累计发送约 370 位联系人，覆盖 47 个 V2500 运营商，包括 Korean Air Managing VP、Air India Head-Powerplant 等最高级别联系人", "created_at": "2026-04-01T23:00:41"}
+{"id": "mem-20260401230041", "text": "RFQ20260401-01 完整流程执行成功 - 海特高新 33 个 PN 询价，83 条 RFQ 发送成功，Gmail 预览页面提取方法验证成功（无需下载 Excel 文件）", "created_at": "2026-04-01T23:00:41"}
