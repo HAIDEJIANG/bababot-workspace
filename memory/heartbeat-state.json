@@ -1,18 +1,39 @@
 {
   "lastChecks": {
-    "email": 1774583638,
-    "calendar": 1774583638,
-    "weather": 1774583638,
-    "heartbeat": 1774583638,
-    "linkedin_progress": 1774583638
+    "email": 1775116740,
+    "calendar": 1775116740,
+    "weather": 1775116740,
+    "heartbeat": 1775116740,
+    "linkedin_progress": 1775116740,
+    "rfq_status": 1775116740,
+    "git_status": 1775116740
   },
-  "lastHeartbeatReport": "2026-03-27T08:53:58+08:00",
+  "lastHeartbeatReport": "2026-04-02T17:59:00+08:00",
   "gitStatus": "uncommitted_changes",
-  "browserRelayStatus": "warning_utf8_bom",
+  "browserRelayStatus": "running_port_18800",
   "linkedinProgress": {
-    "total": 3185,
-    "processed": 336,
-    "failed": 32,
-    "percentComplete": 10.5
-  }
+    "v2500Connect": {
+      "total": 370,
+      "operators": 47,
+      "status": "completed_2026-04-01"
+    },
+    "contactAnalysis": {
+      "total": 3185,
+      "processed": 619,
+      "percentComplete": 19.43
+    },
+    "feedCollection": {
+      "lastRun": "2026-04-02T16:01:00+08:00",
+      "newPosts": 6,
+      "totalRecords": 1293
+    }
+  },
+  "rfqStatus": {
+    "current": "RFQ20260401-01",
+    "totalPN": 33,
+    "rfqSent": 83,
+    "deadline": "2026-04-09",
+    "status": "waiting_supplier_responses"
+  },
+  "notes": "Heartbeat resumed after 6-day gap (last run 2026-03-27). Cron hourly-heartbeat job 47e3eb8d active."
 }

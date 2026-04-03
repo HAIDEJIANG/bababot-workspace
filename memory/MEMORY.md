@@ -143,4 +143,71 @@
 
 ---
 
-*最后更新：2026-03-31 01:00*
+*最后更新：2026-04-01 01:00*
+
+---
+
+## 🔧 RFQ 数据提取方法（2026-04-01 新增）
+
+**铁律：从 Gmail 预览页面直接提取表格数据，不下载 Excel 文件！**
+
+**操作流程**：
+1. 打开 Gmail 邮件 → 点击附件预览（不是下载）
+2. 预览页面包含完整表格内容（所有零件数据）
+3. 用 browser 工具 `evaluate` 函数提取 `document.body.innerText`
+4. Python 解析文本 → 按制表符分割 → 提取 序号/PN/条件/数量
+5. 生成 CSV 文件：`序号，件号，条件，数量`
+
+**成功案例**：RFQ20260401-01（33 个 PN，83 条 RFQ 发送）
+
+---
+
+## 🌐 Browser 工具采集 LinkedIn 方法（2026-04-01 新增）
+
+**CDP WebSocket Origin 问题**：
+- Edge 浏览器 WebSocket 连接需要 `--remote-allow-origins=*` 参数
+- 当前 OpenClaw 浏览器启动配置未包含此参数
+- 错误信息：`Handshake status 403 Forbidden`
+
+**临时解决方案**：使用 browser 工具直接采集
+```javascript
+// 滚动页面
+browser(action="act", kind="evaluate", fn="() => { window.scrollBy(0, 2000); return 'scrolled'; }")
+
+// 提取帖子内容
+browser(action="act", kind="evaluate", fn="() => { return document.body.innerText; }")
+```
+
+**永久修复**：修改 OpenClaw 浏览器启动配置添加 `--remote-allow-origins=*` 参数
+
+---
+
+## 📸 EasyOCR 图片分析（2026-04-01 新增）
+
+**安装位置**：Python 环境 + `~/.EasyOCR/model/`
+
+**支持语言**：`['en', 'ch_sim']` (英文 + 简体中文)
+
+**使用场景**：当 OpenClaw image 工具不可用时（模型 API key 未配置），使用 EasyOCR 进行本地 OCR 分析
+
+**使用方式**：
+```python
+import easyocr
+reader = easyocr.Reader(['en', 'ch_sim'])
+result = reader.readtext(image_path)
+```
+
+---
+
+## 📊 V2500 LinkedIn Connect 任务记录（2026-04-01）
+
+**任务规模**：47 个运营商，约 370 位联系人
+
+**最高价值联系人 TOP 5**：
+1. Kwang Eun (Charlie) Kim - Korean Air Managing VP - Engine Maintenance Center
+2. Abraham Thomas - Air India Head-Powerplant
+3. Yosuke Kinoshita - ANA Engine Technics VP Maintenance
+4. Xin Li - CAAC SAACC Director of Powerplant Division
+5. Gustavo Merizalde - ex-AerCap/ILFC VP Technical Services
+
+**发送规则**：统一使用 "Send without a note"，遇到 LinkedIn 每周限额时停止

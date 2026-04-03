@@ -180,39 +180,83 @@ class CDPClient:
         return info
     
     def extract_posts(self) -> List[Dict[str, Any]]:
-        """提取 LinkedIn 帖子"""
-        js = """
+        """提取 LinkedIn 帖子 - v3 版本（全文分段法）"""
+        # 先获取帖子数量
+        js_count = """
         (function() {
-            var posts = [];
-            var articles = document.querySelectorAll('article');
-            for (var i = 0; i < articles.length; i++) {
-                var el = articles[i];
-                var text = el.innerText;
-                if (text && text.length > 100) {
-                    var authorEl = el.querySelector('[href*="/in/"]');
-                    var author = authorEl ? authorEl.innerText : 'Unknown';
-                    var timeEl = el.querySelector('time');
-                    var timestamp = timeEl ? timeEl.getAttribute('datetime') : null;
-                    posts.push({
-                        author: author,
-                        text: text.substring(0, 3000),
-                        timestamp: timestamp,
-                        hash: text.substring(0, 200)
-                    });
-                }
-            }
-            return posts;
+            var fullText = document.body ? document.body.innerText : '';
+            var segments = fullText.split('Feed post');
+            return segments.length - 1;
         })()
         """
         result = self._send_session("Runtime.evaluate", {
-            "expression": js,
+            "expression": js_count,
             "returnByValue": True,
             "awaitPromise": True
         })
         
-        if 'result' in result and 'value' in result['result']:
-            return result['result']['value']
-        return []
+        post_count = result.get('result', {}).get('result', {}).get('value', 0)
+        if post_count == 0:
+            return []
+        
+        # 分批提取每个帖子（避免单次返回数据过大）
+        posts = []
+        for i in range(1, min(post_count + 1, 15)):  # 最多提取 14 个帖子
+            js_extract = f"""
+            (function() {{
+                var fullText = document.body ? document.body.innerText : '';
+                var segments = fullText.split('Feed post');
+                if (segments.length < {i + 1}) return null;
+                
+                var segment = segments[{i}].trim();
+                if (segment.length < 100) return null;
+                
+                var lines = segment.split('\\n').filter(function(l) {{ return l.trim().length > 0; }});
+                if (lines.length < 2) return null;
+                
+                var author = lines[0].trim();
+                var timestamp = null;
+                var content = '';
+                
+                // 查找时间标记（如 "6h •", "18h •"）
+                for (var j = 1; j < Math.min(5, lines.length); j++) {{
+                    var line = lines[j];
+                    if (line.match(/^[0-9]+[hm]s?[.•]/) || line.match(/[0-9]+[hm].*[•]/)) {{
+                        timestamp = line.trim();
+                        content = lines.slice(j + 1).join('\\n').substring(0, 1500);
+                        break;
+                    }}
+                }}
+                
+                if (!timestamp) {{
+                    content = lines.slice(1).join('\\n').substring(0, 1500);
+                }}
+                
+                // 提取联系方式
+                var contact = null;
+                var emailMatch = content.match(/[\\w\\.-]+@[\\w\\.-]+\\.\\w+/);
+                if (emailMatch) contact = emailMatch[0];
+                
+                return {{
+                    author: author,
+                    text: content,
+                    timestamp: timestamp,
+                    contact: contact,
+                    hash: content.substring(0, 100)
+                }};
+            }})()
+            """
+            result = self._send_session("Runtime.evaluate", {
+                "expression": js_extract,
+                "returnByValue": True,
+                "awaitPromise": True
+            })
+            
+            post_data = result.get('result', {}).get('result', {}).get('value')
+            if post_data:
+                posts.append(post_data)
+        
+        return posts
 
 
 def log(msg: str):

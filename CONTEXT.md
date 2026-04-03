@@ -1,5 +1,15 @@
 # CONTEXT.md - 当前工作上下文
 
+## 2026-04-02 关键摘要
+
+1. **B747F 销售任务 100% 完成** - 18:08-19:35 联系 118 位全球 B747F 运营商/管理公司/产权公司关键决策人，包括 Emirates VP Fleet Planning (Rogerio Leao)、Saudia VP Network Planning (Ricardo B.)、Boeing CEO (Lucky Cheong)、Airbus Head of Aircraft Trading (Pascal Dufour) 等高价值联系人，等待 LinkedIn 连接接受后私信 B747F 出售信息
+
+2. **LinkedIn Feed 采集 3 轮完成** - 16:01/19:18/20:20 三次采集共 26 条新帖子，总表累计约 1300 条记录；高价值线索：CFM56-7B 采购需求 (kostantin@atg.aero, Fresh SV RC2500-3500)、Gulfstream G550 采购需求 (nate@aeroventures.com, 美国优先)、CFM56 被盗零件警告 (EASA 282 个零件流通致 737NG/A320ceo 停场风险)
+
+3. **供应商报价提取完成** - 从 sale 邮箱处理 9 封报价邮件，下载 6 个 PDF 附件，提取 5 条新报价到 Quotes_Master_Table.csv（48 条总记录），包括 711002-5 ($5000 OH/JMF Global)、9DX404700-01 ($1100 NE/Tiger Enterprises)、Y580-02133-01-3 ($9650 NS/Pacific Aerospace)
+
+4. **V2500 Connect 任务最终状态** - 累计发送约 370 位联系人覆盖 47 个 V2500 运营商，高价值联系人 75 位 (20%)，包括 Korean Air Managing VP (Kwang Eun Charlie Kim)、Air India Head-Powerplant (Abraham Thomas)、ANA Engine Technics VP (Yosuke Kinoshita)、CAAC SAACC Director (Xin Li)，任务 100% 完成等待连接接受
+
 ## 2026-04-01 关键摘要
 
 1. **V2500 LinkedIn Connect 任务里程碑** - 累计发送约 370 位联系人，覆盖 47 个 V2500 运营商；最高价值联系人：Kwang Eun (Charlie) Kim (Korean Air Managing VP - Engine Maintenance Center)、Abraham Thomas (Air India Head-Powerplant)、Yosuke Kinoshita (ANA Engine Technics VP)、Xin Li (CAAC SAACC Director of Powerplant Division)
@@ -32,54 +42,14 @@
 
 4. **CDP 协议深度研究结论** - CDP 无法穿透 LinkedIn Shadow DOM 导致帖子提取失败；确认可行方案优先级：现有数据分析 > Playwright > Browser Relay 扩展 > CDP 协议
 
-## 2026-03-29 关键摘要
-
-1. **ClawTeam 多智能体框架安装完成** - Windows+WSL2 双环境配置，2.5 小时完成全部安装，tmux 后端支持已验证；功能包括团队创建/任务管理/Inbox 通信/git worktree 隔离/实时看板
-
-2. **ClawTeam vs 原生 sub-agents 对比明确** - ClawTeam 优势：多 agent 并行/通信/任务依赖自动解锁/工作区隔离/无超时；劣势：Windows 需 WSL2 配置复杂；适用：复杂任务分解、多角色协作、长时间运行
-
-3. **LinkedIn 联系人分析优化版已停止** - 进度 383/3,185(12%) 后终止，仅静态信息无动态帖子数据价值低；转向方案：用现有导出文件筛选 200-300 位高价值联系人精准联系
-
-4. **RFQ Inquiry Trial 持续执行** - 1152466-250 和 129666-3 已成功提交，10037-0770 按前 10 家有效供应商持续执行，总计 283+ 供应商
-
-## 2026-03-26 关键摘要
-
-1. **LinkedIn 联系人优先级打分完成** - 3,185 位联系人全部打分，87% 高优先级（2,770 人），13% 中优先级（415 人）；输出 priority_ranking.csv
-
-2. **LinkedIn 自动采集进行中** - 进度 11.7%（372/3,185），速度 65-90 人/小时，间隔 20-30 秒，预计 2 天完成；选择器问题已修复（多层备选方案）
-
-3. **RFQ20260326-01 新询价单** - 海特高新 Cynthia Zhang 发送，截止 4 月 2 日；待下载附件解析零件清单并发送 StockMarket RFQ
-
-4. **Scrapy 性能验证** - v2.14.2 安装成功，测试性能~545 条/分钟，用于 LinkedIn 数据采集
-
-## 2026-03-25 关键摘要
-
-1. **RFQ20260324-02 Batch 2 完成** - 10 个 PN 发送 15 条 RFQ，总计 114 条 RFQ 全部完成；6 个 PN 成功报价，3 个无库存，1 个条件不匹配（客户要全新件但市场只有 OH/SV）
-
-2. **报价邮件处理系统建立** - 识别 11 封供应商报价回复，设计 Quotes_Master_Table.csv 总表（18 字段），himalaya+pymupdf 提取链路验证成功（无需 deepread 外部依赖）
-
-3. **LinkedIn 采集两轮完成** - 扫描 100+ 帖子，提取 18 条高价值业务帖；关键发现：ERJ 起落架整套、CFM56-5B6 发动机 (fresh SV)、B747-400F 拆解、A330 MLG OH、Dash 8 Q400 整机
-
-4. **技术工具链验证** - himalaya CLI v1.2.0 安装配置完成，pymupdf PDF 提取测试成功，openpyxl 就绪，gmail 技能需 maton.ai API key
-
-5. **163 企业邮箱 IMAP 问题** - 需要授权码而非密码，浏览器 SPA 操作困难；需在 mail.qiye.163.com 设置中开启 IMAP 并生成授权码
-
-## 2026-03-24 关键摘要
-
-1. **RFQ20260324-02 海特高新询价启动** - Gmail 解析 2 个零件，PN1(796880-5-006) 向 7 家供应商发送询价，但条件匹配错误 (AR≠可用件)，任务 22:37 暂停
-
-2. **条件匹配规则教训** - AR(As Removed) 是拆机件；可用件=SV/OH，全新件=NE/FN/NS，后续询价必须按此规则匹配
-
-3. **StockMarket.aero 自动化不稳定** - 会话频繁过期致子代理停滞，fill 操作不生效需改用 type
-
 ## 历史关键事项
 
 - **RFQ20260318-01** 42 项询价 100% 完成，已闭环
-- **LinkedIn 采集系统** 运行稳定，39 条 + 高价值数据（21+18）
-- **Browser Relay** 端口 18789，watchdog 机制监控（UTF-8 BOM 小问题非关键）
+- **LinkedIn 采集系统** 运行稳定，1300 条 + 高价值数据
+- **Browser Relay** 端口 18800，watchdog 机制监控
 - **memU 记忆系统** 每日提取运行中（embedding 待配置 OPENAI_API_KEY）
-- **报价总表** Quotes_Master_Table.csv 待建立（桌面）
+- **报价总表** Quotes_Master_Table.csv 48 条记录（桌面）
 
 ---
-最后更新：2026-04-01 23:00
-当前行数：74 行
+最后更新：2026-04-02 23:03
+当前行数：58 行

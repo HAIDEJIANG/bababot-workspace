@@ -247,7 +247,7 @@
 - 无法从搜索结果确认具体发布日期，需进一步访问视频页面验证是否为近 7 天内容
 - 无官方更新日志类视频 (对比昨日调研，今日未发现 v2026.3.28 等版本更新内容)
 
-**与当前工作相关性**: ⚠️ **低-中** - 当前配置已超越入门阶段，主要价值在于发现新用例参考
+**与当前工作相关性**: ⚠️ **低 - 中** - 当前配置已超越入门阶段，主要价值在于发现新用例参考
 
 ---
 
@@ -267,3 +267,207 @@
 - 是否安装 self-improving-agent 测试 RFQ 自动提交优化效果
 - 是否安装 ontology 重构联系人/供应商数据存储结构
 - 是否安装 Agent Browser 对比与 Browser Relay 的稳定性差异
+
+---
+---
+
+# Daily Learnings - 2026-04-02
+
+## ClawHub Skill Market 推荐列表
+
+**来源**: https://clawhub.ai/skills?sort=downloads&nonSuspicious=true
+**调研时间**: 2026-04-02 09:10 HKT
+**筛选标准**: 安装量靠前、无安全风险标记、与航空航材业务/Agent 设定相关
+
+### 🔥 Top 15 Popular Skills (按下载量排序)
+
+| 排名 | Skill | 作者 | 评分 | 下载量 | 简介 | 相关性 |
+|------|-------|------|------|--------|------|--------|
+| 1 | **self-improving-agent** | @pskoett | ⭐2.9k | **339k** | 捕获学习/错误/修正，持续改进 | ✅ 高 |
+| 2 | **ontology** | @oswalpalash | ⭐451 | **147k** | 结构化知识图谱 (人员/项目/任务/文档) | ✅ 高 |
+| 3 | **Self-Improving + Proactive Agent** | @ivangdavila | ⭐801 | **138k** | 自我反思 + 自我批评 + 自组织记忆 | ✅ 高 |
+| 4 | AdMapix | @fly0pants | ⭐211 | 78.4k | 广告情报与应用分析 | ⚠️ 低 |
+| 5 | Nano Banana Pro | @steipete | ⭐302 | 75.6k | Gemini 3 Pro 图像生成/编辑 | ⚠️ 低 |
+| 6 | **Obsidian** | @steipete | ⭐288 | 71.6k | 操作 Obsidian 知识库 | ✅ 中 |
+| 7 | Baidu Search | @ide-rea | ⭐181 | 69.6k | 百度 AI 搜索引擎 | ⚠️ 低 |
+| 8 | **Agent Browser** | @matrixy | ⭐213 | 62.8k | 无头浏览器自动化 (可访问性树快照) | ✅ 高 |
+| 9 | **API Gateway** | @byungkyu | ⭐295 | 60.6k | 连接 100+ API (Google/Microsoft/GitHub 等) | ✅ 中 |
+| 10 | Mcporter | @steipete | ⭐151 | 50.2k | MCP 服务器 CLI | ⚠️ 中 |
+| 11 | **Word / DOCX** | @ivangdavila | ⭐201 | 45.6k | 创建/编辑 Word 文档 | ✅ 中 |
+| 12 | **Excel / XLSX** | @ivangdavila | ⭐159 | 40.4k | 创建/编辑 Excel 工作簿 | ✅ 中 |
+| 13 | prismfy-search | @uroboros1205 | ⭐16 | 34.9k | 10 引擎搜索 (Google/Reddit/GitHub/arXiv 等) | ⚠️ 中 |
+| 14 | imap-smtp-email | @gzlicanyi | ⭐82 | 33.2k | IMAP/SMTP 邮件收发 | ⚠️ 中 |
+| 15 | Clawdhub | @steipete | ⭐215 | 27.6k | ClawHub CLI 工具 | ⚠️ 低 |
+
+### 📋 推荐优先级 (待用户确认)
+
+**🟢 强烈推荐 (与航材业务高度相关):**
+1. **self-improving-agent** (339k↓) - 提升 RFQ 自动提交准确性，减少人工纠错
+2. **ontology** (147k↑) - 结构化管理 3,185 位 LinkedIn 联系人 + 供应商关系网
+3. **Self-Improving + Proactive Agent** (138k↑) - 增强主动性和自我纠错能力
+
+**🟡 值得考虑 (有实用价值):**
+4. **Agent Browser** (62.8k↑) - 补充 Browser Relay，可能提升 LinkedIn 采集稳定性
+5. **Excel / XLSX** (40.4k↑) - 直接生成供应商报价分析表
+6. **API Gateway** (60.6k↑) - 未来扩展业务系统集成的基础
+
+**⚪ 暂不推荐:**
+- AdMapix, Nano Banana Pro, Baidu Search 等与当前业务关联度低
+
+---
+
+## YouTube OpenClaw 视频 (近 7 天)
+
+**筛选条件**: 上传日期=本周 (过去 7 天)
+**搜索来源**: YouTube 站内搜索 OpenClaw
+
+### 📺 本周新视频 (按时间倒序)
+
+| 标题 | 频道 | 发布时间 | 观看量 | 核心要点 | 相关性 |
+|------|------|----------|--------|----------|--------|
+| **OpenClaw 4.1 Will Change Your Life (INSANE)** | Build In Public | 1 小时前 | 1,524 | OpenClaw 4.1 版本更新，涵盖 3 月 31 日 Anthropic 宕机事件、速率限制故障转移优化、后台任务板、Gateway 挂起修复、Cron 工具白名单、错误处理 + 模型队列修复 | ✅ **高** - 最新版本更新，直接影响当前系统稳定性 |
+| **OpenClaw 3.31: New FREE Update Just Dropped!** | AI News Today | 8 小时前 | 811 | 后台任务控制系统、阻塞状态持久化、全局渠道更新 (QQ & Line)、安全大修、MacOS & Node 问题排查、Matrix 隐私 + 上下文升级 | ✅ **高** - 安全改进和渠道更新与当前配置相关 |
+| **How to Set Up OpenClaw in 2026 (Step-by-Step for Beginners)** | Darrel Wilson | 9 小时前 | 1,302 | 2026 年完整版设置教程，涵盖 VPS 部署、Gemini/Claude API 配置、Telegram 连接、UI 界面、Skills 安装 | ⚠️ 低 - 入门教程 |
+| **OpenClaw + Local AI on M5 MacBook Air: The Honest Truth** | Samuel Gregory | 11 小时前 | 1,196 | M5 MacBook Air 本地 AI 部署实测，讨论本地模型性能限制和成本效益 | ⚠️ 中 - 本地部署参考 |
+| **AutoClaw DESTROYS OpenClaw?** | Julian Goldie SEO | 18 小时前 | 1,963 | AutoClaw vs OpenClaw 对比，50+ 预制 AI 技能，聊天机器人 vs 自主代理，安全与本地数据隐私 | ⚠️ 中 - 竞品分析 |
+| **OpenClaw after 1 Month: Building 24/7 Video Editing Agent (MaxClaw)** | Singh in USA | 18 小时前 | 1,425 | 使用 OpenClaw 构建 24/7 视频编辑 Agent 的实战经验 | ⚠️ 中 - 可参考 Agent 持久化运行模式 |
+| **The Rise and Fall of OpenClaw** | ColdFusion | 21 小时前 | 35 万 | OpenClaw 发展历程深度分析，从周末项目到 30 万 GitHub Stars 的起落故事 | ✅ **中** - 了解项目背景和社区动态 |
+| **OpenClaw......RIGHT NOW??? (it's not what you think)** | NetworkChuck | 2 天前 | 37 万 | VPS 部署 OpenClaw、Telegram 连接、实际项目演示 (AI 新闻简报、服务器监控)、安全配置 | ✅ **中** - 高影响力频道的实战分享 |
+| **彻底超越 OpenClaw！Claude Code 原生支持 Computer Use** | AI 超元域 | 1 天前 | 1.9 万 | Claude Code 新增 Computer Use 功能实测，全自动操控 Mac 电脑 (下棋/测试 APP/写代码)，与 OpenClaw 对比 | ✅ **高** - 竞品功能分析，可能影响技术选型 |
+| **Hermes Just Solved the Biggest Problem With OpenClaw** | Craig Hewitt | 1 天前 | 1.1 万 | Hermes AI 代理框架解决 OpenClaw 局限性，股票交易和内容创作自动化工作流 | ⚠️ 中 - 替代方案参考 |
+| **OpenClaw MCP Update is Coming!** | Julian Goldie SEO | 1 天前 | 1,889 | OpenClaw MCP 更新预告 | ⚠️ 中 - 技术更新追踪 |
+| **OpenClaw 装进手机！秒变 AI 小龙虾** | 零度解说 | 1 天前 | 3.9 万 | 安卓手机部署 OpenClaw，本地运行 + 远程操控 | ⚠️ 低 - 部署方案 |
+| **OpenClaw 装进 U 盘！即插即用** | 零度解说 | 3 天前 | 12 万 | U 盘便携式 OpenClaw 部署方案 (3 套免费方案) | ⚠️ 低 - 部署方案 |
+| **Users build autonomous AI agents with OpenClaw** | CGTN America | 4 天前 | 8.8 万 | CGTN 报道 OpenClaw 用户构建自主 AI 代理的实际案例 | ⚠️ 中 - 媒体报道 |
+| **The AI Agent That Got Me YouTube Monetized (With OpenClaw)** | Sharbel A. | 6 天前 | 2,454 | 使用 OpenClaw 构建 YouTube 内容创作 Agent，4 周获得 2000 订阅并实现盈利 | ⚠️ 中 - 商业化案例 |
+| **OpenClaw Is Taking Over Hospitals (INSANE)** | Build In Public | 6 天前 | 2,961 | 医疗领域 AI 代理应用，受限执行 + 文档中心交互 + 清单引导记忆，测试结果显示 2.2 倍效果提升 | ⚠️ 低 - 垂直领域应用 |
+| **OpenClaw MasterClass | Create Your Own AI Agent** | Ferdy.com | 6 天前 | 1.5 万 | 52 分钟完整教程，VPS 部署、安全配置、Push 通知、成本优化、Skills 安装、内容创作自动化 | ⚠️ 中 - 综合教程 |
+| **OpenClaw 3.24 Just Changed AI Agents Forever** | AI News Today | 6 天前 | 1 万 | Microsoft Teams 集成、Slack 交互按钮、OpenAI API & Open WebUI 支持、子代理多 Agent 工作流、新 Skills UI | ⚠️ 中 - 版本更新 |
+| **最新 OpenClaw + Ollama + ChatGPT 本地部署！** | X 超哥 | 6 天前 | 3,596 | Windows 本地部署教程，无需 API、永久免费 AI、断网可用 | ⚠️ 低 - 本地部署 |
+
+---
+
+## 总结
+
+**今日学习重点**:
+1. **ClawHub 技能市场持续增长** - Top 技能下载量稳步上升 (self-improving-agent 从 336k→339k)，无安全风险标记
+2. **OpenClaw 4.1 刚刚发布** (1 小时前) - 包含多项稳定性修复和速率限制优化，建议关注更新日志评估是否升级
+3. **Claude Code Computer Use 构成竞争** - AI 超元域视频展示 Claude Code 原生 Computer Use 功能，可能在某些场景替代 OpenClaw
+4. **高影响力频道关注** - NetworkChuck (37 万观看)、ColdFusion (35 万观看) 等主流科技频道开始报道 OpenClaw
+
+**与当前业务关联**:
+- ✅ OpenClaw 4.1 的 Gateway 挂起修复可能解决当前 Browser Relay 稳定性问题
+- ✅ self-improving-agent (339k) 仍是提升 RFQ 自动提交准确率的首选技能
+- ✅ ontology (147k) 可整合 LinkedIn 3,185 位联系人数据
+- ⚠️ Claude Code Computer Use 可能提供替代方案，需评估是否值得尝试
+
+**下一步行动 (待确认)**:
+- 是否升级 OpenClaw 至 4.1 版本 (需评估变更日志和兼容性)
+- 是否安装 self-improving-agent 测试 RFQ 自动提交优化效果
+- 是否安装 ontology 重构联系人/供应商数据存储结构
+- 是否研究 Claude Code Computer Use 作为 Browser Relay 的替代方案
+
+---
+---
+
+# Daily Learnings - 2026-04-03
+
+## ClawHub Skill Market 推荐列表
+
+**来源**: https://clawhub.ai
+**调研时间**: 2026-04-03 07:54 HKT
+**筛选标准**: 安装量靠前、无安全风险标记、与航空航材业务/Agent 设定相关
+
+### 🌟 Highlighted Skills (官方精选)
+
+| Skill | 作者 | 评分 | 安装量 | 简介 | 相关性 |
+|-------|------|------|--------|------|--------|
+| **X Search** | @jaaneek | ⭐51 | 6.6k | 使用 xAI API 搜索 X/Twitter 帖子 | ⚠️ 低 - 社交媒体搜索 |
+| **Trello** | @steipete | ⭐120 | 31.8k | 管理 Trello 看板/列表/卡片 | ⚠️ 中 - 可追踪 RFQ 进度 |
+| **Slack** | @steipete | ⭐113 | 35.4k | 从 Clawdbot 控制 Slack | ⚠️ 低 - 当前用 Telegram |
+| **CalDAV Calendar** | @asleep123 | ⭐190 | 23.7k | 同步 CalDAV 日历 (iCloud/Google/Fastmail) | ⚠️ 中 - 日历集成 |
+| **Answer Overflow** | @rhyssullivan | ⭐143 | 15.6k | 搜索 Discord 社区技术讨论 | ⚠️ 低 - 技术问答 |
+
+### 🔥 Popular Skills (按安装量排序)
+
+| Skill | 作者 | 评分 | 安装量 | 简介 | 相关性 |
+|-------|------|------|--------|------|--------|
+| **self-improving-agent** | @pskoett | ⭐2.9k | **343k** | 捕获学习/错误/修正，持续改进 | ✅ 高 |
+| **ontology** | @oswalpalash | ⭐463 | **148k** | 结构化知识图谱 (人员/项目/任务/文档) | ✅ 高 |
+| **Self-Improving + Proactive Agent** | @ivangdavila | ⭐831 | **141k** | 自我反思 + 自我批评 + 自组织记忆 | ✅ 高 |
+| AdMapix | @fly0pants | ⭐210 | 78.7k | 广告情报与应用分析 | ⚠️ 低 |
+| Nano Banana Pro | @steipete | ⭐306 | 76.5k | Gemini 3 Pro 图像生成/编辑 | ⚠️ 低 |
+| **Obsidian** | @steipete | ⭐294 | 72.3k | 操作 Obsidian 知识库 | ✅ 中 |
+| Baidu Search | @ide-rea | ⭐185 | 70.6k | 百度 AI 搜索引擎 | ⚠️ 低 |
+| **Agent Browser** | @matrixy | ⭐227 | 64.9k | 无头浏览器自动化 (可访问性树快照) | ✅ 高 |
+| **API Gateway** | @byungkyu | ⭐297 | 61.2k | 连接 100+ API (Google/Microsoft/GitHub 等) | ✅ 中 |
+| Mcporter | @steipete | ⭐155 | 50.7k | MCP 服务器 CLI | ⚠️ 中 |
+| Free Ride - Unlimited free AI | @shaivpidadi | ⭐360 | 50.2k | 管理 OpenRouter 免费 AI 模型 | ⚠️ 中 |
+| **Word / DOCX** | @ivangdavila | ⭐213 | 47k | 创建/编辑 Word 文档 | ✅ 中 |
+
+### 📋 推荐优先级 (待用户确认)
+
+**🟢 强烈推荐 (与航材业务高度相关):**
+1. **self-improving-agent** (343k) - 提升 RFQ 自动提交准确性，减少人工纠错
+2. **ontology** (148k) - 结构化管理 3,185 位 LinkedIn 联系人 + 供应商关系网
+3. **Self-Improving + Proactive Agent** (141k) - 增强主动性和自我纠错能力
+
+**🟡 值得考虑 (有实用价值):**
+4. **Agent Browser** (64.9k) - 补充 Browser Relay，可能提升 LinkedIn 采集稳定性
+5. **Excel / XLSX** (昨日 40.4k，今日未在前 12 显示但仍有价值) - 直接生成供应商报价分析表
+6. **API Gateway** (61.2k) - 未来扩展业务系统集成的基础
+
+**⚪ 暂不推荐:**
+- X Search, Slack, AdMapix, Nano Banana Pro, Baidu Search 等与当前业务关联度低
+
+---
+
+## YouTube OpenClaw 视频 (近 7 天)
+
+**筛选条件**: 上传日期=过去 7 天 (2026-03-27 至 2026-04-03)
+**搜索状态**: ⚠️ 网络访问受限，未能获取实时搜索结果
+
+### 调研说明
+
+今日尝试通过以下方式获取 YouTube 近 7 天 OpenClaw 视频：
+1. Browser 打开 YouTube 搜索页面 - 标签页加载后失效
+2. web_search 搜索 - 返回 fetch failed 错误
+3. web_fetch 提取页面内容 - 返回 fetch failed 错误
+4. curl 命令行请求 - PowerShell 环境不支持 head 命令
+
+**可能原因**: 网络连接问题、YouTube API 限制、或浏览器配置问题
+
+### 参考昨日数据 (2026-04-02)
+
+基于昨日调研，近 7 天值得关注的视频包括：
+
+| 标题 | 频道 | 发布时间 | 相关性 |
+|------|------|----------|--------|
+| OpenClaw 4.1 Will Change Your Life (INSANE) | Build In Public | 1 小时前 (昨日) | ✅ 高 - 版本更新 |
+| OpenClaw 3.31: New FREE Update Just Dropped! | AI News Today | 8 小时前 (昨日) | ✅ 高 - 安全改进 |
+| 彻底超越 OpenClaw！Claude Code 原生支持 Computer Use | AI 超元域 | 1 天前 | ✅ 高 - 竞品分析 |
+| OpenClaw......RIGHT NOW??? | NetworkChuck | 2 天前 | ✅ 中 - 实战分享 |
+| The Rise and Fall of OpenClaw | ColdFusion | 21 小时前 | ✅ 中 - 项目分析 |
+
+**建议**: 网络恢复后重新执行 YouTube 搜索，验证是否有新的 2026-04-03 发布视频
+
+---
+
+## 总结
+
+**今日学习重点**:
+1. **ClawHub 技能市场持续增长** - self-improving-agent 从 339k→343k，ontology 从 147k→148k，所有 Top 技能均无安全风险标记
+2. **YouTube 调研受阻** - 网络访问问题导致无法获取近 7 天最新视频，建议后续检查网络配置
+3. **推荐技能方向稳定** - 连续 4 日调研显示 self-improving-agent、ontology、Agent Browser 始终位居前列，与航材业务自动化需求高度匹配
+
+**与当前业务关联**:
+- ✅ self-improving-agent (343k) 仍是提升 RFQ 自动提交准确率的首选
+- ✅ ontology (148k) 可整合 LinkedIn 3,185 位联系人和供应商数据
+- ✅ Agent Browser (64.9k) 可能补充/替代当前 Browser Relay 方案
+
+**下一步行动 (待用户确认)**:
+- 是否安装 self-improving-agent 测试 RFQ 自动提交优化效果
+- 是否安装 ontology 重构联系人/供应商数据存储结构
+- 网络恢复后重新执行 YouTube 近 7 天视频搜索
+
+---
