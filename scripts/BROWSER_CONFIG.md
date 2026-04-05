@@ -16,9 +16,16 @@
 # 关闭所有 Edge 实例
 Stop-Process -Name msedge -Force -ErrorAction SilentlyContinue
 
-# 启动 Edge 带远程调试端口
-Start-Process "msedge" -ArgumentList "--remote-debugging-port=9222","--user-data-dir=C:\Users\Haide\AppData\Local\Microsoft\Edge\User Data\OpenClawProfile"
+# 启动 Edge 带远程调试端口（必须包含 remote-allow-origins）
+Start-Process "msedge" -ArgumentList @(
+    "--remote-debugging-port=9222",
+    "--remote-allow-origins=*",
+    "--user-data-dir=C:\Users\Haide\AppData\Local\Microsoft\Edge\User Data\OpenClawProfile",
+    "--no-first-run"
+)
 ```
+
+**⚠️ 重要**: 必须添加 `--remote-allow-origins=*` 参数，否则 WebSocket 连接会被拒绝 (403 Forbidden)
 
 ### 或使用快捷方式
 目标路径添加参数：

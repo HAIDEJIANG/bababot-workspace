@@ -44,6 +44,8 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 DEFAULT_DURATION_MINUTES = 30
 SCROLL_PAUSE = 3  # 滚动后等待秒数
 SCROLL_PIXELS = 600  # 每次滚动像素
+REFRESH_INTERVAL = 5  # 每 5 分钟刷新一次页面
+SCROLL_PER_REFRESH = 20  # 每次刷新后滚动 20 次
 
 # PN 号识别正则
 PN_PATTERNS = [
@@ -228,7 +230,9 @@ def collect_linkedin_posts(duration_minutes: int, port: int):
     
     # 开始采集
     log("\n" + "=" * 70)
-    log("开始采集...")
+    log("开始采集（支持刷新获取最新内容）...")
+    log(f"刷新间隔：每 {REFRESH_INTERVAL} 分钟")
+    log(f"每次刷新后滚动：{SCROLL_PER_REFRESH} 次")
     log("=" * 70)
     
     posts_collected = []
@@ -236,9 +240,36 @@ def collect_linkedin_posts(duration_minutes: int, port: int):
     start_time = time.time()
     end_time = start_time + (duration_minutes * 60)
     scroll_count = 0
+    refresh_count = 0
+    last_refresh_time = start_time
+    scroll_in_cycle = 0  # 本轮滚动计数
     
     while time.time() < end_time:
         try:
+            elapsed_minutes = (time.time() - start_time) / 60
+            
+            # 检查是否需要刷新页面
+            time_since_refresh = (time.time() - last_refresh_time) / 60
+            if time_since_refresh >= REFRESH_INTERVAL:
+                log(f"\n[REFRESH] 刷新页面获取最新内容 (第 {refresh_count + 1} 次刷新)")
+                
+                # 执行刷新
+                client.evaluate("window.location.reload()")
+                time.sleep(8)  # 等待页面重新加载
+                
+                # 重置滚动计数
+                scroll_in_cycle = 0
+                
+                # 更新刷新时间
+                last_refresh_time = time.time()
+                refresh_count += 1
+                
+                log(f"[REFRESH] 页面已刷新，继续采集...")
+                
+                # 保存进度
+                temp_file = OUTPUT_DIR / f"linkedin_posts_temp_{datetime.now().strftime('%H%M')}.json"
+                save_raw_posts(posts_collected, temp_file)
+            
             # 提取帖子
             posts = client.extract_posts()
             new_count = 0
@@ -276,16 +307,16 @@ def collect_linkedin_posts(duration_minutes: int, port: int):
                 log(f"[NEW] 新增 {new_count} 条帖子（总计：{len(posts_collected)}）")
             
             # 滚动页面
-            log(f"[SCROLL] 滚动页面 (第 {scroll_count + 1} 次)")
-            client.scroll_page(SCROLL_PIXELS)
             scroll_count += 1
+            log(f"[SCROLL] 滚动页面 (第 {scroll_count} 次，本轮第 {scroll_in_cycle + 1} 次)")
+            client.scroll_page(SCROLL_PIXELS)
+            scroll_in_cycle += 1
             time.sleep(SCROLL_PAUSE)
             
-            # 每 5 分钟保存一次进度
-            elapsed = (time.time() - start_time) / 60
-            if int(elapsed) % 5 == 0 and int(elapsed) > 0:
-                temp_file = OUTPUT_DIR / f"linkedin_posts_temp_{datetime.now().strftime('%H%M')}.json"
-                save_raw_posts(posts_collected, temp_file)
+            # 如果本轮滚动达到上限，重置计数继续滚动
+            if scroll_in_cycle >= SCROLL_PER_REFRESH:
+                scroll_in_cycle = 0
+                log(f"[INFO] 本轮滚动 {SCROLL_PER_REFRESH} 次完成，重置计数继续采集")
         
         except Exception as e:
             log(f"[WARN] 采集异常：{e}")
@@ -310,6 +341,7 @@ def collect_linkedin_posts(duration_minutes: int, port: int):
     log(f"运行时长：{elapsed_minutes:.1f} 分钟")
     log(f"采集帖子：{len(posts_collected)} 条")
     log(f"滚动次数：{scroll_count} 次")
+    log(f"刷新次数：{refresh_count} 次")
     
     # 保存结果
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -328,7 +360,9 @@ def collect_linkedin_posts(duration_minutes: int, port: int):
     if high_value:
         log(f"\n[TARGET] 高价值帖子：{len(high_value)} 条")
         for post in high_value[:10]:
-            log(f"  - {post.get('author', 'Unknown')[:40]} | PN: {post.get('pn', ['N/A'])[0]}")
+            pn_list = post.get('pn', [])
+            pn_str = pn_list[0] if pn_list else 'N/A'
+            log(f"  - {post.get('author', 'Unknown')[:40]} | PN: {pn_str}")
     
     return len(posts_collected)
 
@@ -338,8 +372,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='LinkedIn 采集 - CDP 协议版')
     parser.add_argument('--duration', type=int, default=DEFAULT_DURATION_MINUTES,
                         help=f'采集时长（分钟），默认 {DEFAULT_DURATION_MINUTES}')
-    parser.add_argument('--port', type=int, default=9222,
-                        help='CDP 调试端口，默认 9222')
+    parser.add_argument('--port', type=int, default=18800,
+                        help='CDP 调试端口，默认 18800（Browser Relay）')
     
     args = parser.parse_args()
     

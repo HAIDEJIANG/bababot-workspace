@@ -24,6 +24,13 @@
 - 动态类名哈希（如 `_4de8b190`）每次页面加载都不同
 - 不推荐使用 CDP 协议采集 LinkedIn 内容
 
+### LinkedIn 采集脚本优化（2026-04-03 更新）
+- **核心原则：刷新比滚动更重要** — 刷新获取最新内容，滚动只能获取历史内容
+- **刷新策略**：每 5 分钟执行 `Page.reload()`，每轮滚动 20 次后重置计数
+- **Edge 安全参数**：必须添加 `--remote-allow-origins=*`，否则 WebSocket 403 Forbidden
+- **CDP 端口**：默认 18800（Browser Relay），脚本与浏览器端口必须一致
+- **脚本文件**：`scripts/linkedin_v9_cdp.py`
+
 ---
 
 ## 📋 业务流程
@@ -158,7 +165,15 @@
 4. Python 解析文本 → 按制表符分割 → 提取 序号/PN/条件/数量
 5. 生成 CSV 文件：`序号，件号，条件，数量`
 
-**成功案例**：RFQ20260401-01（33 个 PN，83 条 RFQ 发送）
+**成功案例**：
+- RFQ20260401-01（33 个 PN，83 条 RFQ 发送）
+- RFQ20260403-02（42 个 PN，173 条 RFQ 发送）
+
+**RFQ 自动化脚本**：
+- 脚本：`stockmarket_rfq.py v3`
+- 效率：936 条/小时（手动 1.5 条/小时，快 624 倍）
+- 条件筛选：New (FN/NE/NS), SV (OH/RP/SV)
+- 排除规则：AR, DIST, EXCHANGE, RQST, REQUEST, Capability
 
 ---
 

@@ -1,5 +1,15 @@
 # CONTEXT.md - 当前工作上下文
 
+## 2026-04-03 关键摘要
+
+1. **LinkedIn Feed 采集两轮完成** - 08:18/12:18 两次采集共 12 条新帖子，主表累计 454 条记录；高价值线索：EREVEGLOBAL 多机型租赁 (C208/F50/DC9-34F/A321F/747F/CRJ-100)、B737-500 ACMI 租赁 (中东/非洲/亚洲)、Embraer 190-E2 制造进度 (2026 年 6 月交付)
+
+2. **LinkedIn 采集脚本优化完成** - 添加 5 分钟周期刷新功能，解决 WebSocket 403 问题（Edge 添加 `--remote-allow-origins=*` 参数），效率显著提升（60 分钟采集~30 条，刷新 12 次）
+
+3. **RFQ20260403-02 海特询价处理完成** - 42 个 PN，发送 173 条 RFQ，29 个 PN 成功/11 个无库存/2 个条件不匹配；截止日期 2026-04-13；自动化效率 936 条/小时（手动 1.5 条/小时）
+
+4. **系统状态稳定** - Browser Relay 正常运行 (Edge, CDP Port 18800)，数据输出 CSV 格式 UTF-8 编码，无模拟数据全部真实 source_url 验证
+
 ## 2026-04-02 关键摘要
 
 1. **B747F 销售任务 100% 完成** - 18:08-19:35 联系 118 位全球 B747F 运营商/管理公司/产权公司关键决策人，包括 Emirates VP Fleet Planning (Rogerio Leao)、Saudia VP Network Planning (Ricardo B.)、Boeing CEO (Lucky Cheong)、Airbus Head of Aircraft Trading (Pascal Dufour) 等高价值联系人，等待 LinkedIn 连接接受后私信 B747F 出售信息
@@ -51,5 +61,5 @@
 - **报价总表** Quotes_Master_Table.csv 48 条记录（桌面）
 
 ---
-最后更新：2026-04-02 23:03
-当前行数：58 行
+最后更新：2026-04-03 23:00
+当前行数：55 行

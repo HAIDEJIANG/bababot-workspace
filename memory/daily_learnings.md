@@ -263,7 +263,7 @@
 - ✅ ontology 可整合 LinkedIn 3,185 位联系人 + 283+ 供应商数据
 - ✅ Agent Browser 可能补充/替代当前 Browser Relay 方案
 
-**下一步行动 (待用户确认)**:
+**下一步行动 (待确认)**:
 - 是否安装 self-improving-agent 测试 RFQ 自动提交优化效果
 - 是否安装 ontology 重构联系人/供应商数据存储结构
 - 是否安装 Agent Browser 对比与 Browser Relay 的稳定性差异
@@ -465,9 +465,117 @@
 - ✅ ontology (148k) 可整合 LinkedIn 3,185 位联系人和供应商数据
 - ✅ Agent Browser (64.9k) 可能补充/替代当前 Browser Relay 方案
 
-**下一步行动 (待用户确认)**:
+**下一步行动 (待确认)**:
 - 是否安装 self-improving-agent 测试 RFQ 自动提交优化效果
 - 是否安装 ontology 重构联系人/供应商数据存储结构
 - 网络恢复后重新执行 YouTube 近 7 天视频搜索
+
+---
+---
+
+# Daily Learnings - 2026-04-05
+
+## ClawHub Skill Market 推荐列表
+
+**来源**: https://clawhub.ai
+**调研时间**: 2026-04-05 15:34 HKT
+**筛选标准**: 安装量靠前、无安全风险标记、与航空航材业务/Agent 设定相关
+
+### 🌟 Highlighted Skills (官方精选)
+
+| Skill | 作者 | 评分 | 安装量 | 简介 | 相关性 |
+|-------|------|------|--------|------|--------|
+| X Search | @jaaneek | ⭐59 | 7.3k | 使用 xAI API 搜索 X/Twitter 帖子 | ⚠️ 低 - 社交媒体搜索 |
+| Trello | @steipete | ⭐120 | 32.4k | 管理 Trello 看板/列表/卡片 | ⚠️ 中 - 可追踪 RFQ 进度 |
+| Slack | @steipete | ⭐113 | 36.2k | 从 Clawdbot 控制 Slack | ⚠️ 低 - 当前用 Telegram |
+| CalDAV Calendar | @asleep123 | ⭐192 | 24k | 同步 CalDAV 日历 | ⚠️ 中 - 日历集成 |
+| Answer Overflow | @rhyssullivan | ⭐146 | 15.9k | 搜索 Discord 技术讨论 | ⚠️ 低 - 技术问答 |
+
+### 🔥 Popular Skills (按安装量排序)
+
+| Skill | 作者 | 评分 | 安装量 | 简介 | 相关性 |
+|-------|------|------|--------|------|--------|
+| **self-improving-agent** | @pskoett | ⭐3k | **351k** | 捕获学习/错误/修正，持续改进 | ✅ 高 |
+| **ontology** | @oswalpalash | ⭐481 | **152k** | 结构化知识图谱 (人员/项目/任务/文档) | ✅ 高 |
+| **Self-Improving + Proactive Agent** | @ivangdavila | ⭐879 | **146k** | 自我反思 + 自我批评 + 自组织记忆 | ✅ 高 |
+| Polymarket | @joelchance | ⭐37 | 84.9k | 预测市场查询 | ⚠️ 低 - 金融预测 |
+| AdMapix | @fly0pants | ⭐215 | 79.2k | 广告情报与应用分析 | ⚠️ 低 |
+| Nano Banana Pro | @steipete | ⭐310 | 78.6k | Gemini 3 Pro 图像生成/编辑 | ⚠️ 低 |
+| **Obsidian** | @steipete | ⭐301 | 74.1k | 操作 Obsidian 知识库 | ✅ 中 |
+| Baidu Search | @ide-rea | ⭐191 | 72.4k | 百度 AI 搜索引擎 | ⚠️ 低 |
+| **Agent Browser** | @matrixy | ⭐250 | 69.5k | 无头浏览器自动化 | ✅ 高 |
+| **API Gateway** | @byungkyu | ⭐309 | 62.7k | 连接 100+ API | ✅ 中 |
+| Mcporter | @steipete | ⭐159 | 51.9k | MCP 服务器 CLI | ⚠️ 中 |
+| Free Ride - Unlimited free AI | @shaivpidadi | ⭐373 | 51.9k | 管理 OpenRouter 免费 AI 模型 | ⚠️ 中 |
+
+### 📋 推荐优先级 (待用户确认)
+
+**🟢 强烈推荐 (与航材业务高度相关):**
+1. **self-improving-agent** (351k↑) - 提升 RFQ 自动提交准确性，减少人工纠错
+2. **ontology** (152k↑) - 结构化管理 3,185 位 LinkedIn 联系人 + 供应商关系网
+3. **Self-Improving + Proactive Agent** (146k↑) - 增强主动性和自我纠错能力
+
+**🟡 值得考虑 (有实用价值):**
+4. **Agent Browser** (69.5k↑) - 补充 Browser Relay，可能提升 LinkedIn 采集稳定性
+5. **API Gateway** (62.7k↑) - 未来扩展业务系统集成的基础
+6. **Obsidian** (74.1k↑) - 知识管理，可整合业务文档
+
+**⚪ 暂不推荐:**
+- X Search, Slack, AdMapix, Nano Banana Pro, Baidu Search, Polymarket 等与当前业务关联度低
+
+---
+
+## YouTube OpenClaw 视频 (近 7 天)
+
+**筛选条件**: 上传日期=过去 7 天 (2026-03-29 至 2026-04-05)
+**搜索来源**: YouTube 站内搜索 (按上传日期排序)
+
+### 📺 本周新视频 (按时间倒序)
+
+| 标题 | 频道 | 发布时间 | 观看量 | 核心要点 | 相关性 |
+|------|------|----------|--------|----------|--------|
+| **Gemma 4 + OpenClaw + Ollama + Discord - Full Local AI Setup for Free** | Fahd Mirza | 29 分钟前 | 106 | Gemma 4 本地部署教程，完全免费的 AI 方案 | ⚠️ 中 - 本地部署可降低成本 |
+| **Your OpenClaw Will Be HACKED If You Do THIS** | Build In Public | 2 小时前 | 460 | 安全警告：端口转发等常见配置疏漏导致 Agent 暴露公网 | ✅ **高** - 安全配置直接影响系统安全 |
+| **Anthropic Banned OpenClaw — Claim This Before April 17** | FuturMinds | 7 小时前 | 365 | Anthropic 4 月 4 日关闭 OAuth 令牌，提供 4 种替代方案 | ✅ **高** - 直接影响当前 Claude 订阅使用 |
+| **This App Gets You Into OpenClaw (No Terminal Needed)** | Build In Public | 8 小时前 | 1,455 | Qclaw 应用实现无终端一键部署 OpenClaw | ⚠️ 中 - 简化部署流程 |
+| **OpenRouter 还在收费？这个免费模型直接让我卸载了它 \| 豆包 Seed 2.0 Pro OpenClaw 配置教程** | 搞机零距离 | 6 小时前 | 1,150 | 豆包 Seed 2.0 Pro 免费模型配置教程，每天可领 25 美元 AI 额度 | ✅ **中** - 可降低 API 成本 |
+| **Claude KILLED OpenClaw — Here's How to Fix It in 60 Seconds** | Alessandro Colford | 9 小时前 | 73 | Anthropic 封禁后 60 秒快速修复方案 | ✅ **高** - 直接影响当前配置 |
+| **OpenClaw Tutorial for Beginners (2026) – Step-by-Step Full Guide** | AppSavants | 11 小时前 | 4 | 2026 完整版入门教程 | ⚠️ 低 - 基础内容 |
+| **Claude kicking OPENCLAW is YOUR Local AI WAKEUP CALL** | Digital Spaceport | 12 小时前 | 1 万 | Anthropic 封杀事件分析，推动本地 AI 部署 | ✅ **中** - 技术选型参考 |
+| **Anthropic 封杀 OpenClaw！别慌，我已经找到了替代方案** | 范凯说 AI | 13 小时前 | 1,406 | 两套已验证的替代方案详解 | ✅ **高** - 直接影响技术路线 |
+| **Gemma 4 太强了！谷歌开源 AI 大模型，本地部署教程｜OpenClaw + Ollama（无需 API、完全免费）** | X 超哥 | 14 小时前 | 3,562 | Gemma 4 本地部署，无需 API 完全免费 | ✅ **中** - 可降低 API 成本 |
+| **OpenClaw Full Tutorial and Setup in 2026 (with memory)** | Arsh Goyal | 15 小时前 | 567 | 集成 mem9 云存储记忆层，实现跨会话上下文持久化 | ⚠️ 中 - 记忆增强方案 |
+| **Did Anthropic Just Ban Openclaw? (Claude AI Ban)** | Mark Savant | 15 小时前 | 1,551 | Anthropic 封禁事件来龙去脉分析 | ✅ **中** - 了解事件背景 |
+| **OpenClaw Full Tutorial for Beginners (Step by Step \| One-Click Setup)** | Create a Pro Website | 16 小时前 | 2,566 | 一键设置教程，含 Hostinger VPS 优惠 | ⚠️ 低 - 入门内容 |
+| **Openclaw 用英文描述 Agent 配置文件 多 Agent 协作完成任务** | CrazyPeace | 17 小时前 | 11 | 多 Agent 协作配置教程 | ⚠️ 中 - 多 Agent 架构参考 |
+| **OpenAgents DESTROY Openclaw?** | Julian Goldie SEO | 17 小时前 | 2,395 | OpenAgents vs OpenClaw 对比分析 | ⚠️ 中 - 竞品分析 |
+| **I built something....** | Matthew Berman | 14 小时前 | 2.7 万 | JourneyKits AI 工作流注册表，可分享打包工具/记忆/技能 | ⚠️ 中 - 工作流复用参考 |
+| **I JUST GAVE OPENCLAW LIVE MARKET DATA — THIS IS THE EDGE** | Clem Chambers | 15 小时前 | 2,097 | aNEWfn 免费实时市场数据 API 集成 | ⚠️ 低 - 金融市场特定 |
+| **付費也要解除安裝！全球爆紅的 OpenClaw，為何陷入棄養潮？一般人還要裝嗎？｜志祺七七** | 志祺七七 | 20 小时前 | 5.6 万 | OpenClaw 弃养潮深度分析，普通用户是否还值得安装 | ✅ **中** - 了解社区动态 |
+| **OpenClaw 2026.4.2 Update!** | Julian Goldie SEO | 19 小时前 | 707 | OpenClaw 2026.4.2 版本更新内容详解 | ✅ **高** - 最新版本更新 |
+| **OpenClaw Without Claude? My New Plan** | Creator Magic | 19 小时前 | 1.7 万 | Anthropic 取消 Claude 订阅支持后的替代计划 | ✅ **高** - 直接影响技术路线 |
+
+---
+
+## 总结
+
+**今日学习重点**:
+1. **ClawHub 技能市场持续增长** - self-improving-agent 从 343k→351k，ontology 从 148k→152k，所有 Top 技能均无安全风险标记
+2. **Anthropic 封杀事件持续发酵** - 4 月 4 日 Anthropic 关闭 OAuth 令牌，多个视频提供替代方案 (豆包 Seed 2.0 Pro、Gemma 4 本地部署等)
+3. **安全警告频发** - Build In Public 发布安全警告，常见配置疏漏导致 Agent 暴露公网
+4. **本地 AI 部署成为热点** - Gemma 4 + Ollama 免费方案受到关注，可降低 API 成本
+
+**与当前业务关联**:
+- ✅ self-improving-agent (351k) 仍是提升 RFQ 自动提交准确率的首选
+- ✅ ontology (152k) 可整合 LinkedIn 3,185 位联系人和供应商数据
+- ✅ Agent Browser (69.5k) 可能补充/替代当前 Browser Relay 方案
+- ⚠️ Anthropic 封杀事件可能影响当前 Claude API 使用，需评估替代方案
+- ⚠️ 安全配置需检查，避免 Agent 暴露风险
+
+**下一步行动 (待确认)**:
+- 是否安装 self-improving-agent 测试 RFQ 自动提交优化效果
+- 是否安装 ontology 重构联系人/供应商数据存储结构
+- 检查当前安全配置，确保无公网暴露风险
+- 评估 Anthropic 封杀事件对当前配置的影响，准备替代方案
 
 ---

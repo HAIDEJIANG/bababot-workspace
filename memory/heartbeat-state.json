@@ -1,14 +1,14 @@
 {
   "lastChecks": {
-    "email": 1775116740,
-    "calendar": 1775116740,
-    "weather": 1775116740,
-    "heartbeat": 1775116740,
-    "linkedin_progress": 1775116740,
-    "rfq_status": 1775116740,
-    "git_status": 1775116740
+    "email": 1775203854,
+    "calendar": 1775203854,
+    "weather": 1775203854,
+    "heartbeat": 1775203854,
+    "linkedin_progress": 1775203854,
+    "rfq_status": 1775203854,
+    "git_status": 1775203854
   },
-  "lastHeartbeatReport": "2026-04-02T17:59:00+08:00",
+  "lastHeartbeatReport": "2026-04-03T12:50:54+08:00",
   "gitStatus": "uncommitted_changes",
   "browserRelayStatus": "running_port_18800",
   "linkedinProgress": {
@@ -23,9 +23,9 @@
       "percentComplete": 19.43
     },
     "feedCollection": {
-      "lastRun": "2026-04-02T16:01:00+08:00",
-      "newPosts": 6,
-      "totalRecords": 1293
+      "lastRun": "2026-04-03T12:18:00+08:00",
+      "newPosts": 8,
+      "totalRecords": 454
     }
   },
   "rfqStatus": {
@@ -35,5 +35,5 @@
     "deadline": "2026-04-09",
     "status": "waiting_supplier_responses"
   },
-  "notes": "Heartbeat resumed after 6-day gap (last run 2026-03-27). Cron hourly-heartbeat job 47e3eb8d active."
+  "notes": "Heartbeat running normally. LinkedIn auto-collection active (every 4h). Git has uncommitted changes."
 }
